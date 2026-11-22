@@ -10,10 +10,10 @@
 /* PROTOTYPE v3 — โครงตาม apple.com/th ค่าวัดจากโค้ดจริงที่จอ 1440
    localnav (หน้า MacBook Pro): sticky เต็มกว้าง สูง 52, ชื่อ 21/600 + บรรทัดรอง 12, เมนู 12px อันที่อยู่มีเส้นใต้ 1px, ปุ่ม 12px pill 3/10
    gallery (หน้า MacBook Pro): การ์ด 1260x612 ห่าง 20 เลื่อนแนวนอนแบบ snap ข้อความ 28/600 สีขาวกลางซ้าย + dotnav pill 56 + ปุ่มเล่น 56
-   ตัวอักษร: hero 80 · หัวข้อ section 48 · การ์ด 28 · eyebrow 21 · copy 21 เทา · body 17 · ระยะ section 128–144 · มุม 28 */
+   ตัวอักษร: hero 80 หัวข้อ section 48 การ์ด 28 eyebrow 21 copy 21 เทา body 17 ระยะ section 128–144 มุม 28 */
 :root{--bg:#fff;--alt:#f5f5f7;--ink:#1d1d1f;--mute:#6e6e73;--mute2:#86868b;--line:#d2d2d7;--blue:#0071e3;--link:#0066cc;--glass:rgba(232,232,237,.72)}
 *{box-sizing:border-box;min-width:0}
-html{scroll-padding-top:64px}
+html{scroll-padding-top:80px}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.47 "Noto Sans Thai",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
 img,video{display:block;max-width:100%}
 h1,h2,h3,p{margin:0}
@@ -53,25 +53,19 @@ button{font:inherit;color:inherit}
 .ribbon{background:var(--alt);min-height:51px;display:flex;align-items:center;justify-content:center;font-size:14px;padding:12px 22px;text-align:center}
 
 /* localnav (MacBook Pro style) */
-.ln{position:sticky;top:0;z-index:50;height:52px;margin-bottom:-52px;background:transparent;transition:background .35s,backdrop-filter .35s}
-.ln.solid{background:rgba(251,251,253,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px)}
-.ln:not(.solid) .ln-title b,.ln:not(.solid) .ln-title span,.ln:not(.solid) .ln-menu a,.ln:not(.solid) .ln-chev{color:#f5f5f7}
-.ln:not(.solid) .ln-menu a.cur::after{background:#f5f5f7}
-.ln .in{max-width:1024px;margin:0 auto;padding:0 22px;height:52px;display:flex;align-items:center;gap:24px}
-.ln-title{margin-right:auto;line-height:1.15;white-space:nowrap}
-.ln-title b{display:block;font-size:21px;font-weight:600;color:var(--ink)}
-.ln-title span{font-size:12px;color:var(--ink)}
-.ln-menu{display:flex;gap:24px;font-size:12px}
-.ln-menu a{color:var(--ink);position:relative;white-space:nowrap;opacity:.88}
-.ln-menu a:hover{opacity:1;text-decoration:none}
-.ln-menu a.cur{opacity:1}.ln-menu a.cur::after{content:"";position:absolute;left:0;right:0;bottom:-17px;height:1px;background:#000}
-.ln-btn{font-size:12px;line-height:1.33;padding:3px 10px;border-radius:980px;background:var(--blue);color:#fff;white-space:nowrap}
-.ln-btn:hover{text-decoration:none;background:#0077ed}
-.ln-chev{display:none;border:0;background:none;cursor:pointer;width:32px;height:32px;font-size:14px;color:var(--ink)}
-.ln-drop{display:none}
+.ln{position:fixed;top:14px;left:0;right:0;z-index:50;display:flex;justify-content:center;pointer-events:none;padding:0 12px}
+.tabbar{pointer-events:auto;position:relative;display:flex;align-items:center;gap:2px;padding:5px;border-radius:999px;background:rgba(22,22,23,.8);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12),inset 0 1px 0 rgba(255,255,255,.18),0 12px 32px rgba(0,0,0,.22);max-width:100%;overflow-x:auto;scrollbar-width:none}
+.tabbar::-webkit-scrollbar{display:none}
+.tabbar a{position:relative;z-index:1;color:rgba(245,245,247,.72);font-size:13px;font-weight:500;padding:8px 16px;border-radius:999px;white-space:nowrap;transition:color .25s}
+.tabbar a:hover{color:#fff;text-decoration:none}
+.tabbar a.cur{color:#fff}
+.tabbar .ind{position:absolute;z-index:0;top:5px;bottom:5px;left:0;width:0;border-radius:999px;background:rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);transition:left .35s cubic-bezier(.3,.7,.2,1),width .35s cubic-bezier(.3,.7,.2,1)}
+.tabbar .ln-btn{background:var(--blue);color:#fff;margin-left:6px;padding:8px 18px;transition:opacity .3s,max-width .35s,padding .35s,margin .35s;max-width:120px;overflow:hidden}
+.tabbar .ln-btn:hover{background:#0077ed}
+.tabbar .ln-btn.off{opacity:0;max-width:0;padding-left:0;padding-right:0;margin-left:0;pointer-events:none}
 
 /* hero (dark, media blends into the page like MacBook Pro) */
-.hero{background:#000;color:#f5f5f7;padding:140px 0 72px;text-align:center;position:relative;overflow:clip}
+.hero{background:#000;color:#f5f5f7;padding:120px 0 72px;text-align:center;position:relative;overflow:clip}
 .hero .t-hero{margin-top:6px;padding:0 22px}
 .hero-media{position:relative;width:min(1440px,100%);margin:8px auto 0;aspect-ratio:16/9;max-height:780px;}
 .hero-media video{width:100%;height:100%;object-fit:cover;display:block}
@@ -86,7 +80,7 @@ button{font:inherit;color:inherit}
 .hero-pill b{font-weight:600}
 .pill-btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 24px;border-radius:24px;background:var(--blue);color:#fff!important;font-size:17px;font-weight:500}
 .pill-btn:hover{text-decoration:none;background:#0077ed}
-.ln-btn{transition:opacity .3s,transform .3s}.ln-btn.off{opacity:0;transform:translateY(4px);pointer-events:none}
+
 
 /* gallery (MBP highlights) */
 .gal{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(22px,calc((100% - 1260px)/2));scroll-padding:0 max(22px,calc((100% - 1260px)/2))}
@@ -116,7 +110,7 @@ button{font:inherit;color:inherit}
 .cmp img,.cmp video{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px;margin-bottom:28px;background:#000}
 .cmp .tag{font-size:12px;font-weight:600;color:#b64400;margin-bottom:6px}
 .cmp h3{margin-bottom:10px}
-.cmp .q{font-size:17px;margin-bottom:6px}
+.cmp .q{font-size:17px;margin-bottom:6px;color:var(--mute)}
 .cmp .price{font-size:14px;margin:14px 0 26px}
 .cmp .act{display:flex;flex-direction:column;align-items:center;gap:16px}
 .cmp dl{margin:40px 0 0;border-top:1px solid var(--line)}
@@ -235,14 +229,12 @@ button{font:inherit;color:inherit}
 .gf .dir a{display:block;color:var(--mute);margin:6px 0}
 .gf .legal{padding-top:16px}
 
-@media(max-width:1068px){.t-hero,.t-xxl{font-size:64px}.t-xl{font-size:48px}.t-sec{font-size:40px}.card{height:520px}.cl{grid-template-columns:minmax(0,300px) minmax(0,1fr)}.ln-menu{display:none}.ln-chev{display:block}
- .ln-drop.on{display:block;position:absolute;left:0;right:0;top:52px;background:rgba(251,251,253,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.16);padding:8px 22px 16px}
- .ln-drop a{display:block;padding:12px 0;border-bottom:1px solid #e8e8ed;color:var(--ink);font-size:17px}}
+@media(max-width:1068px){.t-hero,.t-xxl{font-size:64px}.t-xl{font-size:48px}.t-sec{font-size:40px}.card{height:520px}.cl{grid-template-columns:minmax(0,300px) minmax(0,1fr)}}
 @media(max-width:734px){
  .gn ul li:not(.keep){display:none}
  .sec{padding:88px 0}.cl-head{padding:88px 0 40px}
  .t-hero,.t-xxl{font-size:40px}.t-xl,.t-sec{font-size:32px}.t-card{font-size:21px}.t-copy{font-size:19px}.t-eyebrow{font-size:17px}
- .ln-title b{font-size:17px}.ln-title span{font-size:11px}
+ .tabbar a.opt{display:none}.tabbar a{padding:8px 12px}
  .hero{padding:108px 0 56px}.hero-media{aspect-ratio:4/3}.hero-meta{margin-top:8px}
  .card{height:560px}#galPrev,#galNext{display:none}.dots{gap:12px;padding:0 18px}.card.art svg{right:50%;top:auto;bottom:48px;transform:translateX(50%);width:70%}.card::before{background:linear-gradient(180deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.25) 45%,transparent 70%)}.card .cap{left:24px;right:24px;top:36px;transform:none}
  .cmp{grid-template-columns:minmax(0,1fr);gap:56px}.cmp-card{padding:40px 22px}
@@ -266,15 +258,11 @@ button{font:inherit;color:inherit}
 
 
 <header class="ln">
-  <div class="in">
-    <a class="ln-title" href="#top" style="text-decoration:none"><b>Portfolio Camp</b><span>ค่ายทำเกม TCAS รอบ 1</span></a>
-    <nav class="ln-menu" aria-label="ในหน้านี้">
-      <a href="#top" class="cur">ภาพรวม</a><a href="#paths">เลือกเส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#schedule">กำหนดการ</a><a href="#parents">ผู้ปกครอง</a><a href="#faq">คำถาม</a>
-    </nav>
-    <button class="ln-chev" id="lnChev" aria-expanded="false" aria-label="เมนูในหน้านี้">⌄</button>
-    <a class="ln-btn" id="lnBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a>
-  </div>
-  <nav class="ln-drop" id="lnDrop" aria-label="ในหน้านี้ (มือถือ)"><a href="#paths">เลือกเส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#examples">ตัวอย่างผลงาน</a><a href="#schedule">กำหนดการ</a><a href="#parents">ผู้ปกครอง</a><a href="#faq">คำถาม</a></nav>
+  <nav class="tabbar" id="tabbar" aria-label="ในหน้านี้">
+    <span class="ind" aria-hidden="true"></span>
+    <a href="#top" class="cur">ภาพรวม</a><a href="#paths">เส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#schedule">กำหนดการ</a><a href="#parents" class="opt">ผู้ปกครอง</a><a href="#faq" class="opt">คำถาม</a>
+    <a class="ln-btn off" id="lnBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a>
+  </nav>
 </header>
 
 <main id="top">
@@ -283,11 +271,11 @@ button{font:inherit;color:inherit}
   <p class="t-hero"><span style="white-space:nowrap">3 วัน ทำเกม</span> <span style="white-space:nowrap">เข้ารอบพอร์ต</span></p>
   <div class="hero-media"><video src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกมเพลย์ COMMAND SELECT"></video></div>
   
-  <div class="aap" id="aap"><div class="hero-pill"><span>27–29 พ.ย. 2569 · <b>190 บาท</b></span><a class="pill-btn" id="aapBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a></div></div>
+  <div class="aap" id="aap"><div class="hero-pill"><span>27–29 พ.ย. 2569</span><b>190 บาท</b><a class="pill-btn" id="aapBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a></div></div>
 </section>
 
 <section class="sec alt" id="highlights">
-  <div class="vw"><div class="sh"><div><h2 class="t-sec rv">3 วันในค่ายมีอะไรบ้าง</h2><p class="t-copy" style="margin-top:8px">ศุกร์เย็นถึงอาทิตย์ ลงมือทำเกมเองทุกขั้น มีพี่ ๆ ช่วยสอนและคอมเมนต์ตลอดค่าย</p></div></div></div>
+  <div class="vw"><div class="sh"><h2 class="t-sec rv">3 วัน ทำอะไร ได้อะไร</h2></div></div>
   <div class="gal" id="gal" aria-roledescription="carousel"></div>
   <div class="ctrls"><button class="round" id="galPrev" aria-label="ก่อนหน้า">‹</button><div class="dots" id="dots" role="tablist" aria-label="ไฮไลท์"></div><button class="round" id="galNext" aria-label="ถัดไป">›</button><button class="round" id="playBtn" aria-label="หยุด">❚❚</button></div>
 </section>
@@ -296,7 +284,7 @@ button{font:inherit;color:inherit}
 
 <section class="sec alt" id="paths">
   <div class="vw">
-    <div class="sh"><h2 class="t-sec rv">น้องอยู่ตรงไหน</h2><a class="more" href="#compare">ดูข้อมูลแต่ละเส้นทางเทียบกัน</a></div>
+    <div class="sh"><h2 class="t-sec rv">น้องอยู่ตรงไหน</h2><a class="more" href="#compare">เทียบ 2 เส้นทาง</a></div>
     <div class="cmp-card"><div class="cmp">
       <div>
         <video src="vid/hydrosaur.mp4" poster="img/hydrosaur.jpg" muted loop playsinline autoplay aria-label="ภาพจากเกม Hydrosaur"></video>
@@ -319,7 +307,7 @@ button{font:inherit;color:inherit}
 </section>
 
 <section id="basic" class="alt" style="padding-top:0">
-  <div class="vw cl-head" style="padding-top:0"><p class="t-eyebrow rv">เส้นทางมือใหม่</p><h2 class="t-xl rv" style="margin-top:8px">จากไอเดีย สู่เกมที่เล่นได้</h2><p class="t-copy rv" style="margin-top:20px;max-width:680px">ไม่เคยทำเกมก็เริ่มได้ ทำทีละขั้นกับพี่ ๆ ในบ้าน จนได้<b>เกมที่เล่นได้จริง 1 เกม</b></p></div>
+  <div class="vw cl-head c" style="padding-top:0"><p class="t-eyebrow rv" style="color:var(--mute)">เส้นทางมือใหม่</p><h2 class="t-xxl rv">จากไอเดีย<br>สู่เกมที่เล่นได้</h2><p class="t-copy rv" style="margin:32px auto 0;max-width:816px">ไม่เคยทำเกมก็เริ่มได้ ทำทีละขั้นกับพี่ ๆ ในบ้าน จนได้<b>เกมที่เล่นได้จริง 1 เกม</b></p></div>
   <div class="vw cl" data-cl="basic"><div class="cl-list"></div><div class="ph cl-stage"></div></div>
 </section>
 
@@ -369,12 +357,12 @@ button{font:inherit;color:inherit}
 </section>
 
 <section class="sec alt" id="compare" style="padding-top:0">
-  <div class="vw"><div class="sh"><h2 class="t-sec rv">ดูข้อมูลแต่ละเส้นทาง</h2></div>
+  <div class="vw"><div class="sh"><h2 class="t-sec rv">เทียบ 2 เส้นทาง</h2></div>
     <div class="cmp-card"><div class="cmp" id="cmp"></div></div></div>
 </section>
 
 <section class="sec alt" id="faq" style="padding-top:0">
-  <div class="vw"><div class="sh"><h2 class="t-sec rv">เมื่อมีคำถาม เราก็มีคำตอบ</h2><button class="xall" id="xall">ขยายทั้งหมด ⌄</button></div>
+  <div class="vw"><div class="sh"><h2 class="t-sec rv">เมื่อมีคำถาม เราก็มีคำตอบ</h2></div>
   <div class="faq" id="faqList"></div></div>
 </section>
 
@@ -394,7 +382,8 @@ button{font:inherit;color:inherit}
       <p>2. TGAT/TPAT ของ TCAS70 เลื่อนไปสอบเดือน ม.ค. 2570 ที่มา: <a href="https://www.bangkokbiznews.com/news/news-update/1231277">กรุงเทพธุรกิจ</a></p>
       <p>3. รอบ Portfolio แต่ละมหาวิทยาลัยกำหนดวันรับสมัครเอง เช่น มทส. รอบ 1.2 เปิดรับ 16 พ.ย. 69 – 14 ม.ค. 70 ที่มา: <a href="https://today.line.me/th/v3/article/9m3j1gK">Eduzones</a> ให้เช็กวันของคณะที่จะยื่นอีกครั้ง</p>
       <p>4. ภาพและคลิปทั้งหมดมาจากผลงานจริง COMMAND SELECT เป็นภาพหน้าจอจากหน้า itch.io ของเกม กรอบลายทางคือจุดที่ต้องใส่ภาพถ่ายจริงจากค่าย</p>
-      <p>5. ผู้ที่มีผลงานเดิม ส่งผลงานหลังชำระเงินเพื่อประเมินเกรด · สถานที่จัดค่าย [รอทีมยืนยัน]</p>
+      <p>5. ผู้ที่มีผลงานเดิม ส่งผลงานหลังชำระเงินเพื่อประเมินเกรด</p>
+      <p>6. สถานที่จัดค่าย [รอทีมยืนยัน]</p>
     </div>
     <div class="bc">Hamster Hub › Portfolio Camp</div>
     <div class="dir">
@@ -403,7 +392,7 @@ button{font:inherit;color:inherit}
       <div><b>เกี่ยวกับ Hamster Hub</b><a href="https://www.hamsterhub.co/about">เกี่ยวกับเรา</a><a href="https://www.hamsterhub.co/">หน้าแรก</a></div>
       <div><b>ติดต่อ</b><a href="https://page.line.me/jkm4247u?openQrModal=true">LINE</a><a href="https://www.instagram.com/hamsterhub.official/">Instagram</a><a href="https://www.facebook.com/HamsterHubThailand">Facebook</a></div>
     </div>
-    <p class="legal">Hamster Hub · ต้นแบบหน้าเว็บ (prototype) ยังไม่ใช่หน้าจริง</p>
+    <p class="legal">Hamster Hub ต้นแบบหน้าเว็บ (prototype) ยังไม่ใช่หน้าจริง</p>
   </div>
 </footer>
 
@@ -420,27 +409,23 @@ const DEADLINE=new Date('2026-11-25T23:59:00+07:00'),START=new Date('2026-11-27T
 const phase=()=>{const n=new Date();return n<=DEADLINE?'open':n<START?'closed':n<=END?'live':'done';};
 const left=()=>{const ms=Math.max(0,DEADLINE-Date.now());return{ms,d:Math.floor(ms/864e5),h:Math.floor(ms/36e5)%24,m:Math.floor(ms/6e4)%60};};
 const COPY={
- open:()=>{const l=left();return `อีก ${l.d} วัน ${l.h} ชม. ปิดรับสมัคร · หลายมหาวิทยาลัยยังเปิดรับรอบ Portfolio ถึงต้นปี 2570<sup>2</sup> เพิ่มเกมลงแฟ้มให้ทันก่อนยื่น <a class="more" href="${REG}">สมัครค่าย</a>`;},
- closed:()=>`ปิดรับสมัครแล้ว · ค่ายเริ่มศุกร์ 27 พ.ย. เวลา 18:30 น. <a class="more" href="#schedule">ดูกำหนดการ</a>`,
- live:()=>`ค่ายกำลังจัดอยู่ตอนนี้ · วันอาทิตย์ 14:00 น. ประกาศ Top 10 <a class="more" href="#schedule">ดูกำหนดการ</a>`,
- done:()=>`ค่ายรอบนี้จบแล้ว · อยากได้ข่าวค่ายรอบหน้า <a class="more" href="${LINE}">ทัก LINE ถามทีม</a>`};
+ open:()=>{const l=left();return `อีก ${l.d} วัน ${l.h} ชม. ปิดรับสมัคร หลายมหาวิทยาลัยยังเปิดรับรอบ Portfolio ถึงต้นปี 2570<sup>2</sup> เพิ่มเกมลงแฟ้มให้ทันก่อนยื่น <a class="more" href="${REG}">สมัครค่าย</a>`;},
+ closed:()=>`ปิดรับสมัครแล้ว ค่ายเริ่มศุกร์ 27 พ.ย. เวลา 18:30 น. <a class="more" href="#schedule">ดูกำหนดการ</a>`,
+ live:()=>`ค่ายกำลังจัดอยู่ตอนนี้ วันอาทิตย์ 14:00 น. ประกาศ Top 10 <a class="more" href="#schedule">ดูกำหนดการ</a>`,
+ done:()=>`ค่ายรอบนี้จบแล้ว อยากได้ข่าวค่ายรอบหน้า <a class="more" href="${LINE}">ทัก LINE ถามทีม</a>`};
 const tick=()=>{const p=phase();
  const l=left();$('#cd').innerHTML=p==='open'?[[l.d,'วัน'],[l.h,'ชั่วโมง'],[l.m,'นาที']].map(([n,t])=>`<div><b>${String(n).padStart(2,'0')}</b><span>${t}</span></div>`).join(''):`<div><b>${p==='done'?'จบแล้ว':'ปิดรับแล้ว'}</b></div>`;
  if(p!=='open'){$('#cdLabel').textContent=p==='done'?'ค่ายรอบนี้':'การรับสมัคร';[$('#lnBtn'),$('#cdBtn'),$('#aapBtn')].forEach(b=>{b.href=LINE;b.textContent='ทัก LINE';});}};
 tick();setInterval(tick,30000);
 
-/* localnav button hides while the hero buy pill is on screen (Apple pattern) */
-{const ab=$('#aap'),lb=$('#lnBtn');lb.classList.add('off');new IntersectionObserver(es=>{lb.classList.toggle('off',es[0].isIntersecting&&scrollY<document.querySelector('.hero').offsetHeight);},{threshold:0}).observe(ab);
-addEventListener('scroll',()=>{lb.classList.toggle('off',scrollY<document.querySelector('.hero').offsetHeight-innerHeight*0.2);},{passive:true});}
-/* localnav: see-through on the dark hero, frosted after it */
-{const ln=document.querySelector('.ln'),h=document.querySelector('.hero');const f=()=>ln.classList.toggle('solid',scrollY>h.offsetHeight-60);addEventListener('scroll',f,{passive:true});f();}
-/* localnav: current section + mobile dropdown */
-const links=[...document.querySelectorAll('.ln-menu a')];
-const secIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+e.target.id||(e.target.id==='highlights'&&a.getAttribute('href')==='#top')));}}),{rootMargin:'-45% 0px -50% 0px'});
-['highlights','paths','grades','schedule','parents','faq'].forEach(id=>secIO.observe(document.getElementById(id)));
-addEventListener('scroll',()=>{if(scrollY<document.getElementById('highlights').offsetTop-200)links.forEach((a,i)=>a.classList.toggle('cur',i===0));},{passive:true});
-$('#lnChev').addEventListener('click',e=>{const o=$('#lnDrop').classList.toggle('on');e.currentTarget.setAttribute('aria-expanded',o);e.currentTarget.textContent=o?'⌃':'⌄';});
-$('#lnDrop').addEventListener('click',()=>{$('#lnDrop').classList.remove('on');$('#lnChev').textContent='⌄';});
+/* tab bar: sliding indicator, current section, สมัคร appears after the hero pill leaves */
+{const tb=$('#tabbar'),ind=tb.querySelector('.ind'),links=[...tb.querySelectorAll('a:not(.ln-btn)')],lb=$('#lnBtn'),hero=document.querySelector('.hero');
+ const place=()=>{const c=tb.querySelector('a.cur');if(!c||c.offsetParent===null){ind.style.width=0;return;}ind.style.left=c.offsetLeft+'px';ind.style.width=c.offsetWidth+'px';};
+ const setCur=id=>{links.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+id));place();};
+ const ids=['top','paths','grades','schedule','parents','faq'];
+ const onScroll=()=>{lb.classList.toggle('off',scrollY<hero.offsetHeight-innerHeight*0.25);let id='top';for(const k of ids.slice(1)){const el=document.getElementById(k);if(el&&el.getBoundingClientRect().top<innerHeight*0.45)id=k;}setCur(id);};
+ addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',place);lb.addEventListener('transitionend',place);onScroll();
+ document.fonts&&document.fonts.ready.then(place);}
 
 /* highlights gallery: horizontal cards, caption over media, timed dotnav */
 const HL=[
@@ -480,11 +465,11 @@ document.querySelectorAll('[data-cl]').forEach(box=>{const L=STEPS[box.dataset.c
 /* grade explorer: what a game at each level looks like */
 const G=[
  [0,"ยังไม่มีพื้นฐาน",null,"",["ยังไม่เคยทำเกม หรือยังไม่มีเกมที่เล่นได้","มีแค่ไอเดียในหัว"],"เริ่มที่เส้นทางมือใหม่"],
- [10,"เริ่มทำเกมเล็ก ๆ","hydrosaur","Hydrosaur · เกรด 10",["ตัวละครขยับได้ มีฉากให้เดิน","ยังไม่มีเป้าหมายและวิธีเล่นที่ชัดเจน"],"เส้นทางมือใหม่"],
- [20,"มีเกมที่เล่นได้ระดับ Game Jam","noas","Noas · เกรด 20",["เล่นได้ตั้งแต่ต้นจนจบ","แนวเกม ปริศนา และความน่ากลัวยังไม่ชัด"],"เส้นทางมือใหม่"],
- [30,"เกมดูดีและมีความคิดสร้างสรรค์","pitch","PITCH · เกรด 30",["มีสไตล์ภาพของตัวเอง คอนเซปต์น่าสนใจ","เกมเพลย์ยังดึงความกลัวออกมาไม่เต็มที่"],"เส้นทางล่า Top 10"],
- [40,"เกมออกแบบได้ดี","apocalypse","Apocalypse Building · เกรด 40",["ไอเดียชัด รู้ทันทีว่าต้องทำอะไร","สองระบบหลักยังไม่เชื่อมกัน"],"เส้นทางล่า Top 10"],
- [50,"เกมที่กำลังจะเปิดตัว","stage-pitch","RE//SLASH · เกรด 50 (ภาพตอนนำเสนอ)",["พร้อมปล่อยเดโม","ยังต้องเพิ่มเนื้อหาและความก้าวหน้าก่อนเปิดเต็ม"],"เส้นทางล่า Top 10"],
+ [10,"เริ่มทำเกมเล็ก ๆ","hydrosaur","Hydrosaur เกรด 10",["ตัวละครขยับได้ มีฉากให้เดิน","ยังไม่มีเป้าหมายและวิธีเล่นที่ชัดเจน"],"เส้นทางมือใหม่"],
+ [20,"มีเกมที่เล่นได้ระดับ Game Jam","noas","Noas เกรด 20",["เล่นได้ตั้งแต่ต้นจนจบ","แนวเกม ปริศนา และความน่ากลัวยังไม่ชัด"],"เส้นทางมือใหม่"],
+ [30,"เกมดูดีและมีความคิดสร้างสรรค์","pitch","PITCH เกรด 30",["มีสไตล์ภาพของตัวเอง คอนเซปต์น่าสนใจ","เกมเพลย์ยังดึงความกลัวออกมาไม่เต็มที่"],"เส้นทางล่า Top 10"],
+ [40,"เกมออกแบบได้ดี","apocalypse","Apocalypse Building เกรด 40",["ไอเดียชัด รู้ทันทีว่าต้องทำอะไร","สองระบบหลักยังไม่เชื่อมกัน"],"เส้นทางล่า Top 10"],
+ [50,"เกมที่กำลังจะเปิดตัว","stage-pitch","RE//SLASH เกรด 50 (ภาพตอนนำเสนอ)",["พร้อมปล่อยเดโม","ยังต้องเพิ่มเนื้อหาและความก้าวหน้าก่อนเปิดเต็ม"],"เส้นทางล่า Top 10"],
  [60,"เปิด Demo ให้คนทั่วไปลองเล่น","command-select","ตัวอย่างลักษณะ: COMMAND SELECT (DEMO) เปิดให้โหลดบน itch.io",["มีหน้าให้คนทั่วไปโหลดไปลองเล่น เช่น itch.io","มีคนนอกทีมได้เล่นจริงและให้ความเห็น"],"ระดับมืออาชีพ"],
  [70,"เกมสร้างรายได้แล้ว",null,"",["มีคนจ่ายเงินซื้อเกมหรือของในเกม","วางขายบนร้านค้า เช่น Steam หรือมือถือ"],"ระดับมืออาชีพ"],
  [80,"เกมมีเอกลักษณ์และพัฒนาเป็นสตาร์ทอัพแล้ว",null,"",["เห็นภาพเดียวก็จำได้ว่าเป็นเกมนี้","มีทีมหรือบริษัทพัฒนาต่อเป็นธุรกิจ"],"ระดับมืออาชีพ"],
@@ -524,7 +509,7 @@ const INC=[
  ["ได้อะไรกลับบ้าน","ลูกจะได้อะไรจาก 3 วันนี้?","เกมของตัวเอง 1 เกม พร้อมคอมเมนต์ว่าควรพัฒนาต่อตรงไหน",'<video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline autoplay></video>',"ทุกเส้นทางจบค่ายด้วยเกมที่น้องทำเองหนึ่งเกม และคอมเมนต์จากพี่ ๆ ว่าควรพัฒนาต่อตรงไหน นำไปใส่แฟ้มพอร์ตและเล่าต่อในวันสัมภาษณ์ได้"],
  ["ใช้ยื่นพอร์ตได้จริงไหม","ผลงานจากค่ายมีน้ำหนักแค่ไหน?","TCAS70 เน้นศักยภาพจริง¹ งานที่ทำเองและเล่าเองได้คือจุดแข็ง",'<video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline autoplay></video>',"ปีนี้ TCAS70 ปรับรอบ Portfolio ให้เน้นศักยภาพจริง ในค่ายน้องทำเกมเองตั้งแต่ไอเดียจนเล่นได้ และได้ฝึกนำเสนองานของตัวเองต่อหน้าคนอื่นในวันสุดท้าย"],
  ["ไม่มีพื้นฐาน","ลูกไม่เคยเขียนโปรแกรมเลย ตามทันไหม?","มีเส้นทางมือใหม่ สอนทีละขั้นตั้งแต่ออกแบบเกม",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="40" y="14" width="220" height="110" rx="10"/><path d="M20 136h260"/><path d="M110 50l-24 20 24 20M190 50l24 20-24 20M162 40l-24 62"/></svg>`,"เส้นทางมือใหม่เริ่มจาก Game Design → Graybox → Core System → Prototype ทำทีละขั้นกับพี่ ๆ ในบ้าน ไม่ต้องมีพื้นฐานมาก่อน"],
- ["เวลาเรียน","กระทบการเรียนหรือการสอบไหม?","จัดศุกร์เย็นถึงอาทิตย์ และจบก่อนสอบ TGAT/TPAT เดือน ม.ค. 2570²",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><g font-family="Noto Sans Thai,sans-serif" stroke="none" fill="#0071e3" text-anchor="middle"><text x="50" y="58" font-size="20">ศุกร์</text><text x="150" y="58" font-size="20">เสาร์</text><text x="250" y="58" font-size="20">อาทิตย์</text><text x="50" y="112" font-size="40" font-weight="600">27</text><text x="150" y="112" font-size="40" font-weight="600">28</text><text x="250" y="112" font-size="40" font-weight="600">29</text></g><rect x="8" y="22" width="84" height="116" rx="14"/><rect x="108" y="22" width="84" height="116" rx="14"/><rect x="208" y="22" width="84" height="116" rx="14"/><path d="M8 70h84M108 70h84M208 70h84"/></svg>`,"ศุกร์ 27 พ.ย. 18:30–22:00 น. · เสาร์ 28 พ.ย. 13:00–22:00 น. · อาทิตย์ 29 พ.ย. 10:00–21:00 น. ไม่ชนวันเรียน ส่วนการสอบ TGAT/TPAT ของ TCAS70 เลื่อนไปจัดเดือนมกราคม 2570"],
+ ["เวลาเรียน","กระทบการเรียนหรือการสอบไหม?","จัดศุกร์เย็นถึงอาทิตย์ และจบก่อนสอบ TGAT/TPAT เดือน ม.ค. 2570²",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><g font-family="Noto Sans Thai,sans-serif" stroke="none" fill="#0071e3" text-anchor="middle"><text x="50" y="58" font-size="20">ศุกร์</text><text x="150" y="58" font-size="20">เสาร์</text><text x="250" y="58" font-size="20">อาทิตย์</text><text x="50" y="112" font-size="40" font-weight="600">27</text><text x="150" y="112" font-size="40" font-weight="600">28</text><text x="250" y="112" font-size="40" font-weight="600">29</text></g><rect x="8" y="22" width="84" height="116" rx="14"/><rect x="108" y="22" width="84" height="116" rx="14"/><rect x="208" y="22" width="84" height="116" rx="14"/><path d="M8 70h84M108 70h84M208 70h84"/></svg>`,"ศุกร์ 27 พ.ย. 18:30–22:00 น.<br>เสาร์ 28 พ.ย. 13:00–22:00 น.<br>อาทิตย์ 29 พ.ย. 10:00–21:00 น. ไม่ชนวันเรียน ส่วนการสอบ TGAT/TPAT ของ TCAS70 เลื่อนไปจัดเดือนมกราคม 2570"],
  ["การสมัคร","สมัครและจ่ายเงินยังไง?","3 ขั้นตอนบนเว็บ ปิดรับ 25 พ.ย. 23:59 น.",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="40" cy="75" r="26"/><circle cx="150" cy="75" r="26"/><circle cx="260" cy="75" r="26"/><path d="M72 75h46M182 75h46"/><path d="M28 75l9 9 16-18M138 75l9 9 16-18"/><g font-family="Noto Sans Thai,sans-serif" stroke="none" fill="#0071e3" text-anchor="middle" font-size="18"><text x="40" y="132">สมัคร</text><text x="150" y="132">กรอกข้อมูล</text><text x="260" y="132">ชำระเงิน</text><text x="260" y="82" font-size="20" font-weight="600">฿</text></g></svg>`,"กดปุ่มสมัคร → เข้าสู่ระบบ → กรอกข้อมูล → ชำระเงิน ปิดรับสมัคร 25 พ.ย. 2569 เวลา 23:59 น. ผู้ที่มีผลงานเดิมส่งผลงานหลังชำระเงินเพื่อประเมินเกรด"],
  ["สถานที่และผู้ดูแล","จัดที่ไหน ใครดูแลลูก?","[รอทีมยืนยัน]",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M150 128s-46-42-46-76a46 46 0 0 1 92 0c0 34-46 76-46 76z"/><circle cx="150" cy="52" r="16"/><path d="M40 140h220"/></svg>`,"ทีมยังไม่ได้ยืนยันสถานที่และผู้ดูแล ระหว่างนี้ทัก LINE ถามทีมได้"],
  ["ยังมีคำถาม","อยากคุยกับทีมก่อนตัดสินใจ","ทัก LINE ได้เลย ทีมตอบเอง",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M40 20h150a20 20 0 0 1 20 20v54a20 20 0 0 1-20 20H90l-34 26v-26H40a20 20 0 0 1-20-20V40a20 20 0 0 1 20-20z"/><path d="M226 64h12a20 20 0 0 1 20 20v30a20 20 0 0 1-20 20h-10v20l-26-20h-62a20 20 0 0 1-20-20v-6" stroke="#34c759"/><circle cx="80" cy="67" r="5" fill="#0071e3"/><circle cx="115" cy="67" r="5" fill="#0071e3"/><circle cx="150" cy="67" r="5" fill="#0071e3"/></svg>`,"ทัก LINE ของ Hamster Hub เพื่อถามเรื่องค่าย สถานที่ หรือเส้นทางที่เหมาะกับลูก"]];
@@ -534,14 +519,14 @@ $('#incRail').addEventListener('click',e=>{const b=e.target.closest('.inc');if(!
 const closeM=()=>modal.classList.remove('on');$('#mx').addEventListener('click',closeM);modal.addEventListener('click',e=>{if(e.target===modal)closeM();});addEventListener('keydown',e=>{if(e.key==='Escape')closeM();});
 
 /* compare */
-const CMP=[["มือใหม่ · Basic","ยังไม่มีผลงาน","hydrosaur",["ยังไม่มีผลงาน","เกรด 0–20","Game Design → Prototype","เกมที่เล่นได้ 1 เกม","ส่งผลงาน · เปิดบูธ","190 บาท"]],["ล่า Top 10 · Advance","มีผลงานแล้ว","apocalypse",["มีผลงานแล้ว","เกรด 30–50","Basic Shader Graph","ผลงานต่อยอด + ลุ้น Top 10","Top 10 นำเสนอบนเวที","190 บาท"]]];
+const CMP=[["มือใหม่","ยังไม่มีผลงาน","hydrosaur",["ยังไม่มีผลงาน","เกรด 0–20","Game Design → Prototype","เกมที่เล่นได้ 1 เกม","ส่งผลงานและเปิดบูธ","190 บาท"]],["ล่า Top 10","มีผลงานแล้ว","apocalypse",["มีผลงานแล้ว","เกรด 30–50","Basic Shader Graph","ผลงานต่อยอด + ลุ้น Top 10","Top 10 นำเสนอบนเวที","190 บาท"]]];
 const LAB=["เหมาะกับ","เกรด","เรียน","ได้","วันสุดท้าย","ราคา"];
 $('#cmp').innerHTML=CMP.map(([n,tag,img,r])=>`<div><video src="vid/${img}.mp4" poster="img/${img}.jpg" muted loop playsinline autoplay aria-label="คลิปเกม"></video><p class="tag">${tag}</p><h3 class="t-card">${n}</h3><div class="act" style="margin-top:20px"><a class="btn" href="${REG}">สมัคร</a></div><dl>${r.map((v,i)=>`<dt>${LAB[i]}</dt><dd>${v}</dd>`).join('')}</dl></div>`).join('');
 
 /* faq */
 const FAQ=[["ยังทันยื่นรอบ Portfolio ไหม?","รอบ Portfolio ของ TCAS70 แต่ละมหาวิทยาลัยกำหนดวันรับสมัครเอง บางแห่งยังเปิดรับถึงต้นปี 2570 เช่น มทส. รอบ 1.2 เปิดรับ 16 พ.ย. 69 – 14 ม.ค. 70 ให้เช็กวันของคณะที่น้องจะยื่นอีกครั้ง"],["ไม่มีผลงาน เริ่มยังไง?","เริ่มที่เกรด 0 ได้เลย แล้วลงมือทำเกมในค่าย"],["มีเกมอยู่แล้ว เริ่มที่เกรดไหน?","ส่งผลงานหลังชำระเงิน เพื่อประเมินเกรดจากคุณภาพงาน"],["เกรดต่างจากเกรดที่โรงเรียนยังไง?","เกรดในค่ายคือระดับฝีมือทำเกม 0–100 ไม่เกี่ยวกับผลการเรียน ดูตัวอย่างแต่ละระดับได้ในส่วนระบบเกรด"],["วันสุดท้ายมีอะไร?","ส่งผลงาน เปิดบูธ ประกาศ Top 10 และ Top 10 ขึ้นนำเสนอตามกำหนดการ"]];
 $('#faqList').innerHTML=FAQ.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('');
-$('#xall').addEventListener('click',e=>{const d=[...document.querySelectorAll('#faqList details')];const o=!d.every(x=>x.open);d.forEach(x=>x.open=o);e.currentTarget.textContent=o?'ย่อทั้งหมด ⌃':'ขยายทั้งหมด ⌄';});
+false&&$('#xall').addEventListener('click',e=>{const d=[...document.querySelectorAll('#faqList details')];const o=!d.every(x=>x.open);d.forEach(x=>x.open=o);e.currentTarget.textContent=o?'ย่อทั้งหมด ⌃':'ขยายทั้งหมด ⌄';});
 
 /* rail paddles with disabled ends */
 document.querySelectorAll('.pad2').forEach(p=>{const r=document.getElementById(p.dataset.rail),[pv,nx]=p.querySelectorAll('button');
