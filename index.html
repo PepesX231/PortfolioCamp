@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio Camp – Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* PROTOTYPE v3 — โครงตาม apple.com/th ค่าวัดจากโค้ดจริงที่จอ 1440
+   localnav (หน้า MacBook Pro): sticky เต็มกว้าง สูง 52, ชื่อ 21/600 + บรรทัดรอง 12, เมนู 12px อันที่อยู่มีเส้นใต้ 1px, ปุ่ม 12px pill 3/10
+   gallery (หน้า MacBook Pro): การ์ด 1260x612 ห่าง 20 เลื่อนแนวนอนแบบ snap ข้อความ 28/600 สีขาวกลางซ้าย + dotnav pill 56 + ปุ่มเล่น 56
+   ตัวอักษร: hero 80 · หัวข้อ section 48 · การ์ด 28 · eyebrow 21 · copy 21 เทา · body 17 · ระยะ section 128–144 · มุม 28 */
+:root{--bg:#fff;--alt:#f5f5f7;--ink:#1d1d1f;--mute:#6e6e73;--mute2:#86868b;--line:#d2d2d7;--blue:#0071e3;--link:#0066cc;--glass:rgba(232,232,237,.72)}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.47 "Noto Sans Thai",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.vw{width:min(1260px,calc(100% - 44px));margin:0 auto}
+.vn{width:min(980px,calc(100% - 44px));margin:0 auto}
+.sec{padding:144px 0}
+.alt{background:var(--alt)}
+.dark{background:#000;color:#f5f5f7}
+.c{text-align:center}
+.more::after{content:" ›"}
+.dark a{color:#2997ff}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 21px;border-radius:980px;background:var(--blue);color:#fff;font-size:17px;border:0;cursor:pointer;white-space:nowrap}
+.btn:hover{text-decoration:none;background:#0077ed}
+.ph{background:repeating-linear-gradient(45deg,#e8e8ed 0 12px,#fafafc 12px 24px);display:grid;place-items:center;color:var(--mute);font-size:14px;text-align:center;padding:16px}
+.dark .ph{background:repeating-linear-gradient(45deg,#1c1c1e 0 12px,#242426 12px 24px);color:var(--mute2)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+.t-eyebrow{font-size:21px;line-height:1.2;font-weight:600}
+.t-hero,.t-xxl{font-size:80px;line-height:1.3;font-weight:600;letter-spacing:-.015em;text-wrap:balance}
+.t-xl{font-size:64px;line-height:1.3;font-weight:600;text-wrap:balance}
+.t-sec{font-size:48px;line-height:1.3;font-weight:600}
+.t-card{font-size:28px;line-height:1.39;font-weight:600}
+.t-copy{font-size:21px;line-height:1.4;color:var(--mute)}
+.t-copy b{color:var(--ink);font-weight:600}.dark .t-copy{color:var(--mute2)}.dark .t-copy b{color:#f5f5f7}
+.t-small{font-size:14px;line-height:1.4}
+.t-cap{font-size:12px;line-height:1.35;color:var(--mute)}
+.sh{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:56px}
+
+/* globalnav + ribbon */
+.gn{height:44px;background:rgba(250,250,252,.8);font-size:12px}
+.gn ul{list-style:none;margin:0 auto;padding:0 22px;max-width:1024px;height:44px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.gn a{color:var(--ink);opacity:.8;white-space:nowrap}.gn a:hover{opacity:1;text-decoration:none}.gn .logo{font-weight:600;opacity:1}
+.ribbon{background:var(--alt);min-height:51px;display:flex;align-items:center;justify-content:center;font-size:14px;padding:12px 22px;text-align:center}
+
+/* localnav (MacBook Pro style) */
+.ln{position:sticky;top:0;z-index:50;height:52px;background:rgba(251,251,253,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.16)}
+.ln .in{max-width:1024px;margin:0 auto;padding:0 22px;height:52px;display:flex;align-items:center;gap:24px}
+.ln-title{margin-right:auto;line-height:1.15;white-space:nowrap}
+.ln-title b{display:block;font-size:21px;font-weight:600;color:var(--ink)}
+.ln-title span{font-size:12px;color:var(--ink)}
+.ln-menu{display:flex;gap:24px;font-size:12px}
+.ln-menu a{color:var(--ink);position:relative;white-space:nowrap;opacity:.88}
+.ln-menu a:hover{opacity:1;text-decoration:none}
+.ln-menu a.cur{opacity:1}.ln-menu a.cur::after{content:"";position:absolute;left:0;right:0;bottom:-17px;height:1px;background:#000}
+.ln-btn{font-size:12px;line-height:1.33;padding:3px 10px;border-radius:980px;background:var(--blue);color:#fff;white-space:nowrap}
+.ln-btn:hover{text-decoration:none;background:#0077ed}
+.ln-chev{display:none;border:0;background:none;cursor:pointer;width:32px;height:32px;font-size:14px}
+.ln-drop{display:none}
+
+/* hero (dark, media blends into the page like MacBook Pro) */
+.hero{background:#000;color:#f5f5f7;padding:88px 0 72px;text-align:center;position:relative;overflow:clip}
+.hero .t-hero{margin-top:6px;padding:0 22px}
+.hero-media{position:relative;width:min(1440px,100%);margin:8px auto 0;aspect-ratio:16/9;max-height:780px;}
+.hero-media video{width:100%;height:100%;object-fit:cover;display:block}
+.hero-media::before,.hero-media::after{content:"";position:absolute;inset:-1px;pointer-events:none}
+.hero-media::before{background:linear-gradient(180deg,#000 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 62%,rgba(0,0,0,.85) 86%,#000 100%)}
+.hero-media::after{background:linear-gradient(90deg,#000 0%,rgba(0,0,0,0) 14%,rgba(0,0,0,0) 86%,#000 100%)}
+.hero-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;margin:-40px 0 0;font-size:17px;position:relative;padding:0 22px}
+.hero-meta .t-cap{width:100%;color:#86868b}
+.hero a{color:#2997ff}
+.aap{position:sticky;bottom:32px;z-index:30;display:flex;justify-content:center;margin-top:-40px;padding:0 22px}
+.hero-pill{display:inline-flex;align-items:center;gap:22px;height:64px;padding:0 8px 0 26px;border-radius:32px;background:rgba(66,66,69,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);font-size:15px;color:#f5f5f7;white-space:nowrap}
+.hero-pill b{font-weight:600}
+.pill-btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 24px;border-radius:24px;background:var(--blue);color:#fff!important;font-size:17px;font-weight:500}
+.pill-btn:hover{text-decoration:none;background:#0077ed}
+.ln-btn{transition:opacity .3s,transform .3s}.ln-btn.off{opacity:0;transform:translateY(4px);pointer-events:none}
+
+/* gallery (MBP highlights) */
+.gal{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(22px,calc((100% - 1260px)/2));scroll-padding:0 max(22px,calc((100% - 1260px)/2))}
+.gal::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(1260px,calc(100vw - 44px));height:612px;border-radius:28px;overflow:hidden;position:relative;scroll-snap-align:start;background:#000}
+.card video,.card .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.35) 38%,transparent 62%);z-index:1}
+.card .cap{position:absolute;left:46px;top:50%;transform:translateY(-50%);max-width:420px;z-index:2;color:#f5f5f7}
+.card .src{position:absolute;right:20px;bottom:16px;z-index:2;color:rgba(255,255,255,.75);font-size:12px}
+.ctrls{display:flex;justify-content:center;gap:16px;margin-top:28px}
+.dots{display:flex;align-items:center;gap:16px;padding:0 24px;height:56px;border-radius:28px;background:var(--glass);backdrop-filter:blur(7px)}
+.dots button{width:8px;height:8px;border-radius:8px;border:0;padding:0;background:#86868b;cursor:pointer;position:relative;overflow:hidden;transition:width .4s}
+.dots button.on{width:48px;background:#c7c7cc}
+.dots button.on::after{content:"";position:absolute;inset:0;background:#1d1d1f;transform-origin:left;transform:scaleX(var(--p,0))}
+.card:not(:first-child){cursor:pointer}.round{font-size:22px;width:56px;height:56px;border-radius:50%;background:var(--glass);backdrop-filter:blur(7px);border:0;cursor:pointer;display:grid;place-items:center;font-size:16px}
+
+/* lockup */
+.lock{text-align:center}.lock .t-copy{max-width:816px;margin:32px auto 0}.lock .t-xxl{margin-top:8px}
+
+/* paths compare */
+.cmp-card{background:#fff;border-radius:28px;padding:64px 40px 56px}
+.cmp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;max-width:860px;margin:0 auto;text-align:center}
+.cmp img,.cmp video{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px;margin-bottom:28px;background:#000}
+.cmp .tag{font-size:12px;font-weight:600;color:#b64400;margin-bottom:6px}
+.cmp h3{margin-bottom:10px}
+.cmp .q{font-size:17px;margin-bottom:6px}
+.cmp .price{font-size:14px;margin:14px 0 26px}
+.cmp .act{display:flex;flex-direction:column;align-items:center;gap:16px}
+.cmp dl{margin:40px 0 0;border-top:1px solid var(--line)}
+.cmp dt{font-size:12px;color:var(--mute);margin-top:28px}
+.cmp dd{margin:6px 0 0;font-weight:600}
+
+/* closer-look */
+.cl-head{padding:144px 0 72px}
+.cl{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:48px;align-items:center;padding-bottom:144px}
+.cl-list{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.cl-item{display:flex;align-items:flex-start;gap:12px;min-height:56px;padding:16px 28px 16px 14px;border-radius:28px;background:#fff;border:0;cursor:pointer;text-align:left;max-width:360px}
+.dark .cl-item{background:rgba(66,66,69,.72)}
+.cl-item i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-style:normal;font-size:16px;line-height:1;transition:transform .3s}
+.dark .cl-item i{background:#f5f5f7;color:#000}
+.cl-item small{display:none;font-size:17px;line-height:1.47;margin-top:6px}
+.cl-item.on b{font-weight:600}.cl-item.on small{display:block}
+.cl-item.on i{transform:rotate(45deg);background:var(--blue);color:#fff}
+.cl-stage{height:540px;border-radius:28px}
+
+/* dark finale */
+.finale-type{text-align:center;padding:24px 0 0}.finale-type>b{display:block;font-size:160px;line-height:1.05;font-weight:600;letter-spacing:-.02em;margin:8px 0 16px}
+@media(max-width:734px){.finale-type>b{font-size:80px}}
+.finale{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:16/9;max-height:620px;width:100%;background:#111}
+.finale video{width:100%;height:100%;object-fit:cover;opacity:.85}
+.finale .cap{position:absolute;left:46px;bottom:40px;max-width:520px}
+.finale .cap b{display:block;font-size:80px;line-height:1.1;font-weight:600}
+.finale .src{position:absolute;right:20px;bottom:16px;font-size:12px;color:rgba(255,255,255,.7)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:96px;text-align:center}
+.stats b{display:block;font-size:64px;line-height:1.2;font-weight:600}
+.stats span{color:var(--mute2)}
+
+/* grade explorer */
+.gx{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:center;margin-top:72px}
+.gx-stage{position:relative;aspect-ratio:16/10;border-radius:28px;overflow:hidden;background:#000}
+.gx-stage video,.gx-stage img,.gx-stage .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gx-stage .src{position:absolute;left:16px;bottom:14px;color:#fff;font-size:12px;text-shadow:0 1px 3px #000}
+.gx-num{font-size:120px;line-height:1;font-weight:600}
+.gx-name{font-size:28px;font-weight:600;line-height:1.35;margin-top:8px}
+.gx-look{margin-top:20px}
+.gx-look p{font-size:12px;color:var(--mute);margin-bottom:6px}
+.gx-look ul{margin:0;padding-left:20px;font-size:17px}
+.gx-look li{margin:4px 0}
+.g-track{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));margin-top:56px}
+.g-track button{border:0;background:none;padding:14px 0 0;cursor:pointer;color:var(--mute2);font-size:14px;border-top:4px solid var(--line);transition:border-color .3s,color .3s}
+.g-track button.in{border-top-color:var(--ink);color:var(--ink)}
+.g-track button[aria-pressed=true]{font-weight:600}
+.g-legend{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font-size:12px;color:var(--mute)}
+
+/* examples (sequential autoplay) */
+.rail{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(22px,calc((100% - 1260px)/2)) 8px;scroll-padding:0 max(22px,calc((100% - 1260px)/2))}
+.rail::-webkit-scrollbar{display:none}
+.ex{flex:0 0 auto;width:min(480px,84vw);scroll-snap-align:start;border-radius:28px;overflow:hidden;background:#fff;transition:opacity .4s}
+.ex .m{aspect-ratio:16/9;position:relative;background:#000}
+.ex video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ex .bar{position:absolute;left:0;bottom:0;height:3px;background:#fff;width:0}
+.ex .b{padding:26px 30px 32px}
+.ex .gr{font-size:12px;font-weight:600;color:#b64400;margin:6px 0 10px}
+.ex:not(.on){opacity:.55}
+.paddles{display:flex;justify-content:flex-end;gap:18px;margin-top:24px}
+.paddles button{width:36px;height:36px;border-radius:50%;border:0;background:rgba(210,210,215,.64);cursor:pointer;font-size:18px}
+
+/* incentive (Apple "why buy" cards: one surface, picture sits in the card) */
+.inc{flex:0 0 auto;width:372px;height:545px;display:flex;flex-direction:column;cursor:pointer;border:0;padding:0;text-align:left;border-radius:28px;overflow:hidden;background:#fff;position:relative;scroll-snap-align:start}
+.inc .b{padding:40px 30px 0}
+.inc .k{font-size:14px;font-weight:600;margin-bottom:8px}
+.inc h3{margin-bottom:12px}
+.inc .d{font-size:14px;color:var(--ink);line-height:1.45}
+.inc .m{margin-top:auto;height:290px;position:relative;display:flex;align-items:flex-end;justify-content:center}
+.inc .m video,.inc .m img{width:100%;height:100%;object-fit:cover;display:block}
+.inc .m:has(video)::before{content:"";position:absolute;inset:-1px -1px auto;height:80%;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.96) 18%,rgba(255,255,255,.82) 36%,rgba(255,255,255,.55) 54%,rgba(255,255,255,.25) 72%,rgba(255,255,255,.07) 88%,rgba(255,255,255,0) 100%);z-index:1;pointer-events:none}
+.inc .m svg{width:78%;height:auto;margin-bottom:34px}
+.inc .m .ph{width:calc(100% - 60px);height:190px;margin:0 30px 30px;border-radius:18px}
+.inc .plus{position:absolute;right:18px;bottom:18px;width:36px;height:36px;border-radius:50%;background:rgba(51,51,54,.92);color:#fff;display:grid;place-items:center;font-size:20px;z-index:2}
+.under{display:flex;justify-content:flex-end;align-items:center;gap:28px;margin-top:28px;padding:0 max(22px,calc((100% - 1260px)/2))}
+.pad2{display:flex;gap:18px}
+.pad2 button,.paddles button{width:36px;height:36px;border-radius:50%;border:0;background:rgba(210,210,215,.64);color:rgba(0,0,0,.56);cursor:pointer;font-size:20px;line-height:1;display:grid;place-items:center;transition:opacity .2s}
+.pad2 button:hover,.paddles button:hover{background:rgba(223,223,227,.7);color:rgba(0,0,0,.64)}
+.pad2 button:disabled{opacity:.42;cursor:default}
+
+/* schedule */
+.days{display:inline-flex;gap:4px;padding:4px;border-radius:980px;background:var(--glass);margin:0 auto 48px}
+.days button{border:0;background:none;padding:10px 22px;border-radius:980px;cursor:pointer;font-size:17px;font-weight:500;white-space:nowrap}
+.days button[aria-selected=true]{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.sched{list-style:none;margin:0;padding:0;text-align:left}
+.sched li{display:grid;grid-template-columns:240px minmax(0,1fr);gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.sched time{font-size:28px;font-weight:600;white-space:nowrap}
+.sched span{font-size:21px}
+.sched em{font-style:normal;font-size:14px;color:var(--mute);margin-left:10px}
+
+/* faq */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:32px 40px 32px 0;font-size:28px;line-height:1.39;font-weight:600;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:10px;height:10px;border-right:2px solid var(--mute);border-bottom:2px solid var(--mute);transform:translateY(-70%) rotate(45deg);transition:transform .3s}
+.faq details[open] summary::after{transform:translateY(-20%) rotate(225deg)}
+.faq details p{padding:0 0 32px;max-width:760px}
+.xall{border:0;background:none;color:var(--link);font-size:14px;cursor:pointer}
+
+.cd{display:flex;justify-content:center;gap:56px;margin:24px 0 40px}
+.cd b{display:block;font-size:80px;line-height:1.1;font-weight:600;font-variant-numeric:tabular-nums}
+.cd span{color:var(--mute)}
+
+.modal{position:fixed;inset:0;z-index:99;background:rgba(0,0,0,.48);display:none;place-items:center;padding:22px}
+.modal.on{display:grid}
+.modal-card{background:#fff;border-radius:28px;max-width:816px;width:100%;padding:72px 64px;position:relative;max-height:90vh;overflow:auto}
+.modal-card .x{position:absolute;right:20px;top:20px;width:36px;height:36px;border-radius:50%;border:0;background:#333336;color:#fff;font-size:18px;cursor:pointer}
+.modal-card h2{font-size:48px;line-height:1.25;font-weight:600;margin:8px 0 24px}
+
+.gf{background:var(--alt);font-size:12px;color:var(--mute);padding:17px 0 24px}
+.gf .notes{display:grid;gap:10px;padding:24px 0;border-bottom:1px solid var(--line)}
+.gf .notes a{color:var(--link)}
+.gf .bc{padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+.gf .dir{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+.gf .dir b{display:block;color:var(--ink);font-weight:600;margin-bottom:8px}
+.gf .dir a{display:block;color:var(--mute);margin:6px 0}
+.gf .legal{padding-top:16px}
+
+@media(max-width:1068px){.t-hero,.t-xxl{font-size:64px}.t-xl{font-size:48px}.t-sec{font-size:40px}.card{height:520px}.cl{grid-template-columns:minmax(0,300px) minmax(0,1fr)}.ln-menu{display:none}.ln-chev{display:block}
+ .ln-drop.on{display:block;position:absolute;left:0;right:0;top:52px;background:rgba(251,251,253,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.16);padding:8px 22px 16px}
+ .ln-drop a{display:block;padding:12px 0;border-bottom:1px solid #e8e8ed;color:var(--ink);font-size:17px}}
+@media(max-width:734px){
+ .gn ul li:not(.keep){display:none}
+ .sec{padding:88px 0}.cl-head{padding:88px 0 40px}
+ .t-hero,.t-xxl{font-size:40px}.t-xl,.t-sec{font-size:32px}.t-card{font-size:21px}.t-copy{font-size:19px}.t-eyebrow{font-size:17px}
+ .ln-title b{font-size:17px}.ln-title span{font-size:11px}
+ .hero{padding:56px 0 56px}.hero-media{aspect-ratio:4/3}.hero-meta{margin-top:8px}
+ .card{height:560px}.card::before{background:linear-gradient(180deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.25) 45%,transparent 70%)}.card .cap{left:24px;right:24px;top:36px;transform:none}
+ .cmp{grid-template-columns:minmax(0,1fr);gap:56px}.cmp-card{padding:40px 22px}
+ .cl{grid-template-columns:minmax(0,1fr);padding-bottom:88px}.cl-stage{height:280px;order:-1}
+ .finale{aspect-ratio:4/5}.finale .cap{left:24px;right:24px;bottom:28px}.finale .cap b{font-size:48px}
+ .stats{grid-template-columns:minmax(0,1fr);gap:32px;margin-top:64px}.stats b{font-size:48px}
+ .gx{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:48px}.gx-num{font-size:80px}.gx-name{font-size:21px}
+ .g-track button{font-size:11px}
+ .inc{width:300px;height:500px}
+ .sched li{grid-template-columns:110px minmax(0,1fr);gap:12px}.sched time{font-size:17px}.sched span{font-size:17px}
+ .days button{padding:8px 12px;font-size:14px}
+ .faq summary{font-size:19px;padding:24px 32px 24px 0}
+ .cd{gap:24px}.cd b{font-size:48px}
+ .modal-card{padding:56px 24px}.modal-card h2{font-size:32px}
+ .gf .dir{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+</style>
+</head>
+<body>
+
+
+<div class="ribbon"><p id="ribbon">ปิดรับสมัคร 25 พ.ย. 2569 เวลา 23:59 น.</p></div>
+
+<header class="ln">
+  <div class="in">
+    <a class="ln-title" href="#top" style="text-decoration:none"><b>Portfolio Camp</b><span>ค่ายทำเกม TCAS รอบ 1</span></a>
+    <nav class="ln-menu" aria-label="ในหน้านี้">
+      <a href="#top" class="cur">ภาพรวม</a><a href="#paths">เลือกเส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#schedule">กำหนดการ</a><a href="#parents">ผู้ปกครอง</a><a href="#faq">คำถาม</a>
+    </nav>
+    <button class="ln-chev" id="lnChev" aria-expanded="false" aria-label="เมนูในหน้านี้">⌄</button>
+    <a class="ln-btn" id="lnBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a>
+  </div>
+  <nav class="ln-drop" id="lnDrop" aria-label="ในหน้านี้ (มือถือ)"><a href="#paths">เลือกเส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#examples">ตัวอย่างผลงาน</a><a href="#schedule">กำหนดการ</a><a href="#parents">ผู้ปกครอง</a><a href="#faq">คำถาม</a></nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <h1 class="t-eyebrow">Portfolio Camp for TCAS-1</h1>
+  <p class="t-hero"><span style="white-space:nowrap">3 วัน ทำเกม</span> <span style="white-space:nowrap">เข้ารอบพอร์ต</span></p>
+  <div class="hero-media"><video src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกมเพลย์ COMMAND SELECT"></video></div>
+  
+  <div class="aap" id="aap"><div class="hero-pill"><span>27–29 พ.ย. 2569 · <b>190 บาท</b></span><a class="pill-btn" id="aapBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a></div></div>
+</section>
+
+<section class="sec alt" id="highlights">
+  <div class="vw"><div class="sh"><div><h2 class="t-sec rv">3 วันในค่ายมีอะไรบ้าง</h2><p class="t-copy" style="margin-top:8px">ลงมือทำเกมเองทุกขั้น มีพี่ ๆ ช่วยสอนและคอมเมนต์ตลอดค่าย</p></div></div></div>
+  <div class="gal" id="gal" aria-roledescription="carousel"></div>
+  <div class="ctrls"><button class="round" id="galPrev" aria-label="ก่อนหน้า">‹</button><div class="dots" id="dots" role="tablist" aria-label="ไฮไลท์"></div><button class="round" id="galNext" aria-label="ถัดไป">›</button><button class="round" id="playBtn" aria-label="หยุด">❚❚</button></div>
+</section>
+
+
+
+<section class="sec alt" id="paths">
+  <div class="vw">
+    <div class="sh"><div><h2 class="t-sec rv">น้องอยู่ตรงไหน</h2><p class="t-copy" style="margin-top:8px">ค่ายแบ่งเนื้อหาตามฝีมือ มือใหม่เริ่มจาก 0 ได้ มีผลงานแล้วเอามาต่อยอด</p></div><a class="more" href="#compare">ดูข้อมูลแต่ละเส้นทางเทียบกัน</a></div>
+    <div class="cmp-card"><div class="cmp">
+      <div>
+        <video src="vid/hydrosaur.mp4" poster="img/hydrosaur.jpg" muted loop playsinline autoplay aria-label="ภาพจากเกม Hydrosaur"></video>
+        <p class="tag">มือใหม่ · Basic · เกรด 0–20</p>
+        <h3 class="t-card">ยังไม่มีผลงานติดแฟ้ม?</h3>
+        <p class="q">3 วันนี้ได้เกมแรกของตัวเอง<br>ตั้งแต่ไอเดียจนเล่นได้จริง</p>
+        <p class="price">190 บาท</p>
+        <div class="act"><a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเส้นทางมือใหม่</a><a class="more" href="#basic">ดูว่าเรียนอะไรบ้าง</a></div>
+      </div>
+      <div>
+        <video src="vid/apocalypse.mp4" poster="img/apocalypse.jpg" muted loop playsinline autoplay aria-label="ภาพจากเกม Apocalypse Building"></video>
+        <p class="tag">ล่า Top 10 · Advance · เกรด 30–50</p>
+        <h3 class="t-card">มีเกมแล้ว อยากรู้ว่าอยู่ระดับไหน?</h3>
+        <p class="q">ต่อยอดงานเดิม วัดฝีมือกับทีมอื่น<br>แล้วลุ้นขึ้นเวที Top 10</p>
+        <p class="price">190 บาท</p>
+        <div class="act"><a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเส้นทาง Top 10</a><a class="more" href="#top10">ดูว่าเรียนอะไรบ้าง</a></div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<section id="basic" class="alt" style="padding-top:0">
+  <div class="vw cl-head" style="padding-top:0"><p class="t-eyebrow rv">เส้นทางมือใหม่ · Basic · เกรด 0–20</p><h2 class="t-xl rv" style="margin-top:8px">จากไอเดีย สู่เกมที่เล่นได้</h2><p class="t-copy rv" style="margin-top:20px;max-width:680px">ไม่เคยทำเกมก็เริ่มได้ ทำทีละขั้นกับพี่ ๆ ในบ้าน จนได้<b>เกมที่เล่นได้จริง 1 เกม</b></p></div>
+  <div class="vw cl" data-cl="basic"><div class="cl-list"></div><div class="ph cl-stage"></div></div>
+</section>
+
+<section class="dark" id="top10">
+  <div class="vw" style="padding-top:144px">
+    <div class="c"><p class="t-eyebrow rv" style="color:var(--mute2)">เส้นทางล่า Top 10 · Advance · เกรด 30–50</p><h2 class="t-xxl rv">มีผลงานแล้ว<br>มาพิสูจน์ฝีมือ</h2>
+    <p class="t-copy rv" style="max-width:816px;margin:32px auto 0">ต่อยอดงานเดิม เรียนเนื้อหาระดับ <b>Advance</b> วัดฝีมือกับทีมอื่น แล้วลุ้นขึ้นเวที <b>Top 10</b></p></div>
+    <h3 class="t-sec rv" style="margin-top:120px">เรียนอะไรบ้าง<br><span style="color:var(--mute2)">Basic Shader Graph</span></h3>
+  </div>
+  <div class="vw cl" data-cl="adv" style="padding-top:56px;padding-bottom:96px"><div class="cl-list"></div><div class="ph cl-stage"></div></div>
+  <div class="vw" style="padding-bottom:144px">
+    
+  </div>
+</section>
+
+<section class="sec" id="grades">
+  <div class="vw">
+    <div class="sh" style="margin-bottom:16px"><div><h2 class="t-sec rv">ระบบเกรด</h2><p class="t-copy" style="margin-top:8px;max-width:720px">เกรดคือระดับฝีมือทำเกม ไม่ใช่เกรดที่โรงเรียน กดดูแต่ละระดับว่าเกมหน้าตาเป็นยังไง</p></div></div>
+    <div class="gx">
+      <div class="gx-stage" id="gxStage"></div>
+      <div aria-live="polite"><div class="gx-num" id="gxNum">0</div><p class="gx-name" id="gxName"></p><div class="gx-look"><p>หน้าตาของเกมระดับนี้</p><ul id="gxLook"></ul></div><p class="t-small" id="gxPath" style="margin-top:20px;font-weight:600"></p></div>
+    </div>
+    <div class="g-track" id="gTrack" role="group" aria-label="เลือกดูเกรด 0 ถึง 100"></div>
+    <div class="g-legend"><span>0–20 เส้นทางมือใหม่</span><span>30–50 เส้นทางล่า Top 10</span><span>60–100 ระดับมืออาชีพ</span></div>
+  </div>
+</section>
+
+<section class="sec alt" id="examples">
+  <div class="vw"><div class="sh"><div><h2 class="t-sec rv">ตัวอย่างผลงาน</h2><p class="t-copy" style="margin-top:8px">ผลงานจริง พร้อมเหตุผลที่ได้แต่ละเกรด เล่นต่อกันอัตโนมัติ</p></div></div></div>
+  <div class="rail" id="exRail"></div>
+  <div class="vw paddles"><button data-r="-1" aria-label="ก่อนหน้า">‹</button><button data-r="1" aria-label="ถัดไป">›</button></div>
+</section>
+
+<section class="sec c" id="schedule">
+  <div class="vn">
+    <h2 class="t-sec rv">กำหนดการ</h2>
+    <p class="t-copy" style="margin:12px 0 48px">ศุกร์เย็นถึงอาทิตย์ ไม่ชนวันเรียน</p>
+    <div class="days" role="tablist" id="days"></div>
+    <ol class="sched" id="sched"></ol>
+  </div>
+</section>
+
+<section class="sec alt" id="parents">
+  <div class="vw"><div class="sh"><div><p class="t-eyebrow">สำหรับผู้ปกครอง</p><h2 class="t-sec rv" style="margin-top:8px">ทำไมต้องมาค่ายนี้</h2></div></div></div>
+  <div class="rail" id="incRail"></div>
+  <div class="under"><div class="pad2" data-rail="incRail"><button data-d="-1" aria-label="ก่อนหน้า">‹</button><button data-d="1" aria-label="ถัดไป">›</button></div><a class="more" href="https://page.line.me/jkm4247u?openQrModal=true">ทัก LINE ถามทีม</a></div>
+</section>
+
+<section class="sec alt" id="compare" style="padding-top:0">
+  <div class="vw"><div class="sh"><h2 class="t-sec rv">ดูข้อมูลแต่ละเส้นทาง</h2></div>
+    <div class="cmp-card"><div class="cmp" id="cmp"></div></div></div>
+</section>
+
+<section class="sec alt" id="faq" style="padding-top:0">
+  <div class="vw"><div class="sh"><h2 class="t-sec rv">เมื่อมีคำถาม เราก็มีคำตอบ</h2><button class="xall" id="xall">ขยายทั้งหมด ⌄</button></div>
+  <div class="faq" id="faqList"></div></div>
+</section>
+
+<section class="sec c" id="close">
+  <div class="vn">
+    <p class="t-eyebrow" style="color:var(--mute)" id="cdLabel">ปิดรับสมัครใน</p>
+    <div class="cd" id="cd"></div>
+    <div style="display:flex;gap:24px;justify-content:center;align-items:center;flex-wrap:wrap"><a class="btn" id="cdBtn" href="https://www.hamsterhub.co/portcamp">สมัครค่าย 190 บาท</a><a class="more" href="https://page.line.me/jkm4247u?openQrModal=true">ทัก LINE ถามทีม</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="gf">
+  <div class="vn">
+    <div class="notes">
+      <p>1. TCAS70 ปรับเกณฑ์รอบ Portfolio ให้เน้นศักยภาพจริง ที่มา: <a href="https://www.bangkokbiznews.com/news/news-update/1231277">กรุงเทพธุรกิจ</a></p>
+      <p>2. รอบ Portfolio แต่ละมหาวิทยาลัยกำหนดวันรับสมัครเอง เช่น มทส. รอบ 1.2 เปิดรับ 16 พ.ย. 69 – 14 ม.ค. 70 ที่มา: <a href="https://today.line.me/th/v3/article/9m3j1gK">Eduzones</a> ให้เช็กวันของคณะที่จะยื่นอีกครั้ง</p>
+      <p>3. ภาพและคลิปทั้งหมดมาจากผลงานจริง COMMAND SELECT เป็นภาพหน้าจอจากหน้า itch.io ของเกม กรอบลายทางคือจุดที่ต้องใส่ภาพถ่ายจริงจากค่าย</p>
+      <p>4. ผู้ที่มีผลงานเดิม ส่งผลงานหลังชำระเงินเพื่อประเมินเกรด · สถานที่จัดค่าย [รอทีมยืนยัน]</p>
+    </div>
+    <div class="bc">Hamster Hub › Portfolio Camp</div>
+    <div class="dir">
+      <div><b>กิจกรรม</b><a href="https://www.hamsterhub.co/portcamp">Portfolio Camp</a><a href="https://www.hamsterhub.co/allforone">All for One</a><a href="https://www.hamsterhub.co/portex">Portex</a><a href="https://www.hamsterhub.co/activity">กิจกรรมทั้งหมด</a></div>
+      <div><b>ค่ายนี้</b><a href="#paths">เลือกเส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#schedule">กำหนดการ</a><a href="#faq">คำถามที่พบบ่อย</a></div>
+      <div><b>เกี่ยวกับ Hamster Hub</b><a href="https://www.hamsterhub.co/about">เกี่ยวกับเรา</a><a href="https://www.hamsterhub.co/">หน้าแรก</a></div>
+      <div><b>ติดต่อ</b><a href="https://page.line.me/jkm4247u?openQrModal=true">LINE</a><a href="https://www.instagram.com/hamsterhub.official/">Instagram</a><a href="https://www.facebook.com/HamsterHubThailand">Facebook</a></div>
+    </div>
+    <p class="legal">Hamster Hub · ต้นแบบหน้าเว็บ (prototype) ยังไม่ใช่หน้าจริง</p>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal-card"><button class="x" id="mx" aria-label="ปิด">✕</button><div id="mBody"></div></div></div>
+
+<script>
+{
+const $=s=>document.querySelector(s);
+const LINE='https://page.line.me/jkm4247u?openQrModal=true',REG='https://www.hamsterhub.co/portcamp';
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* date-aware copy: the page speaks to where the visitor is in time */
+const DEADLINE=new Date('2026-11-25T23:59:00+07:00'),START=new Date('2026-11-27T18:30:00+07:00'),END=new Date('2026-11-29T21:00:00+07:00');
+const phase=()=>{const n=new Date();return n<=DEADLINE?'open':n<START?'closed':n<=END?'live':'done';};
+const left=()=>{const ms=Math.max(0,DEADLINE-Date.now());return{ms,d:Math.floor(ms/864e5),h:Math.floor(ms/36e5)%24,m:Math.floor(ms/6e4)%60};};
+const COPY={
+ open:()=>{const l=left();return `อีก ${l.d} วัน ${l.h} ชม. ปิดรับสมัคร · หลายมหาวิทยาลัยยังเปิดรับรอบ Portfolio ถึงต้นปี 2570<sup>2</sup> เพิ่มเกมลงแฟ้มให้ทันก่อนยื่น <a class="more" href="${REG}">สมัครค่าย</a>`;},
+ closed:()=>`ปิดรับสมัครแล้ว · ค่ายเริ่มศุกร์ 27 พ.ย. เวลา 18:30 น. <a class="more" href="#schedule">ดูกำหนดการ</a>`,
+ live:()=>`ค่ายกำลังจัดอยู่ตอนนี้ · วันอาทิตย์ 14:00 น. ประกาศ Top 10 <a class="more" href="#schedule">ดูกำหนดการ</a>`,
+ done:()=>`ค่ายรอบนี้จบแล้ว · อยากได้ข่าวค่ายรอบหน้า <a class="more" href="${LINE}">ทัก LINE ถามทีม</a>`};
+const tick=()=>{const p=phase();$('#ribbon').innerHTML=COPY[p]();
+ const l=left();$('#cd').innerHTML=p==='open'?[[l.d,'วัน'],[l.h,'ชั่วโมง'],[l.m,'นาที']].map(([n,t])=>`<div><b>${String(n).padStart(2,'0')}</b><span>${t}</span></div>`).join(''):`<div><b>${p==='done'?'จบแล้ว':'ปิดรับแล้ว'}</b></div>`;
+ if(p!=='open'){$('#cdLabel').textContent=p==='done'?'ค่ายรอบนี้':'การรับสมัคร';[$('#lnBtn'),$('#cdBtn'),$('#aapBtn')].forEach(b=>{b.href=LINE;b.textContent='ทัก LINE';});}};
+tick();setInterval(tick,30000);
+
+/* localnav button hides while the hero buy pill is on screen (Apple pattern) */
+{const ab=$('#aap'),lb=$('#lnBtn');lb.classList.add('off');new IntersectionObserver(es=>{lb.classList.toggle('off',es[0].isIntersecting&&scrollY<document.querySelector('.hero').offsetHeight);},{threshold:0}).observe(ab);
+addEventListener('scroll',()=>{lb.classList.toggle('off',scrollY<document.querySelector('.hero').offsetHeight-innerHeight*0.2);},{passive:true});}
+/* localnav: current section + mobile dropdown */
+const links=[...document.querySelectorAll('.ln-menu a')];
+const secIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+e.target.id||(e.target.id==='highlights'&&a.getAttribute('href')==='#top')));}}),{rootMargin:'-45% 0px -50% 0px'});
+['highlights','paths','grades','schedule','parents','faq'].forEach(id=>secIO.observe(document.getElementById(id)));
+addEventListener('scroll',()=>{if(scrollY<document.getElementById('highlights').offsetTop-200)links.forEach((a,i)=>a.classList.toggle('cur',i===0));},{passive:true});
+$('#lnChev').addEventListener('click',e=>{const o=$('#lnDrop').classList.toggle('on');e.currentTarget.setAttribute('aria-expanded',o);e.currentTarget.textContent=o?'⌃':'⌄';});
+$('#lnDrop').addEventListener('click',()=>{$('#lnDrop').classList.remove('on');$('#lnChev').textContent='⌄';});
+
+/* highlights gallery: horizontal cards, caption over media, timed dotnav */
+const HL=[["จบค่าย ได้เกมของตัวเอง 1 เกม ไว้ใส่แฟ้มพอร์ต TCAS รอบ 1","heart","คลิปจริง: Heart of Remember"],
+ ["ไม่มีพื้นฐาน เริ่มที่เกรด 0 ได้เลย","hydrosaur","คลิปจริง: Hydrosaur ผลงานระดับเกรด 10"],
+ ["เรียน Engine จริง Roblox หรือ Unity","apocalypse","คลิปจริง: Apocalypse Building"],
+ ["วันสุดท้าย ขึ้นเวทีนำเสนอต่อกรรมการ","stage-pitch","ภาพจริงจากเวทีนำเสนอของทีม RE//SLASH"]];
+const gal=$('#gal'),dots=$('#dots');
+gal.innerHTML=HL.map(([h,v,s],i)=>`<article class="card" aria-label="${i+1} จาก ${HL.length}"><video src="vid/${v}.mp4" poster="img/${v}.jpg" muted loop playsinline preload="metadata"></video><div class="cap"><h3 class="t-card">${h}</h3></div><span class="src">${s}</span></article>`).join('');
+dots.innerHTML=HL.map((_,i)=>`<button role="tab" aria-label="ไฮไลท์ ${i+1}" data-i="${i}"></button>`).join('');
+const cards=[...gal.children];let cur=0,t0=performance.now(),playing=!reduce,galSeen=false;const DUR=6000;
+const mark=i=>{cur=i;t0=performance.now();dots.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-selected',j===i);b.style.setProperty('--p',0);});cards.forEach((c,j)=>{const v=c.querySelector('video');if(j===i&&playing&&galSeen)v.play().catch(()=>{});else v.pause();});};
+const go=i=>{gal.scrollTo({left:cards[i].offsetLeft-cards[0].offsetLeft,behavior:reduce?'auto':'smooth'});mark(i);};
+let st;gal.addEventListener('scroll',()=>{clearTimeout(st);st=setTimeout(()=>{const i=Math.round((gal.scrollLeft)/(cards[0].offsetWidth+20));if(i!==cur&&cards[i])mark(i);},120);});
+dots.addEventListener('click',e=>{const b=e.target.closest('button');if(b)go(+b.dataset.i);});
+$('#playBtn').addEventListener('click',e=>{playing=!playing;e.currentTarget.textContent=playing?'❚❚':'▶';e.currentTarget.setAttribute('aria-label',playing?'หยุด':'เล่น');const d=dots.querySelector('.on');const p=parseFloat(d.style.getPropertyValue('--p'))||0;t0=performance.now()-p*DUR;const v=cards[cur].querySelector('video');playing?v.play().catch(()=>{}):v.pause();});
+if(reduce){$('#playBtn').textContent='▶';}
+new IntersectionObserver(es=>{galSeen=es[0].isIntersecting;const v=cards[cur].querySelector('video');if(galSeen&&playing)v.play().catch(()=>{});else v.pause();},{threshold:.4}).observe(gal);
+const loop=now=>{if(playing&&galSeen){const p=Math.min(1,(now-t0)/DUR);const d=dots.querySelector('.on');if(d)d.style.setProperty('--p',p);if(p>=1)go((cur+1)%HL.length);}else{t0=now-(parseFloat((dots.querySelector('.on')||{style:{getPropertyValue:()=>0}}).style.getPropertyValue('--p'))||0)*DUR;}requestAnimationFrame(loop);};
+mark(0);requestAnimationFrame(loop);
+$('#galPrev').addEventListener('click',()=>go((cur-1+HL.length)%HL.length));
+$('#galNext').addEventListener('click',()=>go((cur+1)%HL.length));
+cards.forEach((c,j)=>c.addEventListener('click',()=>{if(j!==cur)go(j);}));
+gal.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(Math.min(cur+1,HL.length-1));if(e.key==='ArrowLeft')go(Math.max(cur-1,0));});gal.tabIndex=0;
+
+/* closer look */
+const STEPS={basic:[["Game Design","ออกแบบเกมให้สนุกภายใน 3 วัน"],["Graybox","ทำโครงสร้างแมพในเกม"],["Core System","ทำระบบหลักในเกม"],["Prototype","เชื่อมแมพและระบบเกมให้เข้ากัน"]],
+ adv:[["Intro to Shader Graph","รู้จักหน้าตาและวิธีใช้ Shader Graph"],["Fresnel Glow","ใช้ Operation และ Node ทำขอบวัตถุให้เรืองแสง"],["Dissolve","ใช้ Node ร่วมกับเวลา ทำให้วัตถุค่อย ๆ สลาย"],["Vertex Shader","รู้จัก UV และ World Position ก่อนต่อยอดสู่ Advance"]]};
+document.querySelectorAll('[data-cl]').forEach(box=>{const L=STEPS[box.dataset.cl],list=box.querySelector('.cl-list'),stg=box.querySelector('.cl-stage');
+ list.innerHTML=L.map(([t,d],i)=>`<button class="cl-item" data-i="${i}" aria-expanded="false"><i aria-hidden="true">+</i><span><b>${t}</b><small>${d}</small></span></button>`).join('');
+ const show=i=>{list.querySelectorAll('.cl-item').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-expanded',j===i);});stg.textContent='รอภาพหน้าจอจริงของขั้น '+L[i][0];};
+ list.addEventListener('click',e=>{const b=e.target.closest('.cl-item');if(b)show(+b.dataset.i);});show(0);});
+
+/* grade explorer: what a game at each level looks like */
+const G=[
+ [0,"ยังไม่มีพื้นฐาน",null,"",["ยังไม่เคยทำเกม หรือยังไม่มีเกมที่เล่นได้","มีแค่ไอเดียในหัว"],"เริ่มที่เส้นทางมือใหม่"],
+ [10,"เริ่มทำเกมเล็ก ๆ","hydrosaur","Hydrosaur · เกรด 10",["ตัวละครขยับได้ มีฉากให้เดิน","ยังไม่มีเป้าหมายและวิธีเล่นที่ชัดเจน"],"เส้นทางมือใหม่"],
+ [20,"มีเกมที่เล่นได้ระดับ Game Jam","noas","Noas · เกรด 20",["เล่นได้ตั้งแต่ต้นจนจบ","แนวเกม ปริศนา และความน่ากลัวยังไม่ชัด"],"เส้นทางมือใหม่"],
+ [30,"เกมดูดีและมีความคิดสร้างสรรค์","pitch","PITCH · เกรด 30",["มีสไตล์ภาพของตัวเอง คอนเซปต์น่าสนใจ","เกมเพลย์ยังดึงความกลัวออกมาไม่เต็มที่"],"เส้นทางล่า Top 10"],
+ [40,"เกมออกแบบได้ดี","apocalypse","Apocalypse Building · เกรด 40",["ไอเดียชัด รู้ทันทีว่าต้องทำอะไร","สองระบบหลักยังไม่เชื่อมกัน"],"เส้นทางล่า Top 10"],
+ [50,"เกมที่กำลังจะเปิดตัว","stage-pitch","RE//SLASH · เกรด 50 (ภาพตอนนำเสนอ)",["พร้อมปล่อยเดโม","ยังต้องเพิ่มเนื้อหาและความก้าวหน้าก่อนเปิดเต็ม"],"เส้นทางล่า Top 10"],
+ [60,"เปิด Demo ให้คนทั่วไปลองเล่น","command-select","ตัวอย่างลักษณะ: COMMAND SELECT (DEMO) เปิดให้โหลดบน itch.io",["มีหน้าให้คนทั่วไปโหลดไปลองเล่น เช่น itch.io","มีคนนอกทีมได้เล่นจริงและให้ความเห็น"],"ระดับมืออาชีพ"],
+ [70,"เกมสร้างรายได้แล้ว",null,"",["มีคนจ่ายเงินซื้อเกมหรือของในเกม","วางขายบนร้านค้า เช่น Steam หรือมือถือ"],"ระดับมืออาชีพ"],
+ [80,"เกมมีเอกลักษณ์และพัฒนาเป็นสตาร์ทอัพแล้ว",null,"",["เห็นภาพเดียวก็จำได้ว่าเป็นเกมนี้","มีทีมหรือบริษัทพัฒนาต่อเป็นธุรกิจ"],"ระดับมืออาชีพ"],
+ [90,"เกมระดับประเทศ",null,"",["คนทั่วประเทศรู้จักและเล่น"],"ระดับมืออาชีพ"],
+ [100,"เกมระดับโลก",null,"",["คนทั่วโลกรู้จักและเล่น"],"ระดับมืออาชีพ"]];
+const gt=$('#gTrack');gt.innerHTML=G.map(([n],i)=>`<button data-i="${i}">${n}</button>`).join('');
+const setG=i=>{const [n,name,media,src,look,path]=G[i];$('#gxNum').textContent=n;$('#gxName').textContent=name;$('#gxLook').innerHTML=look.map(x=>`<li>${x}</li>`).join('');$('#gxPath').textContent='→ '+path;
+ $('#gxStage').innerHTML=media?`<video src="vid/${media}.mp4" poster="img/${media}.jpg" muted loop playsinline autoplay></video><span class="src">${src}</span>`:`<div class="ph">${n===0?'ยังไม่มีเกม: เริ่มจากกระดาษเปล่า':'รอทีมใส่ตัวอย่างเกมระดับ '+n}</div>`;
+ gt.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('in',j<=i);b.setAttribute('aria-pressed',j===i);});};
+gt.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setG(+b.dataset.i);});setG(1);
+
+/* examples: play one after another */
+const EX=[["hydrosaur","Hydrosaur",10,"ยังไม่มีเป้าหมายและวิธีเล่นที่ชัดเจน"],["noas","Noas",20,"เล่นได้แล้ว แต่แนวเกม ปริศนา และความน่ากลัวยังไม่ชัด"],["pitch","PITCH",30,"คอนเซปต์สยองขวัญน่าสนใจ แต่เกมเพลย์ยังดึงความกลัวออกมาไม่เต็มที่"],["apocalypse","Apocalypse Building",40,"ไอเดียสร้างตึกป้องกันซอมบี้ชัด แต่สองระบบยังไม่เชื่อมกัน"],["heart","Heart of Remember",40,"เกมการ์ดเล่นได้ แต่กลยุทธ์และทางพลิกเกมยังไม่ลึกพอ"],["stage-pitch","RE//SLASH",50,"พร้อมปล่อยเดโม แต่ยังต้องเพิ่มเนื้อหาและความก้าวหน้าก่อนเปิดเต็ม"]];
+const rail=$('#exRail');
+rail.innerHTML=EX.map(([id,n,g,r])=>`<article class="ex"><div class="m"><video src="vid/${id}.mp4" poster="img/${id}.jpg" muted playsinline preload="metadata"></video><span class="bar"></span></div><div class="b"><h3 class="t-card">${n}</h3><p class="gr">เกรด ${g}</p><p class="t-small">${r}</p></div></article>`).join('');
+const exs=[...rail.children];let ei=0,exSeen=false;
+const playEx=(i,scroll=true)=>{ei=(i+exs.length)%exs.length;exs.forEach((c,j)=>{c.classList.toggle('on',j===ei);const v=c.querySelector('video');if(j!==ei){v.pause();c.querySelector('.bar').style.width=0;}});
+ if(scroll)rail.scrollTo({left:exs[ei].offsetLeft-exs[0].offsetLeft,behavior:reduce?'auto':'smooth'});
+ const v=exs[ei].querySelector('video');v.currentTime=0;if(exSeen&&!reduce)v.play().catch(()=>{});};
+exs.forEach((c,j)=>{const v=c.querySelector('video');v.addEventListener('timeupdate',()=>{c.querySelector('.bar').style.width=(v.currentTime/(v.duration||6)*100)+'%';});v.addEventListener('ended',()=>playEx(j+1));c.addEventListener('click',()=>playEx(j));});
+new IntersectionObserver(es=>{exSeen=es[0].isIntersecting;const v=exs[ei].querySelector('video');if(exSeen&&!reduce)v.play().catch(()=>{});else v.pause();},{threshold:.35}).observe(rail);
+document.querySelectorAll('.paddles button').forEach(b=>b.addEventListener('click',()=>playEx(ei+(+b.dataset.r))));
+playEx(0,false);
+
+/* schedule */
+const DAYS=[["ศุกร์ 27","Intro",[["18:30–19:00","เช็กอิน"],["19:00–19:30","เปิดค่ายและเลือกบ้าน"],["19:30–21:00","กิจกรรมประจำบ้านและ Hamsquest"],["21:30–22:00","เล่นมินิเกมสุดมันส์"]]],
+ ["เสาร์ 28","Development",[["13:00–14:00","เรียนตามบ้าน"],["14:00–14:30","เล่นมินิเกมสุดมันส์"],["14:30–18:00","ทำเควส"],["18:00–18:30","เล่นมินิเกมสุดมันส์"],["19:00–20:00","Guest Speaker : Game Design & Level Design","ทุกเกรด"],["20:00–21:00","ทำเควสและกิจกรรมประจำบ้าน"],["21:30–22:00","เล่นมินิเกมสุดมันส์"]]],
+ ["อาทิตย์ 29","Meeting",[["10:00–12:00","ส่งผลงาน"],["13:00–13:30","เปิดบูธ"],["14:00–14:30","ประกาศ Top 10"],["15:00–16:00","Guest Speaker : เบื้องหลังการทำเกมระดับโลก","เกรด 30–50"],["16:00–19:00","เปิดบูธต่อ"],["18:00–18:30","เล่นมินิเกมสุดมันส์"],["19:00–20:00","Top 10 นำเสนอผลงาน"],["20:00–21:00","ปิดกิจกรรม"]]]];
+$('#days').innerHTML=DAYS.map(([d],i)=>`<button role="tab" data-i="${i}">${d} พ.ย.</button>`).join('');
+const setDay=i=>{$('#days').querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-selected',j===i));const ev=DAYS[i][2];
+ $('#sched').innerHTML=`<li><time>${DAYS[i][1]}</time><span style="color:var(--mute)">${ev[0][0].split('–')[0]}–${ev[ev.length-1][0].split('–')[1]} น.</span></li>`+ev.map(([t,x,n])=>`<li><time>${t}</time><span>${x}${n?`<em>${n}</em>`:''}</span></li>`).join('');};
+$('#days').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setDay(+b.dataset.i);});
+const today=new Date();setDay(today>=new Date('2026-11-29T00:00:00+07:00')?2:today>=new Date('2026-11-28T00:00:00+07:00')?1:0);
+
+/* parents: incentive cards + modal */
+const INC=[["ลูกได้อะไร","เกม 1 เกม ไว้ใส่พอร์ต TCAS รอบ 1","พร้อมคอมเมนต์จากพี่ ๆ ว่าควรพัฒนาต่อตรงไหน",'<video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline autoplay></video>',"ทุกเส้นทางจบค่ายด้วยผลงานที่นำไปใส่แฟ้มพอร์ตได้ พร้อมคอมเมนต์จากพี่ ๆ ว่าควรพัฒนาต่อตรงไหน"],
+ ["ผลงานที่ลูกทำเอง","TCAS70 เน้นศักยภาพจริง","TCAS70 ปรับรอบ Portfolio ให้เน้นศักยภาพจริง¹ น้องลงมือทำทุกขั้น จึงเล่าและตอบคำถามเรื่องงานได้เอง",'<video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline autoplay></video>',"ปีนี้ TCAS70 ปรับรอบ Portfolio ให้เน้นศักยภาพจริง ในค่ายน้องทำเกมเองตั้งแต่ไอเดียจนเล่นได้ และได้ฝึกนำเสนองานของตัวเอง"],
+ ["ค่าใช้จ่าย","จ่ายครั้งเดียว 190 บาท","รวมทั้ง 3 วัน กดสมัคร เข้าสู่ระบบ กรอกข้อมูล แล้วชำระเงิน",`<svg viewBox="0 0 280 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" aria-hidden="true"><path d="M14 22h252v34a18 18 0 0 0 0 38v34H14V94a18 18 0 0 0 0-38z"/><path d="M196 26v100" stroke-dasharray="9 9"/><text x="105" y="94" text-anchor="middle" font-size="44" font-weight="600" fill="#0071e3" stroke="none" font-family="Noto Sans Thai,sans-serif">190</text><text x="222" y="86" text-anchor="middle" font-size="19" fill="#0071e3" stroke="none" font-family="Noto Sans Thai,sans-serif">บาท</text></svg>`,"กดปุ่มสมัคร → เข้าสู่ระบบ → กรอกข้อมูล → ชำระเงิน 190 บาท ปิดรับสมัคร 25 พ.ย. 2569 เวลา 23:59 น."],
+ ["เวลาเรียน","ศุกร์เย็น – อาทิตย์ ไม่ชนวันเรียน","เลิก 22:00 / 22:00 / 21:00 น.",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" aria-hidden="true"><g font-family="Noto Sans Thai,sans-serif" stroke="none" fill="#0071e3" text-anchor="middle"><text x="50" y="58" font-size="20">ศุกร์</text><text x="150" y="58" font-size="20">เสาร์</text><text x="250" y="58" font-size="20">อาทิตย์</text><text x="50" y="112" font-size="40" font-weight="600">27</text><text x="150" y="112" font-size="40" font-weight="600">28</text><text x="250" y="112" font-size="40" font-weight="600">29</text></g><rect x="8" y="22" width="84" height="116" rx="14"/><rect x="108" y="22" width="84" height="116" rx="14"/><rect x="208" y="22" width="84" height="116" rx="14"/><path d="M8 70h84M108 70h84M208 70h84"/></svg>`,"ศุกร์ 27 พ.ย. 18:30–22:00 น. · เสาร์ 28 พ.ย. 13:00–22:00 น. · อาทิตย์ 29 พ.ย. 10:00–21:00 น."],
+ ["สถานที่ / ผู้ดูแล","[รอทีมยืนยัน]","ระหว่างนี้ทัก LINE ถามทีมได้",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M150 132s-46-44-46-78a46 46 0 0 1 92 0c0 34-46 78-46 78z"/><circle cx="150" cy="54" r="16"/><path d="M40 140h220"/><text x="150" y="20" text-anchor="middle" font-size="16" fill="#0071e3" stroke="none" font-family="Noto Sans Thai,sans-serif">รอทีมยืนยัน</text></svg>`,"ทีมยังไม่ได้ยืนยันสถานที่และผู้ดูแล ระหว่างนี้ทัก LINE ถามทีมได้"]];
+$('#incRail').innerHTML=INC.map(([k,h,d,m],i)=>`<button class="inc" data-i="${i}" aria-label="${k}: ดูรายละเอียด"><div class="b"><p class="k">${k}</p><h3 class="t-card">${h}</h3><p class="d">${d}</p></div><div class="m">${m}</div><span class="plus" aria-hidden="true">+</span></button>`).join('');
+const modal=$('#modal');
+$('#incRail').addEventListener('click',e=>{const b=e.target.closest('.inc');if(!b)return;const [k,h,,,d]=INC[+b.dataset.i];$('#mBody').innerHTML=`<p class="t-eyebrow">${k}</p><h2>${h}</h2><p class="t-copy">${d}</p><p style="margin-top:32px"><a class="more" href="${LINE}">ทัก LINE ถามทีม</a></p>`;modal.classList.add('on');$('#mx').focus();});
+const closeM=()=>modal.classList.remove('on');$('#mx').addEventListener('click',closeM);modal.addEventListener('click',e=>{if(e.target===modal)closeM();});addEventListener('keydown',e=>{if(e.key==='Escape')closeM();});
+
+/* compare */
+const CMP=[["มือใหม่ · Basic","ยังไม่มีผลงาน","hydrosaur",["ยังไม่มีผลงาน","เกรด 0–20","Game Design → Prototype","เกมที่เล่นได้ 1 เกม","ส่งผลงาน · เปิดบูธ","190 บาท"]],["ล่า Top 10 · Advance","มีผลงานแล้ว","apocalypse",["มีผลงานแล้ว","เกรด 30–50","Basic Shader Graph","ผลงานต่อยอด + ลุ้น Top 10","Top 10 นำเสนอบนเวที","190 บาท"]]];
+const LAB=["เหมาะกับ","เกรด","เรียน","ได้","วันสุดท้าย","ราคา"];
+$('#cmp').innerHTML=CMP.map(([n,tag,img,r])=>`<div><video src="vid/${img}.mp4" poster="img/${img}.jpg" muted loop playsinline autoplay aria-label="คลิปเกม"></video><p class="tag">${tag}</p><h3 class="t-card">${n}</h3><div class="act" style="margin-top:20px"><a class="btn" href="${REG}">สมัคร</a></div><dl>${r.map((v,i)=>`<dt>${LAB[i]}</dt><dd>${v}</dd>`).join('')}</dl></div>`).join('');
+
+/* faq */
+const FAQ=[["ยังทันยื่นรอบ Portfolio ไหม?","รอบ Portfolio ของ TCAS70 แต่ละมหาวิทยาลัยกำหนดวันรับสมัครเอง บางแห่งยังเปิดรับถึงต้นปี 2570 เช่น มทส. รอบ 1.2 เปิดรับ 16 พ.ย. 69 – 14 ม.ค. 70 ให้เช็กวันของคณะที่น้องจะยื่นอีกครั้ง"],["จัดที่ไหน ออนไลน์หรือเปล่า?","[รอทีมยืนยัน] ระหว่างนี้ทัก LINE ถามทีมได้"],["ไม่มีผลงาน เริ่มยังไง?","เริ่มที่เกรด 0 ได้เลย แล้วลงมือทำเกมในค่าย"],["มีเกมอยู่แล้ว เริ่มที่เกรดไหน?","ส่งผลงานหลังชำระเงิน เพื่อประเมินเกรดจากคุณภาพงาน"],["ค่ายจัดวันไหน ราคาเท่าไร?","27–29 พฤศจิกายน 2569 ค่าเข้าร่วม 190 บาท"],["เริ่มและเลิกกี่โมง?","ศุกร์ 27 พ.ย. 18:30–22:00 น. · เสาร์ 28 พ.ย. 13:00–22:00 น. · อาทิตย์ 29 พ.ย. 10:00–21:00 น."],["สมัครและจ่ายเงินยังไง?","กดปุ่มสมัคร → เข้าสู่ระบบ → กรอกข้อมูล → ชำระเงิน 190 บาท ปิดรับสมัคร 25 พ.ย. 2569 เวลา 23:59 น."],["วันสุดท้ายมีอะไร?","ส่งผลงาน ประกาศ Top 10 และขึ้นนำเสนอตามกำหนดการ"]];
+$('#faqList').innerHTML=FAQ.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('');
+$('#xall').addEventListener('click',e=>{const d=[...document.querySelectorAll('#faqList details')];const o=!d.every(x=>x.open);d.forEach(x=>x.open=o);e.currentTarget.textContent=o?'ย่อทั้งหมด ⌃':'ขยายทั้งหมด ⌄';});
+
+/* rail paddles with disabled ends */
+document.querySelectorAll('.pad2').forEach(p=>{const r=document.getElementById(p.dataset.rail),[pv,nx]=p.querySelectorAll('button');
+ const upd=()=>{pv.disabled=r.scrollLeft<=4;nx.disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4;};
+ p.addEventListener('click',e=>{const b=e.target.closest('button');if(b)r.scrollBy({left:+b.dataset.d*r.clientWidth*.75,behavior:'smooth'});});
+ r.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();});
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),{threshold:.2});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+}
+</script>
+</body>
+</html>
