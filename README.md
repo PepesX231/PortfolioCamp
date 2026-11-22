@@ -10,4 +10,4 @@
 
 ข้อมูลที่ยังรอทีมยืนยัน: สถานที่จัดค่าย, คำอธิบายเกรด 60–100, ภาพถ่ายจริงจากค่าย
 
-ดูหน้าเว็บ: https://pepesx231.github.io/PortfolioCamp/
+ดูหน้าเว็บ: https://hamsterhub-portfolio-camp.netlify.app
