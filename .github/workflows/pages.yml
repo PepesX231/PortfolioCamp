@@ -1,0 +1,15 @@
+name: Update website
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Copy main to gh-pages (GitHub Pages serves gh-pages)
+        run: git push --force origin HEAD:gh-pages
