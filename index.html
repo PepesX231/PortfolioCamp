@@ -103,12 +103,10 @@ a.more{display:inline-block;padding:10px 0}
 .card{flex:0 0 min(1260px,calc(100vw - 44px));height:612px;border-radius:28px;overflow:hidden;position:relative;scroll-snap-align:start;background:#000}
 .card video,.card .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .card::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.35) 38%,transparent 62%);z-index:1}
-.card .cap{position:absolute;left:46px;top:50%;transform:translateY(-50%);max-width:460px;z-index:2;color:#f5f5f7}
+.card .cap{position:absolute;left:46px;top:50%;transform:translateY(-50%);max-width:420px;z-index:2;color:#f5f5f7}
 .card.art{background:radial-gradient(120% 90% at 75% 50%,#2a2a2e 0%,#111113 60%,#000 100%)}
 .card.art svg{position:absolute;right:8%;top:50%;transform:translateY(-50%);width:min(42%,460px);height:auto}
 .card.art::before{display:none}
-.card .get{font-size:19px;line-height:1.42;font-weight:600;color:#a1a1a6;margin-top:14px}
-.gal-foot{display:flex;justify-content:flex-end;margin-top:28px}
 .card .when{font-size:17px;font-weight:600;color:#ff9f0a;margin-bottom:6px}
 .card .src{position:absolute;right:20px;bottom:16px;z-index:2;color:rgba(255,255,255,.75);font-size:12px}
 .ctrls{display:flex;justify-content:center;gap:16px;margin-top:28px}
@@ -306,7 +304,9 @@ a.more{display:inline-block;padding:10px 0}
   <div class="vw"><div class="sh"><h2 class="t-sec rv">3 วัน ทำอะไร ได้อะไร</h2></div></div>
   <div class="gal" id="gal" aria-roledescription="carousel"></div>
   <div class="ctrls"><button class="round" id="galPrev" aria-label="ก่อนหน้า">‹</button><div class="dots" id="dots" role="tablist" aria-label="ไฮไลท์"></div><button class="round" id="galNext" aria-label="ถัดไป">›</button><button class="round" id="playBtn" aria-label="หยุด">❚❚</button></div>
-  <div class="vw gal-foot"><a class="more" href="https://page.line.me/jkm4247u?openQrModal=true">ทัก LINE ถามทีม</a></div>
+  <div class="vw"><h3 class="t-sec" style="margin:144px 0 56px">กลับบ้านไปพร้อมอะไร</h3></div>
+  <div class="rail" id="incRail"></div>
+  <div class="under"><div class="pad2" data-rail="incRail"><button data-d="-1" aria-label="ก่อนหน้า">‹</button><button data-d="1" aria-label="ถัดไป">›</button></div><a class="more" href="https://page.line.me/jkm4247u?openQrModal=true">ทัก LINE ถามทีม</a></div>
 </section>
 
 
@@ -395,6 +395,7 @@ a.more{display:inline-block;padding:10px 0}
   </div>
 </footer>
 
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal-card"><button class="x" id="mx" aria-label="ปิด">✕</button><div id="mBody"></div></div></div>
 
 <script>
 {
@@ -429,15 +430,14 @@ tick();setInterval(tick,30000);
 
 /* highlights gallery: horizontal cards, caption over media, timed dotnav */
 const HL=[
- ["ศุกร์ 18:30","คืนแรก เลือกบ้าน เจอเพื่อนร่วมทีม","ได้ลองครบทั้งโค้ด อาร์ต ออกแบบ และนำเสนอ รู้ว่าชอบด้านไหนก่อนเลือกคณะ",'<svg viewBox="0 0 400 260" fill="none" stroke="#f5f5f7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M40 210V130l60-48 60 48v80zM160 210V112l60-50 60 50v98zM280 210v-80l40-32 40 32v80z"/><path d="M85 210v-40h30v40M205 210v-48h30v48M305 210v-34h30v34"/><path d="M20 210h360"/><path d="M220 30l8 16 18 3-13 12 3 18-16-9-16 9 3-18-13-12 18-3z" fill="#ff9f0a" stroke="#ff9f0a"/></svg>',""],
- ["เสาร์ ทั้งวัน","เรียนตามบ้าน ลงมือทำจนเกมเป็นรูปเป็นร่าง","ไม่มีพื้นฐานก็เริ่มได้ สอนด้วย Unity หรือ Roblox ที่ใช้ทำเกมจริง",'<video src="vid/apocalypse.mp4" poster="img/apocalypse.jpg" muted loop playsinline preload="metadata"></video>',"คลิปจริง: Apocalypse Building"],
- ["เสาร์ 19:00","Guest Speaker เรื่อง Game Design และ Level Design","ฟังได้ทุกเกรด มือใหม่หรือมีผลงานแล้วก็ได้ไอเดียกลับไป",'<svg viewBox="0 0 400 260" fill="none" stroke="#f5f5f7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="160" y="30" width="80" height="130" rx="40"/><path d="M120 120a80 80 0 0 0 160 0M200 200v36M150 236h100"/><path d="M60 80c-20 20-20 60 0 80M340 80c20 20 20 60 0 80M30 60c-34 34-34 106 0 140M370 60c34 34 34 106 0 140" stroke="#2997ff"/></svg>',""],
- ["ตลอดค่าย","พี่ ๆ จุฬาฯ มาเพียบ คอยดูแลทุกบ้าน","สอนทำแฟ้มพอร์ตด้วย ไม่ได้แค่ทำเกม แต่รู้ว่าจะเล่าลงแฟ้มยังไง",'<svg viewBox="0 0 300 150" fill="none" stroke="#f5f5f7" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M40 40h70l16 16h134v80H40z"/><path d="M70 30h150v26M90 20h110v36" stroke="#ff9f0a"/><path d="M80 92h90M80 112h130" stroke="#2997ff"/></svg>',""],
- ["ทุกช่วงพัก","มินิเกมคั่นทุกช่วงเรียน","ไม่ต้องนั่งจ้องจออย่างเดียว ได้รู้จักเพื่อนบ้านอื่นด้วย",'<svg viewBox="0 0 400 260" fill="none" stroke="#f5f5f7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M90 90h220c40 0 66 40 70 90 3 34-28 46-50 22l-30-32H100l-30 32c-22 24-53 12-50-22 4-50 30-90 70-90z"/><path d="M120 125v40M100 145h40"/><circle cx="270" cy="130" r="9" fill="#f5f5f7"/><circle cx="296" cy="155" r="9" fill="#ff9f0a" stroke="#ff9f0a"/><path d="M175 40l12 22M225 40l-12 22" stroke="#2997ff"/></svg>',""],
- ["อาทิตย์ 10:00","ส่งผลงาน แล้วเปิดบูธให้ทีมอื่นลองเล่น","กลับบ้านพร้อมเกม 1 เกมที่ทำเอง ไว้ยื่นพอร์ต ปีนี้ TCAS70 เน้นศักยภาพจริง¹",'<video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="metadata"></video>',"คลิปจริง: Heart"],
- ["อาทิตย์ 14:00","ประกาศ Top 10 แล้วขึ้นเวทีนำเสนอ","ใครมีผลงานอยู่แล้วเอามาต่อยอดได้ Top 10 ได้นำเสนอกับอาจารย์มหาวิทยาลัยและนักลงทุน",'<video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="metadata"></video>',"ภาพจริงจากเวทีนำเสนอของทีม RE//SLASH"]];
+ ["ศุกร์ 18:30","คืนแรก เลือกบ้าน เจอเพื่อนร่วมทีม แล้วเริ่มภารกิจ Hamsquest",'<svg viewBox="0 0 400 260" fill="none" stroke="#f5f5f7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M40 210V130l60-48 60 48v80zM160 210V112l60-50 60 50v98zM280 210v-80l40-32 40 32v80z"/><path d="M85 210v-40h30v40M205 210v-48h30v48M305 210v-34h30v34"/><path d="M20 210h360"/><path d="M220 30l8 16 18 3-13 12 3 18-16-9-16 9 3-18-13-12 18-3z" fill="#ff9f0a" stroke="#ff9f0a"/></svg>',""],
+ ["เสาร์ ทั้งวัน","เรียนตามบ้านในเส้นทางของตัวเอง แล้วลงมือทำเควสจนเกมเป็นรูปเป็นร่าง",'<video src="vid/apocalypse.mp4" poster="img/apocalypse.jpg" muted loop playsinline preload="metadata"></video>',"คลิปจริง: Apocalypse Building"],
+ ["เสาร์ 19:00","Guest Speaker เรื่อง Game Design & Level Design ฟังได้ทุกเกรด",'<svg viewBox="0 0 400 260" fill="none" stroke="#f5f5f7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="160" y="30" width="80" height="130" rx="40"/><path d="M120 120a80 80 0 0 0 160 0M200 200v36M150 236h100"/><path d="M60 80c-20 20-20 60 0 80M340 80c20 20 20 60 0 80M30 60c-34 34-34 106 0 140M370 60c34 34 34 106 0 140" stroke="#2997ff"/></svg>',""],
+ ["ทุกช่วงพัก","มินิเกมสุดมันส์ คั่นทุกช่วงเรียน ไม่ต้องนั่งจ้องจออย่างเดียว",'<svg viewBox="0 0 400 260" fill="none" stroke="#f5f5f7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M90 90h220c40 0 66 40 70 90 3 34-28 46-50 22l-30-32H100l-30 32c-22 24-53 12-50-22 4-50 30-90 70-90z"/><path d="M120 125v40M100 145h40"/><circle cx="270" cy="130" r="9" fill="#f5f5f7"/><circle cx="296" cy="155" r="9" fill="#ff9f0a" stroke="#ff9f0a"/><path d="M175 40l12 22M225 40l-12 22" stroke="#2997ff"/></svg>',""],
+ ["อาทิตย์ 10:00","ส่งผลงาน แล้วเปิดบูธให้ทีมอื่นลองเล่นและคอมเมนต์",'<svg viewBox="0 0 400 260" fill="none" stroke="#f5f5f7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M40 100h320l-20-50H60zM60 100v110M340 100v110M40 210h320"/><path d="M40 100c0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0"/><rect x="140" y="135" width="120" height="60" rx="8" stroke="#2997ff"/><path d="M185 150l30 15-30 15z" fill="#2997ff" stroke="#2997ff"/></svg>',""],
+ ["อาทิตย์ 14:00","ประกาศ Top 10 แล้วขึ้นเวทีนำเสนอกับนักลงทุนและอาจารย์มหาวิทยาลัย",'<video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="metadata"></video>',"ภาพจริงจากเวทีนำเสนอของทีม RE//SLASH"]];
 const gal=$('#gal'),dots=$('#dots');
-gal.innerHTML=HL.map(([w,h,g,m,s],i)=>`<article class="card${m.startsWith('<svg')?' art':''}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="when">${w}</p><h3 class="t-card">${h}</h3><p class="get">${g}</p></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
+gal.innerHTML=HL.map(([w,h,m,s],i)=>`<article class="card${m.startsWith('<svg')?' art':''}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="when">${w}</p><h3 class="t-card">${h}</h3></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
 dots.innerHTML=HL.map((_,i)=>`<button role="tab" aria-label="ไฮไลท์ ${i+1}" data-i="${i}"></button>`).join('');
 const cards=[...gal.children];let cur=0,t0=performance.now(),playing=!reduce,galSeen=false;const DUR=6000;
 const mark=i=>{cur=i;t0=performance.now();dots.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-selected',j===i);b.style.setProperty('--p',0);});cards.forEach((c,j)=>{const v=c.querySelector('video');if(!v)return;if(j===i&&playing&&galSeen)v.play().catch(()=>{});else v.pause();});};
@@ -499,6 +499,18 @@ const setDay=i=>{$('#days').querySelectorAll('button').forEach((b,j)=>b.setAttri
  $('#sched').innerHTML=`<li><time>${DAYS[i][1]}</time><span style="color:var(--mute)">${ev[0][0].split('–')[0]}–${ev[ev.length-1][0].split('–')[1]} น.</span></li>`+ev.map(([t,x,n])=>`<li><time>${t}</time><span>${x}${n?`<em>${n}</em>`:''}</span></li>`).join('');};
 $('#days').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setDay(+b.dataset.i);});
 const today=new Date();setDay(today>=new Date('2026-12-06T00:00:00+07:00')?2:today>=new Date('2026-12-05T00:00:00+07:00')?1:0);
+
+/* parents: incentive cards + modal */
+const INC=[
+ ["เกมไว้ยื่นพอร์ต","เกม 1 เกมที่ลูกทำเอง ยื่นพอร์ตได้น้ำหนัก","มีเทคนิคให้โชว์เยอะ และปีนี้ TCAS70 เน้นศักยภาพจริง¹",'<video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline autoplay></video>',"จบค่ายทุกคนได้เกมที่ทำเองหนึ่งเกม มีเทคนิคให้โชว์ในแฟ้มพอร์ตเยอะ พร้อมคอมเมนต์ว่าควรพัฒนาต่อตรงไหน ปีนี้ TCAS70 ปรับรอบ Portfolio ให้เน้นศักยภาพจริง งานที่ทำเองและเล่าเองได้จึงเป็นจุดแข็ง"],
+ ["ความรู้รอบพอร์ต","พี่ ๆ จุฬาฯ มาเพียบ สอนทำแฟ้มพอร์ตด้วย","ไม่ได้แค่ทำเกม แต่รู้ว่าจะใส่ลงแฟ้มยังไง",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M40 40h70l16 16h134v80H40z"/><path d="M70 30h150v26M90 20h110v36" opacity=".55"/><path d="M80 92h90M80 112h130"/></svg>`,"ในค่ายมีพี่ ๆ จากจุฬาฯ หลายคนคอยดูแล และสอนวิธีทำแฟ้มพอร์ตด้วย น้องจะรู้ว่าควรเล่าผลงานเกมลงแฟ้มยังไง"],
+ ["เริ่มจากศูนย์ได้","สอนตั้งแต่พื้นฐาน ด้วยเครื่องมือระดับโลก","เรียน Unity หรือ Roblox ที่ใช้ทำเกมจริง",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="30" y="20" width="240" height="110" rx="12"/><path d="M30 46h240"/><circle cx="48" cy="33" r="4" fill="#0071e3"/><circle cx="62" cy="33" r="4" fill="#0071e3"/><path d="M60 70h60v40H60zM140 70h100M140 90h70M140 110h85"/></svg>`,"ไม่เคยเขียนโปรแกรมก็เริ่มได้ เส้นทางมือใหม่สอนตั้งแต่ Game Design, Graybox, Core System จนได้ Prototype ที่เล่นได้ ด้วย Unity หรือ Roblox ซึ่งเป็นเครื่องมือที่ใช้ทำเกมจริงทั่วโลก"],
+ ["มีผลงานแล้วต่อยอดได้","Top 10 ได้นำเสนอกับอาจารย์และนักลงทุน","เอาผลงานเก่ามาต่อยอด แล้วลุ้นขึ้นเวที",'<video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline autoplay></video>',"ใครมีผลงานอยู่แล้ว เอามาต่อยอดในเส้นทางล่า Top 10 ได้ Top 10 ของกิจกรรมได้ขึ้นนำเสนอกับอาจารย์มหาวิทยาลัยหรือนักลงทุนในวันสุดท้าย"],
+ ["ค้นหาตัวเอง","ได้ลองครบทั้งโค้ด อาร์ต ออกแบบ นำเสนอ","รู้ว่าตัวเองชอบด้านไหน ก่อนเลือกคณะ",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M48 52l-22 22 22 22M92 52l22 22-22 22"/><path d="M150 112c20 0 26-14 26-26 0-18 30-50 46-60-8 18-38 50-52 58M150 112c-8 0-14-4-16-10" /><rect x="196" y="40" width="80" height="70" rx="8"/><path d="M196 62h80M222 62v48"/><path d="M60 138h180" stroke-dasharray="2 14"/></svg>`,"การทำเกมหนึ่งเกมต้องใช้ทั้งการเขียนโค้ด วาดอาร์ต ออกแบบเกม และนำเสนอ น้องได้ลองทุกด้านใน 3 วัน จะได้รู้ว่าชอบอะไรก่อนเลือกคณะ"]];
+$('#incRail').innerHTML=INC.map(([k,h,d,m,_],i)=>`<button class="inc" data-i="${i}" aria-label="${k}: ดูรายละเอียด"><div class="b"><p class="k">${k}</p><h3 class="t-card">${h}</h3><p class="d">${d}</p></div><div class="m">${m}</div><span class="plus" aria-hidden="true">+</span></button>`).join('');
+const modal=$('#modal');
+$('#incRail').addEventListener('click',e=>{const b=e.target.closest('.inc');if(!b)return;const [k,h,,,d]=INC[+b.dataset.i];$('#mBody').innerHTML=`<p class="t-eyebrow">${k}</p><h2>${h}</h2><p class="t-copy">${d}</p><p style="margin-top:32px"><a class="more" href="${LINE}">ทัก LINE ถามทีม</a></p>`;modal.classList.add('on');$('#mx').focus();});
+const closeM=()=>modal.classList.remove('on');$('#mx').addEventListener('click',closeM);modal.addEventListener('click',e=>{if(e.target===modal)closeM();});addEventListener('keydown',e=>{if(e.key==='Escape')closeM();});
 
 /* compare */
 const CMP=[["มือใหม่","ยังไม่มีผลงาน","hydrosaur",["ยังไม่มีผลงาน","เกรด 0–20","Game Design ถึง Prototype","เกมที่เล่นได้ 1 เกม","ส่งผลงานและเปิดบูธ","190 บาท"]],["ล่า Top 10","มีผลงานแล้ว","apocalypse",["มีผลงานแล้ว","เกรด 30–50","Basic Shader Graph","ผลงานต่อยอด + ลุ้น Top 10","Top 10 นำเสนอบนเวที","190 บาท"]]];
