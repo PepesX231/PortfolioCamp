@@ -32,7 +32,7 @@ button{font:inherit;color:inherit}
 .btn:hover{text-decoration:none;background:#0077ed}
 .ph{background:repeating-linear-gradient(45deg,#e8e8ed 0 12px,#fafafc 12px 24px);display:grid;place-items:center;color:var(--mute);font-size:14px;text-align:center;padding:16px}
 .dark .ph{background:repeating-linear-gradient(45deg,#1c1c1e 0 12px,#242426 12px 24px);color:var(--mute2)}
-.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 .t-eyebrow{font-size:21px;line-height:1.2;font-weight:600}
@@ -153,10 +153,19 @@ button{font:inherit;color:inherit}
 .gx-look p{font-size:12px;color:var(--mute);margin-bottom:6px}
 .gx-look ul{margin:0;padding-left:20px;font-size:17px}
 .gx-look li{margin:4px 0}
-.g-track{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));margin-top:56px}
-.g-track button{border:0;background:none;padding:14px 0 0;cursor:pointer;color:var(--mute2);font-size:14px;border-top:4px solid var(--line);transition:border-color .3s,color .3s}
-.g-track button.in{border-top-color:var(--ink);color:var(--ink)}
-.g-track button[aria-pressed=true]{font-weight:600}
+.g-track{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:6px;margin-top:56px;padding:6px;border-radius:999px;background:var(--alt)}
+.g-track button{border:0;background:transparent;height:44px;border-radius:999px;cursor:pointer;color:var(--mute);font-size:15px;font-weight:500;transition:background .25s,color .25s}
+.g-track button:hover{background:#fff;color:var(--ink)}
+.g-track button.in{color:var(--ink)}
+.g-track button[aria-pressed=true]{background:var(--ink);color:#fff;font-weight:600}
+.gx-nav{display:flex;gap:12px;margin-top:24px}
+.gx-nav button{width:44px;height:44px;border-radius:50%;border:0;background:var(--alt);font-size:20px;cursor:pointer;color:var(--ink)}
+.gx-nav button:hover{background:#e8e8ed}.gx-nav button:disabled{opacity:.35;cursor:default}
+.gx-games{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.gx-games button{border:0;border-radius:999px;padding:8px 16px;background:var(--alt);font-size:14px;cursor:pointer}
+.gx-games button[aria-pressed=true]{background:var(--ink);color:#fff}
+.gx-why{margin-top:14px;font-size:17px;color:var(--mute)}
+.gx-stage{cursor:pointer}
 .g-legend{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font-size:12px;color:var(--mute)}
 
 /* examples (sequential autoplay) */
@@ -242,7 +251,7 @@ button{font:inherit;color:inherit}
  .finale{aspect-ratio:4/5}.finale .cap{left:24px;right:24px;bottom:28px}.finale .cap b{font-size:48px}
  .stats{grid-template-columns:minmax(0,1fr);gap:32px;margin-top:64px}.stats b{font-size:48px}
  .gx{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:48px}.gx-num{font-size:80px}.gx-name{font-size:21px}
- .g-track button{font-size:11px}
+ .g-track{gap:2px;padding:4px}.g-track button{font-size:11px;height:38px}
  .inc{width:300px;height:500px}
  .sched li{grid-template-columns:110px minmax(0,1fr);gap:12px}.sched time{font-size:17px}.sched span{font-size:17px}
  .days button{padding:8px 12px;font-size:14px}
@@ -260,7 +269,7 @@ button{font:inherit;color:inherit}
 <header class="ln">
   <nav class="tabbar" id="tabbar" aria-label="ในหน้านี้">
     <span class="ind" aria-hidden="true"></span>
-    <a href="#top" class="cur">ภาพรวม</a><a href="#paths">เส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#schedule">กำหนดการ</a><a href="#parents" class="opt">ผู้ปกครอง</a><a href="#faq" class="opt">คำถาม</a>
+    <a href="#top" class="cur opt">ภาพรวม</a><a href="#highlights">3 วัน</a><a href="#basic">เส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#schedule">กำหนดการ</a><a href="#faq" class="opt">คำถาม</a>
     <a class="ln-btn off" id="lnBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a>
   </nav>
 </header>
@@ -271,40 +280,21 @@ button{font:inherit;color:inherit}
   <p class="t-hero"><span style="white-space:nowrap">3 วัน ทำเกม</span> <span style="white-space:nowrap">เข้ารอบพอร์ต</span></p>
   <div class="hero-media"><video src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกมเพลย์ COMMAND SELECT"></video></div>
   
-  <div class="aap" id="aap"><div class="hero-pill"><span>27–29 พ.ย. 2569</span><b>190 บาท</b><a class="pill-btn" id="aapBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a></div></div>
+  <div class="aap" id="aap"><div class="hero-pill"><span>4–6 ธ.ค. 2569</span><b>190 บาท</b><a class="pill-btn" id="aapBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a></div></div>
 </section>
 
 <section class="sec alt" id="highlights">
   <div class="vw"><div class="sh"><h2 class="t-sec rv">3 วัน ทำอะไร ได้อะไร</h2></div></div>
   <div class="gal" id="gal" aria-roledescription="carousel"></div>
   <div class="ctrls"><button class="round" id="galPrev" aria-label="ก่อนหน้า">‹</button><div class="dots" id="dots" role="tablist" aria-label="ไฮไลท์"></div><button class="round" id="galNext" aria-label="ถัดไป">›</button><button class="round" id="playBtn" aria-label="หยุด">❚❚</button></div>
+  <div class="vw"><h3 class="t-sec" style="margin:144px 0 56px">กลับบ้านไปพร้อมอะไร</h3></div>
+  <div class="rail" id="incRail"></div>
+  <div class="under"><div class="pad2" data-rail="incRail"><button data-d="-1" aria-label="ก่อนหน้า">‹</button><button data-d="1" aria-label="ถัดไป">›</button></div><a class="more" href="https://page.line.me/jkm4247u?openQrModal=true">ทัก LINE ถามทีม</a></div>
 </section>
 
 
 
-<section class="sec alt" id="paths">
-  <div class="vw">
-    <div class="sh"><h2 class="t-sec rv">น้องอยู่ตรงไหน</h2><a class="more" href="#compare">เทียบ 2 เส้นทาง</a></div>
-    <div class="cmp-card"><div class="cmp">
-      <div>
-        <video src="vid/hydrosaur.mp4" poster="img/hydrosaur.jpg" muted loop playsinline autoplay aria-label="ภาพจากเกม Hydrosaur"></video>
-        <p class="tag">มือใหม่</p>
-        <h3 class="t-card">ยังไม่มีผลงานติดแฟ้ม?</h3>
-        <p class="q">3 วันนี้ได้เกมแรกของตัวเอง<br>ตั้งแต่ไอเดียจนเล่นได้จริง</p>
-        <p class="price">190 บาท</p>
-        <div class="act"><a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเส้นทางมือใหม่</a><a class="more" href="#basic">ดูว่าเรียนอะไรบ้าง</a></div>
-      </div>
-      <div>
-        <video src="vid/apocalypse.mp4" poster="img/apocalypse.jpg" muted loop playsinline autoplay aria-label="ภาพจากเกม Apocalypse Building"></video>
-        <p class="tag">ล่า Top 10</p>
-        <h3 class="t-card">มีเกมแล้ว อยากรู้ว่าอยู่ระดับไหน?</h3>
-        <p class="q">ต่อยอดงานเดิม วัดฝีมือกับทีมอื่น<br>แล้วลุ้นขึ้นเวที Top 10</p>
-        <p class="price">190 บาท</p>
-        <div class="act"><a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเส้นทาง Top 10</a><a class="more" href="#top10">ดูว่าเรียนอะไรบ้าง</a></div>
-      </div>
-    </div></div>
-  </div>
-</section>
+
 
 <section id="basic" class="alt" style="padding-top:0">
   <div class="vw cl-head c" style="padding-top:0"><p class="t-eyebrow rv" style="color:var(--mute)">เส้นทางมือใหม่</p><h2 class="t-xxl rv">จากไอเดีย<br>สู่เกมที่เล่นได้</h2><p class="t-copy rv" style="margin:32px auto 0;max-width:816px">ไม่เคยทำเกมก็เริ่มได้ ทำทีละขั้นกับพี่ ๆ ในบ้าน จนได้<b>เกมที่เล่นได้จริง 1 เกม</b></p></div>
@@ -325,21 +315,17 @@ button{font:inherit;color:inherit}
 
 <section class="sec" id="grades">
   <div class="vw">
-    <div class="sh" style="margin-bottom:16px"><div><h2 class="t-sec rv">ระบบเกรด</h2><p class="t-copy" style="margin-top:8px;max-width:720px">เกรดคือระดับฝีมือทำเกม ไม่ใช่เกรดที่โรงเรียน กดดูแต่ละระดับว่าเกมหน้าตาเป็นยังไง</p></div></div>
+    <div class="sh" style="margin-bottom:16px"><div><h2 class="t-sec rv">ระบบเกรด</h2><p class="t-copy" style="margin-top:8px;max-width:720px">เกรดคือระดับฝีมือทำเกม ไม่ใช่เกรดที่โรงเรียน กดเลขเกรดเพื่อดูว่าเกมระดับนั้นหน้าตาเป็นยังไง</p></div></div>
     <div class="gx">
       <div class="gx-stage" id="gxStage"></div>
-      <div aria-live="polite"><div class="gx-num" id="gxNum">0</div><p class="gx-name" id="gxName"></p><div class="gx-look"><p>หน้าตาของเกมระดับนี้</p><ul id="gxLook"></ul></div><p class="t-small" id="gxPath" style="margin-top:20px;font-weight:600"></p></div>
+      <div aria-live="polite"><div class="gx-num" id="gxNum">0</div><p class="gx-name" id="gxName"></p><div class="gx-look"><p>หน้าตาของเกมระดับนี้</p><ul id="gxLook"></ul></div><div class="gx-games" id="gxGames"></div><p class="gx-why" id="gxWhy"></p><p class="t-small" id="gxPath" style="margin-top:20px;font-weight:600"></p><div class="gx-nav"><button id="gxPrev" aria-label="เกรดก่อนหน้า">‹</button><button id="gxNext" aria-label="เกรดถัดไป">›</button></div></div>
     </div>
     <div class="g-track" id="gTrack" role="group" aria-label="เลือกดูเกรด 0 ถึง 100"></div>
     <div class="g-legend"><span>0–20 เส้นทางมือใหม่</span><span>30–50 เส้นทางล่า Top 10</span><span>60–100 ระดับมืออาชีพ</span></div>
   </div>
 </section>
 
-<section class="sec alt" id="examples">
-  <div class="vw"><div class="sh"><div><h2 class="t-sec rv">ตัวอย่างผลงาน</h2><p class="t-copy" style="margin-top:8px">ผลงานจริง พร้อมเหตุผลที่ได้แต่ละเกรด เล่นต่อกันอัตโนมัติ</p></div></div></div>
-  <div class="rail" id="exRail"></div>
-  <div class="vw paddles"><button data-r="-1" aria-label="ก่อนหน้า">‹</button><button data-r="1" aria-label="ถัดไป">›</button></div>
-</section>
+
 
 <section class="sec c" id="schedule">
   <div class="vn">
@@ -350,11 +336,7 @@ button{font:inherit;color:inherit}
   </div>
 </section>
 
-<section class="sec alt" id="parents">
-  <div class="vw"><div class="sh"><div><p class="t-eyebrow">สำหรับผู้ปกครอง</p><h2 class="t-sec rv" style="margin-top:8px">ก่อนให้ลูกมาค่ายนี้</h2></div></div></div>
-  <div class="rail" id="incRail"></div>
-  <div class="under"><div class="pad2" data-rail="incRail"><button data-d="-1" aria-label="ก่อนหน้า">‹</button><button data-d="1" aria-label="ถัดไป">›</button></div><a class="more" href="https://page.line.me/jkm4247u?openQrModal=true">ทัก LINE ถามทีม</a></div>
-</section>
+
 
 <section class="sec alt" id="compare" style="padding-top:0">
   <div class="vw"><div class="sh"><h2 class="t-sec rv">เทียบ 2 เส้นทาง</h2></div>
@@ -388,7 +370,7 @@ button{font:inherit;color:inherit}
     <div class="bc">Hamster Hub › Portfolio Camp</div>
     <div class="dir">
       <div><b>กิจกรรม</b><a href="https://www.hamsterhub.co/portcamp">Portfolio Camp</a><a href="https://www.hamsterhub.co/allforone">All for One</a><a href="https://www.hamsterhub.co/portex">Portex</a><a href="https://www.hamsterhub.co/activity">กิจกรรมทั้งหมด</a></div>
-      <div><b>ค่ายนี้</b><a href="#paths">เลือกเส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#schedule">กำหนดการ</a><a href="#faq">คำถามที่พบบ่อย</a></div>
+      <div><b>ค่ายนี้</b><a href="#basic">เส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#schedule">กำหนดการ</a><a href="#faq">คำถามที่พบบ่อย</a></div>
       <div><b>เกี่ยวกับ Hamster Hub</b><a href="https://www.hamsterhub.co/about">เกี่ยวกับเรา</a><a href="https://www.hamsterhub.co/">หน้าแรก</a></div>
       <div><b>ติดต่อ</b><a href="https://page.line.me/jkm4247u?openQrModal=true">LINE</a><a href="https://www.instagram.com/hamsterhub.official/">Instagram</a><a href="https://www.facebook.com/HamsterHubThailand">Facebook</a></div>
     </div>
@@ -405,12 +387,12 @@ const LINE='https://page.line.me/jkm4247u?openQrModal=true',REG='https://www.ham
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* date-aware copy: the page speaks to where the visitor is in time */
-const DEADLINE=new Date('2026-11-25T23:59:00+07:00'),START=new Date('2026-11-27T18:30:00+07:00'),END=new Date('2026-11-29T21:00:00+07:00');
+const DEADLINE=new Date('2026-12-02T23:59:00+07:00'),START=new Date('2026-12-04T18:30:00+07:00'),END=new Date('2026-12-06T21:00:00+07:00');
 const phase=()=>{const n=new Date();return n<=DEADLINE?'open':n<START?'closed':n<=END?'live':'done';};
 const left=()=>{const ms=Math.max(0,DEADLINE-Date.now());return{ms,d:Math.floor(ms/864e5),h:Math.floor(ms/36e5)%24,m:Math.floor(ms/6e4)%60};};
 const COPY={
  open:()=>{const l=left();return `อีก ${l.d} วัน ${l.h} ชม. ปิดรับสมัคร หลายมหาวิทยาลัยยังเปิดรับรอบ Portfolio ถึงต้นปี 2570<sup>2</sup> เพิ่มเกมลงแฟ้มให้ทันก่อนยื่น <a class="more" href="${REG}">สมัครค่าย</a>`;},
- closed:()=>`ปิดรับสมัครแล้ว ค่ายเริ่มศุกร์ 27 พ.ย. เวลา 18:30 น. <a class="more" href="#schedule">ดูกำหนดการ</a>`,
+ closed:()=>`ปิดรับสมัครแล้ว ค่ายเริ่มศุกร์ 4 ธ.ค. เวลา 18:30 น. <a class="more" href="#schedule">ดูกำหนดการ</a>`,
  live:()=>`ค่ายกำลังจัดอยู่ตอนนี้ วันอาทิตย์ 14:00 น. ประกาศ Top 10 <a class="more" href="#schedule">ดูกำหนดการ</a>`,
  done:()=>`ค่ายรอบนี้จบแล้ว อยากได้ข่าวค่ายรอบหน้า <a class="more" href="${LINE}">ทัก LINE ถามทีม</a>`};
 const tick=()=>{const p=phase();
@@ -422,7 +404,7 @@ tick();setInterval(tick,30000);
 {const tb=$('#tabbar'),ind=tb.querySelector('.ind'),links=[...tb.querySelectorAll('a:not(.ln-btn)')],lb=$('#lnBtn'),hero=document.querySelector('.hero');
  const place=()=>{const c=tb.querySelector('a.cur');if(!c||c.offsetParent===null){ind.style.width=0;return;}ind.style.left=c.offsetLeft+'px';ind.style.width=c.offsetWidth+'px';};
  const setCur=id=>{links.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+id));place();};
- const ids=['top','paths','grades','schedule','parents','faq'];
+ const ids=['top','highlights','basic','grades','schedule','faq'];
  const onScroll=()=>{lb.classList.toggle('off',scrollY<hero.offsetHeight-innerHeight*0.25);let id='top';for(const k of ids.slice(1)){const el=document.getElementById(k);if(el&&el.getBoundingClientRect().top<innerHeight*0.45)id=k;}setCur(id);};
  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',place);lb.addEventListener('transitionend',place);onScroll();
  document.fonts&&document.fonts.ready.then(place);}
@@ -434,8 +416,7 @@ const HL=[
  ["เสาร์ 19:00","Guest Speaker เรื่อง Game Design & Level Design ฟังได้ทุกเกรด",'<svg viewBox="0 0 400 260" fill="none" stroke="#f5f5f7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="160" y="30" width="80" height="130" rx="40"/><path d="M120 120a80 80 0 0 0 160 0M200 200v36M150 236h100"/><path d="M60 80c-20 20-20 60 0 80M340 80c20 20 20 60 0 80M30 60c-34 34-34 106 0 140M370 60c34 34 34 106 0 140" stroke="#2997ff"/></svg>',""],
  ["ทุกช่วงพัก","มินิเกมสุดมันส์ คั่นทุกช่วงเรียน ไม่ต้องนั่งจ้องจออย่างเดียว",'<svg viewBox="0 0 400 260" fill="none" stroke="#f5f5f7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M90 90h220c40 0 66 40 70 90 3 34-28 46-50 22l-30-32H100l-30 32c-22 24-53 12-50-22 4-50 30-90 70-90z"/><path d="M120 125v40M100 145h40"/><circle cx="270" cy="130" r="9" fill="#f5f5f7"/><circle cx="296" cy="155" r="9" fill="#ff9f0a" stroke="#ff9f0a"/><path d="M175 40l12 22M225 40l-12 22" stroke="#2997ff"/></svg>',""],
  ["อาทิตย์ 10:00","ส่งผลงาน แล้วเปิดบูธให้ทีมอื่นลองเล่นและคอมเมนต์",'<svg viewBox="0 0 400 260" fill="none" stroke="#f5f5f7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M40 100h320l-20-50H60zM60 100v110M340 100v110M40 210h320"/><path d="M40 100c0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0"/><rect x="140" y="135" width="120" height="60" rx="8" stroke="#2997ff"/><path d="M185 150l30 15-30 15z" fill="#2997ff" stroke="#2997ff"/></svg>',""],
- ["อาทิตย์ 14:00","ประกาศ Top 10 แล้วขึ้นเวทีนำเสนอกับนักลงทุนและอาจารย์มหาวิทยาลัย",'<video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="metadata"></video>',"ภาพจริงจากเวทีนำเสนอของทีม RE//SLASH"],
- ["จบค่าย","กลับบ้านพร้อมเกมของตัวเอง 1 เกม ไว้ใส่แฟ้มพอร์ต TCAS รอบ 1",'<video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="metadata"></video>',"คลิปจริง: Heart of Remember"]];
+ ["อาทิตย์ 14:00","ประกาศ Top 10 แล้วขึ้นเวทีนำเสนอกับนักลงทุนและอาจารย์มหาวิทยาลัย",'<video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="metadata"></video>',"ภาพจริงจากเวทีนำเสนอของทีม RE//SLASH"]];
 const gal=$('#gal'),dots=$('#dots');
 gal.innerHTML=HL.map(([w,h,m,s],i)=>`<article class="card${m.startsWith('<svg')?' art':''}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="when">${w}</p><h3 class="t-card">${h}</h3></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
 dots.innerHTML=HL.map((_,i)=>`<button role="tab" aria-label="ไฮไลท์ ${i+1}" data-i="${i}"></button>`).join('');
@@ -476,55 +457,49 @@ const G=[
  [90,"เกมระดับประเทศ",null,"",["คนทั่วประเทศรู้จักและเล่น"],"ระดับมืออาชีพ"],
  [100,"เกมระดับโลก",null,"",["คนทั่วโลกรู้จักและเล่น"],"ระดับมืออาชีพ"]];
 const gt=$('#gTrack');gt.innerHTML=G.map(([n],i)=>`<button data-i="${i}">${n}</button>`).join('');
-const setG=i=>{const [n,name,media,src,look,path]=G[i];$('#gxNum').textContent=n;$('#gxName').textContent=name;$('#gxLook').innerHTML=look.map(x=>`<li>${x}</li>`).join('');$('#gxPath').textContent='→ '+path;
- $('#gxStage').innerHTML=media?`<video src="vid/${media}.mp4" poster="img/${media}.jpg" muted loop playsinline autoplay></video><span class="src">${src}</span>`:`<div class="ph">${n===0?'ยังไม่มีเกม: เริ่มจากกระดาษเปล่า':'รอทีมใส่ตัวอย่างเกมระดับ '+n}</div>`;
- gt.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('in',j<=i);b.setAttribute('aria-pressed',j===i);});};
-gt.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setG(+b.dataset.i);});setG(1);
+const GAMES={10:[["hydrosaur","Hydrosaur","ยังไม่มีเป้าหมายและวิธีเล่นที่ชัดเจน"]],20:[["noas","Noas","เล่นได้แล้ว แต่แนวเกม ปริศนา และความน่ากลัวยังไม่ชัด"]],30:[["pitch","PITCH","คอนเซปต์สยองขวัญน่าสนใจ แต่เกมเพลย์ยังดึงความกลัวออกมาไม่เต็มที่"]],40:[["apocalypse","Apocalypse Building","ไอเดียสร้างตึกป้องกันซอมบี้ชัด แต่สองระบบยังไม่เชื่อมกัน"],["heart","Heart of Remember","เกมการ์ดเล่นได้ แต่กลยุทธ์และทางพลิกเกมยังไม่ลึกพอ"]],50:[["stage-pitch","RE//SLASH","พร้อมปล่อยเดโม แต่ยังต้องเพิ่มเนื้อหาก่อนเปิดเต็ม (ภาพตอนนำเสนอ)"]]};
+let gi=1;
+const showGame=(n,k)=>{const list=GAMES[n];const [id,name,why]=list[k];$('#gxStage').innerHTML=`<video src="vid/${id}.mp4" poster="img/${id}.jpg" muted loop playsinline autoplay></video><span class="src">ผลงานจริง: ${name}</span>`;$('#gxWhy').textContent=list.length>1?`${name}: ${why}`:'';$('#gxGames').innerHTML=list.length>1?list.map(([,nm],j)=>`<button aria-pressed="${j===k}" data-k="${j}">${nm}</button>`).join(''):'';};
+const setG=i=>{gi=i;const [n,name,media,src,look,path]=G[i];$('#gxNum').textContent=n;$('#gxName').textContent=name;$('#gxLook').innerHTML=look.map(x=>`<li>${x}</li>`).join('');$('#gxPath').textContent=path;
+ if(GAMES[n])showGame(n,0);else{$('#gxGames').innerHTML='';$('#gxWhy').textContent='';$('#gxStage').innerHTML=media?`<video src="vid/${media}.mp4" poster="img/${media}.jpg" muted loop playsinline autoplay></video><span class="src">${src}</span>`:`<div class="ph">${n===0?'ยังไม่มีเกม: เริ่มจากกระดาษเปล่า':'รอทีมใส่ตัวอย่างเกมระดับ '+n}</div>`;}
+ gt.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('in',j<=i);b.setAttribute('aria-pressed',j===i);});$('#gxPrev').disabled=i===0;$('#gxNext').disabled=i===G.length-1;};
+gt.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setG(+b.dataset.i);});
+$('#gxPrev').addEventListener('click',()=>setG(Math.max(0,gi-1)));$('#gxNext').addEventListener('click',()=>setG(Math.min(G.length-1,gi+1)));
+$('#gxGames').addEventListener('click',e=>{const b=e.target.closest('button');if(b)showGame(G[gi][0],+b.dataset.k);});
+$('#gxStage').addEventListener('click',()=>{const v=$('#gxStage video');if(v)v.paused?v.play().catch(()=>{}):v.pause();});
+setG(1);
 
-/* examples: play one after another */
-const EX=[["hydrosaur","Hydrosaur",10,"ยังไม่มีเป้าหมายและวิธีเล่นที่ชัดเจน"],["noas","Noas",20,"เล่นได้แล้ว แต่แนวเกม ปริศนา และความน่ากลัวยังไม่ชัด"],["pitch","PITCH",30,"คอนเซปต์สยองขวัญน่าสนใจ แต่เกมเพลย์ยังดึงความกลัวออกมาไม่เต็มที่"],["apocalypse","Apocalypse Building",40,"ไอเดียสร้างตึกป้องกันซอมบี้ชัด แต่สองระบบยังไม่เชื่อมกัน"],["heart","Heart of Remember",40,"เกมการ์ดเล่นได้ แต่กลยุทธ์และทางพลิกเกมยังไม่ลึกพอ"],["stage-pitch","RE//SLASH",50,"พร้อมปล่อยเดโม แต่ยังต้องเพิ่มเนื้อหาและความก้าวหน้าก่อนเปิดเต็ม"]];
-const rail=$('#exRail');
-rail.innerHTML=EX.map(([id,n,g,r])=>`<article class="ex"><div class="m"><video src="vid/${id}.mp4" poster="img/${id}.jpg" muted playsinline preload="metadata"></video><span class="bar"></span></div><div class="b"><h3 class="t-card">${n}</h3><p class="gr">เกรด ${g}</p><p class="t-small">${r}</p></div></article>`).join('');
-const exs=[...rail.children];let ei=0,exSeen=false;
-const playEx=(i,scroll=true)=>{ei=(i+exs.length)%exs.length;exs.forEach((c,j)=>{c.classList.toggle('on',j===ei);const v=c.querySelector('video');if(j!==ei){v.pause();c.querySelector('.bar').style.width=0;}});
- if(scroll)rail.scrollTo({left:exs[ei].offsetLeft-exs[0].offsetLeft,behavior:reduce?'auto':'smooth'});
- const v=exs[ei].querySelector('video');v.currentTime=0;if(exSeen&&!reduce)v.play().catch(()=>{});};
-exs.forEach((c,j)=>{const v=c.querySelector('video');v.addEventListener('timeupdate',()=>{c.querySelector('.bar').style.width=(v.currentTime/(v.duration||6)*100)+'%';});v.addEventListener('ended',()=>playEx(j+1));c.addEventListener('click',()=>playEx(j));});
-new IntersectionObserver(es=>{exSeen=es[0].isIntersecting;const v=exs[ei].querySelector('video');if(exSeen&&!reduce)v.play().catch(()=>{});else v.pause();},{threshold:.35}).observe(rail);
-document.querySelectorAll('.paddles button').forEach(b=>b.addEventListener('click',()=>playEx(ei+(+b.dataset.r))));
-playEx(0,false);
+
 
 /* schedule */
-const DAYS=[["ศุกร์ 27","Intro",[["18:30–19:00","เช็กอิน"],["19:00–19:30","เปิดค่ายและเลือกบ้าน"],["19:30–21:00","กิจกรรมประจำบ้านและ Hamsquest"],["21:30–22:00","เล่นมินิเกมสุดมันส์"]]],
- ["เสาร์ 28","Development",[["13:00–14:00","เรียนตามบ้าน"],["14:00–14:30","เล่นมินิเกมสุดมันส์"],["14:30–18:00","ทำเควส"],["18:00–18:30","เล่นมินิเกมสุดมันส์"],["19:00–20:00","Guest Speaker : Game Design & Level Design","ทุกเกรด"],["20:00–21:00","ทำเควสและกิจกรรมประจำบ้าน"],["21:30–22:00","เล่นมินิเกมสุดมันส์"]]],
- ["อาทิตย์ 29","Meeting",[["10:00–12:00","ส่งผลงาน"],["13:00–13:30","เปิดบูธ"],["14:00–14:30","ประกาศ Top 10"],["15:00–16:00","Guest Speaker : เบื้องหลังการทำเกมระดับโลก","เกรด 30–50"],["16:00–19:00","เปิดบูธต่อ"],["18:00–18:30","เล่นมินิเกมสุดมันส์"],["19:00–20:00","Top 10 นำเสนอผลงาน"],["20:00–21:00","ปิดกิจกรรม"]]]];
-$('#days').innerHTML=DAYS.map(([d],i)=>`<button role="tab" data-i="${i}">${d} พ.ย.</button>`).join('');
+const DAYS=[["ศุกร์ 4","Intro",[["18:30–19:00","เช็กอิน"],["19:00–19:30","เปิดค่ายและเลือกบ้าน"],["19:30–21:00","กิจกรรมประจำบ้านและ Hamsquest"],["21:30–22:00","เล่นมินิเกมสุดมันส์"]]],
+ ["เสาร์ 5","Development",[["13:00–14:00","เรียนตามบ้าน"],["14:00–14:30","เล่นมินิเกมสุดมันส์"],["14:30–18:00","ทำเควส"],["18:00–18:30","เล่นมินิเกมสุดมันส์"],["19:00–20:00","Guest Speaker : Game Design & Level Design","ทุกเกรด"],["20:00–21:00","ทำเควสและกิจกรรมประจำบ้าน"],["21:30–22:00","เล่นมินิเกมสุดมันส์"]]],
+ ["อาทิตย์ 6","Meeting",[["10:00–12:00","ส่งผลงาน"],["13:00–13:30","เปิดบูธ"],["14:00–14:30","ประกาศ Top 10"],["15:00–16:00","Guest Speaker : เบื้องหลังการทำเกมระดับโลก","เกรด 30–50"],["16:00–19:00","เปิดบูธต่อ"],["18:00–18:30","เล่นมินิเกมสุดมันส์"],["19:00–20:00","Top 10 นำเสนอผลงาน"],["20:00–21:00","ปิดกิจกรรม"]]]];
+$('#days').innerHTML=DAYS.map(([d],i)=>`<button role="tab" data-i="${i}">${d} ธ.ค.</button>`).join('');
 const setDay=i=>{$('#days').querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-selected',j===i));const ev=DAYS[i][2];
  $('#sched').innerHTML=`<li><time>${DAYS[i][1]}</time><span style="color:var(--mute)">${ev[0][0].split('–')[0]}–${ev[ev.length-1][0].split('–')[1]} น.</span></li>`+ev.map(([t,x,n])=>`<li><time>${t}</time><span>${x}${n?`<em>${n}</em>`:''}</span></li>`).join('');};
 $('#days').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setDay(+b.dataset.i);});
-const today=new Date();setDay(today>=new Date('2026-11-29T00:00:00+07:00')?2:today>=new Date('2026-11-28T00:00:00+07:00')?1:0);
+const today=new Date();setDay(today>=new Date('2026-12-06T00:00:00+07:00')?2:today>=new Date('2026-12-05T00:00:00+07:00')?1:0);
 
 /* parents: incentive cards + modal */
 const INC=[
- ["ได้อะไรกลับบ้าน","ลูกจะได้อะไรจาก 3 วันนี้?","เกมของตัวเอง 1 เกม พร้อมคอมเมนต์ว่าควรพัฒนาต่อตรงไหน",'<video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline autoplay></video>',"ทุกเส้นทางจบค่ายด้วยเกมที่น้องทำเองหนึ่งเกม และคอมเมนต์จากพี่ ๆ ว่าควรพัฒนาต่อตรงไหน นำไปใส่แฟ้มพอร์ตและเล่าต่อในวันสัมภาษณ์ได้"],
- ["ใช้ยื่นพอร์ตได้จริงไหม","ผลงานจากค่ายมีน้ำหนักแค่ไหน?","TCAS70 เน้นศักยภาพจริง¹ งานที่ทำเองและเล่าเองได้คือจุดแข็ง",'<video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline autoplay></video>',"ปีนี้ TCAS70 ปรับรอบ Portfolio ให้เน้นศักยภาพจริง ในค่ายน้องทำเกมเองตั้งแต่ไอเดียจนเล่นได้ และได้ฝึกนำเสนองานของตัวเองต่อหน้าคนอื่นในวันสุดท้าย"],
- ["ไม่มีพื้นฐาน","ลูกไม่เคยเขียนโปรแกรมเลย ตามทันไหม?","มีเส้นทางมือใหม่ สอนทีละขั้นตั้งแต่ออกแบบเกม",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="40" y="14" width="220" height="110" rx="10"/><path d="M20 136h260"/><path d="M110 50l-24 20 24 20M190 50l24 20-24 20M162 40l-24 62"/></svg>`,"เส้นทางมือใหม่เริ่มจาก Game Design → Graybox → Core System → Prototype ทำทีละขั้นกับพี่ ๆ ในบ้าน ไม่ต้องมีพื้นฐานมาก่อน"],
- ["เวลาเรียน","กระทบการเรียนหรือการสอบไหม?","จัดศุกร์เย็นถึงอาทิตย์ และจบก่อนสอบ TGAT/TPAT เดือน ม.ค. 2570²",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><g font-family="Noto Sans Thai,sans-serif" stroke="none" fill="#0071e3" text-anchor="middle"><text x="50" y="58" font-size="20">ศุกร์</text><text x="150" y="58" font-size="20">เสาร์</text><text x="250" y="58" font-size="20">อาทิตย์</text><text x="50" y="112" font-size="40" font-weight="600">27</text><text x="150" y="112" font-size="40" font-weight="600">28</text><text x="250" y="112" font-size="40" font-weight="600">29</text></g><rect x="8" y="22" width="84" height="116" rx="14"/><rect x="108" y="22" width="84" height="116" rx="14"/><rect x="208" y="22" width="84" height="116" rx="14"/><path d="M8 70h84M108 70h84M208 70h84"/></svg>`,"ศุกร์ 27 พ.ย. 18:30–22:00 น.<br>เสาร์ 28 พ.ย. 13:00–22:00 น.<br>อาทิตย์ 29 พ.ย. 10:00–21:00 น. ไม่ชนวันเรียน ส่วนการสอบ TGAT/TPAT ของ TCAS70 เลื่อนไปจัดเดือนมกราคม 2570"],
- ["การสมัคร","สมัครและจ่ายเงินยังไง?","3 ขั้นตอนบนเว็บ ปิดรับ 25 พ.ย. 23:59 น.",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="40" cy="75" r="26"/><circle cx="150" cy="75" r="26"/><circle cx="260" cy="75" r="26"/><path d="M72 75h46M182 75h46"/><path d="M28 75l9 9 16-18M138 75l9 9 16-18"/><g font-family="Noto Sans Thai,sans-serif" stroke="none" fill="#0071e3" text-anchor="middle" font-size="18"><text x="40" y="132">สมัคร</text><text x="150" y="132">กรอกข้อมูล</text><text x="260" y="132">ชำระเงิน</text><text x="260" y="82" font-size="20" font-weight="600">฿</text></g></svg>`,"กดปุ่มสมัคร → เข้าสู่ระบบ → กรอกข้อมูล → ชำระเงิน ปิดรับสมัคร 25 พ.ย. 2569 เวลา 23:59 น. ผู้ที่มีผลงานเดิมส่งผลงานหลังชำระเงินเพื่อประเมินเกรด"],
- ["สถานที่และผู้ดูแล","จัดที่ไหน ใครดูแลลูก?","[รอทีมยืนยัน]",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M150 128s-46-42-46-76a46 46 0 0 1 92 0c0 34-46 76-46 76z"/><circle cx="150" cy="52" r="16"/><path d="M40 140h220"/></svg>`,"ทีมยังไม่ได้ยืนยันสถานที่และผู้ดูแล ระหว่างนี้ทัก LINE ถามทีมได้"],
- ["ยังมีคำถาม","อยากคุยกับทีมก่อนตัดสินใจ","ทัก LINE ได้เลย ทีมตอบเอง",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M40 20h150a20 20 0 0 1 20 20v54a20 20 0 0 1-20 20H90l-34 26v-26H40a20 20 0 0 1-20-20V40a20 20 0 0 1 20-20z"/><path d="M226 64h12a20 20 0 0 1 20 20v30a20 20 0 0 1-20 20h-10v20l-26-20h-62a20 20 0 0 1-20-20v-6" stroke="#34c759"/><circle cx="80" cy="67" r="5" fill="#0071e3"/><circle cx="115" cy="67" r="5" fill="#0071e3"/><circle cx="150" cy="67" r="5" fill="#0071e3"/></svg>`,"ทัก LINE ของ Hamster Hub เพื่อถามเรื่องค่าย สถานที่ หรือเส้นทางที่เหมาะกับลูก"]];
+ ["เกมไว้ยื่นพอร์ต","เกม 1 เกมที่ลูกทำเอง ยื่นพอร์ตได้น้ำหนัก","มีเทคนิคให้โชว์เยอะ และปีนี้ TCAS70 เน้นศักยภาพจริง¹",'<video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline autoplay></video>',"จบค่ายทุกคนได้เกมที่ทำเองหนึ่งเกม มีเทคนิคให้โชว์ในแฟ้มพอร์ตเยอะ พร้อมคอมเมนต์ว่าควรพัฒนาต่อตรงไหน ปีนี้ TCAS70 ปรับรอบ Portfolio ให้เน้นศักยภาพจริง งานที่ทำเองและเล่าเองได้จึงเป็นจุดแข็ง"],
+ ["ความรู้รอบพอร์ต","พี่ ๆ จุฬาฯ มาเพียบ สอนทำแฟ้มพอร์ตด้วย","ไม่ได้แค่ทำเกม แต่รู้ว่าจะใส่ลงแฟ้มยังไง",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M40 40h70l16 16h134v80H40z"/><path d="M70 30h150v26M90 20h110v36" opacity=".55"/><path d="M80 92h90M80 112h130"/></svg>`,"ในค่ายมีพี่ ๆ จากจุฬาฯ หลายคนคอยดูแล และสอนวิธีทำแฟ้มพอร์ตด้วย น้องจะรู้ว่าควรเล่าผลงานเกมลงแฟ้มยังไง"],
+ ["เริ่มจากศูนย์ได้","สอนตั้งแต่พื้นฐาน ด้วยเครื่องมือระดับโลก","เรียน Unity หรือ Roblox ที่ใช้ทำเกมจริง",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="30" y="20" width="240" height="110" rx="12"/><path d="M30 46h240"/><circle cx="48" cy="33" r="4" fill="#0071e3"/><circle cx="62" cy="33" r="4" fill="#0071e3"/><path d="M60 70h60v40H60zM140 70h100M140 90h70M140 110h85"/></svg>`,"ไม่เคยเขียนโปรแกรมก็เริ่มได้ เส้นทางมือใหม่สอนตั้งแต่ Game Design, Graybox, Core System จนได้ Prototype ที่เล่นได้ ด้วย Unity หรือ Roblox ซึ่งเป็นเครื่องมือที่ใช้ทำเกมจริงทั่วโลก"],
+ ["มีผลงานแล้วต่อยอดได้","Top 10 ได้นำเสนอกับอาจารย์และนักลงทุน","เอาผลงานเก่ามาต่อยอด แล้วลุ้นขึ้นเวที",'<video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline autoplay></video>',"ใครมีผลงานอยู่แล้ว เอามาต่อยอดในเส้นทางล่า Top 10 ได้ Top 10 ของกิจกรรมได้ขึ้นนำเสนอกับอาจารย์มหาวิทยาลัยหรือนักลงทุนในวันสุดท้าย"],
+ ["ค้นหาตัวเอง","ได้ลองครบทั้งโค้ด อาร์ต ออกแบบ นำเสนอ","รู้ว่าตัวเองชอบด้านไหน ก่อนเลือกคณะ",`<svg viewBox="0 0 300 150" fill="none" stroke="#0071e3" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M48 52l-22 22 22 22M92 52l22 22-22 22"/><path d="M150 112c20 0 26-14 26-26 0-18 30-50 46-60-8 18-38 50-52 58M150 112c-8 0-14-4-16-10" /><rect x="196" y="40" width="80" height="70" rx="8"/><path d="M196 62h80M222 62v48"/><path d="M60 138h180" stroke-dasharray="2 14"/></svg>`,"การทำเกมหนึ่งเกมต้องใช้ทั้งการเขียนโค้ด วาดอาร์ต ออกแบบเกม และนำเสนอ น้องได้ลองทุกด้านใน 3 วัน จะได้รู้ว่าชอบอะไรก่อนเลือกคณะ"]];
 $('#incRail').innerHTML=INC.map(([k,h,d,m,_],i)=>`<button class="inc" data-i="${i}" aria-label="${k}: ดูรายละเอียด"><div class="b"><p class="k">${k}</p><h3 class="t-card">${h}</h3><p class="d">${d}</p></div><div class="m">${m}</div><span class="plus" aria-hidden="true">+</span></button>`).join('');
 const modal=$('#modal');
 $('#incRail').addEventListener('click',e=>{const b=e.target.closest('.inc');if(!b)return;const [k,h,,,d]=INC[+b.dataset.i];$('#mBody').innerHTML=`<p class="t-eyebrow">${k}</p><h2>${h}</h2><p class="t-copy">${d}</p><p style="margin-top:32px"><a class="more" href="${LINE}">ทัก LINE ถามทีม</a></p>`;modal.classList.add('on');$('#mx').focus();});
 const closeM=()=>modal.classList.remove('on');$('#mx').addEventListener('click',closeM);modal.addEventListener('click',e=>{if(e.target===modal)closeM();});addEventListener('keydown',e=>{if(e.key==='Escape')closeM();});
 
 /* compare */
-const CMP=[["มือใหม่","ยังไม่มีผลงาน","hydrosaur",["ยังไม่มีผลงาน","เกรด 0–20","Game Design → Prototype","เกมที่เล่นได้ 1 เกม","ส่งผลงานและเปิดบูธ","190 บาท"]],["ล่า Top 10","มีผลงานแล้ว","apocalypse",["มีผลงานแล้ว","เกรด 30–50","Basic Shader Graph","ผลงานต่อยอด + ลุ้น Top 10","Top 10 นำเสนอบนเวที","190 บาท"]]];
+const CMP=[["มือใหม่","ยังไม่มีผลงาน","hydrosaur",["ยังไม่มีผลงาน","เกรด 0–20","Game Design ถึง Prototype","เกมที่เล่นได้ 1 เกม","ส่งผลงานและเปิดบูธ","190 บาท"]],["ล่า Top 10","มีผลงานแล้ว","apocalypse",["มีผลงานแล้ว","เกรด 30–50","Basic Shader Graph","ผลงานต่อยอด + ลุ้น Top 10","Top 10 นำเสนอบนเวที","190 บาท"]]];
 const LAB=["เหมาะกับ","เกรด","เรียน","ได้","วันสุดท้าย","ราคา"];
 $('#cmp').innerHTML=CMP.map(([n,tag,img,r])=>`<div><video src="vid/${img}.mp4" poster="img/${img}.jpg" muted loop playsinline autoplay aria-label="คลิปเกม"></video><p class="tag">${tag}</p><h3 class="t-card">${n}</h3><div class="act" style="margin-top:20px"><a class="btn" href="${REG}">สมัคร</a></div><dl>${r.map((v,i)=>`<dt>${LAB[i]}</dt><dd>${v}</dd>`).join('')}</dl></div>`).join('');
 
 /* faq */
-const FAQ=[["ยังทันยื่นรอบ Portfolio ไหม?","รอบ Portfolio ของ TCAS70 แต่ละมหาวิทยาลัยกำหนดวันรับสมัครเอง บางแห่งยังเปิดรับถึงต้นปี 2570 เช่น มทส. รอบ 1.2 เปิดรับ 16 พ.ย. 69 – 14 ม.ค. 70 ให้เช็กวันของคณะที่น้องจะยื่นอีกครั้ง"],["ไม่มีผลงาน เริ่มยังไง?","เริ่มที่เกรด 0 ได้เลย แล้วลงมือทำเกมในค่าย"],["มีเกมอยู่แล้ว เริ่มที่เกรดไหน?","ส่งผลงานหลังชำระเงิน เพื่อประเมินเกรดจากคุณภาพงาน"],["เกรดต่างจากเกรดที่โรงเรียนยังไง?","เกรดในค่ายคือระดับฝีมือทำเกม 0–100 ไม่เกี่ยวกับผลการเรียน ดูตัวอย่างแต่ละระดับได้ในส่วนระบบเกรด"],["วันสุดท้ายมีอะไร?","ส่งผลงาน เปิดบูธ ประกาศ Top 10 และ Top 10 ขึ้นนำเสนอตามกำหนดการ"]];
+const FAQ=[["ยังทันยื่นรอบ Portfolio ไหม?","รอบ Portfolio ของ TCAS70 แต่ละมหาวิทยาลัยกำหนดวันรับสมัครเอง บางแห่งยังเปิดรับถึงต้นปี 2570 เช่น มทส. รอบ 1.2 เปิดรับ 16 พ.ย. 69 ถึง 14 ม.ค. 70 ให้เช็กวันของคณะที่น้องจะยื่นอีกครั้ง"],["กระทบการเรียนหรือการสอบไหม?","ค่ายจัดศุกร์เย็นถึงอาทิตย์ ไม่ชนวันเรียน และจบก่อนสอบ TGAT/TPAT ของ TCAS70 ซึ่งเลื่อนไปจัดเดือนมกราคม 2570²"],["สมัครและจ่ายเงินยังไง?","กดปุ่มสมัคร เข้าสู่ระบบ กรอกข้อมูล แล้วชำระเงิน 190 บาท ปิดรับสมัคร 2 ธ.ค. 2569 เวลา 23:59 น."],["จัดที่ไหน ใครดูแลลูก?","[รอทีมยืนยัน] ระหว่างนี้ทัก LINE ถามทีมได้"],["ไม่มีผลงาน เริ่มยังไง?","เริ่มที่เกรด 0 ได้เลย แล้วลงมือทำเกมในค่าย"],["มีเกมอยู่แล้ว เริ่มที่เกรดไหน?","ส่งผลงานหลังชำระเงิน เพื่อประเมินเกรดจากคุณภาพงาน"],["เกรดต่างจากเกรดที่โรงเรียนยังไง?","เกรดในค่ายคือระดับฝีมือทำเกม 0 ถึง 100 ไม่เกี่ยวกับผลการเรียน ดูตัวอย่างแต่ละระดับได้ในส่วนระบบเกรด"],["วันสุดท้ายมีอะไร?","ส่งผลงาน เปิดบูธ ประกาศ Top 10 และ Top 10 ขึ้นนำเสนอตามกำหนดการ"]];
 $('#faqList').innerHTML=FAQ.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('');
 false&&$('#xall').addEventListener('click',e=>{const d=[...document.querySelectorAll('#faqList details')];const o=!d.every(x=>x.open);d.forEach(x=>x.open=o);e.currentTarget.textContent=o?'ย่อทั้งหมด ⌃':'ขยายทั้งหมด ⌄';});
 
