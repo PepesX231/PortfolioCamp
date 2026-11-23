@@ -3,7 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfolio Camp – Prototype</title>
+<title>Portfolio Camp for TCAS-1 | ค่ายทำเกม 3 วัน 4–6 ธ.ค. 2569 | Hamster Hub</title>
+<meta name="description" content="ค่ายทำเกม 3 วัน 4–6 ธ.ค. 2569 ค่าเข้าร่วม 190 บาท จบค่ายได้เกมที่ทำเองไว้ยื่นพอร์ต TCAS รอบ 1 มือใหม่เริ่มจาก 0 ได้ มีผลงานแล้วมาลุ้น Top 10">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://pepesx231.github.io/PortfolioCamp/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial' font-weight='700' fill='%23fff' text-anchor='middle'%3EPC%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="th_TH">
+<meta property="og:site_name" content="Hamster Hub">
+<meta property="og:title" content="Portfolio Camp for TCAS-1 ค่ายทำเกม 3 วัน">
+<meta property="og:description" content="4–6 ธ.ค. 2569 ค่าเข้าร่วม 190 บาท จบค่ายได้เกมที่ทำเองไว้ยื่นพอร์ต TCAS รอบ 1">
+<meta property="og:url" content="https://pepesx231.github.io/PortfolioCamp/">
+<meta property="og:image" content="https://pepesx231.github.io/PortfolioCamp/img/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -27,6 +40,8 @@ button{font:inherit;color:inherit}
 .dark{background:#000;color:#f5f5f7}
 .c{text-align:center}
 .more::after{content:" ›"}
+.skip{position:absolute;left:12px;top:-60px;z-index:99;background:#fff;color:var(--ink);padding:10px 16px;border-radius:999px}.skip:focus{top:12px}
+a.more{display:inline-block;padding:10px 0}
 .dark a{color:#2997ff}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 21px;border-radius:980px;background:var(--blue);color:#fff;font-size:17px;border:0;cursor:pointer;white-space:nowrap}
 .btn:hover{text-decoration:none;background:#0077ed}
@@ -96,7 +111,8 @@ button{font:inherit;color:inherit}
 .card .src{position:absolute;right:20px;bottom:16px;z-index:2;color:rgba(255,255,255,.75);font-size:12px}
 .ctrls{display:flex;justify-content:center;gap:16px;margin-top:28px}
 .dots{display:flex;align-items:center;gap:16px;padding:0 24px;height:56px;border-radius:28px;background:var(--glass);backdrop-filter:blur(7px)}
-.dots button{width:8px;height:8px;border-radius:8px;border:0;padding:0;background:#86868b;cursor:pointer;position:relative;overflow:hidden;transition:width .4s}
+.dots button{width:8px;height:8px;border-radius:8px;border:0;padding:0;background:#86868b;cursor:pointer;position:relative;overflow:hidden;transition:width .4s;outline-offset:8px}
+.dots button::before{content:"";position:absolute;inset:-18px -8px}.dots{position:relative}
 .dots button.on{width:48px;background:#c7c7cc}
 .dots button.on::after{content:"";position:absolute;inset:0;background:#1d1d1f;transform-origin:left;transform:scaleX(var(--p,0))}
 .card:not(:first-child){cursor:pointer}.round{font-size:22px;width:56px;height:56px;border-radius:50%;background:var(--glass);backdrop-filter:blur(7px);border:0;cursor:pointer;display:grid;place-items:center;font-size:16px}
@@ -128,7 +144,7 @@ button{font:inherit;color:inherit}
 .cl-item small{display:none;font-size:17px;line-height:1.47;margin-top:6px}
 .cl-item.on b{font-weight:600}.cl-item.on small{display:block}
 .cl-item.on i{transform:rotate(45deg);background:var(--blue);color:#fff}
-.cl-stage{height:540px;border-radius:28px}
+.cl-stage{height:540px;border-radius:28px;background:#e8e8ed!important;color:var(--mute)}.dark .cl-stage{background:#1c1c1e!important}
 
 /* dark finale */
 .finale-type{text-align:center;padding:24px 0 0}.finale-type>b{display:block;font-size:160px;line-height:1.05;font-weight:600;letter-spacing:-.02em;margin:8px 0 16px}
@@ -235,7 +251,7 @@ button{font:inherit;color:inherit}
 .gf .bc{padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink)}
 .gf .dir{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
 .gf .dir b{display:block;color:var(--ink);font-weight:600;margin-bottom:8px}
-.gf .dir a{display:block;color:var(--mute);margin:6px 0}
+.gf .dir a{display:block;color:var(--mute);padding:7px 0}
 .gf .legal{padding-top:16px}
 
 @media(max-width:1068px){.t-hero,.t-xxl{font-size:64px}.t-xl{font-size:48px}.t-sec{font-size:40px}.card{height:520px}.cl{grid-template-columns:minmax(0,300px) minmax(0,1fr)}}
@@ -251,7 +267,7 @@ button{font:inherit;color:inherit}
  .finale{aspect-ratio:4/5}.finale .cap{left:24px;right:24px;bottom:28px}.finale .cap b{font-size:48px}
  .stats{grid-template-columns:minmax(0,1fr);gap:32px;margin-top:64px}.stats b{font-size:48px}
  .gx{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:48px}.gx-num{font-size:80px}.gx-name{font-size:21px}
- .g-track{gap:2px;padding:4px}.g-track button{font-size:11px;height:38px}
+ .g-track{gap:2px;padding:4px}.g-track button{font-size:12px;height:40px}
  .inc{width:300px;height:500px}
  .sched li{grid-template-columns:110px minmax(0,1fr);gap:12px}.sched time{font-size:17px}.sched span{font-size:17px}
  .days button{padding:8px 12px;font-size:14px}
@@ -263,6 +279,7 @@ button{font:inherit;color:inherit}
 </style>
 </head>
 <body>
+<a class="skip" href="#highlights">ข้ามไปที่เนื้อหา</a>
 
 
 
@@ -278,7 +295,7 @@ button{font:inherit;color:inherit}
 <section class="hero">
   <h1 class="t-eyebrow">Portfolio Camp for TCAS-1</h1>
   <p class="t-hero"><span style="white-space:nowrap">3 วัน ทำเกม</span> <span style="white-space:nowrap">เข้ารอบพอร์ต</span></p>
-  <div class="hero-media"><video src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกมเพลย์ COMMAND SELECT"></video></div>
+  <div class="hero-media"><video id="heroVid" src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกมเพลย์ COMMAND SELECT"></video></div>
   
   <div class="aap" id="aap"><div class="hero-pill"><span>4–6 ธ.ค. 2569</span><b>190 บาท</b><a class="pill-btn" id="aapBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a></div></div>
 </section>
@@ -363,7 +380,7 @@ button{font:inherit;color:inherit}
       <p>1. TCAS70 ปรับเกณฑ์รอบ Portfolio ให้เน้นศักยภาพจริง ที่มา: <a href="https://www.bangkokbiznews.com/news/news-update/1231277">กรุงเทพธุรกิจ</a></p>
       <p>2. TGAT/TPAT ของ TCAS70 เลื่อนไปสอบเดือน ม.ค. 2570 ที่มา: <a href="https://www.bangkokbiznews.com/news/news-update/1231277">กรุงเทพธุรกิจ</a></p>
       <p>3. รอบ Portfolio แต่ละมหาวิทยาลัยกำหนดวันรับสมัครเอง เช่น มทส. รอบ 1.2 เปิดรับ 16 พ.ย. 69 – 14 ม.ค. 70 ที่มา: <a href="https://today.line.me/th/v3/article/9m3j1gK">Eduzones</a> ให้เช็กวันของคณะที่จะยื่นอีกครั้ง</p>
-      <p>4. ภาพและคลิปทั้งหมดมาจากผลงานจริง COMMAND SELECT เป็นภาพหน้าจอจากหน้า itch.io ของเกม กรอบลายทางคือจุดที่ต้องใส่ภาพถ่ายจริงจากค่าย</p>
+      <p>4. ภาพและคลิปเกมทั้งหมดมาจากผลงานจริงของน้อง ๆ คลิปส่วนเปิดหน้าตัดจากตัวอย่างเกม COMMAND SELECT ภาพเวทีมาจากการนำเสนอของทีม RE//SLASH</p>
       <p>5. ผู้ที่มีผลงานเดิม ส่งผลงานหลังชำระเงินเพื่อประเมินเกรด</p>
       <p>6. สถานที่จัดค่าย [รอทีมยืนยัน]</p>
     </div>
@@ -400,6 +417,8 @@ const tick=()=>{const p=phase();
  if(p!=='open'){$('#cdLabel').textContent=p==='done'?'ค่ายรอบนี้':'การรับสมัคร';[$('#lnBtn'),$('#cdBtn'),$('#aapBtn')].forEach(b=>{b.href=LINE;b.textContent='ทัก LINE';});}};
 tick();setInterval(tick,30000);
 
+/* hero clip: lighter file on phones */
+{const v=$('#heroVid');if(matchMedia('(max-width:734px)').matches){v.src='vid/command-select-sm.mp4';v.play().catch(()=>{});}}
 /* tab bar: sliding indicator, current section, สมัคร appears after the hero pill leaves */
 {const tb=$('#tabbar'),ind=tb.querySelector('.ind'),links=[...tb.querySelectorAll('a:not(.ln-btn)')],lb=$('#lnBtn'),hero=document.querySelector('.hero');
  const place=()=>{const c=tb.querySelector('a.cur');if(!c||c.offsetParent===null){ind.style.width=0;return;}ind.style.left=c.offsetLeft+'px';ind.style.width=c.offsetWidth+'px';};
@@ -440,7 +459,7 @@ const STEPS={basic:[["Game Design","ออกแบบเกมให้สน�
  adv:[["Intro to Shader Graph","รู้จักหน้าตาและวิธีใช้ Shader Graph"],["Fresnel Glow","ใช้ Operation และ Node ทำขอบวัตถุให้เรืองแสง"],["Dissolve","ใช้ Node ร่วมกับเวลา ทำให้วัตถุค่อย ๆ สลาย"],["Vertex Shader","รู้จัก UV และ World Position ก่อนต่อยอดสู่ Advance"]]};
 document.querySelectorAll('[data-cl]').forEach(box=>{const L=STEPS[box.dataset.cl],list=box.querySelector('.cl-list'),stg=box.querySelector('.cl-stage');
  list.innerHTML=L.map(([t,d],i)=>`<button class="cl-item" data-i="${i}" aria-expanded="false"><i aria-hidden="true">+</i><span><b>${t}</b><small>${d}</small></span></button>`).join('');
- const show=i=>{list.querySelectorAll('.cl-item').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-expanded',j===i);});stg.textContent='รอภาพหน้าจอจริงของขั้น '+L[i][0];};
+ const show=i=>{list.querySelectorAll('.cl-item').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-expanded',j===i);});stg.textContent='ภาพหน้าจอขั้น '+L[i][0]+' (ทีมกำลังเตรียม)';};
  list.addEventListener('click',e=>{const b=e.target.closest('.cl-item');if(b)show(+b.dataset.i);});show(0);});
 
 /* grade explorer: what a game at each level looks like */
@@ -508,6 +527,15 @@ document.querySelectorAll('.pad2').forEach(p=>{const r=document.getElementById(p
  const upd=()=>{pv.disabled=r.scrollLeft<=4;nx.disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4;};
  p.addEventListener('click',e=>{const b=e.target.closest('button');if(b)r.scrollBy({left:+b.dataset.d*r.clientWidth*.75,behavior:'smooth'});});
  r.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();});
+/* clips load and play only while on screen (saves mobile data) */
+{const lazy=[...document.querySelectorAll('video[autoplay]')].filter(v=>v.id!=='heroVid'&&!v.closest('#gxStage'));
+ lazy.forEach(v=>{v.removeAttribute('autoplay');v.preload='none';v.setAttribute('aria-hidden','true');});
+ const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting&&!reduce)v.play().catch(()=>{});else v.pause();}),{threshold:.35});
+ lazy.forEach(v=>vio.observe(v));}
+/* measurement: pushes click events to Google Tag Manager / GA4 if the team installs it */
+{window.dataLayer=window.dataLayer||[];const kind=a=>/portcamp/.test(a.href)?'register_click':/line\.me/.test(a.href)?'line_click':/itch\.io|youtube/.test(a.href)?'outbound_game':null;
+ document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const k=kind(a);if(!k)return;const where=(a.closest('section,header,footer')||{}).id||a.closest('header')&&'tabbar'||'page';window.dataLayer.push({event:k,cta_text:a.textContent.trim(),cta_section:where});if(window.gtag)gtag('event',k,{cta_text:a.textContent.trim(),cta_section:where});});
+ document.querySelectorAll('a[href*="hamsterhub.co/portcamp"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('utm_source','portcamp-dec-page');u.searchParams.set('utm_medium','web');u.searchParams.set('utm_campaign','portcamp-2569-12');a.href=u.toString();});}
 /* reveal */
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),{threshold:.2});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
