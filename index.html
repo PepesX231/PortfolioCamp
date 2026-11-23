@@ -100,15 +100,15 @@ a.more{display:inline-block;padding:10px 0}
 /* gallery (MBP highlights) */
 .gal{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(22px,calc((100% - 1260px)/2));scroll-padding:0 max(22px,calc((100% - 1260px)/2))}
 .gal::-webkit-scrollbar{display:none}
-.card{flex:0 0 min(1260px,calc(100vw - 44px));height:612px;border-radius:28px;overflow:hidden;position:relative;scroll-snap-align:start;background:#000}
-.card video,.card .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.card::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.35) 38%,transparent 62%);z-index:1}
-.card .cap{position:absolute;left:46px;top:50%;transform:translateY(-50%);max-width:420px;z-index:2;color:#f5f5f7}
-.card.art{background:radial-gradient(120% 90% at 75% 50%,#2a2a2e 0%,#111113 60%,#000 100%)}
+.card{flex:0 0 min(1260px,calc(100vw - 44px));height:612px;border-radius:28px;overflow:hidden;position:relative;scroll-snap-align:start;background:#fff}
+.card video,.card .ph{position:absolute;top:0;right:0;width:62%;height:100%;object-fit:cover}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,#fff 38%,rgba(255,255,255,0) 54%);z-index:1}
+.card .cap{position:absolute;left:56px;top:50%;transform:translateY(-50%);max-width:440px;z-index:2;color:#86868b}.card .cap b{color:#1d1d1f;font-weight:600}
+.card.art{background:#fff}
 .card.art svg{position:absolute;right:8%;top:50%;transform:translateY(-50%);width:min(42%,460px);height:auto}
 .card.art::before{display:none}
-.card .when{font-size:17px;font-weight:600;color:#ff9f0a;margin-bottom:6px}
-.card .src{position:absolute;right:20px;bottom:16px;z-index:2;color:rgba(255,255,255,.75);font-size:12px}
+
+.card .src{position:absolute;right:20px;bottom:16px;z-index:2;color:rgba(255,255,255,.8);font-size:12px}
 .ctrls{display:flex;justify-content:center;gap:16px;margin-top:28px}
 .dots{display:flex;align-items:center;gap:16px;padding:0 24px;height:56px;border-radius:28px;background:var(--glass);backdrop-filter:blur(7px)}
 .dots button{width:8px;height:8px;border-radius:8px;border:0;padding:0;background:#86868b;cursor:pointer;position:relative;overflow:hidden;transition:width .4s;outline-offset:8px}
@@ -261,7 +261,7 @@ a.more{display:inline-block;padding:10px 0}
  .t-hero,.t-xxl{font-size:40px}.t-xl,.t-sec{font-size:32px}.t-card{font-size:21px}.t-copy{font-size:19px}.t-eyebrow{font-size:17px}
  .tabbar a.opt{display:none}.tabbar a{padding:8px 12px}
  .hero{padding:108px 0 56px}.hero-media{aspect-ratio:4/3}.hero-meta{margin-top:8px}
- .card{height:560px}#galPrev,#galNext{display:none}.dots{gap:12px;padding:0 18px}.card.art svg{right:50%;top:auto;bottom:48px;transform:translateX(50%);width:70%}.card::before{background:linear-gradient(180deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.25) 45%,transparent 70%)}.card .cap{left:24px;right:24px;top:36px;transform:none}
+ .card{height:560px}#galPrev,#galNext{display:none}.dots{gap:12px;padding:0 18px}.card.art svg{right:50%;top:auto;bottom:48px;transform:translateX(50%);width:70%}.card video{top:auto;bottom:0;width:100%;height:58%}.card::before{background:linear-gradient(180deg,#fff 0%,#fff 42%,rgba(255,255,255,0) 58%)}.card .cap{left:24px;right:24px;top:36px;transform:none}
  .cmp{grid-template-columns:minmax(0,1fr);gap:56px}.cmp-card{padding:40px 22px}
  .cl{grid-template-columns:minmax(0,1fr);padding-bottom:88px}.cl-stage{height:280px;order:-1}
  .finale{aspect-ratio:4/5}.finale .cap{left:24px;right:24px;bottom:28px}.finale .cap b{font-size:48px}
@@ -430,13 +430,13 @@ tick();setInterval(tick,30000);
 
 /* highlights gallery: horizontal cards, caption over media, timed dotnav */
 const HL=[
- ["ผลงานจริง", "เกมที่ทำเองกับมือ 1 เกม ใส่แฟ้มพอร์ตได้เลย", "<video src=\"vid/heart.mp4\" poster=\"img/heart.jpg\" muted loop playsinline preload=\"metadata\"></video>", "คลิปจริง: Heart"],
- ["เริ่มจากศูนย์ได้", "ไม่เคยเขียนโค้ด ก็ทำเกมได้ด้วย Unity หรือ Roblox", "<svg viewBox=\"0 0 300 150\" fill=\"none\" stroke=\"#f5f5f7\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><rect x=\"30\" y=\"20\" width=\"240\" height=\"110\" rx=\"12\"/><path d=\"M30 46h240\"/><circle cx=\"48\" cy=\"33\" r=\"4\" fill=\"#f5f5f7\"/><circle cx=\"62\" cy=\"33\" r=\"4\" fill=\"#f5f5f7\"/><path d=\"M60 70h60v40H60zM140 70h100M140 90h70M140 110h85\"/></svg>", ""],
- ["แฟ้มพอร์ต", "พี่ ๆ จุฬาฯ สอนเล่าผลงานลงแฟ้ม", "<svg viewBox=\"0 0 300 150\" fill=\"none\" stroke=\"#f5f5f7\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M40 40h70l16 16h134v80H40z\"/><path d=\"M70 30h150v26M90 20h110v36\" opacity=\".55\"/><path d=\"M80 92h90M80 112h130\"/></svg>", ""],
- ["รู้ว่าชอบอะไร", "ลองทั้งโค้ด อาร์ต ออกแบบ และนำเสนอ ก่อนเลือกคณะ", "<svg viewBox=\"0 0 300 150\" fill=\"none\" stroke=\"#f5f5f7\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M48 52l-22 22 22 22M92 52l22 22-22 22\"/><path d=\"M150 112c20 0 26-14 26-26 0-18 30-50 46-60-8 18-38 50-52 58M150 112c-8 0-14-4-16-10\" /><rect x=\"196\" y=\"40\" width=\"80\" height=\"70\" rx=\"8\"/><path d=\"M196 62h80M222 62v48\"/><path d=\"M60 138h180\" stroke-dasharray=\"2 14\"/></svg>", ""],
- ["ได้ขึ้นเวที", "Top 10 นำเสนอเกมกับอาจารย์และนักลงทุน", "<video src=\"vid/stage-pitch.mp4\" poster=\"img/stage-pitch.jpg\" muted loop playsinline preload=\"metadata\"></video>", "ภาพจริงจากเวทีนำเสนอของทีม RE//SLASH"]];
+ ["จบค่าย มีเกมของตัวเอง 1 เกม", "เอาไปใส่แฟ้มพอร์ต ยื่นมหาลัยได้เลย", "<video src=\"vid/heart.mp4\" poster=\"img/heart.jpg\" muted loop playsinline preload=\"metadata\"></video>", "คลิปจริง: Heart"],
+ ["ไม่เคยเขียนโค้ดก็เริ่มได้", "พี่สอนตั้งแต่ศูนย์ ด้วย Unity หรือ Roblox โปรแกรมที่คนทำเกมใช้จริง", "<svg viewBox=\"0 0 300 150\" fill=\"none\" stroke=\"#0071e3\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><rect x=\"30\" y=\"20\" width=\"240\" height=\"110\" rx=\"12\"/><path d=\"M30 46h240\"/><circle cx=\"48\" cy=\"33\" r=\"4\" fill=\"#0071e3\"/><circle cx=\"62\" cy=\"33\" r=\"4\" fill=\"#0071e3\"/><path d=\"M60 70h60v40H60zM140 70h100M140 90h70M140 110h85\"/></svg>", ""],
+ ["รู้วิธีทำแฟ้มพอร์ต", "พี่ ๆ จุฬาฯ ในค่ายสอนว่าจะเล่าผลงานเกมลงแฟ้มยังไง", "<svg viewBox=\"0 0 300 150\" fill=\"none\" stroke=\"#0071e3\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M40 40h70l16 16h134v80H40z\"/><path d=\"M70 30h150v26M90 20h110v36\" opacity=\".55\"/><path d=\"M80 92h90M80 112h130\"/></svg>", ""],
+ ["ได้ลองทุกงานของการทำเกม", "ทั้งเขียนโค้ด วาดอาร์ต ออกแบบ และนำเสนอ จะได้รู้ว่าชอบด้านไหนก่อนเลือกคณะ", "<svg viewBox=\"0 0 300 150\" fill=\"none\" stroke=\"#0071e3\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M48 52l-22 22 22 22M92 52l22 22-22 22\"/><path d=\"M150 112c20 0 26-14 26-26 0-18 30-50 46-60-8 18-38 50-52 58M150 112c-8 0-14-4-16-10\" /><rect x=\"196\" y=\"40\" width=\"80\" height=\"70\" rx=\"8\"/><path d=\"M196 62h80M222 62v48\"/><path d=\"M60 138h180\" stroke-dasharray=\"2 14\"/></svg>", ""],
+ ["10 ทีมที่ดีที่สุดได้ขึ้นเวที", "นำเสนอเกมของตัวเองต่อหน้าอาจารย์มหาวิทยาลัยและนักลงทุน", "<video src=\"vid/stage-pitch.mp4\" poster=\"img/stage-pitch.jpg\" muted loop playsinline preload=\"metadata\"></video>", "ภาพจริงจากเวทีนำเสนอของทีม RE//SLASH"]];
 const gal=$('#gal'),dots=$('#dots');
-gal.innerHTML=HL.map(([w,h,m,s],i)=>`<article class="card${m.startsWith('<svg')?' art':''}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="when">${w}</p><h3 class="t-card">${h}</h3></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
+gal.innerHTML=HL.map(([w,h,m,s],i)=>`<article class="card${m.startsWith('<svg')?' art':''}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="t-card"><b>${w}</b> ${h}</p></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
 dots.innerHTML=HL.map((_,i)=>`<button role="tab" aria-label="ไฮไลท์ ${i+1}" data-i="${i}"></button>`).join('');
 const cards=[...gal.children];let cur=0,t0=performance.now(),playing=!reduce,galSeen=false;const DUR=6000;
 const mark=i=>{cur=i;t0=performance.now();dots.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-selected',j===i);b.style.setProperty('--p',0);});cards.forEach((c,j)=>{const v=c.querySelector('video');if(!v)return;if(j===i&&playing&&galSeen)v.play().catch(()=>{});else v.pause();});};
