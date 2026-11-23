@@ -207,6 +207,15 @@ a.more{display:inline-block;padding:10px 0}
 .inc .m:has(video)::before{content:"";position:absolute;inset:-1px -1px auto;height:80%;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.96) 18%,rgba(255,255,255,.82) 36%,rgba(255,255,255,.55) 54%,rgba(255,255,255,.25) 72%,rgba(255,255,255,.07) 88%,rgba(255,255,255,0) 100%);z-index:1;pointer-events:none}
 .inc .m svg{width:78%;height:auto;margin-bottom:34px}
 .inc .m .ph{width:calc(100% - 60px);height:190px;margin:0 30px 30px;border-radius:18px}
+.card{background:var(--bg)}
+.card video,.card .ill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.card .ill{object-position:right center}
+.card.art::before{background:linear-gradient(90deg,var(--bg) 0%,var(--bg) 28%,transparent 48%)}
+.card.vid::before{background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.7) 30%,rgba(0,0,0,0) 62%)}
+.card .cap{color:rgba(29,29,31,.62)}.card .cap b{color:#1d1d1f}
+.card.vid .cap{color:#a1a1a6}.card.vid .cap b{color:#f5f5f7}
+.inc.art{background:var(--bg)}.inc.art .m{position:absolute;inset:0;height:auto;margin:0}.inc.art .b{position:relative;z-index:1}
+.inc.art .k{color:rgba(29,29,31,.7)}
+.inc.vid{background:#000}.inc.vid .m{position:absolute;inset:0;height:auto;margin:0}.inc.vid .m::before{display:none}.inc.vid::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.75) 28%,rgba(0,0,0,0) 60%)}.inc.vid .b{position:relative;z-index:2;color:#f5f5f7}.inc.vid .k{color:#a1a1a6}.inc.vid .plus{background:rgba(255,255,255,.2)}
 .inc .plus{position:absolute;right:18px;bottom:18px;width:36px;height:36px;border-radius:50%;background:rgba(51,51,54,.92);color:#fff;display:grid;place-items:center;font-size:20px;z-index:2}
 .under{display:flex;justify-content:flex-end;align-items:center;gap:28px;margin-top:28px;padding:0 max(22px,calc((100% - 1260px)/2))}
 .pad2{display:flex;gap:18px}
@@ -268,6 +277,7 @@ a.more{display:inline-block;padding:10px 0}
  .gx{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:48px}.gx-num{font-size:80px}.gx-name{font-size:21px}
  .g-track{gap:2px;padding:4px}.g-track button{font-size:12px;height:40px}
  .inc{width:300px;height:500px}
+ .card.art::before{background:linear-gradient(180deg,var(--bg) 0%,var(--bg) 30%,transparent 52%)}.card.vid::before{background:linear-gradient(180deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.6) 35%,transparent 60%)}.card video,.card .ill{top:0;height:100%}.card .ill{object-position:72% center}
  .sched li{grid-template-columns:110px minmax(0,1fr);gap:12px}.sched time{font-size:17px}.sched span{font-size:17px}
  .days button{padding:8px 12px;font-size:14px}
  .faq summary{font-size:19px;padding:24px 32px 24px 0}
@@ -430,15 +440,15 @@ tick();setInterval(tick,30000);
 /* highlights gallery: horizontal cards, caption over media, timed dotnav */
 const HL=[
  ["ได้เกมของตัวเอง 1 เกม", "ทำเองตั้งแต่ต้นจนเล่นได้ เอาไปใส่แฟ้มพอร์ตยื่นมหาลัย", "<video src=\"vid/heart.mp4\" poster=\"img/heart.jpg\" muted loop playsinline preload=\"metadata\"></video>", "คลิปจริง: Heart"],
- ["ได้แฟ้มพอร์ตที่เล่าเป็น", "พี่ ๆ จุฬาฯ สอนว่าจะเล่าผลงานเกมลงแฟ้มยังไง", "<img class=\"ill\" src=\"img/ill-folder.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้รู้ว่าตัวเองถนัดอะไร", "เขียนโค้ด วาดอาร์ต ออกแบบ หรือนำเสนอ รู้ก่อนเลือกคณะ", "<img class=\"ill\" src=\"img/ill-know.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["ได้แฟ้มพอร์ตที่เล่าเป็น", "พี่ ๆ จุฬาฯ สอนว่าจะเล่าผลงานเกมลงแฟ้มยังไง", "<img class=\"ill\" data-bg=\"#f77479\" src=\"img/g-folder.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["ได้รู้ว่าตัวเองถนัดอะไร", "เขียนโค้ด วาดอาร์ต ออกแบบ หรือนำเสนอ รู้ก่อนเลือกคณะ", "<img class=\"ill\" data-bg=\"#227bef\" src=\"img/g-know.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["ได้พื้นฐาน Unity หรือ Roblox", "โปรแกรมที่คนทำเกมใช้จริง ไม่เคยเขียนโค้ดมาก่อนก็เรียนได้", "<video src=\"vid/apocalypse.mp4\" poster=\"img/apocalypse.jpg\" muted loop playsinline preload=\"metadata\"></video>", "คลิปจริง: Apocalypse Building"],
- ["ได้คนเล่นเกมของเราจริง", "เปิดบูธให้ทีมอื่นลองเล่น แล้วบอกว่าควรแก้ตรงไหน", "<img class=\"ill\" src=\"img/ill-players.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้เพื่อนที่ชอบเรื่องเดียวกัน", "อยู่บ้านเดียวกัน ทำเกมด้วยกันตลอด 3 วัน", "<img class=\"ill\" src=\"img/ill-friends.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้ไอเดียจากวิทยากร", "Guest Speaker มาเล่าเรื่อง Game Design และ Level Design", "<img class=\"ill\" src=\"img/ill-speaker.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["ได้คนเล่นเกมของเราจริง", "เปิดบูธให้ทีมอื่นลองเล่น แล้วบอกว่าควรแก้ตรงไหน", "<img class=\"ill\" data-bg=\"#f14074\" src=\"img/g-players.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["ได้เพื่อนที่ชอบเรื่องเดียวกัน", "อยู่บ้านเดียวกัน ทำเกมด้วยกันตลอด 3 วัน", "<img class=\"ill\" data-bg=\"#ed647e\" src=\"img/g-friends.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["ได้ไอเดียจากวิทยากร", "Guest Speaker มาเล่าเรื่อง Game Design และ Level Design", "<img class=\"ill\" data-bg=\"#237fed\" src=\"img/g-speaker.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["ได้ขึ้นเวทีนำเสนอ", "10 ทีมที่ดีที่สุด นำเสนอเกมต่อหน้าอาจารย์มหาวิทยาลัยและนักลงทุน", "<video src=\"vid/stage-pitch.mp4\" poster=\"img/stage-pitch.jpg\" muted loop playsinline preload=\"metadata\"></video>", "ภาพจริงจากเวทีนำเสนอของทีม RE//SLASH"]];
 const gal=$('#gal'),dots=$('#dots');
-gal.innerHTML=HL.map(([w,h,m,s],i)=>`<article class="card${m.startsWith('<svg')?' art':''}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="t-card"><b>${w}</b> ${h}</p></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
+gal.innerHTML=HL.map(([w,h,m,s],i)=>`<article class="card ${m.includes('data-bg')?'art':'vid'}" style="--bg:${(m.match(/data-bg="([^"]+)"/)||[])[1]||'#000'}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="t-card"><b>${w}</b> ${h}</p></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
 dots.innerHTML=HL.map((_,i)=>`<button role="tab" aria-label="ไฮไลท์ ${i+1}" data-i="${i}"></button>`).join('');
 const cards=[...gal.children];let cur=0,t0=performance.now(),playing=!reduce,galSeen=false;const DUR=6000;
 const mark=i=>{cur=i;t0=performance.now();dots.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-selected',j===i);b.style.setProperty('--p',0);});cards.forEach((c,j)=>{const v=c.querySelector('video');if(!v)return;if(j===i&&playing&&galSeen)v.play().catch(()=>{});else v.pause();});};
@@ -503,13 +513,13 @@ const today=new Date();setDay(today>=new Date('2026-12-06T00:00:00+07:00')?2:tod
 
 /* parents: incentive cards + modal */
 const INC=[
- ["ศุกร์ 18:30", "เลือกบ้าน เจอทีม", "", "<svg viewBox=\"0 0 400 260\" fill=\"none\" stroke=\"#0071e3\" stroke-width=\"6\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M40 210V130l60-48 60 48v80zM160 210V112l60-50 60 50v98zM280 210v-80l40-32 40 32v80z\"/><path d=\"M85 210v-40h30v40M205 210v-48h30v48M305 210v-34h30v34\"/><path d=\"M20 210h360\"/><path d=\"M220 30l8 16 18 3-13 12 3 18-16-9-16 9 3-18-13-12 18-3z\" fill=\"#ff9f0a\" stroke=\"#ff9f0a\"/></svg>", "เลือกบ้านตามเส้นทางของตัวเอง แล้วเจอเพื่อนที่จะทำเกมด้วยกันตลอด 3 วัน"],
+ ["ศุกร์ 18:30", "เลือกบ้าน เจอทีม", "", "<img class=\"ill\" data-bg=\"#fd777a\" src=\"img/r-team.jpg\" alt=\"\" loading=\"lazy\">", "เลือกบ้านตามเส้นทางของตัวเอง แล้วเจอเพื่อนที่จะทำเกมด้วยกันตลอด 3 วัน"],
  ["เสาร์ ทั้งวัน", "เรียนและทำเกมของตัวเอง", "", "<video src=\"vid/apocalypse.mp4\" poster=\"img/apocalypse.jpg\" muted loop playsinline autoplay></video>", "เรียนทีละเรื่อง แล้วลงมือทำทันที จบวันเกมเริ่มเล่นได้"],
- ["เสาร์ 19:00", "ฟังวิทยากรเรื่องออกแบบเกม", "", "<svg viewBox=\"0 0 400 260\" fill=\"none\" stroke=\"#0071e3\" stroke-width=\"6\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><rect x=\"160\" y=\"30\" width=\"80\" height=\"130\" rx=\"40\"/><path d=\"M120 120a80 80 0 0 0 160 0M200 200v36M150 236h100\"/><path d=\"M60 80c-20 20-20 60 0 80M340 80c20 20 20 60 0 80M30 60c-34 34-34 106 0 140M370 60c34 34 34 106 0 140\" stroke=\"#ff9f0a\"/></svg>", "หัวข้อ Game Design และ Level Design ทุกเกรดเข้าฟังได้"],
- ["ทุกช่วงพัก", "เล่นมินิเกมกับเพื่อน", "", "<svg viewBox=\"0 0 400 260\" fill=\"none\" stroke=\"#0071e3\" stroke-width=\"6\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M90 90h220c40 0 66 40 70 90 3 34-28 46-50 22l-30-32H100l-30 32c-22 24-53 12-50-22 4-50 30-90 70-90z\"/><path d=\"M120 125v40M100 145h40\"/><circle cx=\"270\" cy=\"130\" r=\"9\" fill=\"#0071e3\"/><circle cx=\"296\" cy=\"155\" r=\"9\" fill=\"#ff9f0a\" stroke=\"#ff9f0a\"/><path d=\"M175 40l12 22M225 40l-12 22\" stroke=\"#ff9f0a\"/></svg>", "คั่นระหว่างช่วงเรียน ได้ลุกจากจอและรู้จักเพื่อนบ้านอื่น"],
- ["อาทิตย์ 10:00", "เปิดบูธให้เพื่อนลองเล่น", "", "<svg viewBox=\"0 0 400 260\" fill=\"none\" stroke=\"#0071e3\" stroke-width=\"6\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M40 100h320l-20-50H60zM60 100v110M340 100v110M40 210h320\"/><path d=\"M40 100c0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0 0 20 40 20 40 0\"/><rect x=\"140\" y=\"135\" width=\"120\" height=\"60\" rx=\"8\" stroke=\"#ff9f0a\"/><path d=\"M185 150l30 15-30 15z\" fill=\"#ff9f0a\" stroke=\"#ff9f0a\"/></svg>", "ส่งผลงาน แล้วให้ทีมอื่นลองเล่น ได้คอมเมนต์ว่าควรแก้ตรงไหน"],
- ["อาทิตย์ 14:00", "ประกาศ Top 10", "", "<svg viewBox=\"0 0 400 260\" fill=\"none\" stroke=\"#0071e3\" stroke-width=\"6\" stroke-linejoin=\"round\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M150 40h100v60a50 50 0 0 1-100 0z\"/><path d=\"M150 60h-34c0 34 16 52 40 56M250 60h34c0 34-16 52-40 56\"/><path d=\"M200 150v40M160 220h80l-8-30h-64z\"/><path d=\"M200 58l8 14 16 2-12 11 3 16-15-8-15 8 3-16-12-11 16-2z\" fill=\"#ff9f0a\" stroke=\"#ff9f0a\" stroke-width=\"3\"/></svg>", "10 ทีมที่ติด ได้ขึ้นนำเสนอเกมกับอาจารย์มหาวิทยาลัยหรือนักลงทุน"]];
-$('#incRail').innerHTML=INC.map(([k,h,d,m,_],i)=>`<button class="inc" data-i="${i}" aria-label="${k}: ดูรายละเอียด"><div class="b"><p class="k">${k}</p><h3 class="t-card">${h}</h3>${d?`<p class="d">${d}</p>`:''}</div><div class="m">${m}</div><span class="plus" aria-hidden="true">+</span></button>`).join('');
+ ["เสาร์ 19:00", "ฟังวิทยากรเรื่องออกแบบเกม", "", "<img class=\"ill\" data-bg=\"#197cf3\" src=\"img/r-talk.jpg\" alt=\"\" loading=\"lazy\">", "หัวข้อ Game Design และ Level Design ทุกเกรดเข้าฟังได้"],
+ ["ทุกช่วงพัก", "เล่นมินิเกมกับเพื่อน", "", "<img class=\"ill\" data-bg=\"#f14074\" src=\"img/r-mini.jpg\" alt=\"\" loading=\"lazy\">", "คั่นระหว่างช่วงเรียน ได้ลุกจากจอและรู้จักเพื่อนบ้านอื่น"],
+ ["อาทิตย์ 10:00", "เปิดบูธให้เพื่อนลองเล่น", "", "<video src=\"vid/heart.mp4\" poster=\"img/heart.jpg\" muted loop playsinline preload=\"metadata\"></video>", "ส่งผลงาน แล้วให้ทีมอื่นลองเล่น ได้คอมเมนต์ว่าควรแก้ตรงไหน"],
+ ["อาทิตย์ 14:00", "ประกาศ Top 10", "", "<video src=\"vid/stage-pitch.mp4\" poster=\"img/stage-pitch.jpg\" muted loop playsinline preload=\"metadata\"></video>", "10 ทีมที่ติด ได้ขึ้นนำเสนอเกมกับอาจารย์มหาวิทยาลัยหรือนักลงทุน"]];
+$('#incRail').innerHTML=INC.map(([k,h,d,m,_],i)=>`<button class="inc${m.includes('data-bg')?' art':m.includes('<video')?' vid':''}" style="--bg:${(m.match(/data-bg="([^"]+)"/)||[])[1]||'#fff'}" data-i="${i}" aria-label="${k}: ดูรายละเอียด"><div class="b"><p class="k">${k}</p><h3 class="t-card">${h}</h3>${d?`<p class="d">${d}</p>`:''}</div><div class="m">${m}</div><span class="plus" aria-hidden="true">+</span></button>`).join('');
 const modal=$('#modal');
 $('#incRail').addEventListener('click',e=>{const b=e.target.closest('.inc');if(!b)return;const [k,h,,,d]=INC[+b.dataset.i];$('#mBody').innerHTML=`<p class="t-eyebrow">${k}</p><h2>${h}</h2><p class="t-copy">${d}</p><p style="margin-top:32px"><a class="more" href="${LINE}">ทัก LINE ถามทีม</a></p>`;modal.classList.add('on');$('#mx').focus();});
 const closeM=()=>modal.classList.remove('on');$('#mx').addEventListener('click',closeM);modal.addEventListener('click',e=>{if(e.target===modal)closeM();});addEventListener('keydown',e=>{if(e.key==='Escape')closeM();});
