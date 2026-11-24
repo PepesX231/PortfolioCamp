@@ -104,7 +104,7 @@ a.more{display:inline-block;padding:10px 0}
 .card video,.card .ill{position:absolute;top:0;right:0;width:72%;height:100%;object-fit:cover}.card .ill{object-position:right center}
 .card::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,#fff 30%,rgba(255,255,255,.94) 36%,rgba(255,255,255,.8) 41%,rgba(255,255,255,.6) 46%,rgba(255,255,255,.38) 52%,rgba(255,255,255,.18) 58%,rgba(255,255,255,.06) 64%,rgba(255,255,255,0) 70%);z-index:1}
 .card .cap{position:absolute;left:56px;top:50%;transform:translateY(-50%);max-width:440px;z-index:2;color:#86868b}.card .cap b{color:#1d1d1f;font-weight:600}
-.card.art{background:#fff}
+
 .card.art svg{position:absolute;top:0;right:0;width:72%;height:100%}
 
 .card .src{position:absolute;right:20px;bottom:16px;z-index:2;color:rgba(255,255,255,.8);font-size:12px}
@@ -277,7 +277,7 @@ a.more{display:inline-block;padding:10px 0}
  .gx{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:48px}.gx-num{font-size:80px}.gx-name{font-size:21px}
  .g-track{gap:2px;padding:4px}.g-track button{font-size:12px;height:40px}
  .inc{width:300px;height:500px}
- .card.art::before{background:linear-gradient(180deg,var(--bg) 0%,var(--bg) 30%,transparent 52%)}.card.vid::before{background:linear-gradient(180deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.6) 35%,transparent 60%)}.card video,.card .ill{top:0;height:100%}.card .ill{object-position:72% center}
+ .card.art::before{background:linear-gradient(180deg,var(--bg) 0%,var(--bg) 30%,transparent 52%)}.card.vid::before{background:linear-gradient(180deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.6) 35%,transparent 60%)}.card video{top:0;height:100%}.card .ill{top:auto;bottom:0;height:62%;object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}.card.art::before{display:none}
  .sched li{grid-template-columns:110px minmax(0,1fr);gap:12px}.sched time{font-size:17px}.sched span{font-size:17px}
  .days button{padding:8px 12px;font-size:14px}
  .faq summary{font-size:19px;padding:24px 32px 24px 0}
@@ -440,9 +440,9 @@ tick();setInterval(tick,30000);
 /* highlights gallery: horizontal cards, caption over media, timed dotnav */
 const HL=[
  ["ได้เกมของตัวเอง 1 เกม", "ทำเองตั้งแต่ต้นจนเล่นได้ เอาไปใส่แฟ้มพอร์ตยื่นมหาลัย", "<video src=\"vid/heart.mp4\" poster=\"img/heart.jpg\" muted loop playsinline preload=\"metadata\"></video>", "คลิปจริง: Heart"],
- ["ได้รู้วิธีทำแฟ้มพอร์ต", "แบบที่รุ่นพี่ DEK69 ใช้ยื่น จนติดรอบ Portfolio 48 คน ทั้ง สจล. มหิดล จุฬาฯ และเกษตรฯ", "<img class=\"ill\" data-bg=\"#f77479\" src=\"img/g-folder.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["ได้รู้วิธีทำแฟ้มพอร์ต", "แบบที่รุ่นพี่ DEK69 ใช้ยื่น จนติดรอบ Portfolio 48 คน ทั้ง สจล. มหิดล จุฬาฯ และเกษตรฯ", "<img class=\"ill\" data-bg=\"#fe6c6f\" src=\"img/g-folder.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["ได้รู้ว่าตัวเองถนัดอะไร", "เขียนโค้ด วาดอาร์ต ออกแบบ หรือนำเสนอ รู้ก่อนเลือกคณะ", "<img class=\"ill\" data-bg=\"#227bef\" src=\"img/g-know.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้พื้นฐาน Unity หรือ Roblox", "โปรแกรมที่คนทำเกมใช้จริง ไม่เคยเขียนโค้ดมาก่อนก็เรียนได้", "<video src=\"vid/apocalypse.mp4\" poster=\"img/apocalypse.jpg\" muted loop playsinline preload=\"metadata\"></video>", "คลิปจริง: Apocalypse Building"],
+ ["ได้พื้นฐาน Unity หรือ Roblox", "โปรแกรมที่คนทำเกมใช้จริง ไม่เคยเขียนโค้ดมาก่อนก็เรียนได้", "<img class=\"ill\" data-bg=\"#545be7\" src=\"img/g-learn.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["ได้คนเล่นเกมของเราจริง", "เปิดบูธให้ทีมอื่นลองเล่น แล้วบอกว่าควรแก้ตรงไหน", "<img class=\"ill\" data-bg=\"#f14074\" src=\"img/g-players.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["ได้เพื่อนที่ชอบเรื่องเดียวกัน", "อยู่บ้านเดียวกัน ทำเกมด้วยกันตลอด 3 วัน", "<img class=\"ill\" data-bg=\"#ed647e\" src=\"img/g-friends.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["ได้ไอเดียจากวิทยากร", "Guest Speaker มาเล่าเรื่อง Game Design และ Level Design", "<img class=\"ill\" data-bg=\"#237fed\" src=\"img/g-speaker.jpg\" alt=\"\" loading=\"lazy\">", ""],
