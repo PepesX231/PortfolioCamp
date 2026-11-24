@@ -285,6 +285,36 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 .reg2 .plus{background:rgba(255,255,255,.12);color:#f5f5f7}.reg2 .plus i{background:#f5f5f7;color:#000}
 .reg2 .who{margin-top:24px;font-size:14px;color:#86868b}
 @media(max-width:734px){.reg2{padding:110px 0 100px}.reg2 .wrow img{width:200px;height:125px}.reg2 .price b{font-size:32px}}
+.store{gap:20px;padding-top:8px;padding-bottom:24px}
+.sc{position:relative;flex:0 0 313px;height:500px;border-radius:24px;background:#fff;scroll-snap-align:start;padding:28px 28px 30px;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,.06);overflow:hidden}
+.sc .im{height:250px;display:grid;place-items:center;margin:4px 0 22px}
+.sc .im img{max-height:100%;width:100%;height:100%;object-fit:cover;border-radius:16px}
+.sc .fan{position:relative}.sc .fan img{position:absolute;width:120px;height:150px;object-fit:cover;border-radius:14px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.sc .fan img:nth-child(1){transform:translateX(-80px) rotate(-8deg)}.sc .fan img:nth-child(2){z-index:2}.sc .fan img:nth-child(3){transform:translateX(80px) rotate(8deg)}
+.sc .lb{font-size:12px;font-weight:600;color:#b64400;margin-top:auto}
+.sc h3{font-size:19px;line-height:1.35;font-weight:600;margin-top:4px}
+.sc .sub{font-size:14px;color:#6e6e73;margin-top:4px}
+.sc .go{position:absolute;right:22px;bottom:24px;width:36px;height:36px;border-radius:50%;border:0;background:#e8e8ed;color:#1d1d1f;display:grid;place-items:center;cursor:pointer}
+.sc .go:hover{background:#dcdce1}
+.sc.feat{flex-basis:400px;background:var(--fc);color:#fff;padding:0}
+.sc.feat .lb{color:rgba(255,255,255,.85);margin:30px 30px 0}.sc.feat h3{font-size:28px;line-height:1.3;margin:6px 30px 0;font-weight:700}
+.sc.feat .fm{position:absolute;left:0;right:0;bottom:0;height:62%}.sc.feat .fm video{width:100%;height:100%;object-fit:cover}
+.sc.feat .fm::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,var(--fc) 0,transparent 35%)}
+.sc .src{position:absolute;right:16px;bottom:12px;z-index:2;font-size:11px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.sarrows{display:flex;justify-content:flex-end;gap:14px;margin-top:8px}
+.ar{width:36px;height:36px;border-radius:50%;border:0;background:#e8e8ed;color:#1d1d1f;display:grid;place-items:center;cursor:pointer}.ar:disabled{opacity:.4;cursor:default}
+@media(max-width:734px){.sc{flex-basis:280px;height:460px}.sc.feat{flex-basis:300px}.sc .im{height:220px}.sarrows{display:none}}
+/* registration price */
+.reg2 .price2{margin:36px auto 0;display:inline-flex;flex-direction:column;align-items:center}
+.reg2 .price2 b{font-size:120px;line-height:1;font-weight:700;letter-spacing:-.03em;background:linear-gradient(180deg,#fff 0%,#ffd27a 55%,#ff8a3d 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.reg2 .price2 b small{font-size:.32em;letter-spacing:0;margin-left:10px}
+.reg2 .price2 span{margin-top:14px;font-size:17px;color:#a1a1a6}
+@media(max-width:734px){.reg2 .price2 b{font-size:80px}}
+/* village mock */
+.vmock{position:relative;max-width:980px;margin:0 auto;aspect-ratio:16/9;border-radius:28px;background:linear-gradient(160deg,#e6e6ea,#d2d2d7);overflow:hidden;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);gap:18px;padding:36px}
+.vmock div{border-radius:18px;background:rgba(255,255,255,.55);display:grid;place-items:center;font-size:17px;font-weight:600;color:#86868b}
+.vmock .mk{position:absolute;right:14px;bottom:12px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.85);font-size:12px;color:#1d1d1f}
+@media(max-width:734px){.vmock{padding:16px;gap:10px;border-radius:20px}.vmock div{font-size:13px}}
 </style>
 </head>
 <body>
@@ -308,10 +338,14 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
   <div class="hero-media"><video id="heroVid" src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกม COMMAND SELECT ผลงานของน้องใน Hamster Hub"></video></div>
 </section>
 
-<section class="sec" id="benefits">
+<section class="sec alt" id="benefits">
   <div class="vw"><div class="head"><h2 class="t-sec">3 วัน ได้อะไรบ้าง</h2></div></div>
-  <div class="gal gg" id="bgal"><article class="gc"><p class="gt">มีผลงานใส่พอร์ต<br>เกมที่ทำเองกับมือ</p><div class="gm"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><span class=src>ผลงานจริง: Heart</span></div></article><article class="gc"><p class="gt">เขียนพอร์ตเป็น<br>เล่าผลงานให้กรรมการเห็น</p><div class="gm"><img src="img/g-folder.jpg" alt="" loading="lazy"></div></article><article class="gc"><p class="gt">รู้จักมหาวิทยาลัย<br>จากรุ่นพี่ตัวจริง</p><div class="gm"><img src="img/r-talk.jpg" alt="" loading="lazy"></div></article><article class="gc"><p class="gt">ขึ้นโชว์ผลงาน<br>ให้คนอื่นได้เห็น</p><div class="gm"><video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><span class=src>ภาพจริงจากเวทีของทีม RE//SLASH</span></div></article></div>
-  <div class="ctrls"><div class="dots gdots" id="bdots"></div><button class="round" id="bplay" aria-label="หยุด"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg></button></div>
+  <div class="gal store" id="bstore"><article class="sc feat" style="--fc:#f0453a"><p class="lb">ทั้งสอง Track</p><h3>มีผลงานใส่พอร์ต<br>เกมที่ทำเองกับมือ</h3><div class="fm"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Heart</span></article>
+<article class="sc"><div class="im"><img src="img/g-folder.jpg" alt="" loading="lazy"></div><p class="lb">Portfolio Track</p><h3>เขียนพอร์ตเป็น</h3><p class="sub">จัดเล่ม เขียน SOP เล่าผลงาน</p></article>
+<article class="sc"><div class="im fan"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"></div><p class="lb">4 และ 6 ธ.ค.</p><h3>คุยกับรุ่นพี่มหาวิทยาลัย</h3><p class="sub">ถามเรื่องคณะที่สนใจ</p><button class="go" type="button" data-sheet="sh-uni" aria-label="คุยกับรุ่นพี่มหาวิทยาลัย ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
+<article class="sc"><div class="im"><img src="img/c-mentor.jpg" alt="" loading="lazy"></div><p class="lb">3 รอบ</p><h3>มีรุ่นพี่ช่วยดูงาน</h3><p class="sub">ก่อนเริ่ม ระหว่างทำ ก่อนส่ง</p><button class="go" type="button" data-sheet="sh-mentor" aria-label="มีรุ่นพี่ช่วยดูงาน ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
+<article class="sc feat dk" style="--fc:#111"><p class="lb">6 ธ.ค.</p><h3>ขึ้นโชว์ผลงาน<br>ให้คนอื่นได้เห็น</h3><div class="fm"><video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ภาพจริงจากเวทีของทีม RE//SLASH</span></article></div>
+  <div class="vw sarrows"><button class="ar" data-d="-1" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="ar" data-d="1" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
 </section>
 
 <section class="sec" id="tracks">
@@ -337,14 +371,7 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
   </div>
 </section>
 
-<section class="sec alt c" id="universities">
-  <div class="vw">
-    <h2 class="t-sec">คุยกับรุ่นพี่มหาวิทยาลัย</h2>
-    <p class="lead"><span class="nw">พบรุ่นพี่ 4 ธ.ค.</span> <span class="nw">ถามตอบอีกรอบ 6 ธ.ค.</span></p>
-    <div class="dekr"><img src="img/dek/dek69-1.jpg" alt="น้องปลื้ม รุ่นพี่ Hamster Hub ติดสจล. DEK69" loading="lazy"><img src="img/dek/dek69-3.jpg" alt="น้องดา รุ่นพี่ Hamster Hub ติดสจล. DEK69" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="น้องอาร์ม รุ่นพี่ Hamster Hub ติดมหิดล DEK69" loading="lazy"><img src="img/dek/dek69-8.jpg" alt="น้องปิ่นโต รุ่นพี่ Hamster Hub ติดมหิดล DEK69" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="น้องต้นกล้า รุ่นพี่ Hamster Hub ติดจุฬาฯ DEK69" loading="lazy"><img src="img/dek/dek69-16.jpg" alt="น้องเฟิร์ส รุ่นพี่ Hamster Hub ติดจุฬาฯ DEK69" loading="lazy"></div>
-    <button class="plus" type="button" data-sheet="sh-uni" aria-haspopup="dialog" aria-expanded="false">ถามอะไรได้บ้าง<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button>
-  </div>
-</section>
+
 
 <section class="sec dark c" id="portfolio-pass">
   <div class="vw">
@@ -361,6 +388,7 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 <section class="sec c" id="village">
   <div class="vw">
     <div class="head"><h2 class="t-sec">ทั้งค่าย<span class="nw">อยู่ใน HamsVillage</span></h2></div>
+    <div class="vmock" role="img" aria-label="ภาพตัวอย่างหน้า HamsVillage"><div>Project Zone</div><div>Portfolio Zone</div><div>University Zone</div><div>Showcase Zone</div><span class="mk">ภาพตัวอย่าง รอภาพจริง</span></div>
     <button class="plus" type="button" data-sheet="sh-zones" aria-haspopup="dialog" aria-expanded="false">ดู 4 โซน<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button>
   </div>
 </section>
@@ -384,20 +412,13 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
   </div>
 </section>
 
-<section class="sec alt c mentor" id="mentors">
-  <div class="vw">
-    <div class="head"><h2 class="t-sec">มีรุ่นพี่ช่วยดูงาน</h2><p class="lead"><span class="nw">ดูงาน 3 รอบ</span> <span class="nw">ก่อนเริ่ม ระหว่างทำ และก่อนส่ง</span></p></div>
-    <div class="wide"><img src="img/c-mentor.jpg" alt="ภาพประกอบรุ่นพี่ช่วยดูงานผ่านวิดีโอคอลกลุ่ม" loading="lazy"><span class="mk">ภาพตัวอย่าง</span></div>
-    <button class="plus" type="button" data-sheet="sh-mentor" aria-haspopup="dialog" aria-expanded="false">ดูเวลาแต่ละรอบ<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button>
-  </div>
-</section>
+
 
 <section class="reg2 c" id="registration">
   <div class="wall" aria-hidden="true"><div class="wrow"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"></div><div class="wrow rev"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"></div><div class="wrow"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"></div></div>
   <div class="vw rin">
-    <p class="kick">ทุกเกมข้างหลังนี้ น้อง ๆ ทำเองทั้งหมด</p>
-    <h2 class="t-hero">ชิ้นต่อไป<br>เป็นของคุณ</h2>
-    <p class="price"><b>190 บาท</b> <span>4–6 ธ.ค. 2569 ออนไลน์ผ่าน Discord</span></p>
+    <h2 class="t-hero">พร้อมเริ่มแล้วหรือยัง?</h2>
+    <p class="price2"><b>190<small>บาท</small></b><span>4–6 ธ.ค. 2569 ออนไลน์ผ่าน Discord</span></p>
     <p id="pickedTrack" class="soon" style="margin-top:16px;color:#a1a1a6" hidden></p>
     <div class="acts2"><a class="btn" id="regBtn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><button class="plus" type="button" data-sheet="sh-prep" aria-haspopup="dialog" aria-expanded="false">สิ่งที่ต้องเตรียม<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button></div>
     <p class="who">สำหรับนักเรียนมัธยม</p>
@@ -411,13 +432,7 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
   </div>
 </section>
 
-<section class="sec dark c final" id="final-cta">
-  <div class="vn">
-    <h2 class="t-sec">อนาคตของคุณ<br>เริ่มจากผลงานชิ้นแรก</h2>
-    <p class="dt">4–6 ธ.ค. 2569</p>
-    <a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a>
-  </div>
-</section>
+
 </main>
 
 <dialog class="sheet" id="sh-uni" aria-labelledby="sh-uni-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-uni-t">คุยกับรุ่นพี่มหาวิทยาลัย</h3><h4>ถามได้</h4><ul class="sl"><li class="one"><b>คณะนี้เรียนอะไร</b></li><li class="one"><b>ชีวิตมหาวิทยาลัย</b></li><li class="one"><b>รุ่นพี่เตรียมตัวยังไง</b></li><li class="one"><b>ต้องเริ่มเตรียมอะไร</b></li></ul><h4>วันไหน</h4><ul class="sl"><li><small>4 ธ.ค.</small><div><b>พบรุ่นพี่</b><span>19:30–20:30</span></div></li><li><small>6 ธ.ค.</small><div><b>ถามตอบรอบ 2</b><span>19:00–20:00</span></div></li></ul><p class="cap">ติดตามรายชื่อรุ่นพี่และมหาวิทยาลัยที่จะเข้าร่วมเร็ว ๆ นี้</p></div></dialog>
@@ -469,18 +484,9 @@ $$('.ctrls[data-for]').forEach(c=>{const r=document.getElementById(c.dataset.for
  let t;r.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>mark(idx()),80)},{passive:true});mark(0);});
 
 
-/* benefits gallery: Apple-style autoplay with progress dots */
-{const r=$('#bgal'),it=[...r.children],d=$('#bdots'),pb=$('#bplay');let cur=0,play=!reduce,t0=performance.now(),seen=false;const DUR=6000;
-d.innerHTML=it.map((_,i)=>`<button aria-label="${i+1} จาก ${it.length}"></button>`).join('');const bs=[...d.children];
-const mark=i=>{cur=i;t0=performance.now();bs.forEach((b,k)=>{b.classList.toggle('on',k===i);b.style.setProperty('--p',0);k===i?b.setAttribute('aria-current','true'):b.removeAttribute('aria-current')});};
-const go=i=>{i=(i+it.length)%it.length;r.scrollTo({left:it[i].offsetLeft-it[0].offsetLeft,behavior:reduce?'auto':'smooth'});mark(i)};
-bs.forEach((b,i)=>b.addEventListener('click',()=>go(i)));
-let st;r.addEventListener('scroll',()=>{clearTimeout(st);st=setTimeout(()=>{const i=Math.round(r.scrollLeft/(it[0].offsetWidth+20));if(i!==cur)mark(i)},100)},{passive:true});
-const icon=p=>p?'<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg>':'<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>';
-pb.innerHTML=icon(play);pb.addEventListener('click',()=>{play=!play;pb.innerHTML=icon(play);pb.setAttribute('aria-label',play?'หยุด':'เล่น');const p=parseFloat(bs[cur].style.getPropertyValue('--p'))||0;t0=performance.now()-p*DUR;});
-new IntersectionObserver(e=>{seen=e[0].isIntersecting},{threshold:.4}).observe(r);
-const tick=n=>{if(play&&seen){const p=Math.min(1,(n-t0)/DUR);bs[cur].style.setProperty('--p',p);if(p>=1)go(cur+1);}else t0=n-(parseFloat(bs[cur].style.getPropertyValue('--p'))||0)*DUR;requestAnimationFrame(tick)};
-mark(0);requestAnimationFrame(tick);}
+/* benefits store row */
+{const r=$('#bstore'),bs=$$('.sarrows .ar');const upd=()=>{bs[0].disabled=r.scrollLeft<4;bs[1].disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4;};
+bs.forEach(b=>b.addEventListener('click',()=>r.scrollBy({left:+b.dataset.d*(r.clientWidth*.7),behavior:reduce?'auto':'smooth'})));r.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();}
 /* schedule */
 const DAYS=[
  {tab:'4 ธ.ค.',title:'ค้นหาเส้นทางของตัวเอง',rows:[['19:00–19:30','เปิดค่ายและทำความรู้จักเพื่อน'],['19:30–20:30','พบรุ่นพี่มหาวิทยาลัย'],['20:30–21:00','สำรวจ HamsVillage และรับภารกิจ']]},
