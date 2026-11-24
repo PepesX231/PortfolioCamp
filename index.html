@@ -35,7 +35,7 @@ button{font:inherit;color:inherit}
 .vn{width:min(980px,calc(100% - 48px));margin:0 auto}
 .sec{padding:120px 0}
 .alt{background:var(--alt)}
-.dark{background:#000;color:#f5f5f7}.dark a{color:#2997ff}
+.dark{background:#000;color:#f5f5f7}.dark a:not(.btn){color:#2997ff}
 .c{text-align:center}
 .more::after{content:" ›"}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border-radius:980px;background:var(--blue);color:#fff;font-size:17px;font-weight:500;border:0;cursor:pointer;white-space:nowrap}
@@ -67,7 +67,8 @@ button{font:inherit;color:inherit}
 .hero{background:#000;color:#f5f5f7;padding:128px 0 96px;text-align:center;position:relative;overflow:clip}
 .hero .t-eye{color:#86868b}
 .hero h1{margin-top:12px;padding:0 24px}
-.hero h1 span{display:block}.hero h1 i{font-style:normal;white-space:nowrap}
+.hero h1 span{display:block}.nw{white-space:nowrap}.cc .out b{text-wrap:balance}
+.hero h1 i{font-style:normal;white-space:nowrap}
 .hero .sub{margin:20px auto 0;max-width:720px;padding:0 24px;font-size:24px;line-height:1.45;color:#d2d2d7}
 .hero .when{margin-top:12px;font-size:17px;color:#86868b}
 .hero .acts{display:flex;gap:16px 28px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:32px;padding:0 24px}
@@ -88,7 +89,7 @@ button{font:inherit;color:inherit}
 .bx.art .md{top:auto;height:70%}.bx.art .md img{object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 28%);mask-image:linear-gradient(180deg,transparent 0,#000 28%)}
 .bx.vid{background:#000;color:#f5f5f7}.bx.vid .tx p{color:#a1a1a6}
 .bx.vid::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.6) 30%,rgba(0,0,0,0) 62%)}
-.bx .src{position:absolute;right:18px;bottom:14px;z-index:2;font-size:12px;color:rgba(255,255,255,.75)}
+.bx .src{position:absolute;right:18px;bottom:14px;z-index:2;font-size:12px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8)}
 
 /* tracks */
 .cmp2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(10,auto);column-gap:56px;max-width:980px;margin:0 auto;text-align:center}
@@ -103,6 +104,7 @@ button{font:inherit;color:inherit}
 .cc .fit{margin-top:20px;font-size:14px;color:var(--mute)}
 
 /* universities */
+.qgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:48px}.qgrid li{background:#fff;border-radius:22px;padding:28px 18px;font-size:19px;font-weight:600}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.chips span{padding:8px 16px;border-radius:999px;background:#fff;font-size:15px;font-weight:600}.dark .chips span{background:#1d1d1f}.alt .head .chips span{background:#fff}
 .uni{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
 .uni .ph{border-radius:28px;overflow:hidden;aspect-ratio:4/3;background:#2172ea}
@@ -118,7 +120,7 @@ button{font:inherit;color:inherit}
 .wallet{width:min(360px,100%);margin:8px auto 0;border-radius:18px;background:#3a3a3c;color:#fff;text-align:left;padding:18px 20px 20px;box-shadow:0 30px 60px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.08)}
 .wallet small{display:block;font-size:11px;font-weight:600;letter-spacing:.02em;color:rgba(255,255,255,.6)}
 .wl-top{display:flex;justify-content:space-between;align-items:flex-start}.wl-top b{font-size:17px;font-weight:600}.wl-top span{text-align:right;font-size:17px;font-weight:600}
-.wl-main{margin:34px 0 26px}.wl-main b{display:block;font-size:34px;line-height:1.15;font-weight:600;color:#ffd60a}
+.wl-main{margin:34px 0 26px}.wl-main b{display:block;font-size:34px;line-height:1.15;font-weight:600;color:#fff}
 .wl-row{display:grid;grid-template-columns:1.3fr 1fr .8fr;gap:10px;font-size:15px;font-weight:600}
 .wl-foot{margin-top:24px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;color:rgba(255,255,255,.7)}
 .steps4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:88px}
@@ -126,7 +128,8 @@ button{font:inherit;color:inherit}
 .steps4 b{display:block;margin-top:14px;font-size:19px;font-weight:600}.steps4 p{margin-top:4px;color:#86868b}
 
 /* village */
-.wide{border-radius:28px;overflow:hidden;aspect-ratio:16/9;background:#f9d3d8}.wide img{width:100%;height:100%;object-fit:cover}
+.wide{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:16/9;background:#f9d3d8}.mk{position:absolute;right:14px;bottom:12px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.85);font-size:12px;color:#1d1d1f}
+.wide img{width:100%;height:100%;object-fit:cover}
 .zones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:40px}
 .zn{border-top:1px solid var(--line);padding-top:18px}
 .zn b{font-size:19px;font-weight:600}.zn p{margin-top:4px;font-size:15px;color:var(--mute)}
@@ -137,7 +140,7 @@ button{font:inherit;color:inherit}
 .gal::-webkit-scrollbar{display:none}
 .wk{flex:0 0 372px;scroll-snap-align:start;background:#fff;border-radius:24px;overflow:hidden}
 .wk img{width:100%;aspect-ratio:16/10;object-fit:cover}
-.wk div{padding:18px 22px 22px}.wk b{display:block;font-size:19px;font-weight:600}.wk span{font-size:15px;color:var(--mute)}
+.wk div{padding:18px 22px 22px}.wk small{display:block;font-size:13px;color:#b25000;font-weight:600;margin-top:2px}.wk b{display:block;font-size:19px;font-weight:600}.wk span{font-size:15px;color:var(--mute)}
 .ctrls{display:flex;justify-content:center;gap:16px;margin-top:28px}
 .dots{display:flex;align-items:center;gap:14px;padding:0 24px;height:56px;border-radius:28px;background:var(--glass)}
 .dots button{width:8px;height:8px;border-radius:8px;border:0;padding:0;background:#86868b;cursor:pointer;transition:width .4s,background .4s;position:relative}
@@ -186,7 +189,7 @@ button{font:inherit;color:inherit}
 .howto li::before{content:counter(s);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:14px;font-weight:600}
 
 /* faq */
-.faq{border-top:1px solid var(--line)}
+.faq{border-top:1px solid var(--line);max-width:980px}
 .fq{border-bottom:1px solid var(--line)}
 .fq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 4px;background:none;border:0;cursor:pointer;text-align:left;font-size:21px;font-weight:600}
 .fq button i{flex:none;font-style:normal;font-size:26px;line-height:1;color:var(--mute);transition:transform .3s}
@@ -209,7 +212,7 @@ button{font:inherit;color:inherit}
  .t-hero{font-size:60px}.t-sec{font-size:44px}
 }
 @media(max-width:860px){
- .uni,.show,.reg,.rounds{grid-template-columns:1fr}
+ .uni,.show,.reg{grid-template-columns:1fr}
 
 }
 @media(max-width:734px){
@@ -223,7 +226,8 @@ button{font:inherit;color:inherit}
  .cmp2{gap:12px}.cc .nm{margin-top:20px}.cc h3{font-size:19px}.cc .ds{font-size:14px}.cc .btn{padding:10px 14px;font-size:14px;white-space:normal}.cc .li b{font-size:15px}.cc .li span,.cc .out b{font-size:13px}.cc .out b{font-size:14px}
  .zones{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}.wide{border-radius:18px}
  .wk{flex:0 0 78%}
- .rounds{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin:0 -16px;padding:0 16px}.rounds::-webkit-scrollbar{display:none}.rd{flex:0 0 70%;scroll-snap-align:start}
+ .gal{padding:0 16px;scroll-padding:0 16px}.qgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.qgrid li{padding:20px 12px;font-size:16px}
+ .rounds{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.rd{padding:18px 14px}.rd b{font-size:16px}
  .steps4{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 16px;margin-top:56px}
  .sched .r{grid-template-columns:1fr;gap:4px}
  .sched .split{grid-template-columns:1fr}
@@ -251,7 +255,7 @@ button{font:inherit;color:inherit}
 <main id="top">
 <section class="hero" id="hero">
   <p class="t-eye">Portfolio Camp for TCAS 1</p>
-  <h1 class="t-hero"><span><i>มีผลงานแล้ว</i> <i>ทำพอร์ตให้พร้อม</i></span><span><i>ยังไม่มี</i> <i>เริ่มสร้างได้เลย</i></span></h1>
+  <h1 class="t-hero"><span><i>มีผลงานแล้ว</i> <i>ทำพอร์ตให้พร้อม</i></span><span><i>ยังไม่มีผลงาน</i> <i>เริ่มสร้างได้เลย</i></span></h1>
   <p class="when">4–6 ธ.ค. 2569 &nbsp; ออนไลน์ผ่าน Discord</p>
   <div class="acts"><a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><a class="more" href="#tracks">เลือก Track</a></div>
   <div class="hero-media"><video id="heroVid" src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกม COMMAND SELECT ผลงานของน้องใน Hamster Hub"></video></div>
@@ -259,12 +263,12 @@ button{font:inherit;color:inherit}
 
 <section class="sec alt" id="benefits">
   <div class="vw">
-    <div class="head"><h2 class="t-sec">3 วัน ได้อะไร</h2></div>
+    <div class="head"><h2 class="t-sec">3 วัน ได้อะไรบ้าง</h2></div>
     <div class="bento">
-      <article class="bx vid"><div class="tx"><h3 class="t-card">ผลงานไว้ใส่พอร์ต</h3></div><div class="md"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Heart</span></article>
-      <article class="bx art" style="--bg:#fe6c6f"><div class="tx"><h3 class="t-card">พอร์ตที่เขียนเป็น</h3></div><div class="md"><img src="img/g-folder.jpg" alt="" loading="lazy"></div></article>
-      <article class="bx art" style="--bg:#197cf3"><div class="tx"><h3 class="t-card">รู้จักมหาวิทยาลัย</h3></div><div class="md"><img src="img/r-talk.jpg" alt="" loading="lazy"></div></article>
-      <article class="bx vid"><div class="tx"><h3 class="t-card">ขึ้นโชว์ผลงาน</h3></div><div class="md"><video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ภาพจริงจากเวทีของทีม RE//SLASH</span></article>
+      <article class="bx vid"><div class="tx"><h3 class="t-card">มีผลงานใส่พอร์ต</h3></div><div class="md"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Heart</span></article>
+      <article class="bx art" style="--bg:#fe6c6f"><div class="tx"><h3 class="t-card">เขียนพอร์ตเป็น</h3></div><div class="md"><img src="img/g-folder.jpg" alt="" loading="lazy"></div></article>
+      <article class="bx art" style="--bg:#237fed"><div class="tx"><h3 class="t-card">ฟังรุ่นพี่มหาวิทยาลัย</h3></div><div class="md"><img src="img/g-speaker.jpg" alt="" loading="lazy"></div></article>
+      <article class="bx vid"><div class="tx"><h3 class="t-card">เปิดบูธโชว์ผลงาน</h3></div><div class="md"><video src="vid/hydrosaur.mp4" poster="img/hydrosaur.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Hydrosaur</span></article>
     </div>
   </div>
 </section>
@@ -276,49 +280,47 @@ button{font:inherit;color:inherit}
       <div class="cc" style="--tc:#0057b8">
         <div class="md"><img src="img/t-portfolio.jpg" alt="ตัวอย่างรูปเล่มพอร์ต" loading="lazy"></div>
         <p class="nm">Portfolio Track</p><h3 class="t-card">มีผลงานแล้ว</h3><p class="ds">มาทำพอร์ตให้พร้อมยื่น</p>
-        <div class="act"><a class="btn" data-track="portfolio" href="#registration">เลือก Portfolio Track</a></div>
-        <div class="li"><b>Storytelling</b></div><div class="li"><b>SOP</b></div><div class="li"><b>Portfolio Design</b></div><div class="li"><b>Presentation</b></div>
-        <div class="out"><small>ได้กลับบ้าน</small><b>พอร์ตพร้อมตรวจ + คลิป 2 นาที</b></div>
+        <div class="act"><a class="btn ghost" data-track="portfolio" href="#registration">เลือก Portfolio Track</a></div>
+        <div class="li"><b>เล่าเรื่องผลงาน</b></div><div class="li"><b>เขียน SOP</b></div><div class="li"><b>จัดหน้าพอร์ต</b></div><div class="li"><b>ฝึกนำเสนอ</b></div>
+        <div class="out"><small>ได้กลับบ้าน</small><b>พอร์ต 1 เล่ม + คลิป <span class="nw">2 นาที</span></b></div>
       </div>
       <div class="cc" style="--tc:#b25000">
-        <div class="md"><img src="img/g-learn.jpg" alt="" loading="lazy" style="object-position:60% center"></div>
+        <div class="md"><img src="img/g-learn.jpg" alt="ตัวอย่างการสร้างเกมชิ้นแรก" loading="lazy" style="object-position:30% center"></div>
         <p class="nm">Project Track</p><h3 class="t-card">ยังไม่มีผลงาน</h3><p class="ds">มาสร้างเกมชิ้นแรก</p>
-        <div class="act"><a class="btn" data-track="project" href="#registration">เลือก Project Track</a></div>
-        <div class="li"><b>Game Design</b></div><div class="li"><b>Game Development</b></div><div class="li"><b>Project Building</b></div><div class="li"><b>Presentation</b></div>
-        <div class="out"><small>ได้กลับบ้าน</small><b>เกมของตัวเอง + คลิป 2 นาที</b></div>
+        <div class="act"><a class="btn ghost" data-track="project" href="#registration">เลือก Project Track</a></div>
+        <div class="li"><b>คิดไอเดียเกม</b></div><div class="li"><b>สร้างเกม</b></div><div class="li"><b>ทำให้เสร็จ</b></div><div class="li"><b>ฝึกนำเสนอ</b></div>
+        <div class="out"><small>ได้กลับบ้าน</small><b>เกม 1 เกม + คลิป <span class="nw">2 นาที</span></b></div>
       </div>
     </div>
     <p class="soon c" style="margin-top:28px">เลือกตามความพร้อม ไม่จำกัดระดับชั้น</p>
   </div>
 </section>
 
-<section class="sec alt" id="universities">
-  <div class="vw uni">
-    <div>
-      <h2 class="t-sec">คุยกับรุ่นพี่มหาวิทยาลัย</h2>
-      <ul class="ticks"><li>คณะนี้เรียนอะไร</li><li>ชีวิตในมหาลัย</li><li>รุ่นพี่เตรียมตัวยังไง</li><li>ต้องเริ่มเตรียมอะไร</li></ul>
-      <p class="chips"><span>4 ธ.ค. พบรุ่นพี่</span><span>6 ธ.ค. ถามเพิ่ม</span></p>
-    </div>
-    <div class="ph"><img src="img/g-know.jpg" alt="" loading="lazy"></div>
+<section class="sec alt c" id="universities">
+  <div class="vn">
+    <h2 class="t-sec">คุยกับรุ่นพี่มหาวิทยาลัย</h2>
+    <ul class="qgrid"><li>คณะนี้เรียนอะไร</li><li>ชีวิตมหาวิทยาลัย</li><li>รุ่นพี่เตรียมตัวยังไง</li><li>ต้องเริ่มเตรียมอะไร</li></ul>
+    <p class="chips" style="justify-content:center"><span>4 ธ.ค. พบรุ่นพี่</span><span>6 ธ.ค. ถามตอบรอบ 2</span></p>
+    <p class="soon">ติดตามรายชื่อรุ่นพี่และมหาวิทยาลัยเร็ว ๆ นี้</p>
   </div>
 </section>
 
 <section class="sec dark c" id="portfolio-pass">
   <div class="vw">
-    <div class="head"><h2 class="t-sec">เปิดพอร์ตรุ่นพี่<br>เฉพาะคนที่มีตั๋ว</h2></div>
+    <div class="head"><h2 class="t-sec">ดูพอร์ตจริงของรุ่นพี่<br>เฉพาะคนที่ได้ Pass</h2></div>
     <div class="wallet" role="img" aria-label="ตัวอย่างตั๋ว Portfolio Pass">
       <div class="wl-top"><b>HamsQuest</b><span><small>วันที่</small>5 ธ.ค.</span></div>
-      <div class="wl-main"><small>ไอเทม</small><b>Portfolio Pass</b></div>
-      <div class="wl-row"><span><small>สิทธิ์</small>เปิดพอร์ตรุ่นพี่</span><span><small>เวลา</small>19:00–20:00</span><span><small>ช่องทาง</small>Discord</span></div>
+      <div class="wl-main"><b>Portfolio Pass</b></div>
+      <div class="wl-row"><span><small>สิทธิ์</small>ดูพอร์ตรุ่นพี่</span><span><small>เวลา</small>19:00–20:00</span><span><small>ช่องทาง</small>Discord</span></div>
     </div>
-    <ol class="steps4"><li><span>1</span><b>ทำภารกิจ</b></li><li><span>2</span><b>ได้ตั๋ว</b></li><li><span>3</span><b>ยืนยันใน Discord</b></li><li><span>4</span><b>เปิดพอร์ตรุ่นพี่</b></li></ol>
+    <ol class="steps4"><li><span>1</span><b>ทำภารกิจ</b></li><li><span>2</span><b>ได้ Portfolio Pass</b></li><li><span>3</span><b>ยืนยันใน Discord</b></li><li><span>4</span><b>ดูพอร์ตรุ่นพี่</b></li></ol>
   </div>
 </section>
 
 <section class="sec" id="village">
   <div class="vw">
-    <div class="head"><h2 class="t-sec">ทั้งค่ายอยู่ใน HamsVillage</h2></div>
-    <div class="wide"><img src="img/c-village.jpg" alt="ภาพประกอบ HamsVillage หมู่บ้านออนไลน์ที่มี 4 โซน" loading="lazy"></div>
+    <div class="head"><h2 class="t-sec">ทั้งค่าย<span class="nw">อยู่ใน HamsVillage</span></h2></div>
+    <div class="wide"><img src="img/c-village.jpg" alt="ภาพประกอบ HamsVillage หมู่บ้านออนไลน์ที่มี 4 โซน" loading="lazy"><span class="mk">ภาพตัวอย่าง</span></div>
     <div class="zones"><div class="zn"><b>Project Zone</b><p>เกมของเพื่อน</p></div><div class="zn"><b>Portfolio Zone</b><p>พอร์ตของเพื่อน</p></div><div class="zn"><b>University Zone</b><p>ข้อมูลคณะ</p></div><div class="zn"><b>Showcase Zone</b><p>10 ผลงานเด่น</p></div></div>
   </div>
 </section>
@@ -326,11 +328,11 @@ button{font:inherit;color:inherit}
 <section class="sec alt" id="showcase">
   <div class="vw">
     <div class="head"><h2 class="t-sec">วันสุดท้าย เปิดบูธ</h2><p class="chips" style="margin-top:16px"><span>6 ธ.ค. 16:00–17:30</span></p></div>
-    <div class="wide" style="margin-bottom:96px"><img src="img/c-booth.jpg" alt="ภาพประกอบบูธผลงาน" loading="lazy"></div>
-    <div class="head"><h3 class="t-card" style="font-size:32px">10 ผลงานเด่นแห่งปี</h3></div>
+    <div class="wide" style="margin-bottom:96px"><img src="img/c-booth.jpg" alt="ภาพประกอบบูธผลงาน" loading="lazy"><span class="mk">ภาพตัวอย่าง</span></div>
+    <div class="head"><h3 class="t-card" style="font-size:32px">10 ผลงานเด่นจาก Hamster Hub</h3></div>
   </div>
   <div class="gal" id="hof"></div>
-  <div class="ctrls" data-for="hof"><button class="round" data-d="-1" aria-label="ก่อนหน้า">‹</button><div class="dots" role="tablist" aria-label="ผลงานเด่น"></div><button class="round" data-d="1" aria-label="ถัดไป">›</button></div>
+  <div class="ctrls" data-for="hof"><button class="round" data-d="-1" aria-label="ก่อนหน้า">‹</button><div class="dots" aria-label="ผลงานเด่น"></div><button class="round" data-d="1" aria-label="ถัดไป">›</button></div>
 </section>
 
 <section class="sec c" id="schedule">
@@ -338,14 +340,14 @@ button{font:inherit;color:inherit}
     <div class="head"><h2 class="t-sec">ตารางกิจกรรม</h2></div>
     <div class="days" role="tablist" id="days"></div>
     <div id="dayPanel" role="tabpanel"></div>
-    <p class="sfoot">เวลาไทย อาจปรับตามความเหมาะสม</p>
+    <p class="sfoot">เวลาไทย กำหนดการอาจเปลี่ยน</p>
   </div>
 </section>
 
 <section class="sec alt" id="mentors">
   <div class="vw">
     <div class="head"><h2 class="t-sec">มีรุ่นพี่ช่วยดูงาน</h2></div>
-    <div class="wide" style="margin:0 auto 40px;max-width:980px"><img src="img/c-mentor.jpg" alt="ภาพประกอบรุ่นพี่ช่วยดูงานผ่านวิดีโอคอลกลุ่ม" loading="lazy"></div>
+    <div class="wide" style="margin-bottom:40px"><img src="img/c-mentor.jpg" alt="ภาพประกอบรุ่นพี่ช่วยดูงานผ่านวิดีโอคอลกลุ่ม" loading="lazy"><span class="mk">ภาพตัวอย่าง</span></div>
     <div class="rounds"><div class="rd"><small>รอบ 1</small><b>ก่อนเริ่มทำ</b></div><div class="rd"><small>รอบ 2</small><b>ระหว่างทำ</b></div><div class="rd"><small>รอบ 3</small><b>ก่อนส่ง</b></div></div>
   </div>
 </section>
@@ -357,7 +359,7 @@ button{font:inherit;color:inherit}
       <div class="box" style="background:var(--alt)">
         <dl class="kv">
           <div><dt>วันที่</dt><dd>4–6 ธ.ค. 2569</dd></div>
-          <div><dt>ที่ไหน</dt><dd>ออนไลน์ Discord</dd></div>
+          <div><dt>ที่ไหน</dt><dd>ออนไลน์ผ่าน Discord</dd></div>
           <div><dt>ใครสมัครได้</dt><dd>นักเรียนมัธยม</dd></div>
           <div><dt>ค่าสมัคร</dt><dd>190 บาท</dd></div>
         </dl>
@@ -373,7 +375,7 @@ button{font:inherit;color:inherit}
 </section>
 
 <section class="sec alt" id="faq">
-  <div class="vn">
+  <div class="vw">
     <div class="head"><h2 class="t-sec">คำถามที่พบบ่อย</h2></div>
     <div class="faq" id="faqList"></div>
   </div>
@@ -381,7 +383,7 @@ button{font:inherit;color:inherit}
 
 <section class="sec dark c final" id="final-cta">
   <div class="vn">
-    <h2 class="t-sec">อนาคตของคุณ<br>เริ่มจากผลงานชิ้นนี้</h2>
+    <h2 class="t-sec">อนาคตของคุณ<br>เริ่มจากผลงานชิ้นแรก</h2>
     <p class="dt">4–6 ธ.ค. 2569</p>
     <a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a>
   </div>
@@ -391,7 +393,7 @@ button{font:inherit;color:inherit}
 <footer class="gf">
   <div class="vn">
     <div class="notes">
-      <p>ภาพและคลิปเกมทั้งหมดมาจากผลงานจริงของน้อง ๆ ใน Hamster Hub คลิปส่วนเปิดหน้าตัดจากตัวอย่างเกม COMMAND SELECT ภาพเวทีมาจากการนำเสนอของทีม RE//SLASH ภาพประกอบตัวละครเป็นภาพวาดประกอบ</p>
+      <p>คลิปและภาพเกมเป็นผลงานจริงของน้อง ๆ ใน Hamster Hub ภาพหมู่บ้าน บูธ วิดีโอคอล และภาพตัวละครเป็นภาพตัวอย่าง</p>
       <p>การรับเข้าศึกษาขึ้นอยู่กับเกณฑ์และการพิจารณาของแต่ละมหาวิทยาลัย</p>
     </div>
     <div class="lk"><span>Hamster Hub Portfolio Camp for TCAS 1</span><a href="https://www.hamsterhub.co/">เว็บไซต์ Hamster Hub</a><a href="https://page.line.me/jkm4247u?openQrModal=true">ติดต่อทีมงาน</a></div>
@@ -409,7 +411,7 @@ const REG='https://www.hamsterhub.co/portcamp';
 {const bar=$('#tabbar'),ind=bar.querySelector('.ind'),links=[...bar.querySelectorAll('a[href^="#"]:not(.brand)')];
 const ids=links.map(a=>a.getAttribute('href').slice(1));
 const place=a=>{if(!a||!a.offsetParent){ind.style.width=0;return;}ind.style.left=a.offsetLeft+'px';ind.style.width=a.offsetWidth+'px';};
-const map={benefits:'benefits',tracks:'tracks',universities:'tracks','portfolio-pass':'tracks',village:'tracks',showcase:'tracks',schedule:'schedule',mentors:'schedule',registration:'schedule',faq:'faq'};
+const map={benefits:'benefits',tracks:'tracks',schedule:'schedule',faq:'faq'};
 let cur=null;const upd=()=>{let id=null;for(const s of $$('main>section')){if(s.getBoundingClientRect().top<160)id=map[s.id]||null;}
  if(id!==cur){cur=id;links.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+id));place(links.find(a=>a.getAttribute('href')==='#'+id));}};
 addEventListener('scroll',upd,{passive:true});addEventListener('resize',()=>{cur=undefined;upd()});upd();}
@@ -419,13 +421,13 @@ addEventListener('scroll',upd,{passive:true});addEventListener('resize',()=>{cur
 
 /* hall of fame rail (data from hamsterhub showcase) */
 const HOF=[['stressstrike','StressStrike','@วิน','ชนะเลิศ OBEC Roboplayground'],['beyond-the-board','Beyond the Board','@กัปตัน'],['eugation-strike','Eugation Strike','@ไผ่'],['slash-speed','SLASH//SPEED','@ดินสอ'],['micro-immersive-sim','Micro Immersive Sim','@เพชร'],['phi-krahang','ผีกระหัง','@นนท์'],['midnight-at-roadside','Midnight at Roadside','@Windy'],['hot-hot-hot','Hot Hot Hot','@โอม'],['apocalypis-building','Apocalypis Building','@ฟาร์'],['escape-rolling','Escape Rolling','@เป๊ป']];
-$('#hof').innerHTML=HOF.map(([f,t,by,aw])=>`<article class="wk"><img src="img/hof/work-${f}.jpg" alt="ภาพเกม ${t}" loading="lazy"><div><b>${t}</b><span>${by}${aw?' '+aw:''}</span></div></article>`).join('');
+$('#hof').innerHTML=HOF.map(([f,t,by,aw])=>`<article class="wk"><img src="img/hof/work-${f}.jpg" alt="ภาพเกม ${t}" loading="lazy"><div><b>${t}</b><span>${by}</span>${aw?`<small>${aw}</small>`:''}</div></article>`).join('');
 
 /* generic rail dots + arrows */
 $$('.ctrls[data-for]').forEach(c=>{const r=document.getElementById(c.dataset.for),it=[...r.children],d=c.querySelector('.dots');
- d.innerHTML=it.map((_,i)=>`<button role="tab" aria-label="${i+1} จาก ${it.length}"></button>`).join('');const bs=[...d.children];
+ d.innerHTML=it.map((_,i)=>`<button aria-label="${i+1} จาก ${it.length}"></button>`).join('');const bs=[...d.children];
  const idx=()=>Math.round(r.scrollLeft/(it[0].offsetWidth+20));
- const mark=i=>{bs.forEach((b,k)=>{b.classList.toggle('on',k===i);b.setAttribute('aria-selected',k===i)});c.querySelector('[data-d="-1"]').disabled=i===0;c.querySelector('[data-d="1"]').disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4;};
+ const mark=i=>{bs.forEach((b,k)=>{b.classList.toggle('on',k===i);k===i?b.setAttribute('aria-current','true'):b.removeAttribute('aria-current')});c.querySelector('[data-d="-1"]').disabled=i===0;c.querySelector('[data-d="1"]').disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4;};
  const go=i=>{i=Math.max(0,Math.min(it.length-1,i));r.scrollTo({left:it[i].offsetLeft-it[0].offsetLeft,behavior:reduce?'auto':'smooth'});};
  bs.forEach((b,i)=>b.addEventListener('click',()=>go(i)));c.querySelectorAll('.round').forEach(b=>b.addEventListener('click',()=>go(idx()+ +b.dataset.d)));
  let t;r.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>mark(idx()),80)},{passive:true});mark(0);});
@@ -433,11 +435,11 @@ $$('.ctrls[data-for]').forEach(c=>{const r=document.getElementById(c.dataset.for
 /* schedule */
 const DAYS=[
  {tab:'4 ธ.ค.',title:'ค้นหาเส้นทางของตัวเอง',rows:[['19:00–19:30','เปิดค่ายและทำความรู้จักเพื่อน'],['19:30–20:30','พบรุ่นพี่มหาวิทยาลัย'],['20:30–21:00','สำรวจ HamsVillage และรับภารกิจ']]},
- {tab:'5 ธ.ค.',title:'ลงมือสร้างและปลดล็อกตั๋ว',rows:[['13:00–14:30',['Storytelling และ SOP','Game Design']],['14:30–15:30',['ทำ Portfolio','พัฒนาเกม']],['15:30–16:00','Mentor รอบที่ 1 ตรวจแนวทาง'],['16:00–17:00','ลงมือทำผลงานและทำภารกิจ'],['17:00–19:00','พัก ทำงานต่อ และตรวจสิทธิ์ Portfolio Pass'],['19:00–20:00','เปิดพอร์ตรุ่นพี่ สำหรับผู้ได้รับ Portfolio Pass',1],['20:00–20:30','Mentor รอบที่ 2 ตรวจความก้าวหน้า'],['20:30–21:00','ทำผลงานต่อ']]},
+ {tab:'5 ธ.ค.',title:'ลงมือสร้างและปลดล็อกตั๋ว',rows:[['13:00–14:30',['Storytelling และ SOP','Game Design']],['14:30–15:30',['ทำ Portfolio','พัฒนาเกม']],['15:30–16:00','Mentor รอบที่ 1 ตรวจแนวทาง'],['16:00–17:00','ลงมือทำผลงานและทำภารกิจ'],['17:00–19:00','พัก ทำงานต่อ และตรวจสิทธิ์ Portfolio Pass'],['19:00–20:00','ดูพอร์ตรุ่นพี่ (เฉพาะคนที่มี Pass)',1],['20:00–20:30','Mentor รอบที่ 2 ตรวจความก้าวหน้า'],['20:30–21:00','ทำผลงานต่อ']]},
  {tab:'6 ธ.ค.',title:'โชว์ผลงานของตัวเอง',rows:[['13:00–13:30','Mentor รอบที่ 3 ตรวจความพร้อม'],['13:30–15:00','ทำผลงานให้เสร็จ'],['15:00','ส่งผลงานและคลิปนำเสนอ 2 นาที'],['15:00–16:00','เตรียมบูธ'],['16:00–17:30','HamsVillage Showcase',1],['19:00–20:00','พบรุ่นพี่มหาวิทยาลัยและถามตอบ'],['20:00–21:00','สรุปและปิดค่าย']]}];
 const days=$('#days'),panel=$('#dayPanel');
-days.innerHTML=DAYS.map((d,i)=>`<button role="tab" id="dt${i}" aria-controls="dayPanel" aria-selected="${i===0}">${d.tab}</button>`).join('');
-const show=i=>{const d=DAYS[i];days.querySelectorAll('button').forEach((b,k)=>b.setAttribute('aria-selected',k===i));panel.setAttribute('aria-labelledby','dt'+i);
+days.innerHTML=DAYS.map((d,i)=>`<button role="tab" id="dt${i}" aria-controls="dayPanel" aria-selected="${i===0}" tabindex="${i===0?0:-1}">${d.tab}</button>`).join('');
+const show=i=>{const d=DAYS[i];days.querySelectorAll('button').forEach((b,k)=>{b.setAttribute('aria-selected',k===i);b.tabIndex=k===i?0:-1});panel.setAttribute('aria-labelledby','dt'+i);
  panel.innerHTML=`<p class="dtitle">${d.title}</p><div class="sched">`+d.rows.map(([t,a,hl])=>`<div class="r${hl?' hl':''}"><time>${t}</time>${Array.isArray(a)?`<div class="split"><span style="background:var(--pf)"><small>Portfolio Track</small>${a[0]}</span><span style="background:var(--pj)"><small>Project Track</small>${a[1]}</span></div>`:`<span>${a}</span>`}</div>`).join('')+'</div>';};
 days.addEventListener('click',e=>{const b=e.target.closest('button');if(b)show([...days.children].indexOf(b));});
 days.addEventListener('keydown',e=>{const bs=[...days.children],i=bs.findIndex(b=>b.getAttribute('aria-selected')==='true');let n=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:null;if(n===null)return;n=(n+bs.length)%bs.length;show(n);bs[n].focus();});
