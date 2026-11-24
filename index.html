@@ -222,8 +222,8 @@ a.more{display:inline-block;padding:10px 0}
 .card .ill{top:auto;bottom:0;width:100%;height:62%;object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
 .card.art::before{display:none}
 .card.vid::before{background:linear-gradient(180deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.7) 30%,rgba(0,0,0,0) 60%)}
-.howgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1304px;margin:0 auto;padding:0 22px}
-.howgrid .inc{width:auto;height:470px;cursor:default}.howgrid .plus,.howgrid .k:empty{display:none}
+.howgrid{gap:20px}
+.howgrid .inc{flex:0 0 372px;width:372px;height:545px;cursor:default;scroll-snap-align:start}.howgrid .plus,.howgrid .k:empty{display:none}
 .howgrid .inc .t-card,.howgrid .inc h3{font-size:21px}
 .howgrid .inc .d{font-size:17px;color:rgba(29,29,31,.62);margin-top:6px}.howgrid .inc.vid .d{color:#a1a1a6}
 .howgrid .inc.art .m:has(img){top:auto;height:62%}.howgrid .inc.art .m img{object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
@@ -282,7 +282,7 @@ a.more{display:inline-block;padding:10px 0}
  .t-hero,.t-xxl{font-size:40px}.t-xl,.t-sec{font-size:32px}.t-card{font-size:21px}.t-copy{font-size:19px}.t-eyebrow{font-size:17px}
  .tabbar a.opt{display:none}.tabbar a{padding:8px 12px}
  .hero{padding:108px 0 56px}.hero-media{aspect-ratio:4/3}.hero-meta{margin-top:8px}
- .card{height:560px}#galPrev,#galNext{display:none}.dots{gap:12px;padding:0 18px}.card video,.card .ill{top:auto;bottom:0;width:100%;height:68%}.card::before{background:linear-gradient(180deg,#fff 0%,#fff 32%,rgba(255,255,255,.9) 38%,rgba(255,255,255,.65) 44%,rgba(255,255,255,.35) 51%,rgba(255,255,255,.12) 58%,rgba(255,255,255,0) 65%)}.card .cap{left:24px;right:24px;top:36px;transform:none}
+ .card{height:560px}#galPrev,#galNext,.hwb{display:none}.dots{gap:12px;padding:0 18px}.card video,.card .ill{top:auto;bottom:0;width:100%;height:68%}.card::before{background:linear-gradient(180deg,#fff 0%,#fff 32%,rgba(255,255,255,.9) 38%,rgba(255,255,255,.65) 44%,rgba(255,255,255,.35) 51%,rgba(255,255,255,.12) 58%,rgba(255,255,255,0) 65%)}.card .cap{left:24px;right:24px;top:36px;transform:none}
  .cmp{grid-template-columns:minmax(0,1fr);gap:56px}.cmp-card{padding:40px 22px}
  .cl{grid-template-columns:minmax(0,1fr);padding-bottom:88px}.cl-stage{height:280px;order:-1}
  .finale{aspect-ratio:4/5}.finale .cap{left:24px;right:24px;bottom:28px}.finale .cap b{font-size:48px}
@@ -290,7 +290,7 @@ a.more{display:inline-block;padding:10px 0}
  .gx{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:48px}.gx-num{font-size:80px}.gx-name{font-size:21px}
  .g-track{gap:2px;padding:4px}.g-track button{font-size:12px;height:40px}
  .inc{width:300px;height:500px}
- .card{flex:0 0 300px;height:500px}.howgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:16px;padding:0 22px;scroll-padding:0 22px}.howgrid::-webkit-scrollbar{display:none}.howgrid .inc{flex:0 0 280px;height:440px;scroll-snap-align:start}.gv{gap:6px;padding:0 24px 16px}.gv b{min-width:40px;padding:8px 0;font-size:13px}.gvl{margin:0 24px 30px}.howgrid .inc .d{font-size:15px}
+ .card{flex:0 0 300px;height:500px}.howgrid .inc{flex:0 0 300px;width:300px;height:500px}.gv{gap:6px;padding:0 24px 16px}.gv b{min-width:40px;padding:8px 0;font-size:13px}.gvl{margin:0 24px 30px}.howgrid .inc .d{font-size:15px}
  .card.art::before{background:linear-gradient(180deg,var(--bg) 0%,var(--bg) 30%,transparent 52%)}.card.vid::before{background:linear-gradient(180deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.6) 35%,transparent 60%)}.card video{top:0;height:100%}.card .ill{top:auto;bottom:0;height:62%;object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}.card.art::before{display:none}
  .sched li{grid-template-columns:110px minmax(0,1fr);gap:12px}.sched time{font-size:17px}.sched span{font-size:17px}
  .days button{padding:8px 12px;font-size:14px}
@@ -324,11 +324,12 @@ a.more{display:inline-block;padding:10px 0}
 </section>
 
 <section class="sec alt" id="highlights">
-  <div class="vw"><div class="sh"><h2 class="t-sec rv">3 วัน ได้อะไร</h2></div></div>
+  <div class="vw"><div class="sh"><h2 class="t-sec rv">ได้อะไร</h2></div></div>
   <div class="gal" id="gal" aria-roledescription="carousel"></div>
   <div class="ctrls"><button class="round" id="galPrev" aria-label="ก่อนหน้า">‹</button><div class="dots" id="dots" role="tablist" aria-label="ไฮไลท์"></div><button class="round" id="galNext" aria-label="ถัดไป">›</button><button class="round" id="playBtn" aria-label="หยุด">❚❚</button></div>
   <div class="vw"><h3 class="t-sec" style="margin:144px 0 56px">เรียนยังไง</h3></div>
-  <div class="howgrid" id="incRail"></div>
+  <div class="gal howgrid" id="incRail"></div>
+  <div class="ctrls"><button class="round hwb" data-d="-1" aria-label="ก่อนหน้า">‹</button><div class="dots" id="hdots" role="tablist" aria-label="เรียนยังไง"></div><button class="round hwb" data-d="1" aria-label="ถัดไป">›</button></div>
   <div class="under"><a class="more" href="https://page.line.me/jkm4247u?openQrModal=true">ทัก LINE ถามทีม</a></div>
 </section>
 
@@ -456,8 +457,8 @@ const HL=[
  ["ได้เกมของตัวเอง 1 เกม", "ทำเองตั้งแต่ต้นจนเล่นได้ เอาไปใส่แฟ้มพอร์ตยื่นมหาลัย", "<video src=\"vid/heart.mp4\" poster=\"img/heart.jpg\" muted loop playsinline preload=\"metadata\"></video>", "คลิปจริง: Heart"],
  ["ได้รู้วิธีทำแฟ้มพอร์ต", "แบบที่รุ่นพี่ DEK69 ใช้ยื่น จนติดรอบ Portfolio 48 คน ทั้ง สจล. มหิดล จุฬาฯ และเกษตรฯ", "<img class=\"ill\" data-bg=\"#fe6c6f\" src=\"img/g-folder.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["ได้รู้ว่าตัวเองถนัดอะไร", "เขียนโค้ด วาดอาร์ต ออกแบบ หรือนำเสนอ รู้ก่อนเลือกคณะ", "<img class=\"ill\" data-bg=\"#227bef\" src=\"img/g-know.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้คนเล่นเกมของเราจริง", "เปิดบูธออนไลน์ให้คนอื่นลองเล่น แล้วบอกว่าควรแก้ตรงไหน", "<img class=\"ill\" data-bg=\"#f14074\" src=\"img/g-players.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้เพื่อนที่ชอบเรื่องเดียวกัน", "อยู่บ้านเดียวกัน ทำเกมด้วยกันตลอด 3 วัน", "<img class=\"ill\" data-bg=\"#ed647e\" src=\"img/g-friends.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["ได้คอมเมนต์จากคนเล่นจริง", "รู้ว่าเกมควรแก้ตรงไหน ก่อนเอาไปใส่แฟ้มพอร์ต", "<img class=\"ill\" data-bg=\"#f14074\" src=\"img/g-players.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["ได้เพื่อนสายทำเกม", "คนที่ชอบเรื่องเดียวกัน ไว้ปรึกษากันต่อหลังจบค่าย", "<img class=\"ill\" data-bg=\"#ed647e\" src=\"img/g-friends.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["ได้ไอเดียจากวิทยากร", "Guest Speaker มาเล่าเรื่อง Game Design และ Level Design", "<img class=\"ill\" data-bg=\"#237fed\" src=\"img/g-speaker.jpg\" alt=\"\" loading=\"lazy\">", ""]];
 const gal=$('#gal'),dots=$('#dots');
 gal.innerHTML=HL.map(([w,h,m,s],i)=>`<article class="card ${m.includes('data-bg')?'art':'vid'}" style="--bg:${(m.match(/data-bg="([^"]+)"/)||[])[1]||'#000'}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="t-card"><b>${w}</b> ${h}</p></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
@@ -532,6 +533,13 @@ const INC=[
  ["", "ส่งผลงาน เปิดบูธออนไลน์", "โชว์เกมของตัวเองให้คนอื่นลองเล่น", "<video src=\"vid/apocalypse.mp4\" poster=\"img/apocalypse.jpg\" muted loop playsinline preload=\"metadata\"></video>", ""],
  ["", "Top 10 ขึ้นนำเสนอ", "ต่อหน้านักลงทุน หรืออาจารย์มหาวิทยาลัย", "<video src=\"vid/stage-pitch.mp4\" poster=\"img/stage-pitch.jpg\" muted loop playsinline preload=\"metadata\"></video>", ""]];
 $('#incRail').innerHTML=INC.map(([k,h,d,m,_],i)=>`<article class="inc${m.includes('data-bg')?' art':m.includes('<video')?' vid':''}" style="--bg:${(m.match(/data-bg="([^"]+)"/)||[])[1]||'#fff'}" data-i="${i}"><div class="b"><p class="k">${k}</p><h3 class="t-card">${h}</h3>${d?`<p class="d">${d}</p>`:''}</div><div class="m">${m}</div></article>`).join('');
+
+(()=>{const r=$('#incRail'),d=$('#hdots'),it=[...r.children];d.innerHTML=it.map((_,i)=>`<button role="tab" aria-label="${i+1} จาก ${it.length}"></button>`).join('');const bs=[...d.children];
+const mark=i=>bs.forEach((b,k)=>{b.classList.toggle('on',k===i);b.setAttribute('aria-selected',k===i)});mark(0);
+const go=i=>{i=Math.max(0,Math.min(it.length-1,i));r.scrollTo({left:it[i].offsetLeft-it[0].offsetLeft,behavior:reduce?'auto':'smooth'});mark(i)};
+bs.forEach((b,i)=>b.addEventListener('click',()=>go(i)));
+let t;r.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>mark(Math.round(r.scrollLeft/(it[0].offsetWidth+20))),100)});
+document.querySelectorAll('.hwb').forEach(b=>b.addEventListener('click',()=>{const c=bs.findIndex(x=>x.classList.contains('on'));go(c+ +b.dataset.d)}));})();
 const modal=$('#modal');
 $('#incRail').addEventListener('click',e=>{return;const b=e.target.closest('.inc');if(!b)return;const [k,h,,,d]=INC[+b.dataset.i];$('#mBody').innerHTML=`<p class="t-eyebrow">${k}</p><h2>${h}</h2><p class="t-copy">${d}</p><p style="margin-top:32px"><a class="more" href="${LINE}">ทัก LINE ถามทีม</a></p>`;modal.classList.add('on');$('#mx').focus();});
 const closeM=()=>modal.classList.remove('on');$('#mx').addEventListener('click',closeM);modal.addEventListener('click',e=>{if(e.target===modal)closeM();});addEventListener('keydown',e=>{if(e.key==='Escape')closeM();});
