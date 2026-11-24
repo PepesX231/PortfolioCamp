@@ -50,7 +50,7 @@ button{font:inherit;color:inherit}
 .dark .t-copy{color:var(--mute2)}
 .t-small{font-size:14px;line-height:1.45;color:var(--mute)}
 .head{margin-bottom:56px;max-width:820px}.head .t-copy{margin-top:16px}
-.c .head{margin-left:auto;margin-right:auto}
+.c .head,.head.c{margin-left:auto;margin-right:auto}
 
 /* nav */
 .ln{position:fixed;top:14px;left:0;right:0;z-index:50;display:flex;justify-content:center;pointer-events:none;padding:0 12px}
@@ -91,23 +91,16 @@ button{font:inherit;color:inherit}
 .bx .src{position:absolute;right:18px;bottom:14px;z-index:2;font-size:12px;color:rgba(255,255,255,.75)}
 
 /* tracks */
-.tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.tk{background:#fff;border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
-.tk .md{aspect-ratio:16/9;background:var(--tc)}
-.tk .md img{width:100%;height:100%;object-fit:cover}
-.tk .bd{padding:36px 40px 40px;display:flex;flex-direction:column;flex:1}
-.tk .nm{display:inline-block;align-self:flex-start;font-size:14px;font-weight:600;padding:4px 12px;border-radius:999px;background:var(--tc);color:#1d1d1f}
-.tk h3{margin-top:14px}
-.tk .ds{margin-top:10px;font-size:17px;color:var(--mute)}
-.tk h4{margin-top:28px;font-size:14px;font-weight:600;color:var(--mute2)}
-.tk ul{margin-top:10px;border-top:1px solid var(--line)}
-.tk li{padding:12px 0;border-bottom:1px solid var(--line);font-size:17px}
-.tk li b{font-weight:600}.tk li span{color:var(--mute)}
-.tk .out{margin-top:24px;padding:18px 20px;border-radius:18px;background:var(--tc)}
-.tk .out small{display:block;font-size:13px;color:var(--mute)}
-.tk .out b{display:block;margin-top:2px;font-size:17px;font-weight:600}
-.tk .fit{margin-top:16px;font-size:15px;color:var(--mute)}
-.tk .act{margin-top:auto;padding-top:28px}
+.cmp2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(11,auto);column-gap:56px;max-width:980px;margin:0 auto;text-align:center}
+.cc{display:grid;grid-row:span 11;grid-template-rows:subgrid;align-content:start}
+.cc .md{border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:#f5f5f7}.cc .md img{width:100%;height:100%;object-fit:cover}
+.cc .nm{margin-top:32px;font-size:14px;font-weight:600;color:var(--tc)}
+.cc h3{margin-top:6px}.cc .ds{margin:12px auto 0;max-width:400px;font-size:17px;color:var(--mute)}
+.cc .act{margin-top:24px}
+.cc .li{padding:20px 0;border-bottom:1px solid var(--line)}.cc .act+.li{margin-top:40px;border-top:1px solid var(--line)}
+.cc .li b{display:block;font-size:17px;font-weight:600}.cc .li span{display:block;margin-top:2px;font-size:15px;color:var(--mute)}
+.cc .out{padding:24px 0;border-bottom:1px solid var(--line)}.cc .out small{display:block;font-size:12px;color:var(--mute)}.cc .out b{display:block;margin-top:4px;font-size:17px;font-weight:600}
+.cc .fit{margin-top:20px;font-size:14px;color:var(--mute)}
 
 /* universities */
 .uni{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
@@ -121,16 +114,15 @@ button{font:inherit;color:inherit}
 .soon{margin-top:12px;font-size:15px;color:var(--mute)}
 
 /* portfolio pass */
-.pass{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
-.ticket{position:relative;aspect-ratio:3/2;border-radius:28px;background:linear-gradient(135deg,#ffcf5c,#ff8a3d 55%,#ff5f6d);color:#1d1d1f;padding:44px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transform:rotate(-3deg)}
-.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:56px;height:56px;margin-top:-28px;border-radius:50%;background:#000}
-.ticket::before{left:-28px}.ticket::after{right:-28px}
-.ticket .k{font-size:15px;font-weight:600;opacity:.7}
-.ticket b{display:block;font-size:56px;line-height:1.05;font-weight:700;letter-spacing:-.01em}
-.ticket .row{display:flex;justify-content:space-between;align-items:flex-end;border-top:2px dashed rgba(29,29,31,.35);padding-top:18px;font-size:17px;font-weight:600}
-.steps{margin-top:36px;display:flex;flex-direction:column;gap:2px}
-.steps li{display:grid;grid-template-columns:48px 1fr;align-items:baseline;padding:16px 0;border-bottom:1px solid #333336;font-size:19px}
-.steps li span{font-size:15px;font-weight:600;color:#86868b}
+.wallet{width:min(360px,100%);margin:8px auto 0;border-radius:18px;background:#3a3a3c;color:#fff;text-align:left;padding:18px 20px 20px;box-shadow:0 30px 60px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.08)}
+.wallet small{display:block;font-size:11px;font-weight:600;letter-spacing:.02em;color:rgba(255,255,255,.6)}
+.wl-top{display:flex;justify-content:space-between;align-items:flex-start}.wl-top b{font-size:17px;font-weight:600}.wl-top span{text-align:right;font-size:17px;font-weight:600}
+.wl-main{margin:34px 0 26px}.wl-main b{display:block;font-size:34px;line-height:1.15;font-weight:600;color:#ffd60a}
+.wl-row{display:grid;grid-template-columns:1.3fr 1fr .8fr;gap:10px;font-size:15px;font-weight:600}
+.wl-foot{margin-top:24px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;color:rgba(255,255,255,.7)}
+.steps4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:88px}
+.steps4 li span{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#f5f5f7;color:#000;font-size:15px;font-weight:600}
+.steps4 b{display:block;margin-top:14px;font-size:19px;font-weight:600}.steps4 p{margin-top:4px;color:#86868b}
 
 /* village */
 .zones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
@@ -216,8 +208,8 @@ button{font:inherit;color:inherit}
  .zones{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:860px){
- .tracks,.uni,.pass,.show,.reg,.rounds{grid-template-columns:1fr}
- .pass{gap:48px}.ticket{max-width:520px}
+ .uni,.show,.reg,.rounds{grid-template-columns:1fr}
+
 }
 @media(max-width:734px){
  .sec{padding:72px 0}.vw,.vn{width:calc(100% - 32px)}
@@ -227,12 +219,12 @@ button{font:inherit;color:inherit}
  .bento{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:14px;margin:0 -16px;padding:0 16px;scroll-padding:0 16px}
  .bento::-webkit-scrollbar{display:none}
  .bx{flex:0 0 82%;height:460px;scroll-snap-align:start}.bx .tx{padding:28px 26px 0}.bx .tx p{font-size:16px}
- .tk .bd{padding:26px 24px 30px}
+ .cmp2{gap:12px}.cc .nm{margin-top:20px}.cc h3{font-size:19px}.cc .ds{font-size:14px}.cc .btn{padding:10px 14px;font-size:14px;white-space:normal}.cc .li b{font-size:15px}.cc .li span,.cc .out b{font-size:13px}.cc .out b{font-size:14px}
  .zones{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin:0 -16px;padding:0 16px}
  .zones::-webkit-scrollbar{display:none}.zn{flex:0 0 70%;scroll-snap-align:start;min-height:180px}
  .wk{flex:0 0 78%}
  .rounds{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin:0 -16px;padding:0 16px}.rounds::-webkit-scrollbar{display:none}.rd{flex:0 0 70%;scroll-snap-align:start}
- .ticket{padding:28px}.ticket b{font-size:36px}
+ .steps4{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 16px;margin-top:56px}
  .sched .r{grid-template-columns:1fr;gap:4px}
  .sched .split{grid-template-columns:1fr}
  .kv div{grid-template-columns:1fr;gap:2px}
@@ -281,34 +273,21 @@ button{font:inherit;color:inherit}
 <section class="sec" id="tracks">
   <div class="vw">
     <div class="head c"><h2 class="t-sec">สองเส้นทาง เลือกแบบที่ใช่สำหรับคุณ</h2><p class="t-copy">ไม่ว่าตอนนี้จะมีผลงานแล้ว หรือเพิ่งเริ่มต้น ก็เข้าร่วมได้ เลือกตามความพร้อม ไม่จำกัดระดับชั้น</p></div>
-    <div class="tracks">
-      <article class="tk" style="--tc:var(--pf)">
-        <div class="md"><img src="img/t-portfolio.jpg" alt="ตัวอย่างรูปเล่มพอร์ตที่จัดหน้าจากผลงานเกมจริงของน้องใน Hamster Hub" loading="lazy"></div>
-        <div class="bd">
-          <span class="nm">Portfolio Track</span>
-          <h3 class="t-card">มีผลงานแล้ว แต่ไม่รู้จะเขียนพอร์ตยังไง?</h3>
-          <p class="ds">นำผลงานที่มีมาเรียบเรียง ฝึกเล่าเรื่อง เขียน SOP และจัดรูปเล่มให้สื่อสารความสามารถของตัวเองได้ชัดเจน</p>
-          <h4>สิ่งที่จะได้ทำ</h4>
-          <ul><li><b>Storytelling</b> <span>เล่าผลงานให้คนอ่านเข้าใจ</span></li><li><b>SOP</b> <span>เขียนเหตุผลที่อยากเข้าคณะและมหาวิทยาลัย</span></li><li><b>Portfolio Design</b> <span>จัดรูปเล่มและเลือกเนื้อหา</span></li><li><b>Project Presentation</b> <span>ฝึกนำเสนอผลงานเด่น</span></li></ul>
-          <div class="out"><small>ผลงานที่ได้</small><b>Portfolio ฉบับพร้อมตรวจ และคลิปนำเสนอผลงาน 2 นาที</b></div>
-          <p class="fit">เหมาะกับคนที่มีผลงานอยู่แล้ว โดยเฉพาะผู้ที่กำลังเตรียมยื่นรอบ Portfolio</p>
-          <div class="act"><a class="btn" data-track="portfolio" href="#registration">เลือก Portfolio Track</a></div>
-        </div>
-      </article>
-      <article class="tk" style="--tc:var(--pj)">
+    <div class="cmp2"><div class="cc" style="--tc:#0057b8">
+        <div class="md"><img src="img/t-portfolio.jpg" alt="ตัวอย่างรูปเล่มพอร์ตที่จัดหน้าจากผลงานเกมจริงของน้องใน Hamster Hub" loading="lazy" style="object-position:center"></div>
+        <p class="nm">Portfolio Track</p><h3 class="t-card">มีผลงานแล้ว แต่ไม่รู้จะเขียนพอร์ตยังไง?</h3><p class="ds">นำผลงานที่มีมาเรียบเรียง ฝึกเล่าเรื่อง เขียน SOP และจัดรูปเล่มให้สื่อสารความสามารถของตัวเองได้ชัดเจน</p>
+        <div class="act"><a class="btn" data-track="portfolio" href="#registration">เลือก Portfolio Track</a></div>
+        <div class="li"><b>Storytelling</b><span>เล่าผลงานให้คนอ่านเข้าใจ</span></div><div class="li"><b>SOP</b><span>เขียนเหตุผลที่อยากเข้าคณะและมหาวิทยาลัย</span></div><div class="li"><b>Portfolio Design</b><span>จัดรูปเล่มและเลือกเนื้อหา</span></div><div class="li"><b>Project Presentation</b><span>ฝึกนำเสนอผลงานเด่น</span></div>
+        <div class="out"><small>ผลงานที่ได้</small><b>Portfolio ฉบับพร้อมตรวจ และคลิปนำเสนอผลงาน 2 นาที</b></div>
+        <p class="fit">เหมาะกับคนที่มีผลงานอยู่แล้ว โดยเฉพาะผู้ที่กำลังเตรียมยื่นรอบ Portfolio</p>
+      </div><div class="cc" style="--tc:#b25000">
         <div class="md"><img src="img/g-learn.jpg" alt="" loading="lazy" style="object-position:60% center"></div>
-        <div class="bd">
-          <span class="nm">Project Track</span>
-          <h3 class="t-card">ยังไม่มีผลงาน? มาสร้างชิ้นแรกกัน</h3>
-          <p class="ds">เริ่มจากการออกแบบเกม เรียนรู้พื้นฐาน แล้วลงมือพัฒนาเกมของตัวเองภายในค่าย</p>
-          <h4>สิ่งที่จะได้ทำ</h4>
-          <ul><li><b>Game Design</b> <span>คิดไอเดียและออกแบบวิธีเล่น</span></li><li><b>Game Development</b> <span>เรียนรู้การสร้างเกม</span></li><li><b>Project Building</b> <span>ลงมือทำเกมของตัวเอง</span></li><li><b>Project Presentation</b> <span>ฝึกนำเสนอผลงาน</span></li></ul>
-          <div class="out"><small>ผลงานที่ได้</small><b>เกมที่พัฒนาด้วยตัวเอง และคลิปนำเสนอผลงาน 2 นาที</b></div>
-          <p class="fit">เหมาะกับคนที่ยังไม่มีผลงานหรืออยากเริ่มสร้างเกม</p>
-          <div class="act"><a class="btn" data-track="project" href="#registration">เลือก Project Track</a></div>
-        </div>
-      </article>
-    </div>
+        <p class="nm">Project Track</p><h3 class="t-card">ยังไม่มีผลงาน? มาสร้างชิ้นแรกกัน</h3><p class="ds">เริ่มจากการออกแบบเกม เรียนรู้พื้นฐาน แล้วลงมือพัฒนาเกมของตัวเองภายในค่าย</p>
+        <div class="act"><a class="btn" data-track="project" href="#registration">เลือก Project Track</a></div>
+        <div class="li"><b>Game Design</b><span>คิดไอเดียและออกแบบวิธีเล่น</span></div><div class="li"><b>Game Development</b><span>เรียนรู้การสร้างเกม</span></div><div class="li"><b>Project Building</b><span>ลงมือทำเกมของตัวเอง</span></div><div class="li"><b>Project Presentation</b><span>ฝึกนำเสนอผลงาน</span></div>
+        <div class="out"><small>ผลงานที่ได้</small><b>เกมที่พัฒนาด้วยตัวเอง และคลิปนำเสนอผลงาน 2 นาที</b></div>
+        <p class="fit">เหมาะกับคนที่ยังไม่มีผลงานหรืออยากเริ่มสร้างเกม</p>
+      </div></div>
   </div>
 </section>
 
@@ -325,20 +304,17 @@ button{font:inherit;color:inherit}
   </div>
 </section>
 
-<section class="sec dark" id="portfolio-pass">
-  <div class="vw pass">
-    <div class="ticket" role="img" aria-label="ตั๋ว Portfolio Pass">
-      <span class="k">HamsQuest</span>
-      <b>Portfolio<br>Pass</b>
-      <div class="row"><span>เปิดพอร์ตรุ่นพี่</span><span>5 ธ.ค. 19:00</span></div>
+<section class="sec dark c" id="portfolio-pass">
+  <div class="vw">
+    <div class="head"><h2 class="t-sec">เปิดพอร์ตรุ่นพี่ แต่ไม่ใช่ทุกคนที่จะได้เปิด</h2><p class="t-copy">ทำภารกิจในค่ายเพื่อรับ Portfolio Pass ตั๋วพิเศษสำหรับเข้าชมพอร์ตรุ่นพี่ในคืนวันที่สอง</p></div>
+    <div class="wallet" role="img" aria-label="ตัวอย่างตั๋ว Portfolio Pass">
+      <div class="wl-top"><b>HamsQuest</b><span><small>วันที่</small>5 ธ.ค.</span></div>
+      <div class="wl-main"><small>ไอเทม</small><b>Portfolio Pass</b></div>
+      <div class="wl-row"><span><small>สิทธิ์</small>เปิดพอร์ตรุ่นพี่</span><span><small>เวลา</small>19:00–20:00</span><span><small>ช่องทาง</small>Discord</span></div>
+      <div class="wl-foot">ได้จากการทำภารกิจในค่าย ใช้ได้ทั้งสอง Track</div>
     </div>
-    <div>
-      <h2 class="t-sec">เปิดพอร์ตรุ่นพี่ แต่ไม่ใช่ทุกคนที่จะได้เปิด</h2>
-      <p class="t-copy" style="margin-top:16px">ทำภารกิจในค่ายเพื่อรับ <b style="color:#f5f5f7">Portfolio Pass</b> ตั๋วพิเศษสำหรับเข้าชมพอร์ตรุ่นพี่ในคืนวันที่สอง</p>
-      <ol class="steps"><li><span>01</span>ทำภารกิจที่กำหนดใน HamsQuest</li><li><span>02</span>รับไอเทม Portfolio Pass</li><li><span>03</span>ยืนยันสิทธิ์ผ่าน Discord</li><li><span>04</span>เข้าชมพอร์ตรุ่นพี่และถามคำถาม</li></ol>
-      <p class="note">5 ธันวาคม 19:00–20:00 น.</p>
-      <p class="soon" style="color:#86868b">ทั้งสอง Track ปลดล็อกตั๋วได้โดยทำภารกิจของตัวเอง</p>
-    </div>
+    <ol class="steps4"><li><span>1</span><b>ทำภารกิจ</b><p>ตามที่กำหนดใน HamsQuest</p></li><li><span>2</span><b>รับไอเทม</b><p>Portfolio Pass</p></li><li><span>3</span><b>ยืนยันสิทธิ์</b><p>ผ่าน Discord</p></li><li><span>4</span><b>เข้าชมพอร์ตรุ่นพี่</b><p>และถามคำถาม</p></li></ol>
+    <p class="note" style="margin-top:48px">5 ธันวาคม 19:00–20:00 น.</p>
   </div>
 </section>
 
