@@ -91,18 +91,19 @@ button{font:inherit;color:inherit}
 .bx .src{position:absolute;right:18px;bottom:14px;z-index:2;font-size:12px;color:rgba(255,255,255,.75)}
 
 /* tracks */
-.cmp2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(11,auto);column-gap:56px;max-width:980px;margin:0 auto;text-align:center}
-.cc{display:grid;grid-row:span 11;grid-template-rows:subgrid;align-content:start}
+.cmp2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(10,auto);column-gap:56px;max-width:980px;margin:0 auto;text-align:center}
+.cc{display:grid;grid-row:span 10;grid-template-rows:subgrid;align-content:start}
 .cc .md{border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:#f5f5f7}.cc .md img{width:100%;height:100%;object-fit:cover}
 .cc .nm{margin-top:32px;font-size:14px;font-weight:600;color:var(--tc)}
 .cc h3{margin-top:6px}.cc .ds{margin:12px auto 0;max-width:400px;font-size:17px;color:var(--mute)}
 .cc .act{margin-top:24px}
-.cc .li{padding:20px 0;border-bottom:1px solid var(--line)}.cc .act+.li{margin-top:40px;border-top:1px solid var(--line)}
+.cc .li{padding:16px 0;border-bottom:1px solid var(--line)}.cc .act+.li{margin-top:40px;border-top:1px solid var(--line)}
 .cc .li b{display:block;font-size:17px;font-weight:600}.cc .li span{display:block;margin-top:2px;font-size:15px;color:var(--mute)}
 .cc .out{padding:24px 0;border-bottom:1px solid var(--line)}.cc .out small{display:block;font-size:12px;color:var(--mute)}.cc .out b{display:block;margin-top:4px;font-size:17px;font-weight:600}
 .cc .fit{margin-top:20px;font-size:14px;color:var(--mute)}
 
 /* universities */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.chips span{padding:8px 16px;border-radius:999px;background:#fff;font-size:15px;font-weight:600}.dark .chips span{background:#1d1d1f}.alt .head .chips span{background:#fff}
 .uni{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
 .uni .ph{border-radius:28px;overflow:hidden;aspect-ratio:4/3;background:#2172ea}
 .uni .ph img{width:100%;height:100%;object-fit:cover;object-position:75% center}
@@ -168,7 +169,7 @@ button{font:inherit;color:inherit}
 .rounds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .rd{background:#fff;border-radius:24px;padding:32px 30px}
 .rd small{font-size:14px;font-weight:600;color:var(--mute2)}
-.rd b{display:block;margin-top:8px;font-size:22px;font-weight:600}
+.rd b{display:block;margin-top:6px;font-size:22px;font-weight:600}
 .rd p{margin-top:6px;color:var(--mute)}
 
 /* registration */
@@ -196,7 +197,7 @@ button{font:inherit;color:inherit}
 /* final */
 .final .t-sec{font-size:64px}
 .final .lines{margin-top:24px;font-size:24px;line-height:1.6;color:#d2d2d7}
-.final .dt{margin:24px 0 36px;color:#86868b}
+.final .dt{margin:20px 0 32px;color:#86868b}
 
 /* footer */
 .gf{background:var(--alt);color:var(--mute);font-size:12px;line-height:1.5;padding:40px 0 48px}
@@ -251,53 +252,52 @@ button{font:inherit;color:inherit}
 <section class="hero" id="hero">
   <p class="t-eye">Portfolio Camp for TCAS 1</p>
   <h1 class="t-hero"><span><i>มีผลงานแล้ว</i> <i>ทำพอร์ตให้พร้อม</i></span><span><i>ยังไม่มี</i> <i>เริ่มสร้างได้เลย</i></span></h1>
-  <p class="sub">3 วัน ทำพอร์ต สร้างเกม และค้นหามหาวิทยาลัยที่อยากเข้า</p>
-  <p class="when">4–6 ธันวาคม 2569 ออนไลน์ผ่าน Discord</p>
-  <div class="acts"><a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><a class="more" href="#tracks">เลือก Track ของคุณ</a></div>
+  <p class="when">4–6 ธ.ค. 2569 &nbsp; ออนไลน์ผ่าน Discord</p>
+  <div class="acts"><a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><a class="more" href="#tracks">เลือก Track</a></div>
   <div class="hero-media"><video id="heroVid" src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกม COMMAND SELECT ผลงานของน้องใน Hamster Hub"></video></div>
 </section>
 
 <section class="sec alt" id="benefits">
   <div class="vw">
-    <div class="head"><h2 class="t-sec">3 วัน ได้อะไรมากกว่าที่คิด</h2></div>
+    <div class="head"><h2 class="t-sec">3 วัน ได้อะไร</h2></div>
     <div class="bento">
-      <article class="bx vid"><div class="tx"><h3 class="t-card">มีผลงานไว้ใส่พอร์ต</h3><p>สร้างเกมใหม่ หรือนำผลงานที่มีมาเล่าให้น่าสนใจขึ้น</p></div><div class="md"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Heart</span></article>
-      <article class="bx art" style="--bg:#fe6c6f"><div class="tx"><h3 class="t-card">เขียนพอร์ตให้เป็น</h3><p>เรียนรู้การจัดรูปเล่ม เขียน SOP และอธิบายผลงาน</p></div><div class="md"><img src="img/g-folder.jpg" alt="" loading="lazy"></div></article>
-      <article class="bx art" style="--bg:#197cf3"><div class="tx"><h3 class="t-card">รู้จักมหาวิทยาลัยมากขึ้น</h3><p>คุยกับรุ่นพี่ ฟังประสบการณ์ และถามเรื่องคณะที่สนใจ</p></div><div class="md"><img src="img/r-talk.jpg" alt="" loading="lazy"></div></article>
-      <article class="bx vid"><div class="tx"><h3 class="t-card">มีพื้นที่โชว์ผลงาน</h3><p>เปิดบูธของตัวเอง ดูผลงานเพื่อน และแลกเปลี่ยนความคิดเห็น</p></div><div class="md"><video src="vid/apocalypse.mp4" poster="img/apocalypse.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Apocalypis Building</span></article>
+      <article class="bx vid"><div class="tx"><h3 class="t-card">ผลงานไว้ใส่พอร์ต</h3></div><div class="md"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Heart</span></article>
+      <article class="bx art" style="--bg:#fe6c6f"><div class="tx"><h3 class="t-card">พอร์ตที่เขียนเป็น</h3></div><div class="md"><img src="img/g-folder.jpg" alt="" loading="lazy"></div></article>
+      <article class="bx art" style="--bg:#197cf3"><div class="tx"><h3 class="t-card">รู้จักมหาวิทยาลัย</h3></div><div class="md"><img src="img/r-talk.jpg" alt="" loading="lazy"></div></article>
+      <article class="bx vid"><div class="tx"><h3 class="t-card">ขึ้นโชว์ผลงาน</h3></div><div class="md"><video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ภาพจริงจากเวทีของทีม RE//SLASH</span></article>
     </div>
   </div>
 </section>
 
 <section class="sec" id="tracks">
   <div class="vw">
-    <div class="head c"><h2 class="t-sec">สองเส้นทาง เลือกแบบที่ใช่สำหรับคุณ</h2><p class="t-copy">ไม่ว่าตอนนี้จะมีผลงานแล้ว หรือเพิ่งเริ่มต้น ก็เข้าร่วมได้ เลือกตามความพร้อม ไม่จำกัดระดับชั้น</p></div>
-    <div class="cmp2"><div class="cc" style="--tc:#0057b8">
-        <div class="md"><img src="img/t-portfolio.jpg" alt="ตัวอย่างรูปเล่มพอร์ตที่จัดหน้าจากผลงานเกมจริงของน้องใน Hamster Hub" loading="lazy" style="object-position:center"></div>
-        <p class="nm">Portfolio Track</p><h3 class="t-card">มีผลงานแล้ว แต่ไม่รู้จะเขียนพอร์ตยังไง?</h3><p class="ds">นำผลงานที่มีมาเรียบเรียง ฝึกเล่าเรื่อง เขียน SOP และจัดรูปเล่มให้สื่อสารความสามารถของตัวเองได้ชัดเจน</p>
+    <div class="head c"><h2 class="t-sec">เลือก Track ที่ใช่</h2></div>
+    <div class="cmp2">
+      <div class="cc" style="--tc:#0057b8">
+        <div class="md"><img src="img/t-portfolio.jpg" alt="ตัวอย่างรูปเล่มพอร์ต" loading="lazy"></div>
+        <p class="nm">Portfolio Track</p><h3 class="t-card">มีผลงานแล้ว</h3><p class="ds">มาทำพอร์ตให้พร้อมยื่น</p>
         <div class="act"><a class="btn" data-track="portfolio" href="#registration">เลือก Portfolio Track</a></div>
-        <div class="li"><b>Storytelling</b><span>เล่าผลงานให้คนอ่านเข้าใจ</span></div><div class="li"><b>SOP</b><span>เขียนเหตุผลที่อยากเข้าคณะและมหาวิทยาลัย</span></div><div class="li"><b>Portfolio Design</b><span>จัดรูปเล่มและเลือกเนื้อหา</span></div><div class="li"><b>Project Presentation</b><span>ฝึกนำเสนอผลงานเด่น</span></div>
-        <div class="out"><small>ผลงานที่ได้</small><b>Portfolio ฉบับพร้อมตรวจ และคลิปนำเสนอผลงาน 2 นาที</b></div>
-        <p class="fit">เหมาะกับคนที่มีผลงานอยู่แล้ว โดยเฉพาะผู้ที่กำลังเตรียมยื่นรอบ Portfolio</p>
-      </div><div class="cc" style="--tc:#b25000">
+        <div class="li"><b>Storytelling</b></div><div class="li"><b>SOP</b></div><div class="li"><b>Portfolio Design</b></div><div class="li"><b>Presentation</b></div>
+        <div class="out"><small>ได้กลับบ้าน</small><b>พอร์ตพร้อมตรวจ + คลิป 2 นาที</b></div>
+      </div>
+      <div class="cc" style="--tc:#b25000">
         <div class="md"><img src="img/g-learn.jpg" alt="" loading="lazy" style="object-position:60% center"></div>
-        <p class="nm">Project Track</p><h3 class="t-card">ยังไม่มีผลงาน? มาสร้างชิ้นแรกกัน</h3><p class="ds">เริ่มจากการออกแบบเกม เรียนรู้พื้นฐาน แล้วลงมือพัฒนาเกมของตัวเองภายในค่าย</p>
+        <p class="nm">Project Track</p><h3 class="t-card">ยังไม่มีผลงาน</h3><p class="ds">มาสร้างเกมชิ้นแรก</p>
         <div class="act"><a class="btn" data-track="project" href="#registration">เลือก Project Track</a></div>
-        <div class="li"><b>Game Design</b><span>คิดไอเดียและออกแบบวิธีเล่น</span></div><div class="li"><b>Game Development</b><span>เรียนรู้การสร้างเกม</span></div><div class="li"><b>Project Building</b><span>ลงมือทำเกมของตัวเอง</span></div><div class="li"><b>Project Presentation</b><span>ฝึกนำเสนอผลงาน</span></div>
-        <div class="out"><small>ผลงานที่ได้</small><b>เกมที่พัฒนาด้วยตัวเอง และคลิปนำเสนอผลงาน 2 นาที</b></div>
-        <p class="fit">เหมาะกับคนที่ยังไม่มีผลงานหรืออยากเริ่มสร้างเกม</p>
-      </div></div>
+        <div class="li"><b>Game Design</b></div><div class="li"><b>Game Development</b></div><div class="li"><b>Project Building</b></div><div class="li"><b>Presentation</b></div>
+        <div class="out"><small>ได้กลับบ้าน</small><b>เกมของตัวเอง + คลิป 2 นาที</b></div>
+      </div>
+    </div>
+    <p class="soon c" style="margin-top:28px">เลือกตามความพร้อม ไม่จำกัดระดับชั้น</p>
   </div>
 </section>
 
 <section class="sec alt" id="universities">
   <div class="vw uni">
     <div>
-      <h2 class="t-sec">มหาวิทยาลัยที่อยากเข้า เป็นยังไงกันแน่?</h2>
-      <p class="t-copy" style="margin-top:16px">มาคุยกับรุ่นพี่มหาวิทยาลัย ฟังประสบการณ์จริง และถามเรื่องที่อยากรู้ก่อนตัดสินใจเลือกคณะ</p>
-      <ul class="ticks"><li>แต่ละคณะเรียนอะไรบ้าง</li><li>ชีวิตในมหาวิทยาลัยเป็นอย่างไร</li><li>รุ่นพี่เตรียมตัวเข้ามหาวิทยาลัยอย่างไร</li><li>ถ้าอยากเข้าเรียน ต้องเริ่มเตรียมอะไรบ้าง</li></ul>
-      <p class="note">พบรุ่นพี่วันที่ 4 ธันวาคม และกลับมาถามเพิ่มเติมวันที่ 6 ธันวาคม</p>
-      <p class="soon">ติดตามรายชื่อรุ่นพี่และมหาวิทยาลัยที่จะเข้าร่วมเร็ว ๆ นี้</p>
+      <h2 class="t-sec">คุยกับรุ่นพี่มหาวิทยาลัย</h2>
+      <ul class="ticks"><li>คณะนี้เรียนอะไร</li><li>ชีวิตในมหาลัย</li><li>รุ่นพี่เตรียมตัวยังไง</li><li>ต้องเริ่มเตรียมอะไร</li></ul>
+      <p class="chips"><span>4 ธ.ค. พบรุ่นพี่</span><span>6 ธ.ค. ถามเพิ่ม</span></p>
     </div>
     <div class="ph"><img src="img/g-know.jpg" alt="" loading="lazy"></div>
   </div>
@@ -305,66 +305,48 @@ button{font:inherit;color:inherit}
 
 <section class="sec dark c" id="portfolio-pass">
   <div class="vw">
-    <div class="head"><h2 class="t-sec">เปิดพอร์ตรุ่นพี่ แต่ไม่ใช่ทุกคนที่จะได้เปิด</h2><p class="t-copy">ทำภารกิจในค่ายเพื่อรับ Portfolio Pass ตั๋วพิเศษสำหรับเข้าชมพอร์ตรุ่นพี่ในคืนวันที่สอง</p></div>
+    <div class="head"><h2 class="t-sec">เปิดพอร์ตรุ่นพี่<br>เฉพาะคนที่มีตั๋ว</h2></div>
     <div class="wallet" role="img" aria-label="ตัวอย่างตั๋ว Portfolio Pass">
       <div class="wl-top"><b>HamsQuest</b><span><small>วันที่</small>5 ธ.ค.</span></div>
       <div class="wl-main"><small>ไอเทม</small><b>Portfolio Pass</b></div>
       <div class="wl-row"><span><small>สิทธิ์</small>เปิดพอร์ตรุ่นพี่</span><span><small>เวลา</small>19:00–20:00</span><span><small>ช่องทาง</small>Discord</span></div>
-      <div class="wl-foot">ได้จากการทำภารกิจในค่าย ใช้ได้ทั้งสอง Track</div>
     </div>
-    <ol class="steps4"><li><span>1</span><b>ทำภารกิจ</b><p>ตามที่กำหนดใน HamsQuest</p></li><li><span>2</span><b>รับไอเทม</b><p>Portfolio Pass</p></li><li><span>3</span><b>ยืนยันสิทธิ์</b><p>ผ่าน Discord</p></li><li><span>4</span><b>เข้าชมพอร์ตรุ่นพี่</b><p>และถามคำถาม</p></li></ol>
-    <p class="note" style="margin-top:48px">5 ธันวาคม 19:00–20:00 น.</p>
+    <ol class="steps4"><li><span>1</span><b>ทำภารกิจ</b></li><li><span>2</span><b>ได้ตั๋ว</b></li><li><span>3</span><b>ยืนยันใน Discord</b></li><li><span>4</span><b>เปิดพอร์ตรุ่นพี่</b></li></ol>
   </div>
 </section>
 
 <section class="sec" id="village">
   <div class="vw">
-    <div class="head"><h2 class="t-sec">ไม่ใช่แค่เข้าค่าย แต่ได้เข้าไปอยู่ในหมู่บ้านเดียวกัน</h2><p class="t-copy">สร้างตัวละคร เดินสำรวจหมู่บ้าน เล่นเกม ทำภารกิจ และพบเพื่อนที่กำลังสร้างผลงานเหมือนกัน</p></div>
+    <div class="head"><h2 class="t-sec">ทั้งค่ายอยู่ใน HamsVillage</h2></div>
     <div class="wide"><img src="img/c-village.jpg" alt="ภาพประกอบ HamsVillage หมู่บ้านออนไลน์ที่มี 4 โซน" loading="lazy"></div>
-    <div class="zones">
-      <div class="zn"><b>Project Zone</b><p>เดินดูเกมที่เพื่อนสร้างขึ้นในค่าย</p></div>
-      <div class="zn"><b>Portfolio Zone</b><p>เปิดดูรูปเล่มพอร์ตและผลงานของเพื่อน</p></div>
-      <div class="zn"><b>University Zone</b><p>สำรวจข้อมูลคณะและมหาวิทยาลัย</p></div>
-      <div class="zn"><b>Showcase Zone</b><p>ชม 10 ผลงานเด่นแห่งปีของ Hamster Hub</p></div>
-    </div>
-    <p class="quest"><b>HamsQuest</b> ทำภารกิจ รับไอเทม และปลดล็อกประสบการณ์พิเศษระหว่างค่าย</p>
+    <div class="zones"><div class="zn"><b>Project Zone</b><p>เกมของเพื่อน</p></div><div class="zn"><b>Portfolio Zone</b><p>พอร์ตของเพื่อน</p></div><div class="zn"><b>University Zone</b><p>ข้อมูลคณะ</p></div><div class="zn"><b>Showcase Zone</b><p>10 ผลงานเด่น</p></div></div>
   </div>
 </section>
 
 <section class="sec alt" id="showcase">
-  <div class="vw show">
-    <div>
-      <h2 class="t-sec">ผลงานของคุณ มีพื้นที่ให้คนอื่นได้เห็น</h2>
-      <p class="t-copy" style="margin-top:16px">วันสุดท้าย เปิดบูธของตัวเองใน HamsVillage ให้เพื่อนเข้ามาชมเกม รูปเล่มพอร์ต และคลิปนำเสนอผลงาน</p>
-      <p class="t-copy" style="margin-top:12px">เดินชมบูธเพื่อน แลกเปลี่ยนความคิดเห็น และดูว่าแต่ละคนสร้างอะไรได้บ้างในเวลา 3 วัน</p>
-      <p class="note">6 ธันวาคม 16:00–17:30 น.</p>
-    </div>
-    <div class="md"><img src="img/c-booth.jpg" alt="ภาพประกอบบูธผลงาน เพื่อนลองเล่นเกม เจ้าของเกมจดคอมเมนต์" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+  <div class="vw">
+    <div class="head"><h2 class="t-sec">วันสุดท้าย เปิดบูธ</h2><p class="chips" style="margin-top:16px"><span>6 ธ.ค. 16:00–17:30</span></p></div>
+    <div class="wide" style="margin-bottom:96px"><img src="img/c-booth.jpg" alt="ภาพประกอบบูธผลงาน" loading="lazy"></div>
+    <div class="head"><h3 class="t-card" style="font-size:32px">10 ผลงานเด่นแห่งปี</h3></div>
   </div>
-  <div class="vw"><div class="head"><h3 class="t-card" style="font-size:32px">อีก 10 ผลงานที่ไม่ควรพลาด</h3><p class="t-copy" style="font-size:19px;margin-top:8px">ชมผลงานเด่นแห่งปีจาก Hamster Hub และค้นหาไอเดียสำหรับผลงานชิ้นต่อไปของตัวเอง</p></div></div>
   <div class="gal" id="hof"></div>
   <div class="ctrls" data-for="hof"><button class="round" data-d="-1" aria-label="ก่อนหน้า">‹</button><div class="dots" role="tablist" aria-label="ผลงานเด่น"></div><button class="round" data-d="1" aria-label="ถัดไป">›</button></div>
 </section>
 
 <section class="sec c" id="schedule">
   <div class="vn">
-    <div class="head"><h2 class="t-sec">3 วัน เราจะทำอะไรกันบ้าง?</h2></div>
+    <div class="head"><h2 class="t-sec">ตารางกิจกรรม</h2></div>
     <div class="days" role="tablist" id="days"></div>
     <div id="dayPanel" role="tabpanel"></div>
-    <p class="sfoot">เวลาไทย (ICT) กำหนดการอาจปรับเปลี่ยนตามความเหมาะสม</p>
+    <p class="sfoot">เวลาไทย อาจปรับตามความเหมาะสม</p>
   </div>
 </section>
 
 <section class="sec alt" id="mentors">
   <div class="vw">
-    <div class="head"><h2 class="t-sec">มีรุ่นพี่ช่วยดูงาน ไม่ต้องทำคนเดียว</h2><p class="t-copy">รับคำแนะนำระหว่างค่าย เพื่อให้รู้ว่าควรปรับอะไรและไปต่ออย่างไร</p></div>
-    <div class="wide" style="margin:0 auto 40px;max-width:980px"><img src="img/c-mentor.jpg" alt="ภาพประกอบรุ่นพี่ช่วยดูงานน้องผ่านวิดีโอคอลแบบกลุ่ม" loading="lazy"></div>
-    <div class="rounds">
-      <div class="rd"><small>รอบที่ 1</small><b>ตรวจแนวทาง</b><p>ก่อนลงมือทำ</p></div>
-      <div class="rd"><small>รอบที่ 2</small><b>ตรวจความก้าวหน้า</b><p>และช่วยแก้ปัญหา</p></div>
-      <div class="rd"><small>รอบที่ 3</small><b>ตรวจความพร้อม</b><p>ก่อนส่งผลงาน</p></div>
-    </div>
-    <p class="soon" style="margin-top:24px">การให้คำแนะนำเป็นรอบแบบกลุ่ม ผ่านห้องกิจกรรมออนไลน์</p>
+    <div class="head"><h2 class="t-sec">มีรุ่นพี่ช่วยดูงาน</h2></div>
+    <div class="wide" style="margin:0 auto 40px;max-width:980px"><img src="img/c-mentor.jpg" alt="ภาพประกอบรุ่นพี่ช่วยดูงานผ่านวิดีโอคอลกลุ่ม" loading="lazy"></div>
+    <div class="rounds"><div class="rd"><small>รอบ 1</small><b>ก่อนเริ่มทำ</b></div><div class="rd"><small>รอบ 2</small><b>ระหว่างทำ</b></div><div class="rd"><small>รอบ 3</small><b>ก่อนส่ง</b></div></div>
   </div>
 </section>
 
@@ -374,20 +356,17 @@ button{font:inherit;color:inherit}
     <div class="reg">
       <div class="box" style="background:var(--alt)">
         <dl class="kv">
-          <div><dt>วันจัดกิจกรรม</dt><dd>4–6 ธันวาคม 2569</dd></div>
-          <div><dt>รูปแบบ</dt><dd>ออนไลน์ผ่าน Discord และ HamsVillage</dd></div>
-          <div><dt>ผู้เข้าร่วม</dt><dd>นักเรียนระดับมัธยมศึกษา</dd></div>
-          <div><dt>รูปแบบการสมัคร</dt><dd>เลือก Track ตามความพร้อม</dd></div>
+          <div><dt>วันที่</dt><dd>4–6 ธ.ค. 2569</dd></div>
+          <div><dt>ที่ไหน</dt><dd>ออนไลน์ Discord</dd></div>
+          <div><dt>ใครสมัครได้</dt><dd>นักเรียนมัธยม</dd></div>
           <div><dt>ค่าสมัคร</dt><dd>190 บาท</dd></div>
         </dl>
-        <h3 style="margin-top:36px">สมัครอย่างไร?</h3>
-        <ol class="howto"><li>กดสมัครเข้าร่วมกิจกรรม</li><li>กรอกข้อมูลและแบบประเมินความพร้อม</li><li>เลือก Track ที่เหมาะกับตัวเอง</li><li>ทำตามขั้นตอนยืนยันการสมัครและรับข้อมูลเข้าค่ายจากทีมงาน</li></ol>
         <p id="pickedTrack" class="soon" hidden></p>
         <div style="margin-top:32px"><a class="btn" id="regBtn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a></div>
       </div>
       <div class="box" style="background:var(--alt)">
-        <h3>เตรียมอะไรบ้าง?</h3>
-        <ul class="ticks" style="margin-top:0"><li>คอมพิวเตอร์หรือโน้ตบุ๊ก และอินเทอร์เน็ต</li><li>บัญชี Discord และบัญชีที่ใช้เข้าร่วมระบบ Hamster Hub ตามคำแนะนำของทีม</li><li><b>Portfolio Track</b> เตรียมไฟล์ผลงาน รูปภาพ และข้อมูลที่อยากใส่พอร์ต หากมีคณะเป้าหมายให้เตรียมชื่อคณะไว้ด้วย</li><li><b>Project Track</b> ไม่ต้องมีผลงานมาก่อน เตรียมอุปกรณ์และติดตั้งโปรแกรมตามที่ทีมแจ้ง</li></ul>
+        <h3>เตรียมให้พร้อม</h3>
+        <ul class="ticks" style="margin-top:0"><li>คอมหรือโน้ตบุ๊ก + เน็ต</li><li>บัญชี Discord</li><li><b>Portfolio Track</b> ไฟล์ผลงานที่มี</li><li><b>Project Track</b> ไม่ต้องมีอะไรมาก่อน</li></ul>
       </div>
     </div>
   </div>
@@ -402,9 +381,8 @@ button{font:inherit;color:inherit}
 
 <section class="sec dark c final" id="final-cta">
   <div class="vn">
-    <h2 class="t-sec">อนาคตของคุณ เริ่มจากผลงานชิ้นนี้</h2>
-    <p class="lines">มีผลงานแล้ว มาทำพอร์ตให้พร้อม<br>ยังไม่มีผลงาน มาเริ่มสร้างด้วยกัน</p>
-    <p class="dt">Portfolio Camp for TCAS 1<br>4–6 ธันวาคม 2569</p>
+    <h2 class="t-sec">อนาคตของคุณ<br>เริ่มจากผลงานชิ้นนี้</h2>
+    <p class="dt">4–6 ธ.ค. 2569</p>
     <a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a>
   </div>
 </section>
@@ -466,14 +444,12 @@ days.addEventListener('keydown',e=>{const bs=[...days.children],i=bs.findIndex(b
 show(0);
 
 /* faq */
-const FAQ=[['ไม่มีพื้นฐานเขียนโปรแกรมเลย สมัครได้ไหม?','ได้ Project Track ออกแบบมาสำหรับผู้เริ่มต้น โดยมีเนื้อหาพื้นฐานและแนวทางลงมือทำเกม'],
-['อยู่ ม.5 แต่มีผลงานแล้ว เลือก Portfolio Track ได้ไหม?','ได้ เราแบ่ง Track ตามความพร้อมของผลงาน ไม่ใช่ระดับชั้น'],
-['ยังไม่มีมหาวิทยาลัยหรือคณะในใจ สมัครได้ไหม?','ได้ กิจกรรมพบรุ่นพี่จะช่วยให้รู้จักเส้นทางการเรียนมากขึ้น'],
-['ต้องมีพอร์ตอยู่แล้วไหม?','ไม่จำเป็น Portfolio Track เหมาะกับคนที่มีผลงานแล้วแม้ยังไม่มีรูปเล่ม ส่วนคนที่ยังไม่มีผลงานเลือก Project Track ได้'],
-['ต้องเดินทางไปที่ไหนไหม?','ไม่ต้อง กิจกรรมจัดออนไลน์ผ่าน Discord และ HamsVillage'],
-['Portfolio Pass คืออะไร?','ไอเทมที่ได้รับจากการทำภารกิจช่วงวันที่สอง ใช้ปลดล็อกสิทธิ์เข้าชมพอร์ตรุ่นพี่ในช่วงกลางคืน'],
-['ต้องส่งอะไรในวันสุดท้าย?','Portfolio Track ส่งรูปเล่ม Portfolio และคลิปนำเสนอผลงาน 2 นาที ส่วน Project Track ส่งเกมและคลิปนำเสนอ 2 นาที'],
-['เข้าค่ายแล้วจะสอบติดมหาวิทยาลัยแน่นอนไหม?','ค่ายช่วยให้เตรียมผลงานและพอร์ตได้ดีขึ้น แต่การรับเข้าขึ้นอยู่กับเกณฑ์และการพิจารณาของแต่ละมหาวิทยาลัย']];
+const FAQ=[['ไม่มีพื้นฐาน สมัครได้ไหม?','ได้ เลือก Project Track เริ่มจากพื้นฐาน'],
+['อยู่ ม.5 แต่มีผลงานแล้ว เลือก Portfolio Track ได้ไหม?','ได้ แบ่งตามความพร้อม ไม่ใช่ระดับชั้น'],
+['ยังไม่มีคณะในใจ สมัครได้ไหม?','ได้ วันแรกมีพบรุ่นพี่มหาวิทยาลัย'],
+['ต้องเดินทางไหม?','ไม่ต้อง ออนไลน์ผ่าน Discord และ HamsVillage'],
+['วันสุดท้ายต้องส่งอะไร?','Portfolio Track ส่งพอร์ต + คลิป 2 นาที ส่วน Project Track ส่งเกม + คลิป 2 นาที'],
+['เข้าค่ายแล้วติดแน่ไหม?','ไม่มีใครรับประกันได้ ค่ายช่วยให้ผลงานและพอร์ตพร้อมขึ้น การรับเข้าขึ้นกับแต่ละมหาวิทยาลัย']];
 $('#faqList').innerHTML=FAQ.map(([q,a],i)=>`<div class="fq"><h3><button aria-expanded="false" aria-controls="fa${i}" id="fq${i}">${q}<i aria-hidden="true">+</i></button></h3><div class="a" id="fa${i}" role="region" aria-labelledby="fq${i}" hidden>${a}</div></div>`).join('');
 $('#faqList').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!o);document.getElementById(b.getAttribute('aria-controls')).hidden=o;});
 
