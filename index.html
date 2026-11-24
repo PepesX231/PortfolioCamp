@@ -125,9 +125,10 @@ button{font:inherit;color:inherit}
 .steps4 b{display:block;margin-top:14px;font-size:19px;font-weight:600}.steps4 p{margin-top:4px;color:#86868b}
 
 /* village */
-.zones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.zn{border-radius:24px;padding:32px 28px 36px;background:var(--zc);min-height:220px;display:flex;flex-direction:column;justify-content:flex-end}
-.zn b{font-size:22px;font-weight:600}.zn p{margin-top:6px;font-size:17px;color:rgba(29,29,31,.7)}
+.wide{border-radius:28px;overflow:hidden;aspect-ratio:16/9;background:#f9d3d8}.wide img{width:100%;height:100%;object-fit:cover}
+.zones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:40px}
+.zn{border-top:1px solid var(--line);padding-top:18px}
+.zn b{font-size:19px;font-weight:600}.zn p{margin-top:4px;font-size:15px;color:var(--mute)}
 .quest{margin-top:40px;font-size:19px}.quest b{font-weight:600}
 
 /* rails */
@@ -205,7 +206,6 @@ button{font:inherit;color:inherit}
 
 @media(max-width:1068px){
  .t-hero{font-size:60px}.t-sec{font-size:44px}
- .zones{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:860px){
  .uni,.show,.reg,.rounds{grid-template-columns:1fr}
@@ -220,8 +220,7 @@ button{font:inherit;color:inherit}
  .bento::-webkit-scrollbar{display:none}
  .bx{flex:0 0 82%;height:460px;scroll-snap-align:start}.bx .tx{padding:28px 26px 0}.bx .tx p{font-size:16px}
  .cmp2{gap:12px}.cc .nm{margin-top:20px}.cc h3{font-size:19px}.cc .ds{font-size:14px}.cc .btn{padding:10px 14px;font-size:14px;white-space:normal}.cc .li b{font-size:15px}.cc .li span,.cc .out b{font-size:13px}.cc .out b{font-size:14px}
- .zones{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin:0 -16px;padding:0 16px}
- .zones::-webkit-scrollbar{display:none}.zn{flex:0 0 70%;scroll-snap-align:start;min-height:180px}
+ .zones{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}.wide{border-radius:18px}
  .wk{flex:0 0 78%}
  .rounds{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin:0 -16px;padding:0 16px}.rounds::-webkit-scrollbar{display:none}.rd{flex:0 0 70%;scroll-snap-align:start}
  .steps4{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 16px;margin-top:56px}
@@ -321,11 +320,12 @@ button{font:inherit;color:inherit}
 <section class="sec" id="village">
   <div class="vw">
     <div class="head"><h2 class="t-sec">ไม่ใช่แค่เข้าค่าย แต่ได้เข้าไปอยู่ในหมู่บ้านเดียวกัน</h2><p class="t-copy">สร้างตัวละคร เดินสำรวจหมู่บ้าน เล่นเกม ทำภารกิจ และพบเพื่อนที่กำลังสร้างผลงานเหมือนกัน</p></div>
+    <div class="wide"><img src="img/c-village.jpg" alt="ภาพประกอบ HamsVillage หมู่บ้านออนไลน์ที่มี 4 โซน" loading="lazy"></div>
     <div class="zones">
-      <div class="zn" style="--zc:var(--pj)"><b>Project Zone</b><p>เดินดูเกมที่เพื่อนสร้างขึ้นในค่าย</p></div>
-      <div class="zn" style="--zc:var(--pf)"><b>Portfolio Zone</b><p>เปิดดูรูปเล่มพอร์ตและผลงานของเพื่อน</p></div>
-      <div class="zn" style="--zc:#e9f7ef"><b>University Zone</b><p>สำรวจข้อมูลคณะและมหาวิทยาลัย</p></div>
-      <div class="zn" style="--zc:#fde8ef"><b>Showcase Zone</b><p>ชม 10 ผลงานเด่นแห่งปีของ Hamster Hub</p></div>
+      <div class="zn"><b>Project Zone</b><p>เดินดูเกมที่เพื่อนสร้างขึ้นในค่าย</p></div>
+      <div class="zn"><b>Portfolio Zone</b><p>เปิดดูรูปเล่มพอร์ตและผลงานของเพื่อน</p></div>
+      <div class="zn"><b>University Zone</b><p>สำรวจข้อมูลคณะและมหาวิทยาลัย</p></div>
+      <div class="zn"><b>Showcase Zone</b><p>ชม 10 ผลงานเด่นแห่งปีของ Hamster Hub</p></div>
     </div>
     <p class="quest"><b>HamsQuest</b> ทำภารกิจ รับไอเทม และปลดล็อกประสบการณ์พิเศษระหว่างค่าย</p>
   </div>
@@ -339,7 +339,7 @@ button{font:inherit;color:inherit}
       <p class="t-copy" style="margin-top:12px">เดินชมบูธเพื่อน แลกเปลี่ยนความคิดเห็น และดูว่าแต่ละคนสร้างอะไรได้บ้างในเวลา 3 วัน</p>
       <p class="note">6 ธันวาคม 16:00–17:30 น.</p>
     </div>
-    <div class="md"><video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="none" aria-label="น้อง ๆ นำเสนอผลงานเกม"></video></div>
+    <div class="md"><img src="img/c-booth.jpg" alt="ภาพประกอบบูธผลงาน เพื่อนลองเล่นเกม เจ้าของเกมจดคอมเมนต์" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
   </div>
   <div class="vw"><div class="head"><h3 class="t-card" style="font-size:32px">อีก 10 ผลงานที่ไม่ควรพลาด</h3><p class="t-copy" style="font-size:19px;margin-top:8px">ชมผลงานเด่นแห่งปีจาก Hamster Hub และค้นหาไอเดียสำหรับผลงานชิ้นต่อไปของตัวเอง</p></div></div>
   <div class="gal" id="hof"></div>
@@ -358,6 +358,7 @@ button{font:inherit;color:inherit}
 <section class="sec alt" id="mentors">
   <div class="vw">
     <div class="head"><h2 class="t-sec">มีรุ่นพี่ช่วยดูงาน ไม่ต้องทำคนเดียว</h2><p class="t-copy">รับคำแนะนำระหว่างค่าย เพื่อให้รู้ว่าควรปรับอะไรและไปต่ออย่างไร</p></div>
+    <div class="wide" style="margin:0 auto 40px;max-width:980px"><img src="img/c-mentor.jpg" alt="ภาพประกอบรุ่นพี่ช่วยดูงานน้องผ่านวิดีโอคอลแบบกลุ่ม" loading="lazy"></div>
     <div class="rounds">
       <div class="rd"><small>รอบที่ 1</small><b>ตรวจแนวทาง</b><p>ก่อนลงมือทำ</p></div>
       <div class="rd"><small>รอบที่ 2</small><b>ตรวจความก้าวหน้า</b><p>และช่วยแก้ปัญหา</p></div>
