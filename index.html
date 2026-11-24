@@ -260,6 +260,15 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 .days button{padding:12px 26px;font-size:16px}
 .dtitle{font-size:32px;font-weight:700;letter-spacing:-.01em;margin-bottom:28px}
 @media(max-width:734px){.sched2 .r{grid-template-columns:1fr;gap:4px;padding:18px 20px}.sched2 .r time{font-size:19px}.sched2 .split{grid-template-columns:1fr;gap:8px}.dtitle{font-size:24px}}
+.gg{gap:20px}
+.gc{flex:0 0 min(1200px,calc(100vw - 48px));height:600px;border-radius:28px;background:#f5f5f7;scroll-snap-align:start;display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);align-items:center;padding:0 48px;gap:40px}
+.gc .gt{font-size:24px;line-height:1.35;font-weight:600;color:#1d1d1f}
+.gc .gm{position:relative;height:420px;border-radius:20px;overflow:hidden;background:#000;max-width:640px;width:100%;justify-self:center}
+.gc .gm img,.gc .gm video{width:100%;height:100%;object-fit:cover}
+.gc .src{position:absolute;right:14px;bottom:12px;font-size:12px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.gdots button.on{width:48px;background:#c7c7cc;overflow:hidden}
+.gdots button.on::after{content:"";position:absolute;inset:0;background:#1d1d1f;transform-origin:left;transform:scaleX(var(--p,0))}
+@media(max-width:734px){#bplay{display:grid}.gc{flex-basis:calc(100vw - 32px);height:auto;grid-template-columns:1fr;padding:32px 24px;gap:24px;align-items:start}.gc .gm{height:auto;aspect-ratio:4/3}.gc .gt{font-size:21px}}
 </style>
 </head>
 <body>
@@ -283,16 +292,10 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
   <div class="hero-media"><video id="heroVid" src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกม COMMAND SELECT ผลงานของน้องใน Hamster Hub"></video></div>
 </section>
 
-<section class="sec alt" id="benefits">
-  <div class="vw">
-    <div class="head"><h2 class="t-sec">3 วัน ได้อะไรบ้าง</h2></div>
-    <div class="bento">
-      <article class="bx vid"><div class="tx"><h3 class="t-card">มีผลงานใส่พอร์ต</h3></div><div class="md"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Heart</span></article>
-      <article class="bx art" style="--bg:#fe6c6f"><div class="tx"><h3 class="t-card">เขียนพอร์ตเป็น</h3></div><div class="md"><img src="img/g-folder.jpg" alt="" loading="lazy"></div></article>
-      <article class="bx art" style="--bg:#197cf3"><div class="tx"><h3 class="t-card">รู้จักมหาวิทยาลัย</h3></div><div class="md"><img src="img/r-talk.jpg" alt="" loading="lazy"></div></article>
-      <article class="bx vid"><div class="tx"><h3 class="t-card">ขึ้นโชว์ผลงาน</h3></div><div class="md"><video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ภาพจริงจากเวทีของทีม RE//SLASH</span></article>
-    </div>
-  </div>
+<section class="sec" id="benefits">
+  <div class="vw"><div class="head"><h2 class="t-sec">3 วัน ได้อะไรบ้าง</h2></div></div>
+  <div class="gal gg" id="bgal"><article class="gc"><p class="gt">มีผลงานใส่พอร์ต<br>เกมที่ทำเองกับมือ</p><div class="gm"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><span class=src>ผลงานจริง: Heart</span></div></article><article class="gc"><p class="gt">เขียนพอร์ตเป็น<br>เล่าผลงานให้กรรมการเห็น</p><div class="gm"><img src="img/g-folder.jpg" alt="" loading="lazy"></div></article><article class="gc"><p class="gt">รู้จักมหาวิทยาลัย<br>จากรุ่นพี่ตัวจริง</p><div class="gm"><img src="img/r-talk.jpg" alt="" loading="lazy"></div></article><article class="gc"><p class="gt">ขึ้นโชว์ผลงาน<br>ให้คนอื่นได้เห็น</p><div class="gm"><video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><span class=src>ภาพจริงจากเวทีของทีม RE//SLASH</span></div></article></div>
+  <div class="ctrls"><div class="dots gdots" id="bdots"></div><button class="round" id="bplay" aria-label="หยุด"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg></button></div>
 </section>
 
 <section class="sec" id="tracks">
@@ -452,6 +455,19 @@ $$('.ctrls[data-for]').forEach(c=>{const r=document.getElementById(c.dataset.for
  bs.forEach((b,i)=>b.addEventListener('click',()=>go(i)));c.querySelectorAll('.round').forEach(b=>b.addEventListener('click',()=>go(idx()+ +b.dataset.d)));
  let t;r.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>mark(idx()),80)},{passive:true});mark(0);});
 
+
+/* benefits gallery: Apple-style autoplay with progress dots */
+{const r=$('#bgal'),it=[...r.children],d=$('#bdots'),pb=$('#bplay');let cur=0,play=!reduce,t0=performance.now(),seen=false;const DUR=6000;
+d.innerHTML=it.map((_,i)=>`<button aria-label="${i+1} จาก ${it.length}"></button>`).join('');const bs=[...d.children];
+const mark=i=>{cur=i;t0=performance.now();bs.forEach((b,k)=>{b.classList.toggle('on',k===i);b.style.setProperty('--p',0);k===i?b.setAttribute('aria-current','true'):b.removeAttribute('aria-current')});};
+const go=i=>{i=(i+it.length)%it.length;r.scrollTo({left:it[i].offsetLeft-it[0].offsetLeft,behavior:reduce?'auto':'smooth'});mark(i)};
+bs.forEach((b,i)=>b.addEventListener('click',()=>go(i)));
+let st;r.addEventListener('scroll',()=>{clearTimeout(st);st=setTimeout(()=>{const i=Math.round(r.scrollLeft/(it[0].offsetWidth+20));if(i!==cur)mark(i)},100)},{passive:true});
+const icon=p=>p?'<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="8.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg>':'<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>';
+pb.innerHTML=icon(play);pb.addEventListener('click',()=>{play=!play;pb.innerHTML=icon(play);pb.setAttribute('aria-label',play?'หยุด':'เล่น');const p=parseFloat(bs[cur].style.getPropertyValue('--p'))||0;t0=performance.now()-p*DUR;});
+new IntersectionObserver(e=>{seen=e[0].isIntersecting},{threshold:.4}).observe(r);
+const tick=n=>{if(play&&seen){const p=Math.min(1,(n-t0)/DUR);bs[cur].style.setProperty('--p',p);if(p>=1)go(cur+1);}else t0=n-(parseFloat(bs[cur].style.getPropertyValue('--p'))||0)*DUR;requestAnimationFrame(tick)};
+mark(0);requestAnimationFrame(tick);}
 /* schedule */
 const DAYS=[
  {tab:'4 ธ.ค.',title:'ค้นหาเส้นทางของตัวเอง',rows:[['19:00–19:30','เปิดค่ายและทำความรู้จักเพื่อน'],['19:30–20:30','พบรุ่นพี่มหาวิทยาลัย'],['20:30–21:00','สำรวจ HamsVillage และรับภารกิจ']]},
