@@ -229,6 +229,7 @@ a.more{display:inline-block;padding:10px 0}
 .howgrid .inc.art .m:has(img){top:auto;height:62%}.howgrid .inc.art .m img{object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
 .gv{display:flex;flex-wrap:wrap;gap:8px;padding:0 30px 40px;align-self:stretch;align-content:flex-end}.gv b{min-width:48px;padding:10px 0;text-align:center;border-radius:999px;background:#f0f0f3;font-size:15px;font-weight:600;color:#1d1d1f}.gv b.on{background:#1d1d1f;color:#fff}
 .inc .m:has(.gv)::before{display:none}.inc .m:has(.gv){flex-direction:column;align-items:flex-start;justify-content:flex-end}.gvl{margin:0 30px 36px;font-size:17px}.gv{padding-bottom:20px}
+.gt{align-self:stretch;display:flex;flex-direction:column;gap:10px;padding:0 30px 36px}.gt p{display:grid;grid-template-columns:1fr auto;gap:2px 12px;background:#f0f0f3;border-radius:18px;padding:16px 18px}.gt b{font-size:19px;color:#1d1d1f}.gt span{font-size:15px;color:#6e6e73;align-self:center}.gt i{grid-column:1/-1;font-style:normal;font-size:15px;color:#6e6e73}.inc .m:has(.gt)::before{display:none}.inc .m:has(.gt){flex-direction:column;justify-content:flex-end}
 .inc .plus{position:absolute;right:18px;bottom:18px;width:36px;height:36px;border-radius:50%;background:rgba(51,51,54,.92);color:#fff;display:grid;place-items:center;font-size:20px;z-index:2}
 .under{display:flex;justify-content:flex-end;align-items:center;gap:28px;margin-top:28px;padding:0 max(22px,calc((100% - 1260px)/2))}
 .pad2{display:flex;gap:18px}
@@ -327,7 +328,7 @@ a.more{display:inline-block;padding:10px 0}
   <div class="vw"><div class="sh"><h2 class="t-sec rv">ได้อะไร</h2></div></div>
   <div class="gal" id="gal" aria-roledescription="carousel"></div>
   <div class="ctrls"><button class="round" id="galPrev" aria-label="ก่อนหน้า">‹</button><div class="dots" id="dots" role="tablist" aria-label="ไฮไลท์"></div><button class="round" id="galNext" aria-label="ถัดไป">›</button><button class="round" id="playBtn" aria-label="หยุด">❚❚</button></div>
-  <div class="vw"><h3 class="t-sec" style="margin:144px 0 56px">เรียนยังไง</h3></div>
+  <div class="vw"><h3 class="t-sec" style="margin:144px 0 56px">ในค่ายเป็นยังไง</h3></div>
   <div class="gal howgrid" id="incRail"></div>
   <div class="ctrls"><button class="round hwb" data-d="-1" aria-label="ก่อนหน้า">‹</button><div class="dots" id="hdots" role="tablist" aria-label="เรียนยังไง"></div><button class="round hwb" data-d="1" aria-label="ถัดไป">›</button></div>
   <div class="under"><a class="more" href="https://page.line.me/jkm4247u?openQrModal=true">ทัก LINE ถามทีม</a></div>
@@ -464,13 +465,13 @@ const gal=$('#gal'),dots=$('#dots');
 gal.innerHTML=HL.map(([w,h,m,s],i)=>`<article class="card ${m.includes('data-bg')?'art':'vid'}" style="--bg:${(m.match(/data-bg="([^"]+)"/)||[])[1]||'#000'}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="t-card"><b>${w}</b> ${h}</p></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
 dots.innerHTML=HL.map((_,i)=>`<button role="tab" aria-label="ไฮไลท์ ${i+1}" data-i="${i}"></button>`).join('');
 const cards=[...gal.children];let cur=0,t0=performance.now(),playing=!reduce,galSeen=false;const DUR=6000;
-const mark=i=>{cur=i;t0=performance.now();dots.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-selected',j===i);b.style.setProperty('--p',0);});cards.forEach((c,j)=>{const v=c.querySelector('video');if(!v)return;if(j===i&&playing&&galSeen)v.play().catch(()=>{});else v.pause();});};
+const mark=i=>{cur=i;t0=performance.now();dots.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-selected',j===i);b.style.setProperty('--p',0);});};
 const go=i=>{gal.scrollTo({left:cards[i].offsetLeft-cards[0].offsetLeft,behavior:reduce?'auto':'smooth'});mark(i);};
 let st;gal.addEventListener('scroll',()=>{clearTimeout(st);st=setTimeout(()=>{const i=Math.round((gal.scrollLeft)/(cards[0].offsetWidth+20));if(i!==cur&&cards[i])mark(i);},120);});
 dots.addEventListener('click',e=>{const b=e.target.closest('button');if(b)go(+b.dataset.i);});
 $('#playBtn').addEventListener('click',e=>{playing=!playing;e.currentTarget.textContent=playing?'❚❚':'▶';e.currentTarget.setAttribute('aria-label',playing?'หยุด':'เล่น');const d=dots.querySelector('.on');const p=parseFloat(d.style.getPropertyValue('--p'))||0;t0=performance.now()-p*DUR;const v=cards[cur].querySelector('video');if(v){playing?v.play().catch(()=>{}):v.pause();}});
 if(reduce){$('#playBtn').textContent='▶';}
-new IntersectionObserver(es=>{galSeen=es[0].isIntersecting;const v=cards[cur].querySelector('video');if(!v)return;if(galSeen&&playing)v.play().catch(()=>{});else v.pause();},{threshold:.4}).observe(gal);
+new IntersectionObserver(es=>{galSeen=es[0].isIntersecting;},{threshold:.4}).observe(gal);
 const loop=now=>{if(playing&&galSeen){const p=Math.min(1,(now-t0)/DUR);const d=dots.querySelector('.on');if(d)d.style.setProperty('--p',p);if(p>=1)go((cur+1)%HL.length);}else{t0=now-(parseFloat((dots.querySelector('.on')||{style:{getPropertyValue:()=>0}}).style.getPropertyValue('--p'))||0)*DUR;}requestAnimationFrame(loop);};
 mark(0);requestAnimationFrame(loop);
 $('#galPrev').addEventListener('click',()=>go((cur-1+HL.length)%HL.length));
@@ -526,12 +527,12 @@ const today=new Date();setDay(today>=new Date('2026-12-06T00:00:00+07:00')?2:tod
 
 /* parents: incentive cards + modal */
 const INC=[
- ["", "Unity หรือ Roblox", "เครื่องมือทำเกมระดับโลก ไม่เคยเขียนโค้ดก็เริ่มได้", "<img class=\"ill\" data-bg=\"#545be7\" src=\"img/g-learn.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["", "ประเมินเกรดผลงานตัวเอง", "แล้วแบ่งกลุ่มเรียนตามเกรด ได้เนื้อหาที่พอดีกับฝีมือ", "<div class=\"gv\" data-bg=\"#ffffff\"><b>0</b><b>10</b><b>20</b><b>30</b><b>40</b><b class=\"on\">50</b><b>60</b><b>70</b><b>80</b><b>90</b><b>100</b></div><a class=\"more gvl\" href=\"#grades\">ดูระบบเกรด</a>", ""],
- ["", "รุ่นพี่มหาลัยท็อปมาสอน", "สอนทั้งทำเกม และทำแฟ้มพอร์ต", "<img class=\"ill\" data-bg=\"#197cf3\" src=\"img/r-talk.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["", "เรียนไปพร้อมเพื่อน", "ทำงานเป็นทีม ช่วยกันจนเกมเสร็จ", "<img class=\"ill\" data-bg=\"#fd777a\" src=\"img/r-team.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["", "ส่งผลงาน เปิดบูธออนไลน์", "โชว์เกมของตัวเองให้คนอื่นลองเล่น", "<video src=\"vid/apocalypse.mp4\" poster=\"img/apocalypse.jpg\" muted loop playsinline preload=\"metadata\"></video>", ""],
- ["", "Top 10 ขึ้นนำเสนอ", "ต่อหน้านักลงทุน หรืออาจารย์มหาวิทยาลัย", "<video src=\"vid/stage-pitch.mp4\" poster=\"img/stage-pitch.jpg\" muted loop playsinline preload=\"metadata\"></video>", ""]];
+ ["", "ทำเกมด้วย Unity หรือ Roblox", "โปรแกรมที่คนทำเกมจริงใช้ ไม่เคยเขียนโค้ดก็เริ่มได้", "<img class=\"ill\" data-bg=\"#545be7\" src=\"img/g-learn.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["", "แยกกลุ่มเรียนตามฝีมือ", "ประเมินผลงานตัวเองเป็นเกรดก่อน แล้วได้เรียนกับเพื่อนที่ฝีมือใกล้กัน", "<div class=\"gt\" data-bg=\"#ffffff\"><p><b>มือใหม่</b><span>เกรด 0–20</span><i>เริ่มจากพื้นฐาน</i></p><p><b>มีผลงานแล้ว</b><span>เกรด 30–50</span><i>ต่อยอด ลุ้น Top 10</i></p></div>", ""],
+ ["", "รุ่นพี่มหาลัยท็อปเป็นคนสอน", "สอนทั้งทำเกม และทำแฟ้มพอร์ต", "<img class=\"ill\" data-bg=\"#197cf3\" src=\"img/r-talk.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["", "ทำเกมเป็นทีมกับเพื่อน", "ช่วยกันจนเกมเสร็จในค่าย", "<img class=\"ill\" data-bg=\"#fd777a\" src=\"img/r-team.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["", "วันสุดท้าย เปิดบูธออนไลน์", "โชว์เกมของตัวเองให้คนอื่นลองเล่น", "<video src=\"vid/apocalypse.mp4\" poster=\"img/apocalypse.jpg\" muted loop playsinline preload=\"metadata\"></video>", ""],
+ ["", "Top 10 ได้ขึ้นนำเสนอ", "ต่อหน้านักลงทุน หรืออาจารย์มหาวิทยาลัย", "<video src=\"vid/stage-pitch.mp4\" poster=\"img/stage-pitch.jpg\" muted loop playsinline preload=\"metadata\"></video>", ""]];
 $('#incRail').innerHTML=INC.map(([k,h,d,m,_],i)=>`<article class="inc${m.includes('data-bg')?' art':m.includes('<video')?' vid':''}" style="--bg:${(m.match(/data-bg="([^"]+)"/)||[])[1]||'#fff'}" data-i="${i}"><div class="b"><p class="k">${k}</p><h3 class="t-card">${h}</h3>${d?`<p class="d">${d}</p>`:''}</div><div class="m">${m}</div></article>`).join('');
 
 (()=>{const r=$('#incRail'),d=$('#hdots'),it=[...r.children];d.innerHTML=it.map((_,i)=>`<button role="tab" aria-label="${i+1} จาก ${it.length}"></button>`).join('');const bs=[...d.children];
@@ -560,7 +561,7 @@ document.querySelectorAll('.pad2').forEach(p=>{const r=document.getElementById(p
  p.addEventListener('click',e=>{const b=e.target.closest('button');if(b)r.scrollBy({left:+b.dataset.d*r.clientWidth*.75,behavior:'smooth'});});
  r.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();});
 /* clips load and play only while on screen (saves mobile data) */
-{const lazy=[...document.querySelectorAll('video[autoplay]')].filter(v=>v.id!=='heroVid'&&!v.closest('#gxStage'));
+{const lazy=[...document.querySelectorAll('video[autoplay], #gal video, #incRail video')].filter(v=>v.id!=='heroVid'&&!v.closest('#gxStage'));
  lazy.forEach(v=>{v.removeAttribute('autoplay');v.preload='none';v.setAttribute('aria-hidden','true');});
  const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting&&!reduce)v.play().catch(()=>{});else v.pause();}),{threshold:.35});
  lazy.forEach(v=>vio.observe(v));}
