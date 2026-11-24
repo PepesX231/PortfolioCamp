@@ -319,6 +319,15 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 .plus.sm{margin-top:20px;min-height:40px;padding:4px 4px 4px 18px;font-size:15px;align-self:center}.plus.sm i{width:32px;height:32px}
 .lnk{border:0;background:none;color:#2997ff;font:inherit;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
 .hero .sub{color:#a1a1a6}
+.sc.tint{background:var(--tc);color:#fff;padding:0;box-shadow:none}
+.sc.tint .im{position:absolute;inset:0;height:auto;margin:0;display:block}
+.sc.tint .im img{width:100%;height:100%;border-radius:0;object-fit:cover;object-position:70% 20%;-webkit-mask-image:linear-gradient(180deg,#000 45%,transparent 78%);mask-image:linear-gradient(180deg,#000 45%,transparent 78%)}
+.sc.tint .lb,.sc.tint h3,.sc.tint .sub{position:relative;z-index:1;margin-left:28px;margin-right:60px}
+.sc.tint .lb{color:rgba(255,255,255,.8)}.sc.tint .sub{color:rgba(255,255,255,.78);margin-bottom:30px}
+.sc.tint .go{background:rgba(255,255,255,.22);color:#fff;z-index:2}.sc.tint .go:hover{background:rgba(255,255,255,.32)}
+.sc.tint .fan{display:grid;place-items:center;height:62%;bottom:auto;background:radial-gradient(circle at 50% 40%,#4a3a72,transparent 70%)}
+.sc.tint .fan img{-webkit-mask-image:none;mask-image:none;border-radius:14px;width:120px;height:150px}
+.sc{box-shadow:none}
 </style>
 </head>
 <body>
@@ -346,9 +355,9 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 <section class="sec alt" id="benefits">
   <div class="vw"><div class="head"><h2 class="t-sec">3 วัน ได้อะไรบ้าง</h2></div></div>
   <div class="gal store" id="bstore"><article class="sc feat" style="--fc:#f0453a"><p class="lb">ทั้งสอง Track</p><h3>มีผลงานใส่พอร์ต<br>เกมที่ทำเองกับมือ</h3><div class="fm"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Heart</span></article>
-<article class="sc"><div class="im"><img src="img/g-folder.jpg" alt="" loading="lazy"></div><p class="lb">Portfolio Track</p><h3>เขียนพอร์ตเป็น</h3><p class="sub">จัดเล่ม เขียน SOP เล่าผลงาน</p></article>
-<article class="sc"><div class="im fan"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"></div><p class="lb">4 และ 6 ธ.ค.</p><h3>คุยกับรุ่นพี่มหาวิทยาลัย</h3><p class="sub">ถามเรื่องคณะที่สนใจ</p><button class="go" type="button" data-sheet="sh-uni" aria-label="คุยกับรุ่นพี่มหาวิทยาลัย ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
-<article class="sc"><div class="im"><img src="img/c-mentor.jpg" alt="" loading="lazy"></div><p class="lb">3 รอบ</p><h3>มีรุ่นพี่ช่วยดูงาน</h3><p class="sub">ก่อนเริ่ม ระหว่างทำ ก่อนส่ง</p><button class="go" type="button" data-sheet="sh-mentor" aria-label="มีรุ่นพี่ช่วยดูงาน ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
+<article class="sc tint" style="--tc:#fe6c6f"><div class="im"><img src="img/g-folder.jpg" alt="" loading="lazy"></div><p class="lb">Portfolio Track</p><h3>เขียนพอร์ตเป็น</h3><p class="sub">จัดเล่ม เขียน SOP เล่าผลงาน</p></article>
+<article class="sc tint" style="--tc:#2a2140"><div class="im fan"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"></div><p class="lb">4 และ 6 ธ.ค.</p><h3>คุยกับรุ่นพี่มหาวิทยาลัย</h3><p class="sub">ถามเรื่องคณะที่สนใจ</p><button class="go" type="button" data-sheet="sh-uni" aria-label="คุยกับรุ่นพี่มหาวิทยาลัย ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
+<article class="sc tint" style="--tc:#fd7f8c"><div class="im"><img src="img/c-mentor.jpg" alt="" loading="lazy"></div><p class="lb">3 รอบ</p><h3>มีรุ่นพี่ช่วยดูงาน</h3><p class="sub">ก่อนเริ่ม ระหว่างทำ ก่อนส่ง</p><button class="go" type="button" data-sheet="sh-mentor" aria-label="มีรุ่นพี่ช่วยดูงาน ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
 <article class="sc feat dk" style="--fc:#111"><p class="lb">6 ธ.ค.</p><h3>มีพื้นที่โชว์ผลงาน<br>เปิดบูธของตัวเอง</h3><div class="fm"><video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ภาพจริงจากเวทีของทีม RE//SLASH</span></article></div>
   <div class="vw sarrows"><button class="ar" data-d="-1" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="ar" data-d="1" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
 </section>
