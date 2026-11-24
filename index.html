@@ -99,11 +99,12 @@ button{font:inherit;color:inherit}
 .cc h3{margin-top:6px}.cc .ds{margin:12px auto 0;max-width:400px;font-size:17px;color:var(--mute)}
 .cc .act{margin-top:24px}
 .cc .li{padding:16px 0;border-bottom:1px solid var(--line)}.cc .act+.li{margin-top:40px;border-top:1px solid var(--line)}
-.cc .li b{display:block;font-size:17px;font-weight:600}.cc .li span{display:block;margin-top:2px;font-size:15px;color:var(--mute)}
+.cc .li svg{display:block;margin:0 auto 6px;color:var(--tc)}.cc .li b{display:block;font-size:17px;font-weight:600}.cc .li span{display:block;margin-top:2px;font-size:15px;color:var(--mute)}
 .cc .out{padding:24px 0;border-bottom:1px solid var(--line)}.cc .out small{display:block;font-size:12px;color:var(--mute)}.cc .out b{display:block;margin-top:4px;font-size:17px;font-weight:600}
 .cc .fit{margin-top:20px;font-size:14px;color:var(--mute)}
 
 /* universities */
+.dekr{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;margin-top:48px;justify-content:center;scroll-snap-type:x mandatory}.dekr::-webkit-scrollbar{display:none}.dekr img{flex:0 0 190px;width:190px;aspect-ratio:4/5;object-fit:cover;border-radius:16px;scroll-snap-align:start}
 .qgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:48px}.qgrid li{background:#fff;border-radius:22px;padding:28px 18px;font-size:19px;font-weight:600}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.chips span{padding:8px 16px;border-radius:999px;background:#fff;font-size:15px;font-weight:600}.dark .chips span{background:#1d1d1f}.alt .head .chips span{background:#fff}
 .uni{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
@@ -124,7 +125,7 @@ button{font:inherit;color:inherit}
 .wl-row{display:grid;grid-template-columns:1.3fr 1fr .8fr;gap:10px;font-size:15px;font-weight:600}
 .wl-foot{margin-top:24px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;color:rgba(255,255,255,.7)}
 .steps4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:88px}
-.steps4 li span{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#f5f5f7;color:#000;font-size:15px;font-weight:600}
+.steps4 li span{display:inline-grid;place-items:center;width:64px;height:64px;border-radius:20px;background:#1d1d1f;color:#f5f5f7}
 .steps4 b{display:block;margin-top:14px;font-size:19px;font-weight:600}.steps4 p{margin-top:4px;color:#86868b}
 
 /* village */
@@ -188,6 +189,7 @@ button{font:inherit;color:inherit}
 .howto li{counter-increment:s;display:grid;grid-template-columns:32px 1fr;gap:12px;font-size:17px;align-items:baseline}
 .howto li::before{content:counter(s);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:14px;font-weight:600}
 
+.prep{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.prep li{background:#fff;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px;font-size:16px}.prep svg{color:var(--blue)}.prep b{font-weight:600}
 /* faq */
 .faq{border-top:1px solid var(--line);max-width:980px}
 .fq{border-bottom:1px solid var(--line)}
@@ -226,6 +228,7 @@ button{font:inherit;color:inherit}
  .cmp2{gap:12px}.cc .nm{margin-top:20px}.cc h3{font-size:19px}.cc .ds{font-size:14px}.cc .btn{padding:10px 14px;font-size:14px;white-space:normal}.cc .li b{font-size:15px}.cc .li span,.cc .out b{font-size:13px}.cc .out b{font-size:14px}
  .zones{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}.wide{border-radius:18px}
  .wk{flex:0 0 78%}
+ .dekr{justify-content:flex-start;margin-left:-16px;margin-right:-16px;padding:0 16px}.dekr img{flex-basis:130px;width:130px}.steps4 li span{width:52px;height:52px;border-radius:16px}.prep{grid-template-columns:1fr 1fr;gap:8px}.prep li{padding:14px;font-size:14px}
  .gal{padding:0 16px;scroll-padding:0 16px}.qgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.qgrid li{padding:20px 12px;font-size:16px}
  .rounds{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.rd{padding:18px 14px}.rd b{font-size:16px}
  .steps4{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 16px;margin-top:56px}
@@ -281,14 +284,14 @@ button{font:inherit;color:inherit}
         <div class="md"><img src="img/t-portfolio.jpg" alt="ตัวอย่างรูปเล่มพอร์ต" loading="lazy"></div>
         <p class="nm">Portfolio Track</p><h3 class="t-card">มีผลงานแล้ว</h3><p class="ds">มาทำพอร์ตให้พร้อมยื่น</p>
         <div class="act"><a class="btn ghost" data-track="portfolio" href="#registration">เลือก Portfolio Track</a></div>
-        <div class="li"><b>เล่าเรื่องผลงาน</b></div><div class="li"><b>เขียน SOP</b></div><div class="li"><b>จัดหน้าพอร์ต</b></div><div class="li"><b>ฝึกนำเสนอ</b></div>
+        <div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h7v14H4zM13 5h7v14h-7z"/></svg><b>เล่าเรื่องผลงาน</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M9 11h6M9 15h6"/></svg><b>เขียน SOP</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M10 10v10"/></svg><b>จัดหน้าพอร์ต</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><b>ฝึกนำเสนอ</b></div>
         <div class="out"><small>ได้กลับบ้าน</small><b>พอร์ต 1 เล่ม + คลิป <span class="nw">2 นาที</span></b></div>
       </div>
       <div class="cc" style="--tc:#b25000">
         <div class="md"><img src="img/g-learn.jpg" alt="ตัวอย่างการสร้างเกมชิ้นแรก" loading="lazy" style="object-position:30% center"></div>
         <p class="nm">Project Track</p><h3 class="t-card">ยังไม่มีผลงาน</h3><p class="ds">มาสร้างเกมชิ้นแรก</p>
         <div class="act"><a class="btn ghost" data-track="project" href="#registration">เลือก Project Track</a></div>
-        <div class="li"><b>คิดไอเดียเกม</b></div><div class="li"><b>สร้างเกม</b></div><div class="li"><b>ทำให้เสร็จ</b></div><div class="li"><b>ฝึกนำเสนอ</b></div>
+        <div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z"/></svg><b>คิดไอเดียเกม</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg><b>สร้างเกม</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><b>ทำให้เสร็จ</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><b>ฝึกนำเสนอ</b></div>
         <div class="out"><small>ได้กลับบ้าน</small><b>เกม 1 เกม + คลิป <span class="nw">2 นาที</span></b></div>
       </div>
     </div>
@@ -301,7 +304,8 @@ button{font:inherit;color:inherit}
     <h2 class="t-sec">คุยกับรุ่นพี่มหาวิทยาลัย</h2>
     <ul class="qgrid"><li>คณะนี้เรียนอะไร</li><li>ชีวิตมหาวิทยาลัย</li><li>รุ่นพี่เตรียมตัวยังไง</li><li>ต้องเริ่มเตรียมอะไร</li></ul>
     <p class="chips" style="justify-content:center"><span>4 ธ.ค. พบรุ่นพี่</span><span>6 ธ.ค. ถามตอบรอบ 2</span></p>
-    <p class="soon">ติดตามรายชื่อรุ่นพี่และมหาวิทยาลัยเร็ว ๆ นี้</p>
+    <p class="soon">ติดตามรายชื่อรุ่นพี่และมหาวิทยาลัยที่จะเข้าร่วมเร็ว ๆ นี้</p>
+    <div class="dekr"><img src="img/dek/dek69-1.jpg" alt="น้องปลื้ม รุ่นพี่ Hamster Hub ติดสจล. DEK69" loading="lazy"><img src="img/dek/dek69-3.jpg" alt="น้องดา รุ่นพี่ Hamster Hub ติดสจล. DEK69" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="น้องอาร์ม รุ่นพี่ Hamster Hub ติดมหิดล DEK69" loading="lazy"><img src="img/dek/dek69-8.jpg" alt="น้องปิ่นโต รุ่นพี่ Hamster Hub ติดมหิดล DEK69" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="น้องต้นกล้า รุ่นพี่ Hamster Hub ติดจุฬาฯ DEK69" loading="lazy"><img src="img/dek/dek69-16.jpg" alt="น้องเฟิร์ส รุ่นพี่ Hamster Hub ติดจุฬาฯ DEK69" loading="lazy"></div><p class="soon">ตัวอย่างรุ่นพี่ Hamster Hub ที่ติดรอบ Portfolio ปี DEK69</p>
   </div>
 </section>
 
@@ -313,7 +317,7 @@ button{font:inherit;color:inherit}
       <div class="wl-main"><b>Portfolio Pass</b></div>
       <div class="wl-row"><span><small>สิทธิ์</small>ดูพอร์ตรุ่นพี่</span><span><small>เวลา</small>19:00–20:00</span><span><small>ช่องทาง</small>Discord</span></div>
     </div>
-    <ol class="steps4"><li><span>1</span><b>ทำภารกิจ</b></li><li><span>2</span><b>ได้ Portfolio Pass</b></li><li><span>3</span><b>ยืนยันใน Discord</b></li><li><span>4</span><b>ดูพอร์ตรุ่นพี่</b></li></ol>
+    <ol class="steps4"><li><span><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></span><b>ทำภารกิจ</b></li><li><span><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4z"/><path d="M14 7v12" stroke-dasharray="2 2"/></svg></span><b>ได้ Portfolio Pass</b></li><li><span><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M9 10h.01M15 10h.01"/></svg></span><b>ยืนยันใน Discord</b></li><li><span><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><b>ดูพอร์ตรุ่นพี่</b></li></ol>
   </div>
 </section>
 
@@ -368,7 +372,7 @@ button{font:inherit;color:inherit}
       </div>
       <div class="box" style="background:var(--alt)">
         <h3>เตรียมให้พร้อม</h3>
-        <ul class="ticks" style="margin-top:0"><li>คอมหรือโน้ตบุ๊ก + เน็ต</li><li>บัญชี Discord</li><li><b>Portfolio Track</b> ไฟล์ผลงานที่มี</li><li><b>Project Track</b> ไม่ต้องมีอะไรมาก่อน</li></ul>
+        <ul class="prep"><li><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg><span>คอมหรือโน้ตบุ๊ก + เน็ต</span></li><li><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M9 10h.01M15 10h.01"/></svg><span>บัญชี Discord</span></li><li><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h6l2 2h10v11H3z"/></svg><span><b>Portfolio Track</b> ไฟล์ผลงานที่มี</span></li><li><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></svg><span><b>Project Track</b> ไม่ต้องมีอะไรมาก่อน</span></li></ul>
       </div>
     </div>
   </div>
