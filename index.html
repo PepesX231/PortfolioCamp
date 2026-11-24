@@ -457,9 +457,9 @@ const HL=[
  ["ได้เกมของตัวเอง 1 เกม", "ทำเองตั้งแต่ต้นจนเล่นได้ เอาไปใส่แฟ้มพอร์ตยื่นมหาลัย", "<video src=\"vid/heart.mp4\" poster=\"img/heart.jpg\" muted loop playsinline preload=\"metadata\"></video>", "คลิปจริง: Heart"],
  ["ได้รู้วิธีทำแฟ้มพอร์ต", "แบบที่รุ่นพี่ DEK69 ใช้ยื่น จนติดรอบ Portfolio 48 คน ทั้ง สจล. มหิดล จุฬาฯ และเกษตรฯ", "<img class=\"ill\" data-bg=\"#fe6c6f\" src=\"img/g-folder.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["ได้รู้ว่าตัวเองถนัดอะไร", "เขียนโค้ด วาดอาร์ต ออกแบบ หรือนำเสนอ รู้ก่อนเลือกคณะ", "<img class=\"ill\" data-bg=\"#227bef\" src=\"img/g-know.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้คอมเมนต์จากคนเล่นจริง", "รู้ว่าเกมควรแก้ตรงไหน ก่อนเอาไปใส่แฟ้มพอร์ต", "<img class=\"ill\" data-bg=\"#f2457c\" src=\"img/a-feedback.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["ได้คอมเมนต์จากคนเล่นจริง", "รู้ว่าเกมควรแก้ตรงไหน ก่อนเอาไปใส่แฟ้มพอร์ต", "<img class=\"ill\" data-bg=\"#f14074\" src=\"img/g-players.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["ได้เพื่อนสายทำเกม", "คนที่ชอบเรื่องเดียวกัน ไว้ปรึกษากันต่อหลังจบค่าย", "<img class=\"ill\" data-bg=\"#ed647e\" src=\"img/g-friends.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้ไอเดียจากวิทยากร", "Guest Speaker มาเล่าเรื่อง Game Design และ Level Design", "<img class=\"ill\" data-bg=\"#2b7de9\" src=\"img/a-speaker.jpg\" alt=\"\" loading=\"lazy\">", ""]];
+ ["ได้ไอเดียจากวิทยากร", "Guest Speaker มาเล่าเรื่อง Game Design และ Level Design", "<img class=\"ill\" data-bg=\"#237fed\" src=\"img/g-speaker.jpg\" alt=\"\" loading=\"lazy\">", ""]];
 const gal=$('#gal'),dots=$('#dots');
 gal.innerHTML=HL.map(([w,h,m,s],i)=>`<article class="card ${m.includes('data-bg')?'art':'vid'}" style="--bg:${(m.match(/data-bg="([^"]+)"/)||[])[1]||'#000'}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="t-card"><b>${w}</b> ${h}</p></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
 dots.innerHTML=HL.map((_,i)=>`<button role="tab" aria-label="ไฮไลท์ ${i+1}" data-i="${i}"></button>`).join('');
@@ -527,10 +527,10 @@ const today=new Date();setDay(today>=new Date('2026-12-06T00:00:00+07:00')?2:tod
 /* parents: incentive cards + modal */
 const INC=[
  ["", "Unity หรือ Roblox", "เครื่องมือทำเกมระดับโลก ไม่เคยเขียนโค้ดก็เริ่มได้", "<img class=\"ill\" data-bg=\"#545be7\" src=\"img/g-learn.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["", "ประเมินเกรดผลงานตัวเอง", "แล้วแบ่งกลุ่มเรียนตามเกรด ได้เนื้อหาที่พอดีกับฝีมือ", "<img class=\"ill\" data-bg=\"#6d5ce8\" src=\"img/a-grade.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["", "รุ่นพี่มหาลัยท็อปมาสอน", "สอนทั้งทำเกม และทำแฟ้มพอร์ต", "<img class=\"ill\" data-bg=\"#f26684\" src=\"img/a-mentor.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["", "ประเมินเกรดผลงานตัวเอง", "แล้วแบ่งกลุ่มเรียนตามเกรด ได้เนื้อหาที่พอดีกับฝีมือ", "<div class=\"gv\" data-bg=\"#ffffff\"><b>0</b><b>10</b><b>20</b><b>30</b><b>40</b><b class=\"on\">50</b><b>60</b><b>70</b><b>80</b><b>90</b><b>100</b></div><a class=\"more gvl\" href=\"#grades\">ดูระบบเกรด</a>", ""],
+ ["", "รุ่นพี่มหาลัยท็อปมาสอน", "สอนทั้งทำเกม และทำแฟ้มพอร์ต", "<img class=\"ill\" data-bg=\"#197cf3\" src=\"img/r-talk.jpg\" alt=\"\" loading=\"lazy\">", ""],
  ["", "เรียนไปพร้อมเพื่อน", "ทำงานเป็นทีม ช่วยกันจนเกมเสร็จ", "<img class=\"ill\" data-bg=\"#fd777a\" src=\"img/r-team.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["", "ส่งผลงาน เปิดบูธออนไลน์", "โชว์เกมของตัวเองให้คนอื่นลองเล่น", "<img class=\"ill\" data-bg=\"#237fed\" src=\"img/a-booth.jpg\" alt=\"\" loading=\"lazy\">", ""],
+ ["", "ส่งผลงาน เปิดบูธออนไลน์", "โชว์เกมของตัวเองให้คนอื่นลองเล่น", "<video src=\"vid/apocalypse.mp4\" poster=\"img/apocalypse.jpg\" muted loop playsinline preload=\"metadata\"></video>", ""],
  ["", "Top 10 ขึ้นนำเสนอ", "ต่อหน้านักลงทุน หรืออาจารย์มหาวิทยาลัย", "<video src=\"vid/stage-pitch.mp4\" poster=\"img/stage-pitch.jpg\" muted loop playsinline preload=\"metadata\"></video>", ""]];
 $('#incRail').innerHTML=INC.map(([k,h,d,m,_],i)=>`<article class="inc${m.includes('data-bg')?' art':m.includes('<video')?' vid':''}" style="--bg:${(m.match(/data-bg="([^"]+)"/)||[])[1]||'#fff'}" data-i="${i}"><div class="b"><p class="k">${k}</p><h3 class="t-card">${h}</h3>${d?`<p class="d">${d}</p>`:''}</div><div class="m">${m}</div></article>`).join('');
 
