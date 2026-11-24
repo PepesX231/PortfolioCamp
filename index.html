@@ -269,6 +269,22 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 .gdots button.on{width:48px;background:#c7c7cc;overflow:hidden}
 .gdots button.on::after{content:"";position:absolute;inset:0;background:#1d1d1f;transform-origin:left;transform:scaleX(var(--p,0))}
 @media(max-width:734px){#bplay{display:grid}.gc{flex-basis:calc(100vw - 32px);height:auto;grid-template-columns:1fr;padding:32px 24px;gap:24px;align-items:start}.gc .gm{height:auto;aspect-ratio:4/3}.gc .gt{font-size:21px}}
+.reg2{position:relative;background:#000;color:#f5f5f7;overflow:hidden;padding:160px 0 150px}
+.reg2 .wall{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:16px;opacity:.45;-webkit-mask-image:radial-gradient(ellipse 70% 65% at 50% 50%,transparent 0,#000 75%);mask-image:radial-gradient(ellipse 70% 65% at 50% 50%,transparent 0,#000 75%)}
+.reg2 .wrow{display:flex;gap:16px;width:max-content;animation:wall 60s linear infinite}
+.reg2 .wrow img{flex:none;max-width:none;width:340px;height:212px;object-fit:cover;border-radius:16px}
+.reg2 .wall::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#000 0,rgba(0,0,0,.2) 30%,rgba(0,0,0,.2) 70%,#000 100%)}
+.reg2 .wrow.rev{animation-direction:reverse;margin-left:-170px}
+@keyframes wall{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.reg2 .wrow{animation:none}}
+.reg2 .rin{position:relative}
+.reg2 .kick{font-size:21px;font-weight:600;color:#a1a1a6}
+.reg2 h2{margin-top:10px;background:linear-gradient(90deg,#fff,#c8c8cf);-webkit-background-clip:text;background-clip:text;color:transparent}
+.reg2 .price{margin-top:28px;font-size:19px;color:#a1a1a6}.reg2 .price b{display:block;font-size:40px;color:#fff;font-weight:700;margin-bottom:4px}
+.reg2 .acts2{margin-top:36px}
+.reg2 .plus{background:rgba(255,255,255,.12);color:#f5f5f7}.reg2 .plus i{background:#f5f5f7;color:#000}
+.reg2 .who{margin-top:24px;font-size:14px;color:#86868b}
+@media(max-width:734px){.reg2{padding:110px 0 100px}.reg2 .wrow img{width:200px;height:125px}.reg2 .price b{font-size:32px}}
 </style>
 </head>
 <body>
@@ -345,7 +361,6 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 <section class="sec c" id="village">
   <div class="vw">
     <div class="head"><h2 class="t-sec">ทั้งค่าย<span class="nw">อยู่ใน HamsVillage</span></h2></div>
-    <div class="wide" style="aspect-ratio:1224/963;max-width:820px;margin:0 auto;background:#000"><img src="img/village-real.jpg" alt="ภาพหน้าจอจริงในเกม Hamster Quest" loading="lazy"><span class="mk">ภาพจริงจาก Hamster Quest</span></div>
     <button class="plus" type="button" data-sheet="sh-zones" aria-haspopup="dialog" aria-expanded="false">ดู 4 โซน<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button>
   </div>
 </section>
@@ -377,17 +392,15 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
   </div>
 </section>
 
-<section class="sec c" id="registration">
-  <div class="vw">
-    <div class="head"><h2 class="t-sec">พร้อมเริ่มแล้วหรือยัง?</h2></div>
-    <dl class="facts">
-      <div><dt>วันที่</dt><dd>4–6 ธ.ค. 2569</dd></div>
-      <div><dt>ที่ไหน</dt><dd>ออนไลน์ผ่าน Discord</dd></div>
-      <div><dt>ใครสมัครได้</dt><dd>นักเรียนมัธยม</dd></div>
-      <div><dt>ค่าสมัคร</dt><dd>190 บาท</dd></div>
-    </dl>
-    <p id="pickedTrack" class="soon" style="margin-top:32px" hidden></p>
+<section class="reg2 c" id="registration">
+  <div class="wall" aria-hidden="true"><div class="wrow"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"></div><div class="wrow rev"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"></div><div class="wrow"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"><img src="img/hof/work-stressstrike.jpg" alt="" loading="lazy"><img src="img/hof/work-slash-speed.jpg" alt="" loading="lazy"><img src="img/hof/work-phi-krahang.jpg" alt="" loading="lazy"><img src="img/hof/work-hot-hot-hot.jpg" alt="" loading="lazy"><img src="img/hof/work-midnight-at-roadside.jpg" alt="" loading="lazy"><img src="img/hof/work-escape-rolling.jpg" alt="" loading="lazy"><img src="img/hof/work-beyond-the-board.jpg" alt="" loading="lazy"><img src="img/hof/work-apocalypis-building.jpg" alt="" loading="lazy"></div></div>
+  <div class="vw rin">
+    <p class="kick">ทุกเกมข้างหลังนี้ น้อง ๆ ทำเองทั้งหมด</p>
+    <h2 class="t-hero">ชิ้นต่อไป<br>เป็นของคุณ</h2>
+    <p class="price"><b>190 บาท</b> <span>4–6 ธ.ค. 2569 ออนไลน์ผ่าน Discord</span></p>
+    <p id="pickedTrack" class="soon" style="margin-top:16px;color:#a1a1a6" hidden></p>
     <div class="acts2"><a class="btn" id="regBtn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><button class="plus" type="button" data-sheet="sh-prep" aria-haspopup="dialog" aria-expanded="false">สิ่งที่ต้องเตรียม<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button></div>
+    <p class="who">สำหรับนักเรียนมัธยม</p>
   </div>
 </section>
 
