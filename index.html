@@ -3,398 +3,432 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfolio Camp for TCAS-1 | ค่ายทำเกม 3 วัน 4–6 ธ.ค. 2569 | Hamster Hub</title>
-<meta name="description" content="ค่ายทำเกม 3 วัน 4–6 ธ.ค. 2569 ค่าเข้าร่วม 190 บาท จบค่ายได้เกมที่ทำเองไว้ยื่นพอร์ต TCAS รอบ 1 มือใหม่เริ่มจาก 0 ได้ มีผลงานแล้วมาลุ้น Top 10">
+<title>Portfolio Camp for TCAS 1 | ทำพอร์ตและสร้างผลงาน 3 วัน | Hamster Hub</title>
+<meta name="description" content="มีผลงานแล้วมาทำพอร์ต ยังไม่มีมาเริ่มสร้างเกม พบรุ่นพี่มหาวิทยาลัยและเปิดบูธผลงานใน HamsVillage วันที่ 4–6 ธันวาคม 2569 ออนไลน์">
 <meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://pepesx231.github.io/PortfolioCamp/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial' font-weight='700' fill='%23fff' text-anchor='middle'%3EPC%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="th_TH">
 <meta property="og:site_name" content="Hamster Hub">
-<meta property="og:title" content="Portfolio Camp for TCAS-1 ค่ายทำเกม 3 วัน">
-<meta property="og:description" content="4–6 ธ.ค. 2569 ค่าเข้าร่วม 190 บาท จบค่ายได้เกมที่ทำเองไว้ยื่นพอร์ต TCAS รอบ 1">
+<meta property="og:title" content="Portfolio Camp for TCAS 1">
+<meta property="og:description" content="มีผลงานแล้ว ทำพอร์ตให้พร้อม ยังไม่มี เริ่มสร้างได้เลย 4–6 ธ.ค. 2569 ออนไลน์ผ่าน Discord">
 <meta property="og:url" content="https://pepesx231.github.io/PortfolioCamp/">
 <meta property="og:image" content="https://pepesx231.github.io/PortfolioCamp/img/og.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* PROTOTYPE v3 — โครงตาม apple.com/th ค่าวัดจากโค้ดจริงที่จอ 1440
-   localnav (หน้า MacBook Pro): sticky เต็มกว้าง สูง 52, ชื่อ 21/600 + บรรทัดรอง 12, เมนู 12px อันที่อยู่มีเส้นใต้ 1px, ปุ่ม 12px pill 3/10
-   gallery (หน้า MacBook Pro): การ์ด 1260x612 ห่าง 20 เลื่อนแนวนอนแบบ snap ข้อความ 28/600 สีขาวกลางซ้าย + dotnav pill 56 + ปุ่มเล่น 56
-   ตัวอักษร: hero 80 หัวข้อ section 48 การ์ด 28 eyebrow 21 copy 21 เทา body 17 ระยะ section 128–144 มุม 28 */
-:root{--bg:#fff;--alt:#f5f5f7;--ink:#1d1d1f;--mute:#6e6e73;--mute2:#86868b;--line:#d2d2d7;--blue:#0071e3;--link:#0066cc;--glass:rgba(232,232,237,.72)}
+:root{--bg:#fff;--alt:#f5f5f7;--ink:#1d1d1f;--mute:#515154;--mute2:#86868b;--line:#d2d2d7;--blue:#0071e3;--link:#0066cc;--glass:rgba(232,232,237,.72);--pf:#e8f0ff;--pj:#fff2d5}
 *{box-sizing:border-box;min-width:0}
-html{scroll-padding-top:80px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.47 "Noto Sans Thai",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+html{scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "Noto Sans Thai",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
 img,video{display:block;max-width:100%}
-h1,h2,h3,p{margin:0}
+h1,h2,h3,h4,p,ul,ol,dl{margin:0}
+ul,ol{padding:0;list-style:none}
 a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--blue);outline-offset:3px}
-.vw{width:min(1260px,calc(100% - 44px));margin:0 auto}
-.vn{width:min(980px,calc(100% - 44px));margin:0 auto}
-.sec{padding:144px 0}
+.skip{position:absolute;left:12px;top:-60px;z-index:99;background:#fff;color:var(--ink);padding:10px 16px;border-radius:999px}.skip:focus{top:12px}
+.vw{width:min(1200px,calc(100% - 48px));margin:0 auto}
+.vn{width:min(980px,calc(100% - 48px));margin:0 auto}
+.sec{padding:120px 0}
 .alt{background:var(--alt)}
-.dark{background:#000;color:#f5f5f7}
+.dark{background:#000;color:#f5f5f7}.dark a{color:#2997ff}
 .c{text-align:center}
 .more::after{content:" ›"}
-.skip{position:absolute;left:12px;top:-60px;z-index:99;background:#fff;color:var(--ink);padding:10px 16px;border-radius:999px}.skip:focus{top:12px}
-a.more{display:inline-block;padding:10px 0}
-.dark a{color:#2997ff}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 21px;border-radius:980px;background:var(--blue);color:#fff;font-size:17px;border:0;cursor:pointer;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border-radius:980px;background:var(--blue);color:#fff;font-size:17px;font-weight:500;border:0;cursor:pointer;white-space:nowrap}
 .btn:hover{text-decoration:none;background:#0077ed}
-.ph{background:repeating-linear-gradient(45deg,#e8e8ed 0 12px,#fafafc 12px 24px);display:grid;place-items:center;color:var(--mute);font-size:14px;text-align:center;padding:16px}
-.dark .ph{background:repeating-linear-gradient(45deg,#1c1c1e 0 12px,#242426 12px 24px);color:var(--mute2)}
+.btn.ghost{background:transparent;color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
+.dark .btn.ghost{color:#2997ff;box-shadow:inset 0 0 0 1.5px #2997ff}
+.t-eye{font-size:21px;line-height:1.3;font-weight:600}
+.t-hero{font-size:72px;line-height:1.25;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+.t-sec{font-size:52px;line-height:1.25;font-weight:700;text-wrap:balance}
+.t-card{font-size:26px;line-height:1.35;font-weight:600}
+.t-copy{font-size:21px;line-height:1.55;color:var(--mute)}
+.dark .t-copy{color:var(--mute2)}
+.t-small{font-size:14px;line-height:1.45;color:var(--mute)}
+.head{margin-bottom:56px;max-width:820px}.head .t-copy{margin-top:16px}
+.c .head{margin-left:auto;margin-right:auto}
 
-.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-.t-eyebrow{font-size:21px;line-height:1.2;font-weight:600}
-.t-hero,.t-xxl{font-size:80px;line-height:1.3;font-weight:600;letter-spacing:-.015em;text-wrap:balance}
-.t-xl{font-size:64px;line-height:1.3;font-weight:600;text-wrap:balance}
-.t-sec{font-size:48px;line-height:1.3;font-weight:600}
-.t-card{font-size:28px;line-height:1.39;font-weight:600}
-.t-copy{font-size:21px;line-height:1.4;color:var(--mute)}
-.t-copy b{color:var(--ink);font-weight:600}.dark .t-copy{color:var(--mute2)}.dark .t-copy b{color:#f5f5f7}
-.t-small{font-size:14px;line-height:1.4}
-.t-cap{font-size:12px;line-height:1.35;color:var(--mute)}
-.sh{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:56px}
-
-/* globalnav + ribbon */
-.gn{height:44px;background:rgba(250,250,252,.8);font-size:12px}
-.gn ul{list-style:none;margin:0 auto;padding:0 22px;max-width:1024px;height:44px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.gn a{color:var(--ink);opacity:.8;white-space:nowrap}.gn a:hover{opacity:1;text-decoration:none}.gn .logo{font-weight:600;opacity:1}
-.ribbon{background:var(--alt);min-height:51px;display:flex;align-items:center;justify-content:center;font-size:14px;padding:12px 22px;text-align:center}
-
-/* localnav (MacBook Pro style) */
+/* nav */
 .ln{position:fixed;top:14px;left:0;right:0;z-index:50;display:flex;justify-content:center;pointer-events:none;padding:0 12px}
-.tabbar{pointer-events:auto;position:relative;display:flex;align-items:center;gap:2px;padding:5px;border-radius:999px;background:rgba(22,22,23,.8);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12),inset 0 1px 0 rgba(255,255,255,.18),0 12px 32px rgba(0,0,0,.22);max-width:100%;overflow-x:auto;scrollbar-width:none}
+.tabbar{pointer-events:auto;position:relative;display:flex;align-items:center;gap:2px;padding:5px;border-radius:999px;background:rgba(22,22,23,.8);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12),0 12px 32px rgba(0,0,0,.22);max-width:100%;overflow-x:auto;scrollbar-width:none}
 .tabbar::-webkit-scrollbar{display:none}
-.tabbar a{position:relative;z-index:1;color:rgba(245,245,247,.72);font-size:13px;font-weight:500;padding:8px 16px;border-radius:999px;white-space:nowrap;transition:color .25s}
-.tabbar a:hover{color:#fff;text-decoration:none}
-.tabbar a.cur{color:#fff}
-.tabbar .ind{position:absolute;z-index:0;top:5px;bottom:5px;left:0;width:0;border-radius:999px;background:rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2);transition:left .35s cubic-bezier(.3,.7,.2,1),width .35s cubic-bezier(.3,.7,.2,1)}
-.tabbar .ln-btn{background:var(--blue);color:#fff;margin-left:6px;padding:8px 18px;transition:opacity .3s,max-width .35s,padding .35s,margin .35s;max-width:120px;overflow:hidden}
+.tabbar .brand{color:#fff;font-weight:600;font-size:13px;padding:8px 14px 8px 16px;white-space:nowrap}
+.tabbar a{position:relative;z-index:1;color:rgba(245,245,247,.72);font-size:13px;font-weight:500;padding:8px 14px;border-radius:999px;white-space:nowrap;transition:color .25s}
+.tabbar a:hover{color:#fff;text-decoration:none}.tabbar a.cur{color:#fff}
+.tabbar .ind{position:absolute;z-index:0;top:5px;bottom:5px;left:0;width:0;border-radius:999px;background:rgba(255,255,255,.16);transition:left .35s cubic-bezier(.3,.7,.2,1),width .35s cubic-bezier(.3,.7,.2,1)}
+.tabbar .ln-btn{background:var(--blue);color:#fff;margin-left:6px;padding:8px 18px}
 .tabbar .ln-btn:hover{background:#0077ed}
-.tabbar .ln-btn.off{opacity:0;max-width:0;padding-left:0;padding-right:0;margin-left:0;pointer-events:none}
 
-/* hero (dark, media blends into the page like MacBook Pro) */
-.hero{background:#000;color:#f5f5f7;padding:120px 0 72px;text-align:center;position:relative;overflow:clip}
-.hero .t-hero{margin-top:6px;padding:0 22px}
-.hero-media{position:relative;width:min(1440px,100%);margin:8px auto 0;aspect-ratio:16/9;max-height:780px;}
-.hero-media video{width:100%;height:100%;object-fit:cover;display:block}
+/* hero */
+.hero{background:#000;color:#f5f5f7;padding:128px 0 96px;text-align:center;position:relative;overflow:clip}
+.hero .t-eye{color:#86868b}
+.hero h1{margin-top:12px;padding:0 24px}
+.hero h1 span{display:block}.hero h1 i{font-style:normal;white-space:nowrap}
+.hero .sub{margin:20px auto 0;max-width:720px;padding:0 24px;font-size:24px;line-height:1.45;color:#d2d2d7}
+.hero .when{margin-top:12px;font-size:17px;color:#86868b}
+.hero .acts{display:flex;gap:16px 28px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:32px;padding:0 24px}
+.hero .acts a.more{color:#2997ff;font-size:17px}
+.hero-media{position:relative;width:min(1440px,100%);margin:48px auto 0;aspect-ratio:16/9;max-height:720px}
+.hero-media video{width:100%;height:100%;object-fit:cover}
 .hero-media::before,.hero-media::after{content:"";position:absolute;inset:-1px;pointer-events:none}
-.hero-media::before{background:linear-gradient(180deg,#000 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 62%,rgba(0,0,0,.85) 86%,#000 100%)}
+.hero-media::before{background:linear-gradient(180deg,#000 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 70%,#000 100%)}
 .hero-media::after{background:linear-gradient(90deg,#000 0%,rgba(0,0,0,0) 14%,rgba(0,0,0,0) 86%,#000 100%)}
-.hero-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;margin:-40px 0 0;font-size:17px;position:relative;padding:0 22px}
-.hero-meta .t-cap{width:100%;color:#86868b}
-.hero a{color:#2997ff}
-.aap{position:sticky;bottom:32px;z-index:30;display:flex;justify-content:center;margin-top:-40px;padding:0 22px}
-.hero-pill{display:inline-flex;align-items:center;gap:22px;height:64px;padding:0 8px 0 26px;border-radius:32px;background:rgba(66,66,69,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);font-size:15px;color:#f5f5f7;white-space:nowrap}
-.hero-pill b{font-weight:600}
-.pill-btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 24px;border-radius:24px;background:var(--blue);color:#fff!important;font-size:17px;font-weight:500}
-.pill-btn:hover{text-decoration:none;background:#0077ed}
 
+/* benefits bento */
+.bento{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.bx{position:relative;border-radius:28px;overflow:hidden;height:520px;background:var(--bg,#fff)}
+.bx .tx{position:relative;z-index:2;padding:40px 40px 0;max-width:460px}
+.bx .tx p{margin-top:8px;font-size:19px;line-height:1.5;color:rgba(29,29,31,.66)}
+.bx .md{position:absolute;inset:0;z-index:0}
+.bx .md img,.bx .md video{width:100%;height:100%;object-fit:cover}
+.bx.art .md{top:auto;height:70%}.bx.art .md img{object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 28%);mask-image:linear-gradient(180deg,transparent 0,#000 28%)}
+.bx.vid{background:#000;color:#f5f5f7}.bx.vid .tx p{color:#a1a1a6}
+.bx.vid::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.6) 30%,rgba(0,0,0,0) 62%)}
+.bx .src{position:absolute;right:18px;bottom:14px;z-index:2;font-size:12px;color:rgba(255,255,255,.75)}
 
-/* gallery (MBP highlights) */
-.gal{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(22px,calc((100% - 1260px)/2));scroll-padding:0 max(22px,calc((100% - 1260px)/2))}
+/* tracks */
+.tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.tk{background:#fff;border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
+.tk .md{aspect-ratio:16/9;background:var(--tc)}
+.tk .md img{width:100%;height:100%;object-fit:cover}
+.tk .bd{padding:36px 40px 40px;display:flex;flex-direction:column;flex:1}
+.tk .nm{display:inline-block;align-self:flex-start;font-size:14px;font-weight:600;padding:4px 12px;border-radius:999px;background:var(--tc);color:#1d1d1f}
+.tk h3{margin-top:14px}
+.tk .ds{margin-top:10px;font-size:17px;color:var(--mute)}
+.tk h4{margin-top:28px;font-size:14px;font-weight:600;color:var(--mute2)}
+.tk ul{margin-top:10px;border-top:1px solid var(--line)}
+.tk li{padding:12px 0;border-bottom:1px solid var(--line);font-size:17px}
+.tk li b{font-weight:600}.tk li span{color:var(--mute)}
+.tk .out{margin-top:24px;padding:18px 20px;border-radius:18px;background:var(--tc)}
+.tk .out small{display:block;font-size:13px;color:var(--mute)}
+.tk .out b{display:block;margin-top:2px;font-size:17px;font-weight:600}
+.tk .fit{margin-top:16px;font-size:15px;color:var(--mute)}
+.tk .act{margin-top:auto;padding-top:28px}
+
+/* universities */
+.uni{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.uni .ph{border-radius:28px;overflow:hidden;aspect-ratio:4/3;background:#2172ea}
+.uni .ph img{width:100%;height:100%;object-fit:cover;object-position:75% center}
+.ticks{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+.ticks li{padding-left:30px;position:relative;font-size:19px}
+.ticks li::before{content:"";position:absolute;left:4px;top:.55em;width:12px;height:7px;border-left:2.5px solid var(--blue);border-bottom:2.5px solid var(--blue);transform:rotate(-45deg)}
+.dark .ticks li::before{border-color:#2997ff}
+.note{margin-top:28px;font-size:19px;font-weight:600}
+.soon{margin-top:12px;font-size:15px;color:var(--mute)}
+
+/* portfolio pass */
+.pass{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.ticket{position:relative;aspect-ratio:3/2;border-radius:28px;background:linear-gradient(135deg,#ffcf5c,#ff8a3d 55%,#ff5f6d);color:#1d1d1f;padding:44px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transform:rotate(-3deg)}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:56px;height:56px;margin-top:-28px;border-radius:50%;background:#000}
+.ticket::before{left:-28px}.ticket::after{right:-28px}
+.ticket .k{font-size:15px;font-weight:600;opacity:.7}
+.ticket b{display:block;font-size:56px;line-height:1.05;font-weight:700;letter-spacing:-.01em}
+.ticket .row{display:flex;justify-content:space-between;align-items:flex-end;border-top:2px dashed rgba(29,29,31,.35);padding-top:18px;font-size:17px;font-weight:600}
+.steps{margin-top:36px;display:flex;flex-direction:column;gap:2px}
+.steps li{display:grid;grid-template-columns:48px 1fr;align-items:baseline;padding:16px 0;border-bottom:1px solid #333336;font-size:19px}
+.steps li span{font-size:15px;font-weight:600;color:#86868b}
+
+/* village */
+.zones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.zn{border-radius:24px;padding:32px 28px 36px;background:var(--zc);min-height:220px;display:flex;flex-direction:column;justify-content:flex-end}
+.zn b{font-size:22px;font-weight:600}.zn p{margin-top:6px;font-size:17px;color:rgba(29,29,31,.7)}
+.quest{margin-top:40px;font-size:19px}.quest b{font-weight:600}
+
+/* rails */
+.gal{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(24px,calc((100% - 1200px)/2));scroll-padding:0 max(24px,calc((100% - 1200px)/2))}
 .gal::-webkit-scrollbar{display:none}
-.card{flex:0 0 min(1260px,calc(100vw - 44px));height:612px;border-radius:28px;overflow:hidden;position:relative;scroll-snap-align:start;background:#fff}
-.card video,.card .ill{position:absolute;top:0;right:0;width:72%;height:100%;object-fit:cover}.card .ill{object-position:right center}
-.card::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,#fff 30%,rgba(255,255,255,.94) 36%,rgba(255,255,255,.8) 41%,rgba(255,255,255,.6) 46%,rgba(255,255,255,.38) 52%,rgba(255,255,255,.18) 58%,rgba(255,255,255,.06) 64%,rgba(255,255,255,0) 70%);z-index:1}
-.card .cap{position:absolute;left:56px;top:50%;transform:translateY(-50%);max-width:440px;z-index:2;color:#86868b}.card .cap b{color:#1d1d1f;font-weight:600}
-
-.card.art svg{position:absolute;top:0;right:0;width:72%;height:100%}
-
-.card .src{position:absolute;right:20px;bottom:16px;z-index:2;color:rgba(255,255,255,.8);font-size:12px}
+.wk{flex:0 0 372px;scroll-snap-align:start;background:#fff;border-radius:24px;overflow:hidden}
+.wk img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.wk div{padding:18px 22px 22px}.wk b{display:block;font-size:19px;font-weight:600}.wk span{font-size:15px;color:var(--mute)}
 .ctrls{display:flex;justify-content:center;gap:16px;margin-top:28px}
-.dots{display:flex;align-items:center;gap:16px;padding:0 24px;height:56px;border-radius:28px;background:var(--glass);backdrop-filter:blur(7px)}
-.dots button{width:8px;height:8px;border-radius:8px;border:0;padding:0;background:#86868b;cursor:pointer;position:relative;overflow:hidden;transition:width .4s;outline-offset:8px}
-.dots button::before{content:"";position:absolute;inset:-18px -8px}.dots{position:relative}
-.dots button.on{width:48px;background:#c7c7cc}
-.dots button.on::after{content:"";position:absolute;inset:0;background:#1d1d1f;transform-origin:left;transform:scaleX(var(--p,0))}
-.card:not(:first-child){cursor:pointer}.round{font-size:22px;width:56px;height:56px;border-radius:50%;background:var(--glass);backdrop-filter:blur(7px);border:0;cursor:pointer;display:grid;place-items:center;font-size:16px}
+.dots{display:flex;align-items:center;gap:14px;padding:0 24px;height:56px;border-radius:28px;background:var(--glass)}
+.dots button{width:8px;height:8px;border-radius:8px;border:0;padding:0;background:#86868b;cursor:pointer;transition:width .4s,background .4s;position:relative}
+.dots button::before{content:"";position:absolute;inset:-16px -6px}
+.dots button.on{width:40px;background:#1d1d1f}
+.round{width:56px;height:56px;border-radius:50%;background:var(--glass);border:0;cursor:pointer;display:grid;place-items:center;font-size:18px}
+.round:disabled{opacity:.35;cursor:default}
 
-/* lockup */
-.lock{text-align:center}.lock .t-copy{max-width:816px;margin:32px auto 0}.lock .t-xxl{margin-top:8px}
-
-/* paths compare */
-.cmp-card{background:#fff;border-radius:28px;padding:64px 40px 56px}
-.cmp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;max-width:860px;margin:0 auto;text-align:center}
-.cmp img,.cmp video{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px;margin-bottom:28px;background:#000}
-.cmp .tag{font-size:12px;font-weight:600;color:#b64400;margin-bottom:6px}
-.cmp h3{margin-bottom:10px}
-.cmp .q{font-size:17px;margin-bottom:6px;color:var(--mute)}
-.cmp .price{font-size:14px;margin:14px 0 26px}
-.cmp .act{display:flex;flex-direction:column;align-items:center;gap:16px}
-.cmp dl{margin:40px 0 0;border-top:1px solid var(--line)}
-.cmp dt{font-size:12px;color:var(--mute);margin-top:28px}
-.cmp dd{margin:6px 0 0;font-weight:600}
-
-/* closer-look */
-.cl-head{padding:144px 0 72px}
-.cl{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:48px;align-items:center;padding-bottom:144px}
-.cl-list{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
-.cl-item{display:flex;align-items:flex-start;gap:12px;min-height:56px;padding:16px 28px 16px 14px;border-radius:28px;background:#fff;border:0;cursor:pointer;text-align:left;max-width:360px}
-.dark .cl-item{background:rgba(66,66,69,.72)}
-.cl-item i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-style:normal;font-size:16px;line-height:1;transition:transform .3s}
-.dark .cl-item i{background:#f5f5f7;color:#000}
-.cl-item small{display:none;font-size:17px;line-height:1.47;margin-top:6px}
-.cl-item.on b{font-weight:600}.cl-item.on small{display:block}
-.cl-item.on i{transform:rotate(45deg);background:var(--blue);color:#fff}
-.cl-stage{height:540px;border-radius:28px;background:#e8e8ed!important;color:var(--mute)}.dark .cl-stage{background:#1c1c1e!important}
-
-/* dark finale */
-.finale-type{text-align:center;padding:24px 0 0}.finale-type>b{display:block;font-size:160px;line-height:1.05;font-weight:600;letter-spacing:-.02em;margin:8px 0 16px}
-@media(max-width:734px){.finale-type>b{font-size:80px}}
-.finale{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:16/9;max-height:620px;width:100%;background:#111}
-.finale video{width:100%;height:100%;object-fit:cover;opacity:.85}
-.finale .cap{position:absolute;left:46px;bottom:40px;max-width:520px}
-.finale .cap b{display:block;font-size:80px;line-height:1.1;font-weight:600}
-.finale .src{position:absolute;right:20px;bottom:16px;font-size:12px;color:rgba(255,255,255,.7)}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:96px;text-align:center}
-.stats b{display:block;font-size:64px;line-height:1.2;font-weight:600}
-.stats span{color:var(--mute2)}
-
-/* grade explorer */
-.gx{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:center;margin-top:72px}
-.gx-stage{position:relative;aspect-ratio:16/10;border-radius:28px;overflow:hidden;background:#000}
-.gx-stage video,.gx-stage img,.gx-stage .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.gx-stage .src{position:absolute;left:16px;bottom:14px;color:#fff;font-size:12px;text-shadow:0 1px 3px #000}
-.gx-num{font-size:120px;line-height:1;font-weight:600}
-.gx-name{font-size:28px;font-weight:600;line-height:1.35;margin-top:8px}
-.gx-look{margin-top:20px}
-.gx-look p{font-size:12px;color:var(--mute);margin-bottom:6px}
-.gx-look ul{margin:0;padding-left:20px;font-size:17px}
-.gx-look li{margin:4px 0}
-.g-track{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:6px;margin-top:56px;padding:6px;border-radius:999px;background:var(--alt)}
-.g-track button{border:0;background:transparent;height:44px;border-radius:999px;cursor:pointer;color:var(--mute);font-size:15px;font-weight:500;transition:background .25s,color .25s}
-.g-track button:hover{background:#fff;color:var(--ink)}
-.g-track button.in{color:var(--ink)}
-.g-track button[aria-pressed=true]{background:var(--ink);color:#fff;font-weight:600}
-.gx-nav{display:flex;gap:12px;margin-top:24px}
-.gx-nav button{width:44px;height:44px;border-radius:50%;border:0;background:var(--alt);font-size:20px;cursor:pointer;color:var(--ink)}
-.gx-nav button:hover{background:#e8e8ed}.gx-nav button:disabled{opacity:.35;cursor:default}
-.gx-games{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.gx-games button{border:0;border-radius:999px;padding:8px 16px;background:var(--alt);font-size:14px;cursor:pointer}
-.gx-games button[aria-pressed=true]{background:var(--ink);color:#fff}
-.gx-why{margin-top:14px;font-size:17px;color:var(--mute)}
-.gx-stage{cursor:pointer}
-.g-legend{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font-size:12px;color:var(--mute)}
-
-/* examples (sequential autoplay) */
-.rail{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(22px,calc((100% - 1260px)/2)) 8px;scroll-padding:0 max(22px,calc((100% - 1260px)/2))}
-.rail::-webkit-scrollbar{display:none}
-.ex{flex:0 0 auto;width:min(480px,84vw);scroll-snap-align:start;border-radius:28px;overflow:hidden;background:#fff;transition:opacity .4s}
-.ex .m{aspect-ratio:16/9;position:relative;background:#000}
-.ex video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ex .bar{position:absolute;left:0;bottom:0;height:3px;background:#fff;width:0}
-.ex .b{padding:26px 30px 32px}
-.ex .gr{font-size:12px;font-weight:600;color:#b64400;margin:6px 0 10px}
-.ex:not(.on){opacity:.55}
-.paddles{display:flex;justify-content:flex-end;gap:18px;margin-top:24px}
-.paddles button{width:36px;height:36px;border-radius:50%;border:0;background:rgba(210,210,215,.64);cursor:pointer;font-size:18px}
-
-/* incentive (Apple "why buy" cards: one surface, picture sits in the card) */
-.inc{flex:0 0 auto;width:372px;height:545px;display:flex;flex-direction:column;cursor:pointer;border:0;padding:0;text-align:left;border-radius:28px;overflow:hidden;background:#fff;position:relative;scroll-snap-align:start}
-.inc .b{padding:40px 30px 0}
-.inc .k{font-size:14px;font-weight:600;margin-bottom:8px}
-.inc h3{margin-bottom:12px}
-.inc .d{font-size:14px;color:var(--ink);line-height:1.45}
-.inc .m{margin-top:auto;height:290px;position:relative;display:flex;align-items:flex-end;justify-content:center}
-.inc .m video,.inc .m img{width:100%;height:100%;object-fit:cover;display:block}
-.inc .m:has(video)::before{content:"";position:absolute;inset:-1px -1px auto;height:80%;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.96) 18%,rgba(255,255,255,.82) 36%,rgba(255,255,255,.55) 54%,rgba(255,255,255,.25) 72%,rgba(255,255,255,.07) 88%,rgba(255,255,255,0) 100%);z-index:1;pointer-events:none}
-.inc .m svg{width:78%;height:auto;margin-bottom:34px}
-.inc .m .ph{width:calc(100% - 60px);height:190px;margin:0 30px 30px;border-radius:18px}
-.card{background:var(--bg)}
-.card video,.card .ill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.card .ill{object-position:right center}
-.card.art::before{background:linear-gradient(90deg,var(--bg) 0%,var(--bg) 28%,transparent 48%)}
-.card.vid::before{background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.7) 30%,rgba(0,0,0,0) 62%)}
-.card .cap{color:rgba(29,29,31,.62)}.card .cap b{color:#1d1d1f}
-.card.vid .cap{color:#a1a1a6}.card.vid .cap b{color:#f5f5f7}
-.inc.art{background:var(--bg)}.inc.art .m{position:absolute;inset:0;height:auto;margin:0}.inc.art .b{position:relative;z-index:1}
-.inc.art .k{color:rgba(29,29,31,.7)}
-.inc.vid{background:#000}.inc.vid .m{position:absolute;inset:0;height:auto;margin:0}.inc.vid .m::before{display:none}.inc.vid::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.75) 28%,rgba(0,0,0,0) 60%)}.inc.vid .b{position:relative;z-index:2;color:#f5f5f7}.inc.vid .k{color:#a1a1a6}.inc.vid .plus{background:rgba(255,255,255,.2)}
-
-.card{flex:0 0 372px;height:545px}
-.card .cap{left:30px;right:30px;top:40px;transform:none;max-width:none}.card .cap .t-card{font-size:21px;line-height:1.38}
-.card .ill{top:auto;bottom:0;width:100%;height:62%;object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
-.card.art::before{display:none}
-.card.vid::before{background:linear-gradient(180deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.7) 30%,rgba(0,0,0,0) 60%)}
-.howgrid{gap:20px}
-.howgrid .inc{flex:0 0 372px;width:372px;height:545px;cursor:default;scroll-snap-align:start}.howgrid .plus,.howgrid .k:empty{display:none}
-.howgrid .inc .t-card,.howgrid .inc h3{font-size:21px}
-.howgrid .inc .d{font-size:17px;color:rgba(29,29,31,.62);margin-top:6px}.howgrid .inc.vid .d{color:#a1a1a6}
-.howgrid .inc.art .m:has(img){top:auto;height:62%}.howgrid .inc.art .m img{object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
-.gv{display:flex;flex-wrap:wrap;gap:8px;padding:0 30px 40px;align-self:stretch;align-content:flex-end}.gv b{min-width:48px;padding:10px 0;text-align:center;border-radius:999px;background:#f0f0f3;font-size:15px;font-weight:600;color:#1d1d1f}.gv b.on{background:#1d1d1f;color:#fff}
-.inc .m:has(.gv)::before{display:none}.inc .m:has(.gv){flex-direction:column;align-items:flex-start;justify-content:flex-end}.gvl{margin:0 30px 36px;font-size:17px}.gv{padding-bottom:20px}
-.gt{align-self:stretch;display:flex;flex-direction:column;gap:10px;padding:0 30px 36px}.gt p{display:grid;grid-template-columns:1fr auto;gap:2px 12px;background:#f0f0f3;border-radius:18px;padding:16px 18px}.gt b{font-size:19px;color:#1d1d1f}.gt span{font-size:15px;color:#6e6e73;align-self:center}.gt i{grid-column:1/-1;font-style:normal;font-size:15px;color:#6e6e73}.inc .m:has(.gt)::before{display:none}.inc .m:has(.gt){flex-direction:column;justify-content:flex-end}
-.inc .plus{position:absolute;right:18px;bottom:18px;width:36px;height:36px;border-radius:50%;background:rgba(51,51,54,.92);color:#fff;display:grid;place-items:center;font-size:20px;z-index:2}
-.under{display:flex;justify-content:flex-end;align-items:center;gap:28px;margin-top:28px;padding:0 max(22px,calc((100% - 1260px)/2))}
-.pad2{display:flex;gap:18px}
-.pad2 button,.paddles button{width:36px;height:36px;border-radius:50%;border:0;background:rgba(210,210,215,.64);color:rgba(0,0,0,.56);cursor:pointer;font-size:20px;line-height:1;display:grid;place-items:center;transition:opacity .2s}
-.pad2 button:hover,.paddles button:hover{background:rgba(223,223,227,.7);color:rgba(0,0,0,.64)}
-.pad2 button:disabled{opacity:.42;cursor:default}
+/* showcase */
+.show{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:center;margin-bottom:96px}
+.show .md{border-radius:28px;overflow:hidden;aspect-ratio:16/10;background:#000}
+.show .md video{width:100%;height:100%;object-fit:cover}
 
 /* schedule */
-.days{display:inline-flex;gap:4px;padding:4px;border-radius:980px;background:var(--glass);margin:0 auto 48px}
-.days button{border:0;background:none;padding:10px 22px;border-radius:980px;cursor:pointer;font-size:17px;font-weight:500;white-space:nowrap}
-.days button[aria-selected=true]{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12)}
-.sched{list-style:none;margin:0;padding:0;text-align:left}
-.sched li{display:grid;grid-template-columns:240px minmax(0,1fr);gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.sched time{font-size:28px;font-weight:600;white-space:nowrap}
-.sched span{font-size:21px}
-.sched em{font-style:normal;font-size:14px;color:var(--mute);margin-left:10px}
+.days{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--alt);margin-bottom:40px;flex-wrap:wrap;justify-content:center}
+.days button{border:0;background:transparent;padding:10px 20px;border-radius:999px;cursor:pointer;font-size:15px;font-weight:500;color:var(--mute)}
+.days button[aria-selected=true]{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.dtitle{font-size:28px;font-weight:600;margin-bottom:24px}
+.sched{text-align:left;border-top:1px solid var(--line)}
+.sched .r{display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 4px;border-bottom:1px solid var(--line);font-size:17px}
+.sched .r time{color:var(--mute);font-variant-numeric:tabular-nums}
+.sched .split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sched .split span{padding:10px 14px;border-radius:12px;font-size:16px}
+.sched .split span small{display:block;font-size:12px;font-weight:600;color:var(--mute)}
+.sched .r.hl{background:#fff8e6}
+.sfoot{margin-top:20px;font-size:14px;color:var(--mute)}
+
+/* mentors */
+.rounds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.rd{background:#fff;border-radius:24px;padding:32px 30px}
+.rd small{font-size:14px;font-weight:600;color:var(--mute2)}
+.rd b{display:block;margin-top:8px;font-size:22px;font-weight:600}
+.rd p{margin-top:6px;color:var(--mute)}
+
+/* registration */
+.reg{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px}
+.box{background:#fff;border-radius:28px;padding:40px}
+.alt .box{background:#fff}
+.kv{border-top:1px solid var(--line)}
+.kv div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+.kv dt{color:var(--mute)}.kv dd{margin:0;font-weight:600}
+.box h3{font-size:22px;font-weight:600;margin-bottom:16px}
+.box .ticks li{font-size:17px}
+.howto{counter-reset:s;display:flex;flex-direction:column;gap:14px;margin-top:4px}
+.howto li{counter-increment:s;display:grid;grid-template-columns:32px 1fr;gap:12px;font-size:17px;align-items:baseline}
+.howto li::before{content:counter(s);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:14px;font-weight:600}
 
 /* faq */
 .faq{border-top:1px solid var(--line)}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;padding:32px 40px 32px 0;font-size:28px;line-height:1.39;font-weight:600;position:relative}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:10px;height:10px;border-right:2px solid var(--mute);border-bottom:2px solid var(--mute);transform:translateY(-70%) rotate(45deg);transition:transform .3s}
-.faq details[open] summary::after{transform:translateY(-20%) rotate(225deg)}
-.faq details p{padding:0 0 32px;max-width:760px}
-.xall{border:0;background:none;color:var(--link);font-size:14px;cursor:pointer}
+.fq{border-bottom:1px solid var(--line)}
+.fq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 4px;background:none;border:0;cursor:pointer;text-align:left;font-size:21px;font-weight:600}
+.fq button i{flex:none;font-style:normal;font-size:26px;line-height:1;color:var(--mute);transition:transform .3s}
+.fq button[aria-expanded=true] i{transform:rotate(45deg)}
+.fq .a{padding:0 4px 26px;font-size:19px;color:var(--mute);max-width:820px}
+.fq .a[hidden]{display:none}
 
-.cd{display:flex;justify-content:center;gap:56px;margin:24px 0 40px}
-.cd b{display:block;font-size:80px;line-height:1.1;font-weight:600;font-variant-numeric:tabular-nums}
-.cd span{color:var(--mute)}
+/* final */
+.final .t-sec{font-size:64px}
+.final .lines{margin-top:24px;font-size:24px;line-height:1.6;color:#d2d2d7}
+.final .dt{margin:24px 0 36px;color:#86868b}
 
-.modal{position:fixed;inset:0;z-index:99;background:rgba(0,0,0,.48);display:none;place-items:center;padding:22px}
-.modal.on{display:grid}
-.modal-card{background:#fff;border-radius:28px;max-width:816px;width:100%;padding:72px 64px;position:relative;max-height:90vh;overflow:auto}
-.modal-card .x{position:absolute;right:20px;top:20px;width:36px;height:36px;border-radius:50%;border:0;background:#333336;color:#fff;font-size:18px;cursor:pointer}
-.modal-card h2{font-size:48px;line-height:1.25;font-weight:600;margin:8px 0 24px}
+/* footer */
+.gf{background:var(--alt);color:var(--mute);font-size:12px;line-height:1.5;padding:40px 0 48px}
+.gf .notes{display:flex;flex-direction:column;gap:8px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.gf .lk{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:18px}
+.gf .lk a{color:var(--ink)}
 
-.gf{background:var(--alt);font-size:12px;color:var(--mute);padding:17px 0 24px}
-.gf .notes{display:grid;gap:10px;padding:24px 0;border-bottom:1px solid var(--line)}
-.gf .notes a{color:var(--link)}
-.gf .bc{padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink)}
-.gf .dir{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
-.gf .dir b{display:block;color:var(--ink);font-weight:600;margin-bottom:8px}
-.gf .dir a{display:block;color:var(--mute);padding:7px 0}
-.gf .legal{padding-top:16px}
-
-@media(max-width:1068px){.t-hero,.t-xxl{font-size:64px}.t-xl{font-size:48px}.t-sec{font-size:40px}.card{height:520px}.cl{grid-template-columns:minmax(0,300px) minmax(0,1fr)}}
-@media(max-width:734px){
- .gn ul li:not(.keep){display:none}
- .sec{padding:88px 0}.cl-head{padding:88px 0 40px}
- .t-hero,.t-xxl{font-size:40px}.t-xl,.t-sec{font-size:32px}.t-card{font-size:21px}.t-copy{font-size:19px}.t-eyebrow{font-size:17px}
- .tabbar a.opt{display:none}.tabbar a{padding:8px 12px}
- .hero{padding:108px 0 56px}.hero-media{aspect-ratio:4/3}.hero-meta{margin-top:8px}
- .card{height:560px}#galPrev,#galNext,.hwb{display:none}.dots{gap:12px;padding:0 18px}.card video,.card .ill{top:auto;bottom:0;width:100%;height:68%}.card::before{background:linear-gradient(180deg,#fff 0%,#fff 32%,rgba(255,255,255,.9) 38%,rgba(255,255,255,.65) 44%,rgba(255,255,255,.35) 51%,rgba(255,255,255,.12) 58%,rgba(255,255,255,0) 65%)}.card .cap{left:24px;right:24px;top:36px;transform:none}
- .cmp{grid-template-columns:minmax(0,1fr);gap:56px}.cmp-card{padding:40px 22px}
- .cl{grid-template-columns:minmax(0,1fr);padding-bottom:88px}.cl-stage{height:280px;order:-1}
- .finale{aspect-ratio:4/5}.finale .cap{left:24px;right:24px;bottom:28px}.finale .cap b{font-size:48px}
- .stats{grid-template-columns:minmax(0,1fr);gap:32px;margin-top:64px}.stats b{font-size:48px}
- .gx{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:48px}.gx-num{font-size:80px}.gx-name{font-size:21px}
- .g-track{gap:2px;padding:4px}.g-track button{font-size:12px;height:40px}
- .inc{width:300px;height:500px}
- .card{flex:0 0 300px;height:500px}.howgrid .inc{flex:0 0 300px;width:300px;height:500px}.gv{gap:6px;padding:0 24px 16px}.gv b{min-width:40px;padding:8px 0;font-size:13px}.gvl{margin:0 24px 30px}.howgrid .inc .d{font-size:15px}
- .card.art::before{background:linear-gradient(180deg,var(--bg) 0%,var(--bg) 30%,transparent 52%)}.card.vid::before{background:linear-gradient(180deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.6) 35%,transparent 60%)}.card video{top:0;height:100%}.card .ill{top:auto;bottom:0;height:62%;object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}.card.art::before{display:none}
- .sched li{grid-template-columns:110px minmax(0,1fr);gap:12px}.sched time{font-size:17px}.sched span{font-size:17px}
- .days button{padding:8px 12px;font-size:14px}
- .faq summary{font-size:19px;padding:24px 32px 24px 0}
- .cd{gap:24px}.cd b{font-size:48px}
- .modal-card{padding:56px 24px}.modal-card h2{font-size:32px}
- .gf .dir{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:1068px){
+ .t-hero{font-size:60px}.t-sec{font-size:44px}
+ .zones{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+@media(max-width:860px){
+ .tracks,.uni,.pass,.show,.reg,.rounds{grid-template-columns:1fr}
+ .pass{gap:48px}.ticket{max-width:520px}
+}
+@media(max-width:734px){
+ .sec{padding:72px 0}.vw,.vn{width:calc(100% - 32px)}
+ .t-hero{font-size:40px}.t-sec{font-size:32px}.final .t-sec{font-size:36px}.t-card{font-size:22px}.t-copy{font-size:18px}
+ .hero{padding:104px 0 56px}.hero .sub{font-size:19px}
+ .tabbar .brand,.tabbar .opt,.tabbar .lg{display:none}.tabbar a{padding:8px 11px}
+ .bento{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:14px;margin:0 -16px;padding:0 16px;scroll-padding:0 16px}
+ .bento::-webkit-scrollbar{display:none}
+ .bx{flex:0 0 82%;height:460px;scroll-snap-align:start}.bx .tx{padding:28px 26px 0}.bx .tx p{font-size:16px}
+ .tk .bd{padding:26px 24px 30px}
+ .zones{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin:0 -16px;padding:0 16px}
+ .zones::-webkit-scrollbar{display:none}.zn{flex:0 0 70%;scroll-snap-align:start;min-height:180px}
+ .wk{flex:0 0 78%}
+ .rounds{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin:0 -16px;padding:0 16px}.rounds::-webkit-scrollbar{display:none}.rd{flex:0 0 70%;scroll-snap-align:start}
+ .ticket{padding:28px}.ticket b{font-size:36px}
+ .sched .r{grid-template-columns:1fr;gap:4px}
+ .sched .split{grid-template-columns:1fr}
+ .kv div{grid-template-columns:1fr;gap:2px}
+ .box{padding:28px 24px}
+ .fq button{font-size:18px}.fq .a{font-size:17px}
+ .final .lines{font-size:19px}
+ .round{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<a class="skip" href="#highlights">ข้ามไปที่เนื้อหา</a>
-
-
+<a class="skip" href="#benefits">ข้ามไปที่เนื้อหา</a>
 
 <header class="ln">
   <nav class="tabbar" id="tabbar" aria-label="ในหน้านี้">
     <span class="ind" aria-hidden="true"></span>
-    <a href="#top" class="cur opt">ภาพรวม</a><a href="#highlights">3 วัน</a><a href="#basic">เส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#schedule">กำหนดการ</a><a href="#faq" class="opt">คำถาม</a>
-    <a class="ln-btn off" id="lnBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a>
+    <a class="brand" href="#top">Hamster Hub</a>
+    <a href="#benefits">สิ่งที่จะได้รับ</a><a href="#tracks">เลือก Track</a><a href="#schedule">ตารางกิจกรรม</a><a href="#faq" class="opt">FAQ</a>
+    <a class="ln-btn" href="https://www.hamsterhub.co/portcamp">สมัคร<span class="lg">เข้าร่วมกิจกรรม</span></a>
   </nav>
 </header>
 
 <main id="top">
-<section class="hero">
-  <h1 class="t-eyebrow">Portfolio Camp for TCAS-1</h1>
-  <p class="t-hero"><span style="white-space:nowrap">3 วัน ทำเกม</span> <span style="white-space:nowrap">เข้ารอบพอร์ต</span></p>
-  <div class="hero-media"><video id="heroVid" src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกมเพลย์ COMMAND SELECT"></video></div>
-  
-  <div class="aap" id="aap"><div class="hero-pill"><span>4–6 ธ.ค. 2569</span><b>190 บาท</b><a class="pill-btn" id="aapBtn" href="https://www.hamsterhub.co/portcamp">สมัคร</a></div></div>
+<section class="hero" id="hero">
+  <p class="t-eye">Portfolio Camp for TCAS 1</p>
+  <h1 class="t-hero"><span><i>มีผลงานแล้ว</i> <i>ทำพอร์ตให้พร้อม</i></span><span><i>ยังไม่มี</i> <i>เริ่มสร้างได้เลย</i></span></h1>
+  <p class="sub">3 วัน ทำพอร์ต สร้างเกม และค้นหามหาวิทยาลัยที่อยากเข้า</p>
+  <p class="when">4–6 ธันวาคม 2569 ออนไลน์ผ่าน Discord</p>
+  <div class="acts"><a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><a class="more" href="#tracks">เลือก Track ของคุณ</a></div>
+  <div class="hero-media"><video id="heroVid" src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกม COMMAND SELECT ผลงานของน้องใน Hamster Hub"></video></div>
 </section>
 
-<section class="sec alt" id="highlights">
-  <div class="vw"><div class="sh"><h2 class="t-sec rv">ได้อะไร</h2></div></div>
-  <div class="gal" id="gal" aria-roledescription="carousel"></div>
-  <div class="ctrls"><button class="round" id="galPrev" aria-label="ก่อนหน้า">‹</button><div class="dots" id="dots" role="tablist" aria-label="ไฮไลท์"></div><button class="round" id="galNext" aria-label="ถัดไป">›</button><button class="round" id="playBtn" aria-label="หยุด">❚❚</button></div>
-  <div class="vw"><h3 class="t-sec" style="margin:144px 0 56px">ในค่ายเป็นยังไง</h3></div>
-  <div class="gal howgrid" id="incRail"></div>
-  <div class="ctrls"><button class="round hwb" data-d="-1" aria-label="ก่อนหน้า">‹</button><div class="dots" id="hdots" role="tablist" aria-label="เรียนยังไง"></div><button class="round hwb" data-d="1" aria-label="ถัดไป">›</button></div>
-  <div class="under"><a class="more" href="https://page.line.me/jkm4247u?openQrModal=true">ทัก LINE ถามทีม</a></div>
-</section>
-
-
-
-
-
-<section id="basic" class="alt" style="padding-top:0">
-  <div class="vw cl-head c" style="padding-top:0"><p class="t-eyebrow rv" style="color:var(--mute)">เส้นทางมือใหม่</p><h2 class="t-xxl rv">จากไอเดีย<br>สู่เกมที่เล่นได้</h2><p class="t-copy rv" style="margin:32px auto 0;max-width:816px">ไม่เคยทำเกมก็เริ่มได้ ทำทีละขั้นกับพี่ ๆ ในบ้าน จนได้<b>เกมที่เล่นได้จริง 1 เกม</b></p></div>
-  <div class="vw cl" data-cl="basic"><div class="cl-list"></div><div class="ph cl-stage"></div></div>
-</section>
-
-<section class="dark" id="top10">
-  <div class="vw" style="padding-top:144px">
-    <div class="c"><p class="t-eyebrow rv" style="color:var(--mute2)">เส้นทางล่า Top 10</p><h2 class="t-xxl rv">มีผลงานแล้ว<br>มาพิสูจน์ฝีมือ</h2>
-    <p class="t-copy rv" style="max-width:816px;margin:32px auto 0">ต่อยอดงานเดิม เรียนเนื้อหาระดับ <b>Advance</b> วัดฝีมือกับทีมอื่น แล้วลุ้นขึ้นเวที <b>Top 10</b></p></div>
-    <h3 class="t-sec rv" style="margin-top:120px">เรียนอะไรบ้าง<br><span style="color:var(--mute2)">Basic Shader Graph</span></h3>
-  </div>
-  <div class="vw cl" data-cl="adv" style="padding-top:56px;padding-bottom:96px"><div class="cl-list"></div><div class="ph cl-stage"></div></div>
-  <div class="vw" style="padding-bottom:144px">
-    
-  </div>
-</section>
-
-<section class="sec" id="grades">
+<section class="sec alt" id="benefits">
   <div class="vw">
-    <div class="sh" style="margin-bottom:16px"><div><h2 class="t-sec rv">ระบบเกรด</h2><p class="t-copy" style="margin-top:8px;max-width:720px">เกรดคือระดับฝีมือทำเกม ไม่ใช่เกรดที่โรงเรียน กดเลขเกรดเพื่อดูว่าเกมระดับนั้นหน้าตาเป็นยังไง</p></div></div>
-    <div class="gx">
-      <div class="gx-stage" id="gxStage"></div>
-      <div aria-live="polite"><div class="gx-num" id="gxNum">0</div><p class="gx-name" id="gxName"></p><div class="gx-look"><p>หน้าตาของเกมระดับนี้</p><ul id="gxLook"></ul></div><div class="gx-games" id="gxGames"></div><p class="gx-why" id="gxWhy"></p><p class="t-small" id="gxPath" style="margin-top:20px;font-weight:600"></p><div class="gx-nav"><button id="gxPrev" aria-label="เกรดก่อนหน้า">‹</button><button id="gxNext" aria-label="เกรดถัดไป">›</button></div></div>
+    <div class="head"><h2 class="t-sec">3 วัน ได้อะไรมากกว่าที่คิด</h2></div>
+    <div class="bento">
+      <article class="bx vid"><div class="tx"><h3 class="t-card">มีผลงานไว้ใส่พอร์ต</h3><p>สร้างเกมใหม่ หรือนำผลงานที่มีมาเล่าให้น่าสนใจขึ้น</p></div><div class="md"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Heart</span></article>
+      <article class="bx art" style="--bg:#fe6c6f"><div class="tx"><h3 class="t-card">เขียนพอร์ตให้เป็น</h3><p>เรียนรู้การจัดรูปเล่ม เขียน SOP และอธิบายผลงาน</p></div><div class="md"><img src="img/g-folder.jpg" alt="" loading="lazy"></div></article>
+      <article class="bx art" style="--bg:#197cf3"><div class="tx"><h3 class="t-card">รู้จักมหาวิทยาลัยมากขึ้น</h3><p>คุยกับรุ่นพี่ ฟังประสบการณ์ และถามเรื่องคณะที่สนใจ</p></div><div class="md"><img src="img/r-talk.jpg" alt="" loading="lazy"></div></article>
+      <article class="bx vid"><div class="tx"><h3 class="t-card">มีพื้นที่โชว์ผลงาน</h3><p>เปิดบูธของตัวเอง ดูผลงานเพื่อน และแลกเปลี่ยนความคิดเห็น</p></div><div class="md"><video src="vid/apocalypse.mp4" poster="img/apocalypse.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Apocalypis Building</span></article>
     </div>
-    <div class="g-track" id="gTrack" role="group" aria-label="เลือกดูเกรด 0 ถึง 100"></div>
-    <div class="g-legend"><span>0–20 เส้นทางมือใหม่</span><span>30–50 เส้นทางล่า Top 10</span><span>60–100 ระดับมืออาชีพ</span></div>
   </div>
 </section>
 
+<section class="sec" id="tracks">
+  <div class="vw">
+    <div class="head c"><h2 class="t-sec">สองเส้นทาง เลือกแบบที่ใช่สำหรับคุณ</h2><p class="t-copy">ไม่ว่าตอนนี้จะมีผลงานแล้ว หรือเพิ่งเริ่มต้น ก็เข้าร่วมได้ เลือกตามความพร้อม ไม่จำกัดระดับชั้น</p></div>
+    <div class="tracks">
+      <article class="tk" style="--tc:var(--pf)">
+        <div class="md"><img src="img/t-portfolio.jpg" alt="ตัวอย่างรูปเล่มพอร์ตที่จัดหน้าจากผลงานเกมจริงของน้องใน Hamster Hub" loading="lazy"></div>
+        <div class="bd">
+          <span class="nm">Portfolio Track</span>
+          <h3 class="t-card">มีผลงานแล้ว แต่ไม่รู้จะเขียนพอร์ตยังไง?</h3>
+          <p class="ds">นำผลงานที่มีมาเรียบเรียง ฝึกเล่าเรื่อง เขียน SOP และจัดรูปเล่มให้สื่อสารความสามารถของตัวเองได้ชัดเจน</p>
+          <h4>สิ่งที่จะได้ทำ</h4>
+          <ul><li><b>Storytelling</b> <span>เล่าผลงานให้คนอ่านเข้าใจ</span></li><li><b>SOP</b> <span>เขียนเหตุผลที่อยากเข้าคณะและมหาวิทยาลัย</span></li><li><b>Portfolio Design</b> <span>จัดรูปเล่มและเลือกเนื้อหา</span></li><li><b>Project Presentation</b> <span>ฝึกนำเสนอผลงานเด่น</span></li></ul>
+          <div class="out"><small>ผลงานที่ได้</small><b>Portfolio ฉบับพร้อมตรวจ และคลิปนำเสนอผลงาน 2 นาที</b></div>
+          <p class="fit">เหมาะกับคนที่มีผลงานอยู่แล้ว โดยเฉพาะผู้ที่กำลังเตรียมยื่นรอบ Portfolio</p>
+          <div class="act"><a class="btn" data-track="portfolio" href="#registration">เลือก Portfolio Track</a></div>
+        </div>
+      </article>
+      <article class="tk" style="--tc:var(--pj)">
+        <div class="md"><img src="img/g-learn.jpg" alt="" loading="lazy" style="object-position:60% center"></div>
+        <div class="bd">
+          <span class="nm">Project Track</span>
+          <h3 class="t-card">ยังไม่มีผลงาน? มาสร้างชิ้นแรกกัน</h3>
+          <p class="ds">เริ่มจากการออกแบบเกม เรียนรู้พื้นฐาน แล้วลงมือพัฒนาเกมของตัวเองภายในค่าย</p>
+          <h4>สิ่งที่จะได้ทำ</h4>
+          <ul><li><b>Game Design</b> <span>คิดไอเดียและออกแบบวิธีเล่น</span></li><li><b>Game Development</b> <span>เรียนรู้การสร้างเกม</span></li><li><b>Project Building</b> <span>ลงมือทำเกมของตัวเอง</span></li><li><b>Project Presentation</b> <span>ฝึกนำเสนอผลงาน</span></li></ul>
+          <div class="out"><small>ผลงานที่ได้</small><b>เกมที่พัฒนาด้วยตัวเอง และคลิปนำเสนอผลงาน 2 นาที</b></div>
+          <p class="fit">เหมาะกับคนที่ยังไม่มีผลงานหรืออยากเริ่มสร้างเกม</p>
+          <div class="act"><a class="btn" data-track="project" href="#registration">เลือก Project Track</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
+<section class="sec alt" id="universities">
+  <div class="vw uni">
+    <div>
+      <h2 class="t-sec">มหาวิทยาลัยที่อยากเข้า เป็นยังไงกันแน่?</h2>
+      <p class="t-copy" style="margin-top:16px">มาคุยกับรุ่นพี่มหาวิทยาลัย ฟังประสบการณ์จริง และถามเรื่องที่อยากรู้ก่อนตัดสินใจเลือกคณะ</p>
+      <ul class="ticks"><li>แต่ละคณะเรียนอะไรบ้าง</li><li>ชีวิตในมหาวิทยาลัยเป็นอย่างไร</li><li>รุ่นพี่เตรียมตัวเข้ามหาวิทยาลัยอย่างไร</li><li>ถ้าอยากเข้าเรียน ต้องเริ่มเตรียมอะไรบ้าง</li></ul>
+      <p class="note">พบรุ่นพี่วันที่ 4 ธันวาคม และกลับมาถามเพิ่มเติมวันที่ 6 ธันวาคม</p>
+      <p class="soon">ติดตามรายชื่อรุ่นพี่และมหาวิทยาลัยที่จะเข้าร่วมเร็ว ๆ นี้</p>
+    </div>
+    <div class="ph"><img src="img/g-know.jpg" alt="" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="sec dark" id="portfolio-pass">
+  <div class="vw pass">
+    <div class="ticket" role="img" aria-label="ตั๋ว Portfolio Pass">
+      <span class="k">HamsQuest</span>
+      <b>Portfolio<br>Pass</b>
+      <div class="row"><span>เปิดพอร์ตรุ่นพี่</span><span>5 ธ.ค. 19:00</span></div>
+    </div>
+    <div>
+      <h2 class="t-sec">เปิดพอร์ตรุ่นพี่ แต่ไม่ใช่ทุกคนที่จะได้เปิด</h2>
+      <p class="t-copy" style="margin-top:16px">ทำภารกิจในค่ายเพื่อรับ <b style="color:#f5f5f7">Portfolio Pass</b> ตั๋วพิเศษสำหรับเข้าชมพอร์ตรุ่นพี่ในคืนวันที่สอง</p>
+      <ol class="steps"><li><span>01</span>ทำภารกิจที่กำหนดใน HamsQuest</li><li><span>02</span>รับไอเทม Portfolio Pass</li><li><span>03</span>ยืนยันสิทธิ์ผ่าน Discord</li><li><span>04</span>เข้าชมพอร์ตรุ่นพี่และถามคำถาม</li></ol>
+      <p class="note">5 ธันวาคม 19:00–20:00 น.</p>
+      <p class="soon" style="color:#86868b">ทั้งสอง Track ปลดล็อกตั๋วได้โดยทำภารกิจของตัวเอง</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="village">
+  <div class="vw">
+    <div class="head"><h2 class="t-sec">ไม่ใช่แค่เข้าค่าย แต่ได้เข้าไปอยู่ในหมู่บ้านเดียวกัน</h2><p class="t-copy">สร้างตัวละคร เดินสำรวจหมู่บ้าน เล่นเกม ทำภารกิจ และพบเพื่อนที่กำลังสร้างผลงานเหมือนกัน</p></div>
+    <div class="zones">
+      <div class="zn" style="--zc:var(--pj)"><b>Project Zone</b><p>เดินดูเกมที่เพื่อนสร้างขึ้นในค่าย</p></div>
+      <div class="zn" style="--zc:var(--pf)"><b>Portfolio Zone</b><p>เปิดดูรูปเล่มพอร์ตและผลงานของเพื่อน</p></div>
+      <div class="zn" style="--zc:#e9f7ef"><b>University Zone</b><p>สำรวจข้อมูลคณะและมหาวิทยาลัย</p></div>
+      <div class="zn" style="--zc:#fde8ef"><b>Showcase Zone</b><p>ชม 10 ผลงานเด่นแห่งปีของ Hamster Hub</p></div>
+    </div>
+    <p class="quest"><b>HamsQuest</b> ทำภารกิจ รับไอเทม และปลดล็อกประสบการณ์พิเศษระหว่างค่าย</p>
+  </div>
+</section>
+
+<section class="sec alt" id="showcase">
+  <div class="vw show">
+    <div>
+      <h2 class="t-sec">ผลงานของคุณ มีพื้นที่ให้คนอื่นได้เห็น</h2>
+      <p class="t-copy" style="margin-top:16px">วันสุดท้าย เปิดบูธของตัวเองใน HamsVillage ให้เพื่อนเข้ามาชมเกม รูปเล่มพอร์ต และคลิปนำเสนอผลงาน</p>
+      <p class="t-copy" style="margin-top:12px">เดินชมบูธเพื่อน แลกเปลี่ยนความคิดเห็น และดูว่าแต่ละคนสร้างอะไรได้บ้างในเวลา 3 วัน</p>
+      <p class="note">6 ธันวาคม 16:00–17:30 น.</p>
+    </div>
+    <div class="md"><video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="none" aria-label="น้อง ๆ นำเสนอผลงานเกม"></video></div>
+  </div>
+  <div class="vw"><div class="head"><h3 class="t-card" style="font-size:32px">อีก 10 ผลงานที่ไม่ควรพลาด</h3><p class="t-copy" style="font-size:19px;margin-top:8px">ชมผลงานเด่นแห่งปีจาก Hamster Hub และค้นหาไอเดียสำหรับผลงานชิ้นต่อไปของตัวเอง</p></div></div>
+  <div class="gal" id="hof"></div>
+  <div class="ctrls" data-for="hof"><button class="round" data-d="-1" aria-label="ก่อนหน้า">‹</button><div class="dots" role="tablist" aria-label="ผลงานเด่น"></div><button class="round" data-d="1" aria-label="ถัดไป">›</button></div>
+</section>
 
 <section class="sec c" id="schedule">
   <div class="vn">
-    <h2 class="t-sec rv">กำหนดการ</h2>
-    <p class="t-copy" style="margin:12px 0 48px">ศุกร์เย็นถึงอาทิตย์ ไม่ชนวันเรียน</p>
+    <div class="head"><h2 class="t-sec">3 วัน เราจะทำอะไรกันบ้าง?</h2></div>
     <div class="days" role="tablist" id="days"></div>
-    <ol class="sched" id="sched"></ol>
+    <div id="dayPanel" role="tabpanel"></div>
+    <p class="sfoot">เวลาไทย (ICT) กำหนดการอาจปรับเปลี่ยนตามความเหมาะสม</p>
   </div>
 </section>
 
-
-
-<section class="sec alt" id="compare" style="padding-top:0">
-  <div class="vw"><div class="sh"><h2 class="t-sec rv">เทียบ 2 เส้นทาง</h2></div>
-    <div class="cmp-card"><div class="cmp" id="cmp"></div></div></div>
+<section class="sec alt" id="mentors">
+  <div class="vw">
+    <div class="head"><h2 class="t-sec">มีรุ่นพี่ช่วยดูงาน ไม่ต้องทำคนเดียว</h2><p class="t-copy">รับคำแนะนำระหว่างค่าย เพื่อให้รู้ว่าควรปรับอะไรและไปต่ออย่างไร</p></div>
+    <div class="rounds">
+      <div class="rd"><small>รอบที่ 1</small><b>ตรวจแนวทาง</b><p>ก่อนลงมือทำ</p></div>
+      <div class="rd"><small>รอบที่ 2</small><b>ตรวจความก้าวหน้า</b><p>และช่วยแก้ปัญหา</p></div>
+      <div class="rd"><small>รอบที่ 3</small><b>ตรวจความพร้อม</b><p>ก่อนส่งผลงาน</p></div>
+    </div>
+    <p class="soon" style="margin-top:24px">การให้คำแนะนำเป็นรอบแบบกลุ่ม ผ่านห้องกิจกรรมออนไลน์</p>
+  </div>
 </section>
 
-<section class="sec alt" id="faq" style="padding-top:0">
-  <div class="vw"><div class="sh"><h2 class="t-sec rv">เมื่อมีคำถาม เราก็มีคำตอบ</h2></div>
-  <div class="faq" id="faqList"></div></div>
+<section class="sec" id="registration">
+  <div class="vw">
+    <div class="head"><h2 class="t-sec">พร้อมเริ่มแล้วหรือยัง?</h2></div>
+    <div class="reg">
+      <div class="box" style="background:var(--alt)">
+        <dl class="kv">
+          <div><dt>วันจัดกิจกรรม</dt><dd>4–6 ธันวาคม 2569</dd></div>
+          <div><dt>รูปแบบ</dt><dd>ออนไลน์ผ่าน Discord และ HamsVillage</dd></div>
+          <div><dt>ผู้เข้าร่วม</dt><dd>นักเรียนระดับมัธยมศึกษา</dd></div>
+          <div><dt>รูปแบบการสมัคร</dt><dd>เลือก Track ตามความพร้อม</dd></div>
+          <div><dt>ค่าสมัคร</dt><dd>190 บาท</dd></div>
+        </dl>
+        <h3 style="margin-top:36px">สมัครอย่างไร?</h3>
+        <ol class="howto"><li>กดสมัครเข้าร่วมกิจกรรม</li><li>กรอกข้อมูลและแบบประเมินความพร้อม</li><li>เลือก Track ที่เหมาะกับตัวเอง</li><li>ทำตามขั้นตอนยืนยันการสมัครและรับข้อมูลเข้าค่ายจากทีมงาน</li></ol>
+        <p id="pickedTrack" class="soon" hidden></p>
+        <div style="margin-top:32px"><a class="btn" id="regBtn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a></div>
+      </div>
+      <div class="box" style="background:var(--alt)">
+        <h3>เตรียมอะไรบ้าง?</h3>
+        <ul class="ticks" style="margin-top:0"><li>คอมพิวเตอร์หรือโน้ตบุ๊ก และอินเทอร์เน็ต</li><li>บัญชี Discord และบัญชีที่ใช้เข้าร่วมระบบ Hamster Hub ตามคำแนะนำของทีม</li><li><b>Portfolio Track</b> เตรียมไฟล์ผลงาน รูปภาพ และข้อมูลที่อยากใส่พอร์ต หากมีคณะเป้าหมายให้เตรียมชื่อคณะไว้ด้วย</li><li><b>Project Track</b> ไม่ต้องมีผลงานมาก่อน เตรียมอุปกรณ์และติดตั้งโปรแกรมตามที่ทีมแจ้ง</li></ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="sec c" id="close">
+<section class="sec alt" id="faq">
   <div class="vn">
-    <p class="t-eyebrow" style="color:var(--mute)" id="cdLabel">ปิดรับสมัครใน</p>
-    <div class="cd" id="cd"></div>
-    <div style="display:flex;gap:24px;justify-content:center;align-items:center;flex-wrap:wrap"><a class="btn" id="cdBtn" href="https://www.hamsterhub.co/portcamp">สมัครค่าย 190 บาท</a><a class="more" href="https://page.line.me/jkm4247u?openQrModal=true">ทัก LINE ถามทีม</a></div>
+    <div class="head"><h2 class="t-sec">คำถามที่พบบ่อย</h2></div>
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+
+<section class="sec dark c final" id="final-cta">
+  <div class="vn">
+    <h2 class="t-sec">อนาคตของคุณ เริ่มจากผลงานชิ้นนี้</h2>
+    <p class="lines">มีผลงานแล้ว มาทำพอร์ตให้พร้อม<br>ยังไม่มีผลงาน มาเริ่มสร้างด้วยกัน</p>
+    <p class="dt">Portfolio Camp for TCAS 1<br>4–6 ธันวาคม 2569</p>
+    <a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a>
   </div>
 </section>
 </main>
@@ -402,176 +436,84 @@ a.more{display:inline-block;padding:10px 0}
 <footer class="gf">
   <div class="vn">
     <div class="notes">
-      <p>1. TCAS70 ปรับเกณฑ์รอบ Portfolio ให้เน้นศักยภาพจริง ที่มา: <a href="https://www.bangkokbiznews.com/news/news-update/1231277">กรุงเทพธุรกิจ</a></p>
-      <p>2. TGAT/TPAT ของ TCAS70 เลื่อนไปสอบเดือน ม.ค. 2570 ที่มา: <a href="https://www.bangkokbiznews.com/news/news-update/1231277">กรุงเทพธุรกิจ</a></p>
-      <p>3. รอบ Portfolio แต่ละมหาวิทยาลัยกำหนดวันรับสมัครเอง เช่น มทส. รอบ 1.2 เปิดรับ 16 พ.ย. 69 – 14 ม.ค. 70 ที่มา: <a href="https://today.line.me/th/v3/article/9m3j1gK">Eduzones</a> ให้เช็กวันของคณะที่จะยื่นอีกครั้ง</p>
-      <p>4. ภาพและคลิปเกมทั้งหมดมาจากผลงานจริงของน้อง ๆ คลิปส่วนเปิดหน้าตัดจากตัวอย่างเกม COMMAND SELECT ภาพเวทีมาจากการนำเสนอของทีม RE//SLASH</p>
-      <p>5. ผู้ที่มีผลงานเดิม ส่งผลงานหลังชำระเงินเพื่อประเมินเกรด</p>
-      <p>6. สถานที่จัดค่าย [รอทีมยืนยัน]</p>
+      <p>ภาพและคลิปเกมทั้งหมดมาจากผลงานจริงของน้อง ๆ ใน Hamster Hub คลิปส่วนเปิดหน้าตัดจากตัวอย่างเกม COMMAND SELECT ภาพเวทีมาจากการนำเสนอของทีม RE//SLASH ภาพประกอบตัวละครเป็นภาพวาดประกอบ</p>
+      <p>การรับเข้าศึกษาขึ้นอยู่กับเกณฑ์และการพิจารณาของแต่ละมหาวิทยาลัย</p>
     </div>
-    <div class="bc">Hamster Hub › Portfolio Camp</div>
-    <div class="dir">
-      <div><b>กิจกรรม</b><a href="https://www.hamsterhub.co/portcamp">Portfolio Camp</a><a href="https://www.hamsterhub.co/allforone">All for One</a><a href="https://www.hamsterhub.co/portex">Portex</a><a href="https://www.hamsterhub.co/activity">กิจกรรมทั้งหมด</a></div>
-      <div><b>ค่ายนี้</b><a href="#basic">เส้นทาง</a><a href="#grades">ระบบเกรด</a><a href="#schedule">กำหนดการ</a><a href="#faq">คำถามที่พบบ่อย</a></div>
-      <div><b>เกี่ยวกับ Hamster Hub</b><a href="https://www.hamsterhub.co/about">เกี่ยวกับเรา</a><a href="https://www.hamsterhub.co/">หน้าแรก</a></div>
-      <div><b>ติดต่อ</b><a href="https://page.line.me/jkm4247u?openQrModal=true">LINE</a><a href="https://www.instagram.com/hamsterhub.official/">Instagram</a><a href="https://www.facebook.com/HamsterHubThailand">Facebook</a></div>
-    </div>
-    <p class="legal">Hamster Hub ต้นแบบหน้าเว็บ (prototype) ยังไม่ใช่หน้าจริง</p>
+    <div class="lk"><span>Hamster Hub Portfolio Camp for TCAS 1</span><a href="https://www.hamsterhub.co/">เว็บไซต์ Hamster Hub</a><a href="https://page.line.me/jkm4247u?openQrModal=true">ติดต่อทีมงาน</a></div>
+    <p style="margin-top:12px">ต้นแบบหน้าเว็บ (prototype) ยังไม่ใช่หน้าจริง</p>
   </div>
 </footer>
 
-<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal-card"><button class="x" id="mx" aria-label="ปิด">✕</button><div id="mBody"></div></div></div>
-
 <script>
 {
-const $=s=>document.querySelector(s);
-const LINE='https://page.line.me/jkm4247u?openQrModal=true',REG='https://www.hamsterhub.co/portcamp';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const REG='https://www.hamsterhub.co/portcamp';
 
-/* date-aware copy: the page speaks to where the visitor is in time */
-const DEADLINE=new Date('2026-12-02T23:59:00+07:00'),START=new Date('2026-12-04T18:30:00+07:00'),END=new Date('2026-12-06T21:00:00+07:00');
-const phase=()=>{const n=new Date();return n<=DEADLINE?'open':n<START?'closed':n<=END?'live':'done';};
-const left=()=>{const ms=Math.max(0,DEADLINE-Date.now());return{ms,d:Math.floor(ms/864e5),h:Math.floor(ms/36e5)%24,m:Math.floor(ms/6e4)%60};};
-const COPY={
- open:()=>{const l=left();return `อีก ${l.d} วัน ${l.h} ชม. ปิดรับสมัคร หลายมหาวิทยาลัยยังเปิดรับรอบ Portfolio ถึงต้นปี 2570<sup>2</sup> เพิ่มเกมลงแฟ้มให้ทันก่อนยื่น <a class="more" href="${REG}">สมัครค่าย</a>`;},
- closed:()=>`ปิดรับสมัครแล้ว ค่ายเริ่มศุกร์ 4 ธ.ค. เวลา 18:30 น. <a class="more" href="#schedule">ดูกำหนดการ</a>`,
- live:()=>`ค่ายกำลังจัดอยู่ตอนนี้ วันอาทิตย์ 14:00 น. ประกาศ Top 10 <a class="more" href="#schedule">ดูกำหนดการ</a>`,
- done:()=>`ค่ายรอบนี้จบแล้ว อยากได้ข่าวค่ายรอบหน้า <a class="more" href="${LINE}">ทัก LINE ถามทีม</a>`};
-const tick=()=>{const p=phase();
- const l=left();$('#cd').innerHTML=p==='open'?[[l.d,'วัน'],[l.h,'ชั่วโมง'],[l.m,'นาที']].map(([n,t])=>`<div><b>${String(n).padStart(2,'0')}</b><span>${t}</span></div>`).join(''):`<div><b>${p==='done'?'จบแล้ว':'ปิดรับแล้ว'}</b></div>`;
- if(p!=='open'){$('#cdLabel').textContent=p==='done'?'ค่ายรอบนี้':'การรับสมัคร';[$('#lnBtn'),$('#cdBtn'),$('#aapBtn')].forEach(b=>{b.href=LINE;b.textContent='ทัก LINE';});}};
-tick();setInterval(tick,30000);
+/* nav indicator */
+{const bar=$('#tabbar'),ind=bar.querySelector('.ind'),links=[...bar.querySelectorAll('a[href^="#"]:not(.brand)')];
+const ids=links.map(a=>a.getAttribute('href').slice(1));
+const place=a=>{if(!a||!a.offsetParent){ind.style.width=0;return;}ind.style.left=a.offsetLeft+'px';ind.style.width=a.offsetWidth+'px';};
+const map={benefits:'benefits',tracks:'tracks',universities:'tracks','portfolio-pass':'tracks',village:'tracks',showcase:'tracks',schedule:'schedule',mentors:'schedule',registration:'schedule',faq:'faq'};
+let cur=null;const upd=()=>{let id=null;for(const s of $$('main>section')){if(s.getBoundingClientRect().top<160)id=map[s.id]||null;}
+ if(id!==cur){cur=id;links.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+id));place(links.find(a=>a.getAttribute('href')==='#'+id));}};
+addEventListener('scroll',upd,{passive:true});addEventListener('resize',()=>{cur=undefined;upd()});upd();}
 
-/* hero clip: lighter file on phones */
+/* hero video on small screens */
 {const v=$('#heroVid');if(matchMedia('(max-width:734px)').matches){v.src='vid/command-select-sm.mp4';v.play().catch(()=>{});}}
-/* tab bar: sliding indicator, current section, สมัคร appears after the hero pill leaves */
-{const tb=$('#tabbar'),ind=tb.querySelector('.ind'),links=[...tb.querySelectorAll('a:not(.ln-btn)')],lb=$('#lnBtn'),hero=document.querySelector('.hero');
- const place=()=>{const c=tb.querySelector('a.cur');if(!c||c.offsetParent===null){ind.style.width=0;return;}ind.style.left=c.offsetLeft+'px';ind.style.width=c.offsetWidth+'px';};
- const setCur=id=>{links.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+id));place();};
- const ids=['top','highlights','basic','grades','schedule','faq'];
- const onScroll=()=>{lb.classList.toggle('off',scrollY<hero.offsetHeight-innerHeight*0.25);let id='top';for(const k of ids.slice(1)){const el=document.getElementById(k);if(el&&el.getBoundingClientRect().top<innerHeight*0.45)id=k;}setCur(id);};
- addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',place);lb.addEventListener('transitionend',place);onScroll();
- document.fonts&&document.fonts.ready.then(place);}
 
-/* highlights gallery: horizontal cards, caption over media, timed dotnav */
-const HL=[
- ["ได้เกมของตัวเอง 1 เกม", "ทำเองตั้งแต่ต้นจนเล่นได้ เอาไปใส่แฟ้มพอร์ตยื่นมหาลัย", "<video src=\"vid/heart.mp4\" poster=\"img/heart.jpg\" muted loop playsinline preload=\"metadata\"></video>", "คลิปจริง: Heart"],
- ["ได้รู้วิธีทำแฟ้มพอร์ต", "แบบที่รุ่นพี่ DEK69 ใช้ยื่น จนติดรอบ Portfolio 48 คน ทั้ง สจล. มหิดล จุฬาฯ และเกษตรฯ", "<img class=\"ill\" data-bg=\"#fe6c6f\" src=\"img/g-folder.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้รู้ว่าตัวเองถนัดอะไร", "เขียนโค้ด วาดอาร์ต ออกแบบ หรือนำเสนอ รู้ก่อนเลือกคณะ", "<img class=\"ill\" data-bg=\"#227bef\" src=\"img/g-know.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้คอมเมนต์จากคนเล่นจริง", "รู้ว่าเกมควรแก้ตรงไหน ก่อนเอาไปใส่แฟ้มพอร์ต", "<img class=\"ill\" data-bg=\"#f14074\" src=\"img/g-players.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้เพื่อนสายทำเกม", "คนที่ชอบเรื่องเดียวกัน ไว้ปรึกษากันต่อหลังจบค่าย", "<img class=\"ill\" data-bg=\"#ed647e\" src=\"img/g-friends.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["ได้ไอเดียจากวิทยากร", "Guest Speaker มาเล่าเรื่อง Game Design และ Level Design", "<img class=\"ill\" data-bg=\"#237fed\" src=\"img/g-speaker.jpg\" alt=\"\" loading=\"lazy\">", ""]];
-const gal=$('#gal'),dots=$('#dots');
-gal.innerHTML=HL.map(([w,h,m,s],i)=>`<article class="card ${m.includes('data-bg')?'art':'vid'}" style="--bg:${(m.match(/data-bg="([^"]+)"/)||[])[1]||'#000'}" aria-label="${i+1} จาก ${HL.length}">${m}<div class="cap"><p class="t-card"><b>${w}</b> ${h}</p></div>${s?`<span class="src">${s}</span>`:''}</article>`).join('');
-dots.innerHTML=HL.map((_,i)=>`<button role="tab" aria-label="ไฮไลท์ ${i+1}" data-i="${i}"></button>`).join('');
-const cards=[...gal.children];let cur=0,t0=performance.now(),playing=!reduce,galSeen=false;const DUR=6000;
-const mark=i=>{cur=i;t0=performance.now();dots.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-selected',j===i);b.style.setProperty('--p',0);});};
-const go=i=>{gal.scrollTo({left:cards[i].offsetLeft-cards[0].offsetLeft,behavior:reduce?'auto':'smooth'});mark(i);};
-let st;gal.addEventListener('scroll',()=>{clearTimeout(st);st=setTimeout(()=>{const i=Math.round((gal.scrollLeft)/(cards[0].offsetWidth+20));if(i!==cur&&cards[i])mark(i);},120);});
-dots.addEventListener('click',e=>{const b=e.target.closest('button');if(b)go(+b.dataset.i);});
-$('#playBtn').addEventListener('click',e=>{playing=!playing;e.currentTarget.textContent=playing?'❚❚':'▶';e.currentTarget.setAttribute('aria-label',playing?'หยุด':'เล่น');const d=dots.querySelector('.on');const p=parseFloat(d.style.getPropertyValue('--p'))||0;t0=performance.now()-p*DUR;const v=cards[cur].querySelector('video');if(v){playing?v.play().catch(()=>{}):v.pause();}});
-if(reduce){$('#playBtn').textContent='▶';}
-new IntersectionObserver(es=>{galSeen=es[0].isIntersecting;},{threshold:.4}).observe(gal);
-const loop=now=>{if(playing&&galSeen){const p=Math.min(1,(now-t0)/DUR);const d=dots.querySelector('.on');if(d)d.style.setProperty('--p',p);if(p>=1)go((cur+1)%HL.length);}else{t0=now-(parseFloat((dots.querySelector('.on')||{style:{getPropertyValue:()=>0}}).style.getPropertyValue('--p'))||0)*DUR;}requestAnimationFrame(loop);};
-mark(0);requestAnimationFrame(loop);
-$('#galPrev').addEventListener('click',()=>go((cur-1+HL.length)%HL.length));
-$('#galNext').addEventListener('click',()=>go((cur+1)%HL.length));
-cards.forEach((c,j)=>c.addEventListener('click',()=>{if(j!==cur)go(j);}));
-gal.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(Math.min(cur+1,HL.length-1));if(e.key==='ArrowLeft')go(Math.max(cur-1,0));});gal.tabIndex=0;
+/* hall of fame rail (data from hamsterhub showcase) */
+const HOF=[['stressstrike','StressStrike','@วิน','ชนะเลิศ OBEC Roboplayground'],['beyond-the-board','Beyond the Board','@กัปตัน'],['eugation-strike','Eugation Strike','@ไผ่'],['slash-speed','SLASH//SPEED','@ดินสอ'],['micro-immersive-sim','Micro Immersive Sim','@เพชร'],['phi-krahang','ผีกระหัง','@นนท์'],['midnight-at-roadside','Midnight at Roadside','@Windy'],['hot-hot-hot','Hot Hot Hot','@โอม'],['apocalypis-building','Apocalypis Building','@ฟาร์'],['escape-rolling','Escape Rolling','@เป๊ป']];
+$('#hof').innerHTML=HOF.map(([f,t,by,aw])=>`<article class="wk"><img src="img/hof/work-${f}.jpg" alt="ภาพเกม ${t}" loading="lazy"><div><b>${t}</b><span>${by}${aw?' '+aw:''}</span></div></article>`).join('');
 
-/* closer look */
-const STEPS={basic:[["Game Design","ออกแบบเกมให้สนุกภายใน 3 วัน"],["Graybox","ทำโครงสร้างแมพในเกม"],["Core System","ทำระบบหลักในเกม"],["Prototype","เชื่อมแมพและระบบเกมให้เข้ากัน"]],
- adv:[["Intro to Shader Graph","รู้จักหน้าตาและวิธีใช้ Shader Graph"],["Fresnel Glow","ใช้ Operation และ Node ทำขอบวัตถุให้เรืองแสง"],["Dissolve","ใช้ Node ร่วมกับเวลา ทำให้วัตถุค่อย ๆ สลาย"],["Vertex Shader","รู้จัก UV และ World Position ก่อนต่อยอดสู่ Advance"]]};
-document.querySelectorAll('[data-cl]').forEach(box=>{const L=STEPS[box.dataset.cl],list=box.querySelector('.cl-list'),stg=box.querySelector('.cl-stage');
- list.innerHTML=L.map(([t,d],i)=>`<button class="cl-item" data-i="${i}" aria-expanded="false"><i aria-hidden="true">+</i><span><b>${t}</b><small>${d}</small></span></button>`).join('');
- const show=i=>{list.querySelectorAll('.cl-item').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-expanded',j===i);});stg.textContent='ภาพหน้าจอขั้น '+L[i][0]+' (ทีมกำลังเตรียม)';};
- list.addEventListener('click',e=>{const b=e.target.closest('.cl-item');if(b)show(+b.dataset.i);});show(0);});
-
-/* grade explorer: what a game at each level looks like */
-const G=[
- [0,"ยังไม่มีพื้นฐาน",null,"",["ยังไม่เคยทำเกม หรือยังไม่มีเกมที่เล่นได้","มีแค่ไอเดียในหัว"],"เริ่มที่เส้นทางมือใหม่"],
- [10,"เริ่มทำเกมเล็ก ๆ","hydrosaur","Hydrosaur เกรด 10",["ตัวละครขยับได้ มีฉากให้เดิน","ยังไม่มีเป้าหมายและวิธีเล่นที่ชัดเจน"],"เส้นทางมือใหม่"],
- [20,"มีเกมที่เล่นได้ระดับ Game Jam","noas","Noas เกรด 20",["เล่นได้ตั้งแต่ต้นจนจบ","แนวเกม ปริศนา และความน่ากลัวยังไม่ชัด"],"เส้นทางมือใหม่"],
- [30,"เกมดูดีและมีความคิดสร้างสรรค์","pitch","PITCH เกรด 30",["มีสไตล์ภาพของตัวเอง คอนเซปต์น่าสนใจ","เกมเพลย์ยังดึงความกลัวออกมาไม่เต็มที่"],"เส้นทางล่า Top 10"],
- [40,"เกมออกแบบได้ดี","apocalypse","Apocalypse Building เกรด 40",["ไอเดียชัด รู้ทันทีว่าต้องทำอะไร","สองระบบหลักยังไม่เชื่อมกัน"],"เส้นทางล่า Top 10"],
- [50,"เกมที่กำลังจะเปิดตัว","stage-pitch","RE//SLASH เกรด 50 (ภาพตอนนำเสนอ)",["พร้อมปล่อยเดโม","ยังต้องเพิ่มเนื้อหาและความก้าวหน้าก่อนเปิดเต็ม"],"เส้นทางล่า Top 10"],
- [60,"เปิด Demo ให้คนทั่วไปลองเล่น","command-select","ตัวอย่างลักษณะ: COMMAND SELECT (DEMO) เปิดให้โหลดบน itch.io",["มีหน้าให้คนทั่วไปโหลดไปลองเล่น เช่น itch.io","มีคนนอกทีมได้เล่นจริงและให้ความเห็น"],"ระดับมืออาชีพ"],
- [70,"เกมสร้างรายได้แล้ว",null,"",["มีคนจ่ายเงินซื้อเกมหรือของในเกม","วางขายบนร้านค้า เช่น Steam หรือมือถือ"],"ระดับมืออาชีพ"],
- [80,"เกมมีเอกลักษณ์และพัฒนาเป็นสตาร์ทอัพแล้ว",null,"",["เห็นภาพเดียวก็จำได้ว่าเป็นเกมนี้","มีทีมหรือบริษัทพัฒนาต่อเป็นธุรกิจ"],"ระดับมืออาชีพ"],
- [90,"เกมระดับประเทศ",null,"",["คนทั่วประเทศรู้จักและเล่น"],"ระดับมืออาชีพ"],
- [100,"เกมระดับโลก",null,"",["คนทั่วโลกรู้จักและเล่น"],"ระดับมืออาชีพ"]];
-const gt=$('#gTrack');gt.innerHTML=G.map(([n],i)=>`<button data-i="${i}">${n}</button>`).join('');
-const GAMES={10:[["hydrosaur","Hydrosaur","ยังไม่มีเป้าหมายและวิธีเล่นที่ชัดเจน"]],20:[["noas","Noas","เล่นได้แล้ว แต่แนวเกม ปริศนา และความน่ากลัวยังไม่ชัด"]],30:[["pitch","PITCH","คอนเซปต์สยองขวัญน่าสนใจ แต่เกมเพลย์ยังดึงความกลัวออกมาไม่เต็มที่"]],40:[["apocalypse","Apocalypse Building","ไอเดียสร้างตึกป้องกันซอมบี้ชัด แต่สองระบบยังไม่เชื่อมกัน"],["heart","Heart of Remember","เกมการ์ดเล่นได้ แต่กลยุทธ์และทางพลิกเกมยังไม่ลึกพอ"]],50:[["stage-pitch","RE//SLASH","พร้อมปล่อยเดโม แต่ยังต้องเพิ่มเนื้อหาก่อนเปิดเต็ม (ภาพตอนนำเสนอ)"]]};
-let gi=1;
-const showGame=(n,k)=>{const list=GAMES[n];const [id,name,why]=list[k];$('#gxStage').innerHTML=`<video src="vid/${id}.mp4" poster="img/${id}.jpg" muted loop playsinline autoplay></video><span class="src">ผลงานจริง: ${name}</span>`;$('#gxWhy').textContent=list.length>1?`${name}: ${why}`:'';$('#gxGames').innerHTML=list.length>1?list.map(([,nm],j)=>`<button aria-pressed="${j===k}" data-k="${j}">${nm}</button>`).join(''):'';};
-const setG=i=>{gi=i;const [n,name,media,src,look,path]=G[i];$('#gxNum').textContent=n;$('#gxName').textContent=name;$('#gxLook').innerHTML=look.map(x=>`<li>${x}</li>`).join('');$('#gxPath').textContent=path;
- if(GAMES[n])showGame(n,0);else{$('#gxGames').innerHTML='';$('#gxWhy').textContent='';$('#gxStage').innerHTML=media?`<video src="vid/${media}.mp4" poster="img/${media}.jpg" muted loop playsinline autoplay></video><span class="src">${src}</span>`:`<div class="ph">${n===0?'ยังไม่มีเกม: เริ่มจากกระดาษเปล่า':'รอทีมใส่ตัวอย่างเกมระดับ '+n}</div>`;}
- gt.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('in',j<=i);b.setAttribute('aria-pressed',j===i);});$('#gxPrev').disabled=i===0;$('#gxNext').disabled=i===G.length-1;};
-gt.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setG(+b.dataset.i);});
-$('#gxPrev').addEventListener('click',()=>setG(Math.max(0,gi-1)));$('#gxNext').addEventListener('click',()=>setG(Math.min(G.length-1,gi+1)));
-$('#gxGames').addEventListener('click',e=>{const b=e.target.closest('button');if(b)showGame(G[gi][0],+b.dataset.k);});
-$('#gxStage').addEventListener('click',()=>{const v=$('#gxStage video');if(v)v.paused?v.play().catch(()=>{}):v.pause();});
-setG(1);
-
-
+/* generic rail dots + arrows */
+$$('.ctrls[data-for]').forEach(c=>{const r=document.getElementById(c.dataset.for),it=[...r.children],d=c.querySelector('.dots');
+ d.innerHTML=it.map((_,i)=>`<button role="tab" aria-label="${i+1} จาก ${it.length}"></button>`).join('');const bs=[...d.children];
+ const idx=()=>Math.round(r.scrollLeft/(it[0].offsetWidth+20));
+ const mark=i=>{bs.forEach((b,k)=>{b.classList.toggle('on',k===i);b.setAttribute('aria-selected',k===i)});c.querySelector('[data-d="-1"]').disabled=i===0;c.querySelector('[data-d="1"]').disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4;};
+ const go=i=>{i=Math.max(0,Math.min(it.length-1,i));r.scrollTo({left:it[i].offsetLeft-it[0].offsetLeft,behavior:reduce?'auto':'smooth'});};
+ bs.forEach((b,i)=>b.addEventListener('click',()=>go(i)));c.querySelectorAll('.round').forEach(b=>b.addEventListener('click',()=>go(idx()+ +b.dataset.d)));
+ let t;r.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>mark(idx()),80)},{passive:true});mark(0);});
 
 /* schedule */
-const DAYS=[["ศุกร์ 4","Intro",[["18:30–19:00","เช็กอิน"],["19:00–19:30","เปิดค่ายและเลือกบ้าน"],["19:30–21:00","กิจกรรมประจำบ้านและ Hamsquest"],["21:30–22:00","เล่นมินิเกมสุดมันส์"]]],
- ["เสาร์ 5","Development",[["13:00–14:00","เรียนตามบ้าน"],["14:00–14:30","เล่นมินิเกมสุดมันส์"],["14:30–18:00","ทำเควส"],["18:00–18:30","เล่นมินิเกมสุดมันส์"],["19:00–20:00","Guest Speaker : Game Design & Level Design","ทุกเกรด"],["20:00–21:00","ทำเควสและกิจกรรมประจำบ้าน"],["21:30–22:00","เล่นมินิเกมสุดมันส์"]]],
- ["อาทิตย์ 6","Meeting",[["10:00–12:00","ส่งผลงาน"],["13:00–13:30","เปิดบูธ"],["14:00–14:30","ประกาศ Top 10"],["15:00–16:00","Guest Speaker : เบื้องหลังการทำเกมระดับโลก","เกรด 30–50"],["16:00–19:00","เปิดบูธต่อ"],["18:00–18:30","เล่นมินิเกมสุดมันส์"],["19:00–20:00","Top 10 นำเสนอผลงาน"],["20:00–21:00","ปิดกิจกรรม"]]]];
-$('#days').innerHTML=DAYS.map(([d],i)=>`<button role="tab" data-i="${i}">${d} ธ.ค.</button>`).join('');
-const setDay=i=>{$('#days').querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-selected',j===i));const ev=DAYS[i][2];
- $('#sched').innerHTML=`<li><time>${DAYS[i][1]}</time><span style="color:var(--mute)">${ev[0][0].split('–')[0]}–${ev[ev.length-1][0].split('–')[1]} น.</span></li>`+ev.map(([t,x,n])=>`<li><time>${t}</time><span>${x}${n?`<em>${n}</em>`:''}</span></li>`).join('');};
-$('#days').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setDay(+b.dataset.i);});
-const today=new Date();setDay(today>=new Date('2026-12-06T00:00:00+07:00')?2:today>=new Date('2026-12-05T00:00:00+07:00')?1:0);
-
-/* parents: incentive cards + modal */
-const INC=[
- ["", "ทำเกมด้วย Unity หรือ Roblox", "โปรแกรมที่คนทำเกมจริงใช้ ไม่เคยเขียนโค้ดก็เริ่มได้", "<img class=\"ill\" data-bg=\"#545be7\" src=\"img/g-learn.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["", "แยกกลุ่มเรียนตามฝีมือ", "ประเมินผลงานตัวเองเป็นเกรดก่อน แล้วได้เรียนกับเพื่อนที่ฝีมือใกล้กัน", "<div class=\"gt\" data-bg=\"#ffffff\"><p><b>มือใหม่</b><span>เกรด 0–20</span><i>เริ่มจากพื้นฐาน</i></p><p><b>มีผลงานแล้ว</b><span>เกรด 30–50</span><i>ต่อยอด ลุ้น Top 10</i></p></div>", ""],
- ["", "รุ่นพี่มหาลัยท็อปเป็นคนสอน", "สอนทั้งทำเกม และทำแฟ้มพอร์ต", "<img class=\"ill\" data-bg=\"#197cf3\" src=\"img/r-talk.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["", "ทำเกมเป็นทีมกับเพื่อน", "ช่วยกันจนเกมเสร็จในค่าย", "<img class=\"ill\" data-bg=\"#fd777a\" src=\"img/r-team.jpg\" alt=\"\" loading=\"lazy\">", ""],
- ["", "วันสุดท้าย เปิดบูธออนไลน์", "โชว์เกมของตัวเองให้คนอื่นลองเล่น", "<video src=\"vid/apocalypse.mp4\" poster=\"img/apocalypse.jpg\" muted loop playsinline preload=\"metadata\"></video>", ""],
- ["", "Top 10 ได้ขึ้นนำเสนอ", "ต่อหน้านักลงทุน หรืออาจารย์มหาวิทยาลัย", "<video src=\"vid/stage-pitch.mp4\" poster=\"img/stage-pitch.jpg\" muted loop playsinline preload=\"metadata\"></video>", ""]];
-$('#incRail').innerHTML=INC.map(([k,h,d,m,_],i)=>`<article class="inc${m.includes('data-bg')?' art':m.includes('<video')?' vid':''}" style="--bg:${(m.match(/data-bg="([^"]+)"/)||[])[1]||'#fff'}" data-i="${i}"><div class="b"><p class="k">${k}</p><h3 class="t-card">${h}</h3>${d?`<p class="d">${d}</p>`:''}</div><div class="m">${m}</div></article>`).join('');
-
-(()=>{const r=$('#incRail'),d=$('#hdots'),it=[...r.children];d.innerHTML=it.map((_,i)=>`<button role="tab" aria-label="${i+1} จาก ${it.length}"></button>`).join('');const bs=[...d.children];
-const mark=i=>bs.forEach((b,k)=>{b.classList.toggle('on',k===i);b.setAttribute('aria-selected',k===i)});mark(0);
-const go=i=>{i=Math.max(0,Math.min(it.length-1,i));r.scrollTo({left:it[i].offsetLeft-it[0].offsetLeft,behavior:reduce?'auto':'smooth'});mark(i)};
-bs.forEach((b,i)=>b.addEventListener('click',()=>go(i)));
-let t;r.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>mark(Math.round(r.scrollLeft/(it[0].offsetWidth+20))),100)});
-document.querySelectorAll('.hwb').forEach(b=>b.addEventListener('click',()=>{const c=bs.findIndex(x=>x.classList.contains('on'));go(c+ +b.dataset.d)}));})();
-const modal=$('#modal');
-$('#incRail').addEventListener('click',e=>{return;const b=e.target.closest('.inc');if(!b)return;const [k,h,,,d]=INC[+b.dataset.i];$('#mBody').innerHTML=`<p class="t-eyebrow">${k}</p><h2>${h}</h2><p class="t-copy">${d}</p><p style="margin-top:32px"><a class="more" href="${LINE}">ทัก LINE ถามทีม</a></p>`;modal.classList.add('on');$('#mx').focus();});
-const closeM=()=>modal.classList.remove('on');$('#mx').addEventListener('click',closeM);modal.addEventListener('click',e=>{if(e.target===modal)closeM();});addEventListener('keydown',e=>{if(e.key==='Escape')closeM();});
-
-/* compare */
-const CMP=[["มือใหม่","ยังไม่มีผลงาน","hydrosaur",["ยังไม่มีผลงาน","เกรด 0–20","Game Design ถึง Prototype","เกมที่เล่นได้ 1 เกม","ส่งผลงานและเปิดบูธ","190 บาท"]],["ล่า Top 10","มีผลงานแล้ว","apocalypse",["มีผลงานแล้ว","เกรด 30–50","Basic Shader Graph","ผลงานต่อยอด + ลุ้น Top 10","Top 10 นำเสนอบนเวที","190 บาท"]]];
-const LAB=["เหมาะกับ","เกรด","เรียน","ได้","วันสุดท้าย","ราคา"];
-$('#cmp').innerHTML=CMP.map(([n,tag,img,r])=>`<div><video src="vid/${img}.mp4" poster="img/${img}.jpg" muted loop playsinline autoplay aria-label="คลิปเกม"></video><p class="tag">${tag}</p><h3 class="t-card">${n}</h3><div class="act" style="margin-top:20px"><a class="btn" href="${REG}">สมัคร</a></div><dl>${r.map((v,i)=>`<dt>${LAB[i]}</dt><dd>${v}</dd>`).join('')}</dl></div>`).join('');
+const DAYS=[
+ {tab:'4 ธ.ค.',title:'ค้นหาเส้นทางของตัวเอง',rows:[['19:00–19:30','เปิดค่ายและทำความรู้จักเพื่อน'],['19:30–20:30','พบรุ่นพี่มหาวิทยาลัย'],['20:30–21:00','สำรวจ HamsVillage และรับภารกิจ']]},
+ {tab:'5 ธ.ค.',title:'ลงมือสร้างและปลดล็อกตั๋ว',rows:[['13:00–14:30',['Storytelling และ SOP','Game Design']],['14:30–15:30',['ทำ Portfolio','พัฒนาเกม']],['15:30–16:00','Mentor รอบที่ 1 ตรวจแนวทาง'],['16:00–17:00','ลงมือทำผลงานและทำภารกิจ'],['17:00–19:00','พัก ทำงานต่อ และตรวจสิทธิ์ Portfolio Pass'],['19:00–20:00','เปิดพอร์ตรุ่นพี่ สำหรับผู้ได้รับ Portfolio Pass',1],['20:00–20:30','Mentor รอบที่ 2 ตรวจความก้าวหน้า'],['20:30–21:00','ทำผลงานต่อ']]},
+ {tab:'6 ธ.ค.',title:'โชว์ผลงานของตัวเอง',rows:[['13:00–13:30','Mentor รอบที่ 3 ตรวจความพร้อม'],['13:30–15:00','ทำผลงานให้เสร็จ'],['15:00','ส่งผลงานและคลิปนำเสนอ 2 นาที'],['15:00–16:00','เตรียมบูธ'],['16:00–17:30','HamsVillage Showcase',1],['19:00–20:00','พบรุ่นพี่มหาวิทยาลัยและถามตอบ'],['20:00–21:00','สรุปและปิดค่าย']]}];
+const days=$('#days'),panel=$('#dayPanel');
+days.innerHTML=DAYS.map((d,i)=>`<button role="tab" id="dt${i}" aria-controls="dayPanel" aria-selected="${i===0}">${d.tab}</button>`).join('');
+const show=i=>{const d=DAYS[i];days.querySelectorAll('button').forEach((b,k)=>b.setAttribute('aria-selected',k===i));panel.setAttribute('aria-labelledby','dt'+i);
+ panel.innerHTML=`<p class="dtitle">${d.title}</p><div class="sched">`+d.rows.map(([t,a,hl])=>`<div class="r${hl?' hl':''}"><time>${t}</time>${Array.isArray(a)?`<div class="split"><span style="background:var(--pf)"><small>Portfolio Track</small>${a[0]}</span><span style="background:var(--pj)"><small>Project Track</small>${a[1]}</span></div>`:`<span>${a}</span>`}</div>`).join('')+'</div>';};
+days.addEventListener('click',e=>{const b=e.target.closest('button');if(b)show([...days.children].indexOf(b));});
+days.addEventListener('keydown',e=>{const bs=[...days.children],i=bs.findIndex(b=>b.getAttribute('aria-selected')==='true');let n=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:null;if(n===null)return;n=(n+bs.length)%bs.length;show(n);bs[n].focus();});
+show(0);
 
 /* faq */
-const FAQ=[["ยังทันยื่นรอบ Portfolio ไหม?","รอบ Portfolio ของ TCAS70 แต่ละมหาวิทยาลัยกำหนดวันรับสมัครเอง บางแห่งยังเปิดรับถึงต้นปี 2570 เช่น มทส. รอบ 1.2 เปิดรับ 16 พ.ย. 69 ถึง 14 ม.ค. 70 ให้เช็กวันของคณะที่น้องจะยื่นอีกครั้ง ปีนี้รอบ Portfolio เน้นศักยภาพจริง¹ เกมที่ทำเองจึงเป็นจุดแข็ง"],["กระทบการเรียนหรือการสอบไหม?","ค่ายจัดศุกร์เย็นถึงอาทิตย์ ไม่ชนวันเรียน และจบก่อนสอบ TGAT/TPAT ของ TCAS70 ซึ่งเลื่อนไปจัดเดือนมกราคม 2570²"],["สมัครและจ่ายเงินยังไง?","กดปุ่มสมัคร เข้าสู่ระบบ กรอกข้อมูล แล้วชำระเงิน 190 บาท ปิดรับสมัคร 2 ธ.ค. 2569 เวลา 23:59 น."],["จัดที่ไหน ใครดูแลลูก?","[รอทีมยืนยัน] ระหว่างนี้ทัก LINE ถามทีมได้"],["ไม่มีผลงาน เริ่มยังไง?","เริ่มที่เกรด 0 ได้เลย แล้วลงมือทำเกมในค่าย"],["มีเกมอยู่แล้ว เริ่มที่เกรดไหน?","ส่งผลงานหลังชำระเงิน เพื่อประเมินเกรดจากคุณภาพงาน"],["เกรดต่างจากเกรดที่โรงเรียนยังไง?","เกรดในค่ายคือระดับฝีมือทำเกม 0 ถึง 100 ไม่เกี่ยวกับผลการเรียน ดูตัวอย่างแต่ละระดับได้ในส่วนระบบเกรด"],["วันสุดท้ายมีอะไร?","ส่งผลงาน เปิดบูธ ประกาศ Top 10 และ Top 10 ขึ้นนำเสนอตามกำหนดการ"]];
-$('#faqList').innerHTML=FAQ.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('');
-false&&$('#xall').addEventListener('click',e=>{const d=[...document.querySelectorAll('#faqList details')];const o=!d.every(x=>x.open);d.forEach(x=>x.open=o);e.currentTarget.textContent=o?'ย่อทั้งหมด ⌃':'ขยายทั้งหมด ⌄';});
+const FAQ=[['ไม่มีพื้นฐานเขียนโปรแกรมเลย สมัครได้ไหม?','ได้ Project Track ออกแบบมาสำหรับผู้เริ่มต้น โดยมีเนื้อหาพื้นฐานและแนวทางลงมือทำเกม'],
+['อยู่ ม.5 แต่มีผลงานแล้ว เลือก Portfolio Track ได้ไหม?','ได้ เราแบ่ง Track ตามความพร้อมของผลงาน ไม่ใช่ระดับชั้น'],
+['ยังไม่มีมหาวิทยาลัยหรือคณะในใจ สมัครได้ไหม?','ได้ กิจกรรมพบรุ่นพี่จะช่วยให้รู้จักเส้นทางการเรียนมากขึ้น'],
+['ต้องมีพอร์ตอยู่แล้วไหม?','ไม่จำเป็น Portfolio Track เหมาะกับคนที่มีผลงานแล้วแม้ยังไม่มีรูปเล่ม ส่วนคนที่ยังไม่มีผลงานเลือก Project Track ได้'],
+['ต้องเดินทางไปที่ไหนไหม?','ไม่ต้อง กิจกรรมจัดออนไลน์ผ่าน Discord และ HamsVillage'],
+['Portfolio Pass คืออะไร?','ไอเทมที่ได้รับจากการทำภารกิจช่วงวันที่สอง ใช้ปลดล็อกสิทธิ์เข้าชมพอร์ตรุ่นพี่ในช่วงกลางคืน'],
+['ต้องส่งอะไรในวันสุดท้าย?','Portfolio Track ส่งรูปเล่ม Portfolio และคลิปนำเสนอผลงาน 2 นาที ส่วน Project Track ส่งเกมและคลิปนำเสนอ 2 นาที'],
+['เข้าค่ายแล้วจะสอบติดมหาวิทยาลัยแน่นอนไหม?','ค่ายช่วยให้เตรียมผลงานและพอร์ตได้ดีขึ้น แต่การรับเข้าขึ้นอยู่กับเกณฑ์และการพิจารณาของแต่ละมหาวิทยาลัย']];
+$('#faqList').innerHTML=FAQ.map(([q,a],i)=>`<div class="fq"><h3><button aria-expanded="false" aria-controls="fa${i}" id="fq${i}">${q}<i aria-hidden="true">+</i></button></h3><div class="a" id="fa${i}" role="region" aria-labelledby="fq${i}" hidden>${a}</div></div>`).join('');
+$('#faqList').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!o);document.getElementById(b.getAttribute('aria-controls')).hidden=o;});
 
-/* rail paddles with disabled ends */
-document.querySelectorAll('.pad2').forEach(p=>{const r=document.getElementById(p.dataset.rail),[pv,nx]=p.querySelectorAll('button');
- const upd=()=>{pv.disabled=r.scrollLeft<=4;nx.disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4;};
- p.addEventListener('click',e=>{const b=e.target.closest('button');if(b)r.scrollBy({left:+b.dataset.d*r.clientWidth*.75,behavior:'smooth'});});
- r.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();});
-/* clips load and play only while on screen (saves mobile data) */
-{const lazy=[...document.querySelectorAll('video[autoplay], #gal video, #incRail video')].filter(v=>v.id!=='heroVid'&&!v.closest('#gxStage'));
- lazy.forEach(v=>{v.removeAttribute('autoplay');v.preload='none';v.setAttribute('aria-hidden','true');});
- const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting&&!reduce)v.play().catch(()=>{});else v.pause();}),{threshold:.35});
- lazy.forEach(v=>vio.observe(v));}
-/* measurement: pushes click events to Google Tag Manager / GA4 if the team installs it */
-{window.dataLayer=window.dataLayer||[];const kind=a=>/portcamp/.test(a.href)?'register_click':/line\.me/.test(a.href)?'line_click':/itch\.io|youtube/.test(a.href)?'outbound_game':null;
- document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const k=kind(a);if(!k)return;const where=(a.closest('section,header,footer')||{}).id||a.closest('header')&&'tabbar'||'page';window.dataLayer.push({event:k,cta_text:a.textContent.trim(),cta_section:where});if(window.gtag)gtag('event',k,{cta_text:a.textContent.trim(),cta_section:where});});
- document.querySelectorAll('a[href*="hamsterhub.co/portcamp"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('utm_source','portcamp-dec-page');u.searchParams.set('utm_medium','web');u.searchParams.set('utm_campaign','portcamp-2569-12');a.href=u.toString();});}
-/* reveal */
-const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),{threshold:.2});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* track pick: remember choice, pass it to the sign-up link */
+$$('[data-track]').forEach(a=>a.addEventListener('click',()=>{const t=a.dataset.track,n=t==='portfolio'?'Portfolio Track':'Project Track';
+ const p=$('#pickedTrack');p.hidden=false;p.textContent='เลือกไว้: '+n;$('#regBtn').href=REG+'?track='+t;
+ (window.dataLayer=window.dataLayer||[]).push({event:'select_track',track:t});}));
+
+/* videos play only while on screen */
+{const vs=$$('video').filter(v=>v.id!=='heroVid');
+ const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting&&!reduce)v.play().catch(()=>{});else v.pause();}),{threshold:.35});
+ vs.forEach(v=>io.observe(v));}
+
+/* measurement */
+{window.dataLayer=window.dataLayer||[];document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;
+ if(/portcamp/.test(a.href))dataLayer.push({event:'register_click',where:a.closest('section,header')?.id||'nav'});
+ else if(/line\.me/.test(a.href))dataLayer.push({event:'line_click'});});}
 }
 </script>
 </body>
