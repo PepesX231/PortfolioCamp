@@ -256,7 +256,7 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 .sched2 .r>span{font-size:17px;color:#515154}
 .sched2 .r.hl{background:#1d1d1f}.sched2 .r.hl time{color:#fff}.sched2 .r.hl>span{color:#d2d2d7}
 .sched2 .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}.sched2 .split span{font-size:16px;color:#515154}.sched2 .split small{display:block;font-size:12px;font-weight:600;color:var(--tc);margin-bottom:2px}
-#schedule{background:var(--alt)}#schedule .days{background:#e8e8ed}
+#schedule .days{background:var(--alt)}
 .days button{padding:12px 26px;font-size:16px}
 .dtitle{font-size:32px;font-weight:700;letter-spacing:-.01em;margin-bottom:28px}
 @media(max-width:734px){.sched2 .r{grid-template-columns:1fr;gap:4px;padding:18px 20px}.sched2 .r time{font-size:19px}.sched2 .split{grid-template-columns:1fr;gap:8px}.dtitle{font-size:24px}}
@@ -328,6 +328,44 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 .sc.tint .fan{display:grid;place-items:center;height:62%;bottom:auto;background:radial-gradient(circle at 50% 40%,#4a3a72,transparent 70%)}
 .sc.tint .fan img{-webkit-mask-image:none;mask-image:none;border-radius:14px;width:120px;height:150px}
 .sc{box-shadow:none}
+
+/* ---- loop r1 ---- */
+.hero{padding:136px 0 0}
+.hero .t-eye{font-size:19px}
+.hero h1{margin-top:14px;font-size:min(72px,7.2vw);line-height:1.22}
+.hero h1 span{white-space:nowrap}
+.hero h1 .g{background:linear-gradient(90deg,#ffd27a 0%,#ff9a4a 55%,#ff6a3d 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:22px;font-size:21px;color:#a1a1a6}
+.hero .more{display:inline-block;margin-top:14px;color:#2997ff;font-size:19px}
+.hero-media{margin-top:40px;max-height:none;width:min(1240px,100%)}
+.hero-media::before{background:linear-gradient(180deg,#000 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0) 78%,#000 100%)}
+.hero-media::after{background:linear-gradient(90deg,#000 0%,rgba(0,0,0,0) 12%,rgba(0,0,0,0) 88%,#000 100%)}
+.hero-media .src{position:absolute;right:max(24px,calc((100% - 1200px)/2));bottom:28px;z-index:2;font-size:12px;color:#86868b}
+.sc.mt .im{bottom:auto;height:63%}
+.sc.mt .im img{object-position:100% 0;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
+.sc.pf .im{bottom:auto;height:64%}
+.sc.pf .im img{object-position:28% 30%;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
+.sc .mk2{position:absolute;top:14px;left:14px;z-index:2;padding:3px 9px;border-radius:999px;background:rgba(255,255,255,.85);font-size:11px;color:#1d1d1f}
+.wide.vil{max-width:1080px;margin:0 auto}
+.reg2 .wall{-webkit-mask-image:radial-gradient(ellipse 62% 70% at 50% 50%,transparent 20%,#000 85%);mask-image:radial-gradient(ellipse 62% 70% at 50% 50%,transparent 20%,#000 85%)}
+.sched3{max-width:760px;margin:0 auto;text-align:left;border-top:1px solid var(--line)}
+.sched3 li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;align-items:baseline;padding:22px 4px;border-bottom:1px solid var(--line)}
+.sched3 time{font-size:24px;font-weight:600;letter-spacing:-.01em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.sched3 li>span{font-size:19px;color:var(--ink)}
+.sched3 li.hl>span{font-weight:600}
+.sched3 em{font-style:normal;margin-left:10px;padding:2px 10px;border-radius:999px;background:#fff1e0;color:#b64400;font-size:12px;font-weight:600;vertical-align:3px}
+.sched3 .split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.sched3 .split span{font-size:19px;color:var(--ink)}
+.sched3 .split small{display:block;font-size:12px;font-weight:600;color:var(--tc);margin-bottom:2px}
+.dtitle{font-size:17px;font-weight:500;color:var(--mute);margin:-8px 0 28px;letter-spacing:0}
+@media(max-width:734px){
+ .hero{padding:104px 0 0}.hero .t-eye{font-size:15px}.hero .sub{font-size:17px;margin-top:16px}.hero .more{font-size:17px}
+ .hero-media{margin-top:28px;aspect-ratio:4/3}
+ .hero-media .src{right:16px;bottom:14px}
+ .sched3 li{grid-template-columns:1fr;gap:2px;padding:16px 2px}.sched3 time{font-size:20px}.sched3 li>span,.sched3 .split span{font-size:17px}
+ .sched3 .split{gap:14px;margin-top:4px}
+ .dtitle{font-size:15px}
+}
 </style>
 </head>
 <body>
@@ -345,19 +383,18 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 <main id="top">
 <section class="hero" id="hero">
   <p class="t-eye">Portfolio Camp for TCAS 1</p>
-  <h1 class="t-hero"><span><i>มีผลงานแล้ว</i> <i>ทำพอร์ตให้พร้อม</i></span><span><i>ยังไม่มีผลงาน</i> <i>เริ่มสร้างได้เลย</i></span></h1>
-  <p class="sub">3 วัน ทำพอร์ต สร้างเกม และค้นหามหาวิทยาลัยที่อยากเข้า</p>
-  <p class="when">4–6 ธ.ค. 2569 &nbsp; ออนไลน์ผ่าน Discord</p>
-  <div class="acts"><a class="btn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><a class="more" href="#tracks">เลือก Track</a></div>
-  <div class="hero-media"><video id="heroVid" src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกม COMMAND SELECT ผลงานของน้องใน Hamster Hub"></video></div>
+  <h1 class="t-hero"><span>มีผลงานแล้ว ทำพอร์ตให้พร้อม</span><span class="g">ยังไม่มีผลงาน มาสร้างกัน</span></h1>
+  <p class="sub">ค่ายออนไลน์ 3 วัน 4–6 ธ.ค. 2569</p>
+  <a class="more" href="#tracks">เลือก Track</a>
+  <div class="hero-media"><video id="heroVid" src="vid/heart.mp4" poster="img/heart-p.jpg" autoplay muted loop playsinline aria-label="คลิปเกม Heart ผลงานจริงของน้องใน Hamster Hub"></video><span class="src">ผลงานจริง: Heart</span></div>
 </section>
 
 <section class="sec alt" id="benefits">
   <div class="vw"><div class="head"><h2 class="t-sec">3 วัน ได้อะไรบ้าง</h2></div></div>
-  <div class="gal store" id="bstore"><article class="sc feat" style="--fc:#f0453a"><p class="lb">ทั้งสอง Track</p><h3>มีผลงานใส่พอร์ต<br>เกมที่ทำเองกับมือ</h3><div class="fm"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Heart</span></article>
-<article class="sc tint" style="--tc:#fe6c6f"><div class="im"><img src="img/g-folder.jpg" alt="" loading="lazy"></div><p class="lb">Portfolio Track</p><h3>เขียนพอร์ตเป็น</h3><p class="sub">จัดเล่ม เขียน SOP เล่าผลงาน</p></article>
+  <div class="gal store" id="bstore"><article class="sc feat" style="--fc:#0e2433"><p class="lb">Project Track</p><h3>ได้เกมที่ทำเอง<br>ใส่พอร์ตได้เลย</h3><div class="fm"><video src="vid/hydrosaur.mp4" poster="img/hydrosaur.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง: Hydrosaur</span></article>
+<article class="sc tint pf" style="--tc:#f77479"><div class="im"><img src="img/t-portfolio.jpg" alt="" loading="lazy"></div><span class="mk2">ภาพตัวอย่าง</span><p class="lb">Portfolio Track</p><h3>ได้พอร์ตพร้อมยื่น</h3><p class="sub">จัดเล่ม เขียน SOP เล่าผลงาน</p><button class="go" type="button" data-sheet="sh-tpf" aria-label="Portfolio Track ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
 <article class="sc tint" style="--tc:#2a2140"><div class="im fan"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"></div><p class="lb">4 และ 6 ธ.ค.</p><h3>คุยกับรุ่นพี่มหาวิทยาลัย</h3><p class="sub">ถามเรื่องคณะที่สนใจ</p><button class="go" type="button" data-sheet="sh-uni" aria-label="คุยกับรุ่นพี่มหาวิทยาลัย ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
-<article class="sc tint" style="--tc:#fd7f8c"><div class="im"><img src="img/c-mentor.jpg" alt="" loading="lazy"></div><p class="lb">3 รอบ</p><h3>มีรุ่นพี่ช่วยดูงาน</h3><p class="sub">ก่อนเริ่ม ระหว่างทำ ก่อนส่ง</p><button class="go" type="button" data-sheet="sh-mentor" aria-label="มีรุ่นพี่ช่วยดูงาน ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
+<article class="sc tint mt" style="--tc:#555ce8"><div class="im"><img src="img/g-learn.jpg" alt="" loading="lazy"></div><p class="lb">3 รอบ</p><h3>มีรุ่นพี่ช่วยดูงาน</h3><p class="sub">ก่อนเริ่ม ระหว่างทำ ก่อนส่ง</p><button class="go" type="button" data-sheet="sh-mentor" aria-label="มีรุ่นพี่ช่วยดูงาน ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
 <article class="sc feat dk" style="--fc:#111"><p class="lb">6 ธ.ค.</p><h3>มีพื้นที่โชว์ผลงาน<br>เปิดบูธของตัวเอง</h3><div class="fm"><video src="vid/stage-pitch.mp4" poster="img/stage-pitch.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ภาพจริงจากเวทีของทีม RE//SLASH</span></article></div>
   <div class="vw sarrows"><button class="ar" data-d="-1" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="ar" data-d="1" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
 </section>
@@ -374,7 +411,7 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
         <div class="out"><small>ได้กลับบ้าน</small><b>พอร์ต 1 เล่ม + คลิป <span class="nw">2 นาที</span></b></div><button class="plus sm" type="button" data-sheet="sh-tpf" aria-haspopup="dialog" aria-expanded="false">รายละเอียด<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button>
       </div>
       <div class="cc" style="--tc:#b25000">
-        <div class="md"><video src="vid/apocalypse.mp4" poster="img/apocalypse.jpg" muted loop playsinline preload="none" aria-label="เกม Apocalypis Building ผลงานจริงของน้อง"></video></div>
+        <div class="md"><video src="vid/apocalypse.mp4" poster="img/apocalypse-p.jpg" muted loop playsinline preload="none" aria-label="เกม Apocalypis Building ผลงานจริงของน้อง"></video></div>
         <p class="nm">Project Track</p><h3 class="t-card">ยังไม่มีผลงาน</h3>
         <div class="act"><a class="btn ghost" data-track="project" href="#registration">เลือก Project Track</a></div>
         <div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z"/></svg><b>คิดไอเดียเกม</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg><b>สร้างเกม</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><b>ทำให้เสร็จ</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><b>ฝึกนำเสนอ</b></div>
@@ -411,7 +448,7 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
   <div class="vw">
     <div class="head c"><h2 class="t-sec">วันสุดท้าย เปิดบูธ</h2><p class="lead">6 ธ.ค. 16:00–17:30</p></div>
     <div class="wide" style="margin-bottom:96px"><img src="img/c-booth.jpg" alt="ภาพประกอบบูธผลงาน" loading="lazy"><span class="mk">ภาพตัวอย่าง</span></div>
-    <div class="head c"><h3 class="t-card" style="font-size:32px">อีก 10 ผลงานที่ไม่ควรพลาด</h3></div>
+    <div class="head c"><h3 class="t-card" style="font-size:32px">10 ผลงานจริงจากน้อง ๆ</h3></div>
   </div>
   <div class="gal" id="hof"></div>
   <div class="ctrls" data-for="hof"><button class="round" data-d="-1" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="dots" aria-label="ผลงานเด่น"></div><button class="round" data-d="1" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
@@ -422,7 +459,6 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
     <div class="head"><h2 class="t-sec">ตารางกิจกรรม</h2></div>
     <div class="days" role="tablist" id="days"></div>
     <div id="dayPanel" role="tabpanel"></div>
-    <p class="sfoot">เวลาไทย กำหนดการอาจเปลี่ยน</p>
   </div>
 </section>
 
@@ -434,8 +470,7 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
     <h2 class="t-hero">พร้อมเริ่มแล้วหรือยัง?</h2>
     <p class="price2"><b>190<small>บาท</small></b><span>4–6 ธ.ค. 2569 ออนไลน์ผ่าน Discord</span></p>
     <p id="pickedTrack" class="soon" style="margin-top:16px;color:#a1a1a6" hidden></p>
-    <div class="acts2"><a class="btn" id="regBtn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><button class="plus" type="button" data-sheet="sh-prep" aria-haspopup="dialog" aria-expanded="false">สิ่งที่ต้องเตรียม<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button></div>
-    <p class="who">สำหรับนักเรียนมัธยม เลือก Track ตามความพร้อม <button class="lnk" type="button" data-sheet="sh-how" aria-haspopup="dialog" aria-expanded="false">สมัครอย่างไร</button></p>
+    <div class="acts2"><a class="btn" id="regBtn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><button class="plus" type="button" data-sheet="sh-how" aria-haspopup="dialog" aria-expanded="false">สมัครอย่างไร<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button></div>
   </div>
 </section>
 
@@ -455,13 +490,12 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 <dialog class="sheet" id="sh-mentor" aria-labelledby="sh-mentor-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-mentor-t">รุ่นพี่ดูงาน 3 รอบ</h3><ul class="sl"><li><small>รอบ 1</small><div><b>ก่อนเริ่มทำ</b><span>ตรวจแนวทาง</span><span>5 ธ.ค. 15:30–16:00</span></div></li><li><small>รอบ 2</small><div><b>ระหว่างทำ</b><span>ตรวจความก้าวหน้า</span><span>5 ธ.ค. 20:00–20:30</span></div></li><li><small>รอบ 3</small><div><b>ก่อนส่ง</b><span>ตรวจความพร้อม</span><span>6 ธ.ค. 13:00–13:30</span></div></li></ul><p class="sn">ดูงานเป็นรอบแบบกลุ่ม ผ่านห้องกิจกรรมออนไลน์</p></div></dialog>
 <dialog class="sheet" id="sh-tpf" aria-labelledby="sh-tpf-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-tpf-t">Portfolio Track</h3><p class="sp">มีผลงานแล้ว แต่ไม่รู้จะเขียนพอร์ตยังไง นำผลงานที่มีมาเรียบเรียง ฝึกเล่าเรื่อง เขียน SOP และจัดรูปเล่ม</p><ul class="sl"><li><small>Storytelling</small><div><b>เล่าผลงานให้คนอ่านเข้าใจ</b></div></li><li><small>SOP</small><div><b>เขียนเหตุผลที่อยากเข้าคณะและมหาวิทยาลัย</b></div></li><li><small>Portfolio Design</small><div><b>จัดรูปเล่มและเลือกเนื้อหา</b></div></li><li><small>Presentation</small><div><b>ฝึกนำเสนอผลงานเด่น</b></div></li><li><small>ได้กลับบ้าน</small><div><b>Portfolio ฉบับพร้อมตรวจ</b><span>และคลิปนำเสนอผลงาน 2 นาที</span></div></li></ul><p class="sn">เหมาะกับคนที่มีผลงานอยู่แล้ว โดยเฉพาะคนที่กำลังเตรียมยื่นรอบ Portfolio</p></div></dialog>
 <dialog class="sheet" id="sh-tpj" aria-labelledby="sh-tpj-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-tpj-t">Project Track</h3><p class="sp">ยังไม่มีผลงาน มาสร้างชิ้นแรก เริ่มจากออกแบบเกม เรียนพื้นฐาน แล้วลงมือทำเกมของตัวเองในค่าย</p><ul class="sl"><li><small>Game Design</small><div><b>คิดไอเดียและออกแบบวิธีเล่น</b></div></li><li><small>Game Development</small><div><b>เรียนรู้การสร้างเกม</b></div></li><li><small>Project Building</small><div><b>ลงมือทำเกมของตัวเอง</b></div></li><li><small>Presentation</small><div><b>ฝึกนำเสนอผลงาน</b></div></li><li><small>ได้กลับบ้าน</small><div><b>เกมที่ทำเอง</b><span>และคลิปนำเสนอผลงาน 2 นาที</span></div></li></ul><p class="sn">เหมาะกับคนที่ยังไม่มีผลงาน หรืออยากเริ่มสร้างเกม</p></div></dialog>
-<dialog class="sheet" id="sh-how" aria-labelledby="sh-how-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-how-t">สมัครอย่างไร</h3><ul class="sl"><li><small>ขั้นที่ 1</small><div><b>กดสมัครเข้าร่วมกิจกรรม</b></div></li><li><small>ขั้นที่ 2</small><div><b>กรอกข้อมูลและแบบประเมินความพร้อม</b></div></li><li><small>ขั้นที่ 3</small><div><b>เลือก Track ที่เหมาะกับตัวเอง</b></div></li><li><small>ขั้นที่ 4</small><div><b>ยืนยันการสมัคร</b><span>แล้วรอรับข้อมูลเข้าค่ายจากทีมงาน</span></div></li></ul></div></dialog>
-<dialog class="sheet" id="sh-prep" aria-labelledby="sh-prep-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-prep-t">สิ่งที่ต้องเตรียม</h3><ul class="sl"><li><small>ทุกคน</small><div><b>คอมหรือโน้ตบุ๊ก และเน็ต</b></div></li><li><small>ทุกคน</small><div><b>บัญชี Discord</b><span>และบัญชี Hamster Hub ตามที่ทีมแจ้ง</span></div></li><li><small>Portfolio Track</small><div><b>ไฟล์ผลงานและรูปภาพที่มี</b><span>ถ้ามีคณะเป้าหมาย เตรียมชื่อคณะไว้ด้วย</span></div></li><li><small>Project Track</small><div><b>ไม่ต้องมีผลงานมาก่อน</b><span>ติดตั้งโปรแกรมตามที่ทีมแจ้ง</span></div></li></ul></div></dialog>
+<dialog class="sheet" id="sh-how" aria-labelledby="sh-how-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-how-t">สมัครอย่างไร</h3><h4>ขั้นตอน</h4><ul class="sl"><li><small>ขั้นที่ 1</small><div><b>กดสมัครเข้าร่วมกิจกรรม</b></div></li><li><small>ขั้นที่ 2</small><div><b>กรอกข้อมูลและแบบประเมินความพร้อม</b></div></li><li><small>ขั้นที่ 3</small><div><b>เลือก Track ที่เหมาะกับตัวเอง</b></div></li><li><small>ขั้นที่ 4</small><div><b>ยืนยันการสมัคร</b><span>แล้วรอรับข้อมูลเข้าค่ายจากทีมงาน</span></div></li></ul><h4>สิ่งที่ต้องเตรียม</h4><ul class="sl"><li><small>ทุกคน</small><div><b>คอมหรือโน้ตบุ๊ก และเน็ต</b></div></li><li><small>ทุกคน</small><div><b>บัญชี Discord</b><span>และบัญชี Hamster Hub ตามที่ทีมแจ้ง</span></div></li><li><small>Portfolio Track</small><div><b>ไฟล์ผลงานและรูปที่มี</b><span>ถ้ามีคณะเป้าหมาย เตรียมชื่อคณะไว้ด้วย</span></div></li><li><small>Project Track</small><div><b>ไม่ต้องมีผลงานมาก่อน</b><span>ติดตั้งโปรแกรมตามที่ทีมแจ้ง</span></div></li></ul></div></dialog>
 
 <footer class="gf">
   <div class="vn">
     <div class="notes">
-      <p>คลิปและภาพเกมเป็นผลงานจริงของน้อง ๆ ใน Hamster Hub ภาพหมู่บ้าน บูธ วิดีโอคอล และภาพตัวละครเป็นภาพตัวอย่าง</p>
+      <p>คลิปและภาพเกมเป็นผลงานจริงของน้อง ๆ ใน Hamster Hub ภาพหมู่บ้าน บูธ หน้าพอร์ต และภาพตัวละครเป็นภาพตัวอย่าง</p>
       <p>การรับเข้าศึกษาขึ้นอยู่กับเกณฑ์และการพิจารณาของแต่ละมหาวิทยาลัย</p>
     </div>
     <div class="lk"><span>Hamster Hub Portfolio Camp for TCAS 1</span><a href="https://www.hamsterhub.co/">เว็บไซต์ Hamster Hub</a><a href="https://page.line.me/jkm4247u?openQrModal=true">ติดต่อทีมงาน</a><span>นโยบายความเป็นส่วนตัว [รอลิงก์จากทีม]</span></div>
@@ -484,8 +518,6 @@ let cur=null;const upd=()=>{let id=null;for(const s of $$('main>section')){if(s.
  if(id!==cur){cur=id;links.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+id));place(links.find(a=>a.getAttribute('href')==='#'+id));}};
 addEventListener('scroll',upd,{passive:true});addEventListener('resize',()=>{cur=undefined;upd()});upd();}
 
-/* hero video on small screens */
-{const v=$('#heroVid');if(matchMedia('(max-width:734px)').matches){v.src='vid/command-select-sm.mp4';v.play().catch(()=>{});}}
 
 /* hall of fame rail (data from hamsterhub showcase) */
 const HOF=[['stressstrike','StressStrike','@วิน','ชนะเลิศ OBEC Roboplayground'],['beyond-the-board','Beyond the Board','@กัปตัน'],['eugation-strike','Eugation Strike','@ไผ่'],['slash-speed','SLASH//SPEED','@ดินสอ'],['micro-immersive-sim','Micro Immersive Sim','@เพชร'],['phi-krahang','ผีกระหัง','@นนท์'],['midnight-at-roadside','Midnight at Roadside','@Windy'],['hot-hot-hot','Hot Hot Hot','@โอม'],['apocalypis-building','Apocalypis Building','@ฟาร์'],['escape-rolling','Escape Rolling','@เป๊ป']];
@@ -506,13 +538,13 @@ $$('.ctrls[data-for]').forEach(c=>{const r=document.getElementById(c.dataset.for
 bs.forEach(b=>b.addEventListener('click',()=>r.scrollBy({left:+b.dataset.d*(r.clientWidth*.7),behavior:reduce?'auto':'smooth'})));r.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();}
 /* schedule */
 const DAYS=[
- {tab:'4 ธ.ค.',title:'ค้นหาเส้นทางของตัวเอง',rows:[['19:00–19:30','เปิดค่ายและทำความรู้จักเพื่อน'],['19:30–20:30','พบรุ่นพี่มหาวิทยาลัย'],['20:30–21:00','สำรวจ HamsVillage และรับภารกิจ']]},
- {tab:'5 ธ.ค.',title:'ลงมือสร้างและปลดล็อกตั๋ว',rows:[['13:00–14:30',['Storytelling และ SOP','Game Design']],['14:30–15:30',['ทำ Portfolio','พัฒนาเกม']],['15:30–16:00','Mentor รอบที่ 1 ตรวจแนวทาง'],['16:00–17:00','ลงมือทำผลงานและทำภารกิจ'],['17:00–19:00','พัก ทำงานต่อ และตรวจสิทธิ์ Portfolio Pass'],['19:00–20:00','ดูพอร์ตรุ่นพี่ (เฉพาะคนที่มี Pass)',1],['20:00–20:30','Mentor รอบที่ 2 ตรวจความก้าวหน้า'],['20:30–21:00','ทำผลงานต่อ']]},
- {tab:'6 ธ.ค.',title:'โชว์ผลงานของตัวเอง',rows:[['13:00–13:30','Mentor รอบที่ 3 ตรวจความพร้อม'],['13:30–15:00','ทำผลงานให้เสร็จ'],['15:00','ส่งผลงานและคลิปนำเสนอ 2 นาที'],['15:00–16:00','เตรียมบูธ'],['16:00–17:30','HamsVillage Showcase',1],['19:00–20:00','พบรุ่นพี่มหาวิทยาลัยและถามตอบ'],['20:00–21:00','สรุปและปิดค่าย']]}];
+ {tab:'4 ธ.ค.',title:'ค้นหาเส้นทางของตัวเอง',rows:[['19:00–19:30','เปิดค่าย รู้จักเพื่อน'],['19:30–20:30','พบรุ่นพี่มหาวิทยาลัย',1],['20:30–21:00','สำรวจ HamsVillage และรับภารกิจ']]},
+ {tab:'5 ธ.ค.',title:'ลงมือสร้างและปลดล็อกตั๋ว',rows:[['13:00–14:30',['Storytelling และ SOP','Game Design']],['14:30–15:30',['ทำ Portfolio','พัฒนาเกม']],['15:30–16:00','รุ่นพี่ดูงาน รอบ 1'],['16:00–17:00','ทำผลงานและภารกิจ'],['17:00–19:00','พัก และตรวจสิทธิ์ Portfolio Pass'],['19:00–20:00','ดูพอร์ตรุ่นพี่ สำหรับคนที่ได้ Pass',1],['20:00–20:30','รุ่นพี่ดูงาน รอบ 2'],['20:30–21:00','ทำผลงานต่อ']]},
+ {tab:'6 ธ.ค.',title:'โชว์ผลงานของตัวเอง',rows:[['13:00–13:30','รุ่นพี่ดูงาน รอบ 3'],['13:30–15:00','ทำผลงานให้เสร็จ'],['15:00','ส่งผลงานและคลิป 2 นาที'],['15:00–16:00','เตรียมบูธ'],['16:00–17:30','เปิดบูธโชว์ผลงาน',1],['19:00–20:00','ถามตอบกับรุ่นพี่มหาวิทยาลัย'],['20:00–21:00','ปิดค่าย']]}];
 const days=$('#days'),panel=$('#dayPanel');
 days.innerHTML=DAYS.map((d,i)=>`<button role="tab" id="dt${i}" aria-controls="dayPanel" aria-selected="${i===0}" tabindex="${i===0?0:-1}">${d.tab}</button>`).join('');
 const show=i=>{const d=DAYS[i];days.querySelectorAll('button').forEach((b,k)=>{b.setAttribute('aria-selected',k===i);b.tabIndex=k===i?0:-1});panel.setAttribute('aria-labelledby','dt'+i);
- panel.innerHTML=`<p class="dtitle">${d.title}</p><div class="sched2">`+d.rows.map(([t,a,hl])=>`<div class="r${hl?' hl':''}"><time>${t}</time>${Array.isArray(a)?`<div class="split"><span style="--tc:#0057b8"><small>Portfolio Track</small>${a[0]}</span><span style="--tc:#b25000"><small>Project Track</small>${a[1]}</span></div>`:`<span>${a}</span>`}</div>`).join('')+'</div>';};
+ panel.innerHTML=`<p class="dtitle">${d.title}</p><ol class="sched3">`+d.rows.map(([t,a,hl])=>`<li class="${hl?'hl':''}"><time>${t}</time>${Array.isArray(a)?`<div class="split"><span style="--tc:#0057b8"><small>Portfolio Track</small>${a[0]}</span><span style="--tc:#b25000"><small>Project Track</small>${a[1]}</span></div>`:`<span>${a}${hl?'<em>ไฮไลต์</em>':''}</span>`}</li>`).join('')+'</ol>';};
 days.addEventListener('click',e=>{const b=e.target.closest('button');if(b)show([...days.children].indexOf(b));});
 days.addEventListener('keydown',e=>{const bs=[...days.children],i=bs.findIndex(b=>b.getAttribute('aria-selected')==='true');let n=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:null;if(n===null)return;n=(n+bs.length)%bs.length;show(n);bs[n].focus();});
 show(0);
