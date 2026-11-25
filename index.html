@@ -463,6 +463,60 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 #village,#seniors,#showcase{padding-bottom:120px}
 /* hero scrub */
 .hero-media.scrub{will-change:transform;border-radius:var(--r,0px);overflow:hidden}
+/* store cards: one layout for every card (text top, media bottom) */
+.sc.tint .lb,.sc.feat .lb{position:relative;z-index:1;margin:30px 28px 0;font-size:12px}
+.sc h3,.sc.tint h3,.sc.feat h3{position:relative;z-index:1;font-size:24px;line-height:1.3;font-weight:700;margin:6px 28px 0}
+.sc.tint .sub{margin:6px 60px 0 28px;font-size:14px}
+.sc.tint .im,.sc.pf .im,.sc.mt .im{inset:auto 0 0 0;height:66%;top:auto}
+.sc.tint .im img,.sc.pf .im img{-webkit-mask-image:linear-gradient(0deg,#000 62%,transparent 100%);mask-image:linear-gradient(0deg,#000 62%,transparent 100%);object-position:50% 30%}
+.sc.tint .fan{inset:auto 0 0 0;top:auto;height:62%}
+.sc.feat .fm{height:66%}
+.sc .mk2{top:auto;bottom:22px;left:22px}
+/* product-story sections (Apple: lockup, showpiece, detail cards) */
+.story{padding:140px 0 120px;overflow:clip}
+.lock{text-align:center;max-width:680px;margin:0 auto}
+.lock .eye{font-size:21px;font-weight:600;margin:0 0 8px}
+.lock .t-sec{font-size:56px;line-height:1.1;font-weight:700;margin:0}
+.lock-copy{margin:28px auto 0;max-width:600px;font-size:21px;line-height:1.38;color:#6e6e73}
+.dark .lock .eye{color:#f5f5f7}.dark .lock-copy{color:#86868b}
+.lock .plus{margin-top:24px}
+.spiece{position:relative;height:220vh;margin-top:64px}
+.spiece[data-steps="0"]{height:auto}
+.show-pin{position:sticky;top:0;height:100vh;display:grid;place-items:center;overflow:hidden}
+.spiece[data-steps="0"] .show-pin{position:static;height:auto}
+.show-frame{position:relative;width:min(87.5vw,1260px);aspect-ratio:1892/968;border-radius:28px;overflow:hidden;background:#1d1d1f;transform-origin:50% 50%}
+.show-m{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:var(--ox,50%) var(--oy,50%);will-change:transform}
+.show-frame::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 34%)}
+.show-cap{position:absolute;left:0;right:0;bottom:44px;z-index:2;margin:0;text-align:center;font-size:32px;line-height:1.3;font-weight:700;color:#fff;opacity:0;transition:opacity .5s;text-shadow:0 2px 16px rgba(0,0,0,.4);padding:0 24px}
+.show-cap.on{opacity:1}
+.show-note{position:absolute;left:20px;top:18px;z-index:2;font-size:12px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.35);padding:4px 10px;border-radius:999px}
+.show-ph{display:grid;place-items:center;background:#2c2c2e;color:#8e8e93;font-size:17px}
+.spiece:has(.show-ph) .show-frame::before{display:none}
+#seniors .show-m.covers{display:flex;flex-direction:column;justify-content:center;gap:20px;margin:0;-webkit-mask-image:none;mask-image:none;transform-origin:50% 45%;padding-bottom:40px}
+#seniors .show-m.covers .crow img{width:210px;height:262px}
+.mcw{margin-top:56px}
+.mc{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-padding-inline:max(6.25vw,calc((100vw - 1260px)/2))}
+.mc::-webkit-scrollbar{display:none}
+.mc-set{list-style:none;margin:0;display:grid;grid-auto-flow:column;gap:20px;width:max-content;padding:0 max(6.25vw,calc((100vw - 1260px)/2))}
+.mc-i{width:min(590px,80vw);scroll-snap-align:start}
+.mc-m{position:relative;aspect-ratio:590/420;border-radius:28px;overflow:hidden;background:#1d1d1f}
+.mc-m img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mc-ph{position:absolute;inset:0;display:grid;place-items:center;background:#2c2c2e;color:#8e8e93;font-size:15px}
+.sec:not(.dark) .mc-m{background:#e8e8ed}.sec:not(.dark) .mc-ph{background:#d2d2d7;color:#6e6e73}
+.mc-t{margin:0;padding:28px 16px 0;max-width:460px;font-size:17px;line-height:1.47;color:#6e6e73}
+.dark .mc-t{color:#86868b}.mc-t b{font-weight:600;color:#1d1d1f}.dark .mc-t b{color:#f5f5f7}
+.mc-nav{display:flex;justify-content:flex-end;gap:16px;margin-top:32px}
+.mc-nav button{width:36px;height:36px;border-radius:50%;border:0;display:grid;place-items:center;cursor:pointer;background:rgba(210,210,215,.64);color:#1d1d1f}
+.dark .mc-nav button{background:#333336;color:#f5f5f7}
+.mc-nav button:disabled{opacity:.36;cursor:default}
+.mc-nav button:focus-visible,.mc:focus-visible{outline:2px solid #0071e3;outline-offset:3px}
+@media(max-width:1068px){.lock .t-sec{font-size:48px}.show-cap{font-size:26px}}
+@media(max-width:734px){.story{padding:100px 0 90px}.lock .eye{font-size:17px}.lock .t-sec{font-size:36px}.lock-copy{font-size:17px;margin-top:18px;padding:0 8px}
+ .spiece{height:200vh;margin-top:44px}.show-frame{width:87.5vw;aspect-ratio:4/5}.show-cap{font-size:21px;bottom:28px}
+ #seniors .show-m.covers .crow img{width:130px;height:163px}.mcw{margin-top:40px}.mc-t{font-size:15px;padding:20px 8px 0}}
+@media(prefers-reduced-motion:reduce){.spiece{height:auto}.show-pin{position:static;height:auto}}
+#village .show-m{--ox:100%;--oy:20%}
+@media(max-width:734px){#village .show-m{object-position:100% 50%;--ox:100%;--oy:20%}}
 </style>
 </head>
 <body>
@@ -488,7 +542,7 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
   <div class="vw"><div class="head"><h2 class="t-sec">3 วัน ได้อะไรบ้าง</h2></div></div>
   <div class="gal store" id="bstore"><article class="sc feat" style="--fc:#0e2433"><p class="lb">Project Track</p><h3>ได้เกมที่ทำเอง<br>ใส่พอร์ตได้เลย</h3><div class="fm"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริงของน้องใน Hamster Hub</span></article>
 <article class="sc tint pf" style="--tc:#f77479"><div class="im"><img src="img/t-portfolio.jpg" alt="" loading="lazy"></div><span class="mk2">ภาพตัวอย่าง</span><p class="lb">Portfolio Track</p><h3>ได้พอร์ตพร้อมยื่น</h3><p class="sub">จัดเล่ม เขียน SOP เล่าผลงาน</p><button class="go" type="button" data-sheet="sh-tpf" aria-label="Portfolio Track ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
-<article class="sc tint gm" style="--tc:#1d3324"><div class="im"><img src="img/hv-1.jpg" alt="" loading="lazy"></div><p class="lb">เรียนรู้ด้วย Gamification</p><h3>เรียนสนุก<br>ปั่นงานมันส์</h3><p class="sub">ทั้งค่ายอยู่ใน HamsVillage</p><button class="go" type="button" data-sheet="sh-zones" aria-label="เรียนรู้ด้วย Gamification ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
+<article class="sc tint gm" style="--tc:#1d3324"><div class="im"><img src="img/hv-2.jpg" alt="" loading="lazy"></div><p class="lb">เรียนรู้ด้วย Gamification</p><h3>เรียนสนุก<br>ปั่นงานมันส์</h3><p class="sub">ทั้งค่ายอยู่ใน HamsVillage</p><button class="go" type="button" data-sheet="sh-zones" aria-label="เรียนรู้ด้วย Gamification ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
 <article class="sc tint" style="--tc:#2a2140"><div class="im fan"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"></div><p class="lb">รุ่นพี่มหาวิทยาลัย</p><h3>เจอรุ่นพี่ม.ดัง</h3><p class="sub">แนะนำมหาลัย เปิดพอร์ตให้ดู</p><button class="go" type="button" data-sheet="sh-uni" aria-label="คุยกับรุ่นพี่มหาวิทยาลัย ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
 <article class="sc tint bo" style="--tc:#3a1d2c"><div class="im"><img src="img/c-booth.jpg" alt="" loading="lazy"></div><span class="mk2">ภาพตัวอย่าง</span><p class="lb">6 ธ.ค.</p><h3>ตั้งบูธโชว์ผลงาน<br>ใน HamsVillage</h3><p class="sub">แพลตฟอร์มออนไลน์ที่ใช้เรียนในค่ายนี้</p></article></div>
   <div class="vw sarrows"><button class="ar" data-d="-1" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="ar" data-d="1" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
@@ -519,24 +573,22 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 
 
 
-<section class="sec" id="village">
-  <div class="vw">
-    <div class="head"><p class="eye">เรียนรู้ด้วย Gamification</p><h2 class="t-sec">เรียนสนุก ปั่นงานมันส์</h2></div>
-  </div>
-  <div class="hlw"><div class="hl" aria-roledescription="carousel" aria-label="HamsVillage"><div class="hl-track"><article class="hl-s" role="group" aria-roledescription="สไลด์" aria-label="1 จาก 3: HamsVillage"><img class="hl-m" src="img/hv-1.jpg" alt="" loading="lazy" style="object-position:50% 70%"><div class="hl-cap"><p><b>HamsVillage</b> ทั้งค่ายอยู่ในหมู่บ้านเดียว เดินไปแต่ละโซนได้เอง</p></div><span class="src">หน้าจอจริง HamsVillage</span><button class="go" type="button" data-sheet="sh-zones" aria-haspopup="dialog" aria-expanded="false" aria-label="HamsVillage ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article><article class="hl-s" role="group" aria-roledescription="สไลด์" aria-label="2 จาก 3: Squad"><img class="hl-m" src="img/hv-2.jpg" alt="" loading="lazy" style="object-position:50% 70%"><div class="hl-cap"><p><b>Squad</b> จับทีมกับเพื่อน ลงด่านไปด้วยกัน</p></div><span class="src">หน้าจอจริง HamsVillage</span></article><article class="hl-s" role="group" aria-roledescription="สไลด์" aria-label="3 จาก 3: HamsQuest"><img class="hl-m" src="img/quest-app.jpg" alt="" loading="lazy" style="object-position:50% 20%"><div class="hl-cap"><p><b>HamsQuest</b> งานทุกชิ้นเป็นเควส ดูได้บน Questboard</p></div><span class="src">หน้าจอจริง HamsQuest</span></article></div></div>
-  <div class="hl-ctl"><div class="hl-dots"><button class="hl-d" type="button" aria-label="ไปที่สไลด์ 1: HamsVillage"><i></i></button><button class="hl-d" type="button" aria-label="ไปที่สไลด์ 2: Squad"><i></i></button><button class="hl-d" type="button" aria-label="ไปที่สไลด์ 3: HamsQuest"><i></i></button></div><button class="hl-pp" type="button" aria-label="เล่น"><svg class="i-pause" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M5 3v10M11 3v10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><svg class="i-play" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M5 2.5l9 5.5-9 5.5z" fill="currentColor"/></svg><svg class="i-replay" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3.5 8a4.5 4.5 0 1 0 1.4-3.3M3 2.5v3h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
+<section class="sec dark story" id="village">
+  <div class="vw"><div class="lock"><p class="eye">เรียนรู้ด้วย Gamification</p><h2 class="t-sec">เรียนสนุก ปั่นงานมันส์</h2><p class="lock-copy">ทั้งค่ายอยู่ใน HamsVillage แพลตฟอร์มออนไลน์ที่ใช้เรียนในค่ายนี้ เดินในหมู่บ้าน รับเควส และลงด่านกับเพื่อน</p><button class="plus" type="button" data-sheet="sh-zones" aria-haspopup="dialog" aria-expanded="false">ดู 4 โซนในหมู่บ้าน<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button></div></div>
+  <div class="spiece z" data-steps="2"><div class="show-pin"><div class="show-frame"><img class="show-m" src="img/hv-1.jpg" alt="หน้าจอจริง HamsVillage หมู่บ้านที่ใช้เรียนในค่าย"><p class="show-cap on" data-i="0">ทั้งค่ายอยู่ในหมู่บ้านเดียว</p><p class="show-cap" data-i="1">งานทุกชิ้นเป็นเควส</p><span class="show-note">หน้าจอจริง HamsVillage</span></div></div></div>
+  <div class="mcw"><div class="mc" tabindex="0" aria-label="รายละเอียด HamsVillage"><ul class="mc-set"><li class="mc-i"><div class="mc-m"><img src="img/hv-squad.jpg" alt="" loading="lazy" style="object-position:0% 0%"></div><p class="mc-t"><b>Squad</b> จับทีมกับเพื่อน ลงด่านไปด้วยกัน</p></li><li class="mc-i"><div class="mc-m"><img src="img/hv-raid.jpg" alt="" loading="lazy" style="object-position:50% 40%"></div><p class="mc-t"><b>Raid Boss</b> มีบอสเกิดตามรอบเวลาในหมู่บ้าน</p></li><li class="mc-i"><div class="mc-m"><img src="img/quest-app.jpg" alt="" loading="lazy" style="object-position:50% 15%"></div><p class="mc-t"><b>HamsQuest</b> งานทุกชิ้นเป็นเควสบน Questboard</p></li></ul></div><div class="vw mc-nav"><button class="mc-p" type="button" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="mc-n" type="button" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
 </section>
 
-<section class="sec dark" id="seniors">
-  <div class="vw"><div class="head"><p class="eye">รุ่นพี่มหาวิทยาลัย</p><h2 class="t-sec">เจอรุ่นพี่ม.ดัง</h2></div></div>
-  <div class="hlw"><div class="hl" aria-roledescription="carousel" aria-label="รุ่นพี่มหาวิทยาลัย"><div class="hl-track"><article class="hl-s" role="group" aria-roledescription="สไลด์" aria-label="1 จาก 3: 4 ธ.ค. 19:30"><div class="hl-m covers" aria-hidden="true"><div class="crow"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-3.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"><img src="img/dek/dek69-8.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-16.jpg" alt="" loading="lazy"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-3.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"><img src="img/dek/dek69-8.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-16.jpg" alt="" loading="lazy"></div><div class="crow rev"><img src="img/dek/dek69-16.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-8.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"><img src="img/dek/dek69-3.jpg" alt="" loading="lazy"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-16.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-8.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"><img src="img/dek/dek69-3.jpg" alt="" loading="lazy"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"></div></div><div class="hl-cap"><p><b>4 ธ.ค. 19:30</b> รุ่นพี่มหาวิทยาลัยแนะนำคณะ ถามเรื่องที่สนใจได้</p></div><span class="src">รุ่นพี่ DEK69 ของ Hamster Hub</span><button class="go" type="button" data-sheet="sh-uni" aria-haspopup="dialog" aria-expanded="false" aria-label="4 ธ.ค. 19:30 ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article><article class="hl-s" role="group" aria-roledescription="สไลด์" aria-label="2 จาก 3: 5 ธ.ค. 19:00"><div class="hl-m hl-ph"><span>รอภาพพอร์ตจริงของรุ่นพี่</span></div><div class="hl-cap"><p><b>5 ธ.ค. 19:00</b> รุ่นพี่เปิดพอร์ตที่ใช้ยื่นจริงให้ดู</p></div></article><article class="hl-s" role="group" aria-roledescription="สไลด์" aria-label="3 จาก 3: 6 ธ.ค. 19:00"><img class="hl-m" src="img/hl-seniors.jpg" alt="" loading="lazy" style="object-position:50% 80%"><div class="hl-cap"><p><b>6 ธ.ค. 19:00</b> ถามตอบกับรุ่นพี่ วางเส้นทางของน้อง</p></div><span class="src">รุ่นพี่ DEK69 ของ Hamster Hub</span></article></div></div>
-  <div class="hl-ctl"><div class="hl-dots"><button class="hl-d" type="button" aria-label="ไปที่สไลด์ 1: 4 ธ.ค. 19:30"><i></i></button><button class="hl-d" type="button" aria-label="ไปที่สไลด์ 2: 5 ธ.ค. 19:00"><i></i></button><button class="hl-d" type="button" aria-label="ไปที่สไลด์ 3: 6 ธ.ค. 19:00"><i></i></button></div><button class="hl-pp" type="button" aria-label="เล่น"><svg class="i-pause" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M5 3v10M11 3v10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><svg class="i-play" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M5 2.5l9 5.5-9 5.5z" fill="currentColor"/></svg><svg class="i-replay" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3.5 8a4.5 4.5 0 1 0 1.4-3.3M3 2.5v3h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
+<section class="sec alt story" id="seniors">
+  <div class="vw"><div class="lock"><p class="eye">รุ่นพี่มหาวิทยาลัย</p><h2 class="t-sec">เจอรุ่นพี่ม.ดัง</h2><p class="lock-copy">แนะนำมหาลัย เปิดพอร์ตให้ดู และวางเส้นทางของน้อง ตลอด 3 คืนของค่าย</p></div></div>
+  <div class="spiece zo" data-steps="1"><div class="show-pin"><div class="show-frame"><div class="show-m covers" aria-hidden="true"><div class="crow"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-3.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"><img src="img/dek/dek69-8.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-16.jpg" alt="" loading="lazy"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-3.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"><img src="img/dek/dek69-8.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-16.jpg" alt="" loading="lazy"></div><div class="crow rev"><img src="img/dek/dek69-16.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-8.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"><img src="img/dek/dek69-3.jpg" alt="" loading="lazy"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-16.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-8.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"><img src="img/dek/dek69-3.jpg" alt="" loading="lazy"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"></div></div><p class="show-cap on" data-i="0">รุ่นพี่ DEK69 ของ Hamster Hub ที่ติดมหาลัยแล้ว</p><span class="show-note">ภาพตัวอย่าง รอปกพอร์ตจริงของรุ่นพี่</span></div></div></div>
+  <div class="mcw"><div class="mc" tabindex="0" aria-label="รุ่นพี่ในแต่ละวัน"><ul class="mc-set"><li class="mc-i"><div class="mc-m"><img src="img/hl-seniors.jpg" alt="" loading="lazy" style="object-position:50% 75%"></div><p class="mc-t"><b>4 ธ.ค. 19:30</b> พบรุ่นพี่มหาวิทยาลัย แนะนำคณะ ถามเรื่องที่สนใจได้</p></li><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพพอร์ตจริงของรุ่นพี่</span></div></div><p class="mc-t"><b>5 ธ.ค. 19:00</b> ดูพอร์ตที่รุ่นพี่ใช้ยื่นจริง</p></li><li class="mc-i"><div class="mc-m"><img src="img/hl-seniors2.jpg" alt="" loading="lazy" style="object-position:50% 55%"></div><p class="mc-t"><b>6 ธ.ค. 19:00</b> ถามตอบกับรุ่นพี่ วางเส้นทางของน้อง</p></li></ul></div><div class="vw mc-nav"><button class="mc-p" type="button" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="mc-n" type="button" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
 </section>
 
-<section class="sec alt" id="showcase">
-  <div class="vw"><div class="head"><p class="eye">6 ธ.ค. ตั้งบูธใน HamsVillage</p><h2 class="t-sec">ผลงานที่น้องทำใน 3 วัน</h2></div></div>
-  <div class="hlw"><div class="hl" aria-roledescription="carousel" aria-label="ผลงานใน 3 วัน"><div class="hl-track"><article class="hl-s" role="group" aria-roledescription="สไลด์" aria-label="1 จาก 3: Project Track"><div class="hl-m hl-ph"><span>รอคลิปจริง</span></div><div class="hl-cap"><p><b>Project Track</b> เกมที่น้องทำเสร็จใน 3 วัน</p></div></article><article class="hl-s" role="group" aria-roledescription="สไลด์" aria-label="2 จาก 3: Portfolio Track"><div class="hl-m hl-ph"><span>รอคลิปจริง</span></div><div class="hl-cap"><p><b>Portfolio Track</b> พอร์ตที่น้องจัดเสร็จใน 3 วัน</p></div></article><article class="hl-s" role="group" aria-roledescription="สไลด์" aria-label="3 จาก 3: 6 ธ.ค. 16:00"><div class="hl-m hl-ph"><span>รอคลิปจริง</span></div><div class="hl-cap"><p><b>6 ธ.ค. 16:00</b> เปิดบูธโชว์ผลงานใน HamsVillage</p></div></article></div></div>
-  <div class="hl-ctl"><div class="hl-dots"><button class="hl-d" type="button" aria-label="ไปที่สไลด์ 1: Project Track"><i></i></button><button class="hl-d" type="button" aria-label="ไปที่สไลด์ 2: Portfolio Track"><i></i></button><button class="hl-d" type="button" aria-label="ไปที่สไลด์ 3: 6 ธ.ค. 16:00"><i></i></button></div><button class="hl-pp" type="button" aria-label="เล่น"><svg class="i-pause" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M5 3v10M11 3v10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><svg class="i-play" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M5 2.5l9 5.5-9 5.5z" fill="currentColor"/></svg><svg class="i-replay" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3.5 8a4.5 4.5 0 1 0 1.4-3.3M3 2.5v3h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
+<section class="sec dark story" id="showcase">
+  <div class="vw"><div class="lock"><p class="eye">6 ธ.ค. ตั้งบูธใน HamsVillage</p><h2 class="t-sec">ผลงานที่น้องทำใน 3 วัน</h2><p class="lock-copy">วันสุดท้ายน้องตั้งบูธใน HamsVillage โชว์ผลงานที่ทำเสร็จ</p></div></div>
+  <div class="spiece " data-steps="0"><div class="show-pin"><div class="show-frame"><div class="show-m show-ph"><span>รอคลิปผลงานจริง</span></div></div></div></div>
+  <div class="mcw"><div class="mc" tabindex="0" aria-label="ผลงานใน 3 วัน"><ul class="mc-set"><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอคลิปจริง</span></div></div><p class="mc-t"><b>Project Track</b> เกมที่น้องทำเสร็จใน 3 วัน</p></li><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอคลิปจริง</span></div></div><p class="mc-t"><b>Portfolio Track</b> พอร์ตที่น้องจัดเสร็จใน 3 วัน</p></li><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอคลิปจริง</span></div></div><p class="mc-t"><b>6 ธ.ค. 16:00</b> เปิดบูธโชว์ผลงานใน HamsVillage</p></li></ul></div><div class="vw mc-nav"><button class="mc-p" type="button" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="mc-n" type="button" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
 </section>
 
 <section class="sec c" id="schedule">
@@ -648,7 +700,12 @@ const HLG=W=>{const sc=$('.hl',W),S=$$('.hl-s',sc),D=$$('.hl-d',W),pp=$('.hl-pp'
  new IntersectionObserver(([e])=>{inView=e.isIntersecting;if(inView){if(!reduce&&!userPaused&&!ended&&!playing)play();}else if(!ended&&playing){pause(false);}},{threshold:.6}).observe(sc);
  addEventListener('resize',()=>{sc.scrollLeft=pos(cur);paint(cur);});
  cur=-1;setCur(0);cur=0;state('paused');sc.scrollLeft=pos(0);paint(0);}
-$$('.hlw').forEach(HLG);
+$$('.hlw').forEach(HLG);/* detail cards paddles (Apple media-card-set) */
+$$('.mcw').forEach(w=>{const sc=$('.mc',w),p=$('.mc-p',w),n=$('.mc-n',w),step=()=>$('.mc-i',w).offsetWidth+20;
+ const upd=()=>{p.disabled=sc.scrollLeft<4;n.disabled=sc.scrollLeft+sc.clientWidth>=sc.scrollWidth-4;};
+ p.addEventListener('click',()=>sc.scrollBy({left:-step(),behavior:'smooth'}));n.addEventListener('click',()=>sc.scrollBy({left:step(),behavior:'smooth'}));
+ sc.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();});
+
 /* schedule */
 const DAYS=[
  {tab:'4 ธ.ค.',title:'ค้นหาเส้นทางของตัวเอง',rows:[['19:00–19:30','เปิดค่าย รู้จักเพื่อน'],['19:30–20:30','พบรุ่นพี่มหาวิทยาลัย',1],['20:30–21:00','สำรวจ HamsVillage และรับภารกิจ']]},
@@ -703,7 +760,14 @@ $$('[data-track]').forEach(a=>a.addEventListener('click',()=>{const t=a.dataset.
 <script>
 if(window.gsap&&window.ScrollTrigger&&!matchMedia('(prefers-reduced-motion: reduce)').matches){gsap.registerPlugin(ScrollTrigger);
  const m=document.querySelector('.hero-media');m.classList.add('scrub');
- gsap.fromTo(m,{scale:1,'--r':'0px'},{scale:.88,'--r':'32px',ease:'none',scrollTrigger:{trigger:m,start:'top 20%',end:'bottom top',scrub:true}});}
+ gsap.fromTo(m,{scale:1,'--r':'0px'},{scale:.88,'--r':'32px',ease:'none',scrollTrigger:{trigger:m,start:'top 20%',end:'bottom top',scrub:true}});
+ document.querySelectorAll('.spiece').forEach(sh=>{const steps=+sh.dataset.steps;if(!steps)return;const fr=sh.querySelector('.show-frame'),md=sh.querySelector('.show-m'),caps=[...sh.querySelectorAll('.show-cap')];
+  const tl=gsap.timeline({scrollTrigger:{trigger:sh,start:'top top',end:'bottom bottom',scrub:.6,onUpdate:st=>{const k=Math.min(caps.length-1,Math.floor(st.progress*caps.length+0.1));caps.forEach((c,i)=>c.classList.toggle('on',i===k));}}});
+  tl.fromTo(fr,{scale:.86},{scale:1,ease:'none',duration:.35});
+  if(sh.classList.contains('z'))tl.fromTo(md,{scale:1},{scale:2.3,ease:'power1.inOut',duration:.65});
+  if(sh.classList.contains('zo'))tl.fromTo(md,{scale:2.4},{scale:1,ease:'power1.out',duration:.8},0);
+ });}
 </script>
+
 </body>
 </html>
