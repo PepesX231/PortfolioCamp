@@ -377,13 +377,15 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 #seniors .crow img{flex:none;max-width:none;width:240px;height:300px;object-fit:cover;border-radius:18px}
 #seniors .mk3{margin:28px 0 0;font-size:13px;color:#86868b}
 @media(prefers-reduced-motion:reduce){#seniors .crow{animation:none}}
-#village .gam{display:grid;grid-template-columns:1.6fr 1fr;gap:20px;margin-top:48px}
+#village .gam{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:auto auto;gap:20px;margin-top:48px}
 #village .gam figure{margin:0;position:relative;border-radius:28px;overflow:hidden;background:#1d1d1f}
 #village .gam img{display:block;width:100%;height:440px;object-fit:cover}
 #village .gam figcaption{position:absolute;left:20px;bottom:16px;color:#fff;font-weight:600;font-size:17px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
 #showcase .clips{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
 #showcase .ph0{aspect-ratio:16/9;border-radius:24px;background:#d2d2d7;display:grid;place-items:center;color:#6e6e73;font-size:15px}
 @media(max-width:734px){.cc .out b{font-size:30px}.cc .out b span{font-size:22px}#seniors .crow img{width:150px;height:188px}#village .gam{grid-template-columns:1fr}#village .gam img{height:260px}#showcase .clips{grid-template-columns:1fr}}
+#village .gam .big{grid-column:1/-1}#village .gam .big img{height:auto;aspect-ratio:1892/968}#village .gam{grid-template-columns:1fr 1fr}
+@media(max-width:734px){#village .gam{grid-template-columns:1fr}#village .gam .big img{height:auto}}
 </style>
 </head>
 <body>
@@ -449,7 +451,7 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10
 <section class="sec c" id="village">
   <div class="vw">
     <div class="head"><h2 class="t-sec">เรียนรู้ด้วย Gamification</h2><p class="lead">เรียนสนุก ปั่นงานมันส์</p></div>
-    <div class="gam"><figure><img src="img/village-real.jpg" alt="หน้าจอ HamsVillage เมืองพิกเซลที่ใช้เรียนในค่าย" loading="lazy"><figcaption>HamsVillage</figcaption></figure><figure><img src="img/quest-app.jpg" alt="หน้าจอ HamsQuest กระดานภารกิจ" loading="lazy"><figcaption>HamsQuest</figcaption></figure></div>
+    <div class="gam"><figure class="big"><img src="img/hv-1.jpg" alt="หน้าจอจริง HamsVillage ตัวละครเดินในหมู่บ้าน มีเควสใหม่และ Raid Boss" loading="lazy"><figcaption>HamsVillage</figcaption></figure><figure><img src="img/hv-2.jpg" alt="หน้าจอจริง HamsVillage เพื่อนในทีมเดินไปด้วยกัน" loading="lazy"><figcaption>เล่นเป็นทีม</figcaption></figure><figure><img src="img/quest-app.jpg" alt="หน้าจอ HamsQuest กระดานภารกิจ" loading="lazy"><figcaption>HamsQuest</figcaption></figure></div>
     <button class="plus" type="button" data-sheet="sh-zones" aria-haspopup="dialog" aria-expanded="false">ดู 4 โซน<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button>
   </div>
 </section>
