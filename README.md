@@ -1,15 +1,15 @@
-# Portfolio Camp — Prototype
+# Portfolio Camp for TCAS 1
 
-หน้าต้นแบบ (prototype) ของหน้า Portfolio Camp for TCAS-1 ของ Hamster Hub
-โครงหน้าอิงรูปแบบของ apple.com/th (iPhone Duo, MacBook Pro) ค่าขนาดตัวอักษร ระยะ และมุม วัดจากหน้าเว็บจริง
+Static landing page for Hamster Hub. The implementation follows [planning.md](planning.md) and uses HTML, CSS, and vanilla JavaScript in `index.html`.
 
-- ไฟล์เดียว `index.html` (HTML/CSS/JS ล้วน ไม่ต้อง build)
-- `img/` ภาพนิ่ง, `vid/` คลิปเกมจริงที่ตัดแล้ว
-- ข้อความบนแถบประกาศเปลี่ยนเองตามวันที่ (ก่อนปิดรับ / หลังปิดรับ / ระหว่างค่าย / หลังจบค่าย)
-- สีปุ่มยังเป็นฟ้าแบบ Apple เปลี่ยนเป็นสีแบรนด์ได้ที่ตัวแปร `--blue` ใน `:root`
+## Local preview
 
-ข้อมูลที่ยังรอทีมยืนยัน: สถานที่จัดค่าย, คำอธิบายเกรด 60–100, ภาพถ่ายจริงจากค่าย
+```sh
+python3 -m http.server 8765
+```
 
-ดูหน้าเว็บ: https://pepesx231.github.io/PortfolioCamp/
+Open `http://localhost:8765/`.
 
-แก้ไฟล์แล้ว push ขึ้น `main` ได้เลย หน้าเว็บจะอัปเดตเองภายในราว 1 นาที
+The page keeps the existing registration and LINE destinations. The registration destination returned HTTP 404 on 27 November 2026, so launch is blocked until the event team supplies a working URL. The price, registration deadline, grade eligibility, privacy link, ARAYA artwork, senior profiles, and actual portfolio examples are not displayed until confirmed. The site includes seven full-length student clips that autoplay muted and loop while visible selected from the user-provided spreadsheet and a guest portrait supplied by the user, plus two licensed illustrative photos. See [planning.md](planning.md) for the current checklist and [assets-sources.md](assets-sources.md) for media provenance.
+
+Do not push to `main` or deploy without authorization.

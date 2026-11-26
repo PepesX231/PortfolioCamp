@@ -1,869 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfolio Camp for TCAS 1 | ทำพอร์ตและสร้างผลงาน 3 วัน | Hamster Hub</title>
-<meta name="description" content="มีผลงานแล้วมาทำพอร์ต ยังไม่มีมาเริ่มสร้างเกม พบรุ่นพี่มหาวิทยาลัยและเปิดบูธผลงานใน HamsVillage วันที่ 4–6 ธันวาคม 2569 ออนไลน์">
+<title>Portfolio Camp for TCAS 1 | ทำพอร์ตและสร้างเกมใน 3 วัน | Hamster Hub</title>
+<meta name="description" content="มีผลงานแล้ว ทำพอร์ตให้พร้อม ยังไม่มี มาเริ่มสร้างเกม พบรุ่นพี่มหาวิทยาลัยและผู้พัฒนา ARAYA วันที่ 4–6 ธันวาคม 2569 ออนไลน์ผ่าน Discord">
 <meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://pepesx231.github.io/PortfolioCamp/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial' font-weight='700' fill='%23fff' text-anchor='middle'%3EPC%3C/text%3E%3C/svg%3E">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="th_TH">
-<meta property="og:site_name" content="Hamster Hub">
+<meta property="og:type" content="website"><meta property="og:locale" content="th_TH"><meta property="og:site_name" content="Hamster Hub">
 <meta property="og:title" content="Portfolio Camp for TCAS 1">
-<meta property="og:description" content="มีผลงานแล้ว ทำพอร์ตให้พร้อม ยังไม่มี เริ่มสร้างได้เลย 4–6 ธ.ค. 2569 ออนไลน์ผ่าน Discord">
+<meta property="og:description" content="มีผลงานแล้ว ทำพอร์ตให้พร้อม ยังไม่มี มาเริ่มสร้างเกม | 4–6 ธันวาคม 2569">
 <meta property="og:url" content="https://pepesx231.github.io/PortfolioCamp/">
 <meta property="og:image" content="https://pepesx231.github.io/PortfolioCamp/img/og.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/noto-sans-thai-thai.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root{--bg:#fff;--alt:#f5f5f7;--ink:#1d1d1f;--mute:#515154;--mute2:#86868b;--line:#d2d2d7;--blue:#0071e3;--link:#0066cc;--glass:rgba(232,232,237,.72);--pf:#e8f0ff;--pj:#fff2d5;--r:28px}
-*{box-sizing:border-box;min-width:0}
-html{scroll-padding-top:84px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "Noto Sans Thai",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
-img,video{display:block;max-width:100%}
-h1,h2,h3,h4,p,ul,ol,dl{margin:0}
-ul,ol{padding:0;list-style:none}
-a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
-button{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
-.skip{position:absolute;left:12px;top:-60px;z-index:99;background:#fff;color:var(--ink);padding:10px 16px;border-radius:999px}.skip:focus{top:12px}
-.vw{width:min(1200px,calc(100% - 48px));margin:0 auto}
-.vn{width:min(980px,calc(100% - 48px));margin:0 auto}
-.sec{padding:120px 0}
-.alt{background:var(--alt)}
-.dark{background:#000;color:#f5f5f7}.dark a:not(.btn){color:#2997ff}
-.c{text-align:center}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border-radius:980px;background:var(--blue);color:#fff;font-size:17px;font-weight:500;border:0;cursor:pointer;white-space:nowrap}
-.btn:hover{text-decoration:none;background:#0077ed}
-.btn.ghost{background:transparent;color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
-.dark .btn.ghost{color:#2997ff;box-shadow:inset 0 0 0 1.5px #2997ff}
-.t-eye{font-size:21px;line-height:1.3;font-weight:600}
-.t-hero{font-size:72px;line-height:1.25;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
-.t-sec{font-size:52px;line-height:1.25;font-weight:700;text-wrap:balance}
-.t-card{font-size:26px;line-height:1.35;font-weight:600}
-.t-copy{font-size:21px;line-height:1.55;color:var(--mute)}
-.dark .t-copy{color:var(--mute2)}
-.t-small{font-size:14px;line-height:1.45;color:var(--mute)}
-.head{margin-bottom:56px;max-width:820px}.head .t-copy{margin-top:16px}
-.c .head,.head.c{margin-left:auto;margin-right:auto}
-
-/* nav */
-.ln{position:fixed;top:14px;left:0;right:0;z-index:50;display:flex;justify-content:center;pointer-events:none;padding:0 12px}
-.tabbar{pointer-events:auto;position:relative;display:flex;align-items:center;gap:2px;padding:5px;border-radius:999px;background:rgba(22,22,23,.8);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12),0 12px 32px rgba(0,0,0,.22);max-width:100%;overflow-x:auto;scrollbar-width:none}
-.tabbar::-webkit-scrollbar{display:none}
-.tabbar .brand{color:#fff;font-weight:600;font-size:13px;padding:8px 14px 8px 16px;white-space:nowrap}
-.tabbar a{position:relative;z-index:1;color:rgba(245,245,247,.72);font-size:13px;font-weight:500;padding:8px 14px;border-radius:999px;white-space:nowrap;transition:color .25s}
-.tabbar a:hover{color:#fff;text-decoration:none}.tabbar a.cur{color:#fff}
-.tabbar .ind{position:absolute;z-index:0;top:5px;bottom:5px;left:0;width:0;border-radius:999px;background:rgba(255,255,255,.16);transition:left .35s cubic-bezier(.3,.7,.2,1),width .35s cubic-bezier(.3,.7,.2,1)}
-.tabbar .ln-btn{background:var(--blue);color:#fff;margin-left:6px;padding:8px 18px}
-.tabbar .ln-btn:hover{background:#0077ed}
-
-/* hero */
-.hero{background:#000;color:#f5f5f7;padding:128px 0 96px;text-align:center;position:relative;overflow:clip}
-.hero .t-eye{color:#86868b}
-.hero h1{margin-top:12px;padding:0 24px}
-.hero h1 span{display:block}.nw{white-space:nowrap}.cc .out b{text-wrap:balance}
-.hero h1 i{font-style:normal;white-space:nowrap}
-.hero .sub{margin:20px auto 0;max-width:720px;padding:0 24px;font-size:24px;line-height:1.45;color:#d2d2d7}
-.hero .when{margin-top:12px;font-size:17px;color:#86868b}
-.hero .acts{display:flex;gap:16px 28px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:32px;padding:0 24px}
-.hero .acts a.more{color:#2997ff;font-size:17px}
-.hero-media{position:relative;width:min(1440px,100%);margin:48px auto 0;aspect-ratio:16/9;max-height:720px}
-.hero-media video{width:100%;height:100%;object-fit:cover}
-.hero-media::before,.hero-media::after{content:"";position:absolute;inset:-1px;pointer-events:none}
-.hero-media::before{background:linear-gradient(180deg,#000 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 70%,#000 100%)}
-.hero-media::after{background:linear-gradient(90deg,#000 0%,rgba(0,0,0,0) 14%,rgba(0,0,0,0) 86%,#000 100%)}
-
-/* benefits bento */
-.bento{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.bx{position:relative;border-radius:var(--r);overflow:hidden;height:520px;background:var(--bg,#fff)}
-.bx .tx{position:relative;z-index:2;padding:40px 40px 0;max-width:460px}
-.bx .tx p{margin-top:8px;font-size:19px;line-height:1.5;color:rgba(29,29,31,.66)}
-.bx .md{position:absolute;inset:0;z-index:0}
-.bx .md img,.bx .md video{width:100%;height:100%;object-fit:cover}
-.bx.art .md{top:auto;height:70%}.bx.art .md img{object-position:right bottom;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 28%);mask-image:linear-gradient(180deg,transparent 0,#000 28%)}
-.bx.vid{background:#000;color:#f5f5f7}.bx.vid .tx p{color:#a1a1a6}
-.bx.vid::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.6) 30%,rgba(0,0,0,0) 62%)}
-.bx .src{position:absolute;right:18px;bottom:14px;z-index:2;font-size:12px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8)}
-
-/* tracks */
-.cmp2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(10,auto);column-gap:56px;max-width:980px;margin:0 auto;text-align:center}
-.cc{display:grid;grid-row:span 10;grid-template-rows:subgrid;align-content:start}
-.cc .md{border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;background:#f5f5f7}.cc .md img{width:100%;height:100%;object-fit:cover}
-.cc .nm{margin-top:32px;font-size:14px;font-weight:600;color:var(--tc)}
-.cc h3{margin-top:6px}.cc .ds{margin:12px auto 0;max-width:400px;font-size:17px;color:var(--mute)}
-.cc .act{margin-top:24px}
-.cc .li{padding:16px 0;border-bottom:1px solid var(--line)}.cc .act+.li{margin-top:40px;border-top:1px solid var(--line)}
-.cc .li svg{display:block;margin:0 auto 6px;color:var(--tc)}.cc .li b{display:block;font-size:17px;font-weight:600}.cc .li span{display:block;margin-top:2px;font-size:15px;color:var(--mute)}
-.cc .out{padding:24px 0;border-bottom:1px solid var(--line)}.cc .out small{display:block;font-size:12px;color:var(--mute)}.cc .out b{display:block;margin-top:4px;font-size:17px;font-weight:600}
-.cc .fit{margin-top:20px;font-size:14px;color:var(--mute)}
-
-/* universities */
-.dekr{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin-top:56px}
-.dekr img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
-.cap{margin-top:20px;font-size:14px;color:var(--mute)}
-.dark .cap{color:var(--mute2)}
-.lead{margin:16px auto 0;max-width:640px;font-size:21px;line-height:1.5;color:var(--mute)}
-.dark .lead{color:var(--mute2)}
-.soon{margin-top:12px;font-size:15px;color:var(--mute)}
-
-/* portfolio pass */
-.wallet{width:min(400px,100%);margin:0 auto;border-radius:var(--r);background:linear-gradient(160deg,#48484a 0%,#2c2c2e 55%,#1c1c1e 100%);color:#fff;text-align:left;padding:24px 26px 26px;box-shadow:0 40px 80px rgba(0,0,0,.6),inset 0 0 0 1px rgba(255,255,255,.1)}
-.wallet small{display:block;font-size:11px;font-weight:600;letter-spacing:.02em;color:rgba(255,255,255,.6)}
-.wl-top{display:flex;justify-content:space-between;align-items:flex-start}.wl-top b{font-size:17px;font-weight:600}.wl-top span{text-align:right;font-size:17px;font-weight:600}
-.wl-main{margin:44px 0 32px}.wl-main b{display:block;font-size:38px;line-height:1.15;font-weight:600;color:#fff}
-.wl-row{display:grid;grid-template-columns:1.3fr 1fr .8fr;gap:10px;font-size:15px;font-weight:600}
-
-/* disclosure button (one component for every section) */
-.plus{display:inline-flex;align-items:center;gap:14px;margin-top:36px;min-height:52px;padding:6px 6px 6px 24px;border:0;border-radius:999px;background:var(--alt);color:var(--ink);font-size:17px;font-weight:500;cursor:pointer;transition:background .2s}
-.plus i{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;transition:transform .3s}
-.plus:hover{background:#e8e8ed}.plus:hover i{transform:rotate(90deg)}
-.alt .plus{background:#fff}.alt .plus:hover{background:#fafafc}
-.dark .plus{background:#1d1d1f;color:#f5f5f7}.dark .plus:hover{background:#2c2c2e}.dark .plus i{background:#f5f5f7;color:#000}
-.acts2{display:flex;flex-wrap:wrap;gap:16px 20px;justify-content:center;align-items:center;margin-top:40px}.acts2 .plus{margin-top:0}
-
-/* sheet (one modal for every section) */
-dialog.sheet{width:min(720px,calc(100% - 48px));max-width:none;max-height:calc(100dvh - 96px);padding:0;border:0;border-radius:var(--r);background:#fff;color:var(--ink);box-shadow:0 40px 100px rgba(0,0,0,.35);overflow:hidden}
-dialog.sheet[open]{display:flex;flex-direction:column;animation:shUp .35s cubic-bezier(.3,.7,.2,1)}
-dialog.sheet::backdrop{background:rgba(0,0,0,.5);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-@keyframes shUp{from{transform:translateY(24px);opacity:0}}
-.sheet .in{overflow-y:auto;padding:64px 56px 56px;overscroll-behavior:contain}
-.sheet .x{position:absolute;top:16px;right:16px;z-index:2;width:40px;height:40px;border-radius:50%;border:0;background:#e8e8ed;color:var(--ink);display:grid;place-items:center;cursor:pointer}
-.sheet .x:hover{background:#dcdce1}
-.sheet h3{font-size:32px;line-height:1.3;font-weight:700;padding-right:32px}
-.sheet .lead{margin:8px 0 0;font-size:19px}
-.sheet h4{margin-top:36px;font-size:14px;font-weight:600;color:var(--mute)}
-.sl{margin-top:12px;border-top:1px solid var(--line)}
-.sheet h3+.sl,.sheet .lead+.sl{margin-top:32px}
-.sl li{display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.sl li.one{grid-template-columns:1fr}
-.sl small{font-size:15px;color:var(--mute)}
-.sl b{display:block;font-size:19px;font-weight:600}
-.sl span{display:block;margin-top:2px;font-size:16px;color:var(--mute)}
-.sheet .cap{margin-top:24px}
-
-/* village */
-.wide{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;background:#f9d3d8}.mk{position:absolute;right:14px;bottom:12px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.85);font-size:12px;color:#1d1d1f}
-.wide img{width:100%;height:100%;object-fit:cover}
-.mentor .wide img{object-position:60% center}
-
-/* rails */
-.gal{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(24px,calc((100% - 1200px)/2));scroll-padding:0 max(24px,calc((100% - 1200px)/2))}
-.gal::-webkit-scrollbar{display:none}
-.wk{flex:0 0 372px;scroll-snap-align:start;background:#fff;border-radius:var(--r);overflow:hidden}
-.wk img{width:100%;aspect-ratio:16/10;object-fit:cover}
-.wk div{padding:18px 22px 22px}.wk small{display:block;font-size:13px;color:#b25000;font-weight:600;margin-top:2px}.wk b{display:block;font-size:19px;font-weight:600}.wk span{font-size:15px;color:var(--mute)}
-.ctrls{display:flex;justify-content:center;gap:16px;margin-top:28px}
-.dots{display:flex;align-items:center;gap:14px;padding:0 24px;height:56px;border-radius:28px;background:var(--glass)}
-.dots button{width:8px;height:8px;border-radius:8px;border:0;padding:0;background:#86868b;cursor:pointer;transition:width .4s,background .4s;position:relative}
-.dots button::before{content:"";position:absolute;inset:-16px -6px}
-.dots button.on{width:40px;background:#1d1d1f}
-.round{width:56px;height:56px;border-radius:50%;background:var(--glass);border:0;cursor:pointer;display:grid;place-items:center;font-size:18px}
-.round:disabled{opacity:.35;cursor:default}
-
-/* showcase */
-.show{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:center;margin-bottom:96px}
-.show .md{border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;background:#000}
-.show .md video{width:100%;height:100%;object-fit:cover}
-
-/* schedule */
-.days{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--alt);margin-bottom:40px;flex-wrap:wrap;justify-content:center}
-.days button{border:0;background:transparent;padding:10px 20px;border-radius:999px;cursor:pointer;font-size:15px;font-weight:500;color:var(--mute)}
-.days button[aria-selected=true]{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.dtitle{font-size:28px;font-weight:600;margin-bottom:24px}
-.sched{text-align:left;border-top:1px solid var(--line)}
-.sched .r{display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 4px;border-bottom:1px solid var(--line);font-size:17px}
-.sched .r time{color:var(--mute);font-variant-numeric:tabular-nums}
-.sched .split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.sched .split span{padding:10px 14px;border-radius:12px;font-size:16px}
-.sched .split span small{display:block;font-size:12px;font-weight:600;color:var(--mute)}
-.sched .r.hl{background:#fff8e6}
-.sfoot{margin-top:20px;font-size:14px;color:var(--mute)}
-
-/* registration */
-.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;max-width:980px;margin:0 auto;text-align:center}
-.facts div{border-top:1px solid var(--line);padding-top:20px}
-.facts dt{font-size:15px;color:var(--mute)}
-.facts dd{margin:4px 0 0;font-size:24px;line-height:1.35;font-weight:600}
-/* faq */
-.faq{border-top:1px solid var(--line);max-width:980px}
-.fq{border-bottom:1px solid var(--line)}
-.fq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 4px;background:none;border:0;cursor:pointer;text-align:left;font-size:21px;font-weight:600}
-.fq button i{flex:none;font-style:normal;font-size:26px;line-height:1;color:var(--mute);transition:transform .3s}
-.fq button[aria-expanded=true] i{transform:rotate(45deg)}
-.fq .a{padding:0 4px 26px;font-size:19px;color:var(--mute);max-width:820px}
-.fq .a[hidden]{display:none}
-
-/* final */
-.final .t-sec{font-size:64px}
-.final .lines{margin-top:24px;font-size:24px;line-height:1.6;color:#d2d2d7}
-.final .dt{margin:20px 0 32px;color:#86868b}
-
-/* footer */
-.gf{background:var(--alt);color:var(--mute);font-size:12px;line-height:1.5;padding:40px 0 48px}
-.gf .notes{display:flex;flex-direction:column;gap:8px;padding-bottom:20px;border-bottom:1px solid var(--line)}
-.gf .lk{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:18px}
-.gf .lk a{color:var(--ink)}
-
-@media(max-width:1068px){
- .t-hero{font-size:60px}.t-sec{font-size:44px}
-}
-@media(max-width:860px){
- .uni,.show,.reg{grid-template-columns:1fr}
-
-}
-@media(max-width:734px){
- .sec{padding:72px 0}.vw,.vn{width:calc(100% - 32px)}
- .t-hero{font-size:40px}.t-sec{font-size:32px}.final .t-sec{font-size:36px}.t-card{font-size:22px}.t-copy{font-size:18px}
- .hero{padding:104px 0 56px}.hero .sub{font-size:19px}
- .tabbar .brand,.tabbar .opt,.tabbar .lg{display:none}.tabbar a{padding:8px 11px}
- .bento{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:14px;margin:0 -16px;padding:0 16px;scroll-padding:0 16px}
- .bento::-webkit-scrollbar{display:none}
- .bx{flex:0 0 82%;height:460px;scroll-snap-align:start}.bx .tx{padding:28px 26px 0}.bx .tx p{font-size:16px}
- .cmp2{gap:12px}.cc .nm{margin-top:20px}.cc h3{font-size:19px}.cc .ds{font-size:14px}.cc .btn{padding:10px 14px;font-size:14px;white-space:normal}.cc .li b{font-size:15px}.cc .li span,.cc .out b{font-size:13px}.cc .out b{font-size:14px}
- .zones{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}.wide{border-radius:18px}
- .wk{flex:0 0 78%}
- :root{--r:20px}
- .dekr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin:40px -16px 0;padding:0 16px;scroll-padding:0 16px}.dekr::-webkit-scrollbar{display:none}.dekr img{flex:0 0 150px;width:150px;scroll-snap-align:start}
- .lead{font-size:18px}
- .gal{padding:0 16px;scroll-padding:0 16px}
- .mentor .wide{aspect-ratio:4/3}
- .wl-main{margin:32px 0 24px}.wl-main b{font-size:32px}.wallet{padding:20px 22px 22px}
- .facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}.facts dd{font-size:19px}
- dialog.sheet{width:100%;max-height:88dvh;margin:auto 0 0;border-radius:24px 24px 0 0}
- @keyframes shUp{from{transform:translateY(100%)}}
- .sheet .in{padding:56px 24px 40px}
- .sheet h3{font-size:26px}.sheet .lead{font-size:17px}
- .sl li{grid-template-columns:116px minmax(0,1fr);gap:12px;padding:16px 0}.sl b{font-size:17px}.sl span{font-size:15px}
- .sched .r{grid-template-columns:1fr;gap:4px}
- .sched .split{grid-template-columns:1fr}
- .fq button{font-size:18px}.fq .a{font-size:17px}
- .final .lines{font-size:19px}
- .round{display:none}
-}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-.cc .md video{width:100%;height:100%;object-fit:cover}
-.cc .li,.cc .act+.li,.cc .out{border:0!important}.cc .act+.li{margin-top:32px}.cc .li{padding:12px 0}.cc .out{margin-top:20px;padding-top:0}
-.cmp2{grid-template-rows:none!important}.cc{grid-row:auto!important;display:flex!important;flex-direction:column}
-#universities .lead,#universities .cap{color:#86868b}
-.sched2{display:flex;flex-direction:column;gap:12px;text-align:left;max-width:760px;margin:0 auto}
-.sched2 .r{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:center;background:#fff;border-radius:22px;padding:22px 28px}
-.sched2 .r time{font-size:22px;font-weight:600;letter-spacing:-.01em;font-variant-numeric:tabular-nums;color:#1d1d1f}
-.sched2 .r>span{font-size:17px;color:#515154}
-.sched2 .r.hl{background:#1d1d1f}.sched2 .r.hl time{color:#fff}.sched2 .r.hl>span{color:#d2d2d7}
-.sched2 .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}.sched2 .split span{font-size:16px;color:#515154}.sched2 .split small{display:block;font-size:12px;font-weight:600;color:var(--tc);margin-bottom:2px}
-#schedule .days{background:var(--alt)}
-.days button{padding:12px 26px;font-size:16px}
-.dtitle{font-size:32px;font-weight:700;letter-spacing:-.01em;margin-bottom:28px}
-@media(max-width:734px){.sched2 .r{grid-template-columns:1fr;gap:4px;padding:18px 20px}.sched2 .r time{font-size:19px}.sched2 .split{grid-template-columns:1fr;gap:8px}.dtitle{font-size:24px}}
-.gg{gap:20px}
-.gc{flex:0 0 min(1200px,calc(100vw - 48px));height:600px;border-radius:28px;background:#f5f5f7;scroll-snap-align:start;display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);align-items:center;padding:0 48px;gap:40px}
-.gc .gt{font-size:24px;line-height:1.35;font-weight:600;color:#1d1d1f}
-.gc .gm{position:relative;height:420px;border-radius:20px;overflow:hidden;background:#000;max-width:640px;width:100%;justify-self:center}
-.gc .gm img,.gc .gm video{width:100%;height:100%;object-fit:cover}
-.gc .src{position:absolute;right:14px;bottom:12px;font-size:12px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8)}
-.gdots button.on{width:48px;background:#c7c7cc;overflow:hidden}
-.gdots button.on::after{content:"";position:absolute;inset:0;background:#1d1d1f;transform-origin:left;transform:scaleX(var(--p,0))}
-@media(max-width:734px){#bplay{display:grid}.gc{flex-basis:calc(100vw - 32px);height:auto;grid-template-columns:1fr;padding:32px 24px;gap:24px;align-items:start}.gc .gm{height:auto;aspect-ratio:4/3}.gc .gt{font-size:21px}}
-.reg2{position:relative;background:#000;color:#f5f5f7;overflow:hidden;padding:160px 0 150px}
-.reg2 .wall{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:16px;opacity:.45;-webkit-mask-image:radial-gradient(ellipse 70% 65% at 50% 50%,transparent 0,#000 75%);mask-image:radial-gradient(ellipse 70% 65% at 50% 50%,transparent 0,#000 75%)}
-.reg2 .wrow{display:flex;gap:16px;width:max-content;animation:wall 60s linear infinite}
-.reg2 .wrow img{flex:none;max-width:none;width:340px;height:212px;object-fit:cover;border-radius:16px}
-.reg2 .wall::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#000 0,rgba(0,0,0,.2) 30%,rgba(0,0,0,.2) 70%,#000 100%)}
-.reg2 .wrow.rev{animation-direction:reverse;margin-left:-170px}
-@keyframes wall{to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.reg2 .wrow{animation:none}}
-.reg2 .rin{position:relative}
-.reg2 .kick{font-size:21px;font-weight:600;color:#a1a1a6}
-.reg2 h2{margin-top:10px;background:linear-gradient(90deg,#fff,#c8c8cf);-webkit-background-clip:text;background-clip:text;color:transparent}
-.reg2 .price{margin-top:28px;font-size:19px;color:#a1a1a6}.reg2 .price b{display:block;font-size:40px;color:#fff;font-weight:700;margin-bottom:4px}
-.reg2 .acts2{margin-top:36px}
-.reg2 .plus{background:rgba(255,255,255,.12);color:#f5f5f7}.reg2 .plus i{background:#f5f5f7;color:#000}
-.reg2 .who{margin-top:24px;font-size:14px;color:#86868b}
-@media(max-width:734px){.reg2{padding:110px 0 100px}.reg2 .wrow img{width:200px;height:125px}.reg2 .price b{font-size:32px}}
-.store{gap:20px;padding-top:8px;padding-bottom:24px}
-.sc{position:relative;flex:0 0 313px;height:500px;border-radius:24px;background:#fff;scroll-snap-align:start;padding:28px 28px 30px;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,.06);overflow:hidden}
-.sc .im{height:250px;display:grid;place-items:center;margin:4px 0 22px}
-.sc .im img{max-height:100%;width:100%;height:100%;object-fit:cover;border-radius:16px}
-.sc .fan{position:relative}.sc .fan img{position:absolute;width:120px;height:150px;object-fit:cover;border-radius:14px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
-.sc .fan img:nth-child(1){transform:translateX(-80px) rotate(-8deg)}.sc .fan img:nth-child(2){z-index:2}.sc .fan img:nth-child(3){transform:translateX(80px) rotate(8deg)}
-.sc .lb{font-size:12px;font-weight:600;color:#b64400;margin-top:auto}
-.sc h3{font-size:19px;line-height:1.35;font-weight:600;margin-top:4px}
-.sc .sub{font-size:14px;color:#6e6e73;margin-top:4px}
-.sc .go{position:absolute;right:22px;bottom:24px;width:36px;height:36px;border-radius:50%;border:0;background:#e8e8ed;color:#1d1d1f;display:grid;place-items:center;cursor:pointer}
-.sc .go:hover{background:#dcdce1}
-.sc.feat{flex-basis:400px;background:var(--fc);color:#fff;padding:0}
-.sc.feat .lb{color:rgba(255,255,255,.85);margin:30px 30px 0}.sc.feat h3{font-size:28px;line-height:1.3;margin:6px 30px 0;font-weight:700}
-.sc.feat .fm{position:absolute;left:0;right:0;bottom:0;height:62%}.sc.feat .fm video{width:100%;height:100%;object-fit:cover}
-.sc.feat .fm::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,var(--fc) 0,transparent 35%)}
-.sc .src{position:absolute;right:16px;bottom:12px;z-index:2;font-size:11px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8)}
-.sarrows{display:flex;justify-content:flex-end;gap:14px;margin-top:8px}
-.ar{width:36px;height:36px;border-radius:50%;border:0;background:#e8e8ed;color:#1d1d1f;display:grid;place-items:center;cursor:pointer}.ar:disabled{opacity:.4;cursor:default}
-@media(max-width:734px){.sc{flex-basis:280px;height:460px}.sc.feat{flex-basis:300px}.sc .im{height:220px}.sarrows{display:none}}
-/* registration price */
-.reg2 .price2{margin:36px auto 0;display:inline-flex;flex-direction:column;align-items:center}
-.reg2 .price2 b{font-size:120px;line-height:1;font-weight:700;letter-spacing:-.03em;background:linear-gradient(180deg,#fff 0%,#ffd27a 55%,#ff8a3d 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.reg2 .price2 b small{font-size:.32em;letter-spacing:0;margin-left:10px}
-.reg2 .price2 span{margin-top:14px;font-size:17px;color:#a1a1a6}
-@media(max-width:734px){.reg2 .price2 b{font-size:80px}}
-/* village mock */
-.vmock{position:relative;max-width:980px;margin:0 auto;aspect-ratio:16/9;border-radius:28px;background:linear-gradient(160deg,#e6e6ea,#d2d2d7);overflow:hidden;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);gap:18px;padding:36px}
-.vmock div{border-radius:18px;background:rgba(255,255,255,.55);display:grid;place-items:center;font-size:17px;font-weight:600;color:#86868b}
-.vmock .mk{position:absolute;right:14px;bottom:12px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.85);font-size:12px;color:#1d1d1f}
-@media(max-width:734px){.vmock{padding:16px;gap:10px;border-radius:20px}.vmock div{font-size:13px}}
-.sheet .sp{font-size:17px;color:#515154;margin:-4px 0 20px}.sheet .sn{margin-top:20px;font-size:14px;color:#6e6e73}
-.plus.sm{margin-top:20px;min-height:40px;padding:4px 4px 4px 18px;font-size:15px;align-self:center}.plus.sm i{width:32px;height:32px}
-.lnk{border:0;background:none;color:#2997ff;font:inherit;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
-.hero .sub{color:#a1a1a6}
-.sc.tint{background:var(--tc);color:#fff;padding:0;box-shadow:none}
-.sc.tint .im{position:absolute;inset:0;height:auto;margin:0;display:block}
-.sc.tint .im img{width:100%;height:100%;border-radius:0;object-fit:cover;object-position:70% 20%;-webkit-mask-image:linear-gradient(180deg,#000 45%,transparent 78%);mask-image:linear-gradient(180deg,#000 45%,transparent 78%)}
-.sc.tint .lb,.sc.tint h3,.sc.tint .sub{position:relative;z-index:1;margin-left:28px;margin-right:60px}
-.sc.tint .lb{color:rgba(255,255,255,.8)}.sc.tint .sub{color:rgba(255,255,255,.78);margin-bottom:30px}
-.sc.tint .go{background:rgba(255,255,255,.22);color:#fff;z-index:2}.sc.tint .go:hover{background:rgba(255,255,255,.32)}
-.sc.tint .fan{display:grid;place-items:center;height:62%;bottom:auto;background:radial-gradient(circle at 50% 40%,#4a3a72,transparent 70%)}
-.sc.tint .fan img{-webkit-mask-image:none;mask-image:none;border-radius:14px;width:120px;height:150px}
-.sc{box-shadow:none}
-
-/* ---- loop r1 ---- */
-.hero{padding:136px 0 0}
-.hero .t-eye{font-size:19px}
-.hero h1{margin-top:14px;font-size:min(72px,7.2vw);line-height:1.22}
-.hero h1 span{white-space:nowrap}
-.hero h1 .g{background:linear-gradient(90deg,#ffd27a 0%,#ff9a4a 55%,#ff6a3d 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .sub{margin-top:22px;font-size:21px;color:#a1a1a6}
-.hero .more{display:inline-block;margin-top:14px;color:#2997ff;font-size:19px}
-.hero-media{margin-top:40px;max-height:none;width:min(1240px,100%)}
-.hero-media::before{background:linear-gradient(180deg,#000 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0) 78%,#000 100%)}
-.hero-media::after{background:linear-gradient(90deg,#000 0%,rgba(0,0,0,0) 12%,rgba(0,0,0,0) 88%,#000 100%)}
-.hero-media .src{position:absolute;right:max(24px,calc((100% - 1200px)/2));bottom:28px;z-index:2;font-size:12px;color:#86868b}
-.sc.mt .im{bottom:auto;height:63%}
-.sc.mt .im img{object-position:100% 0;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
-.sc.pf .im{bottom:auto;height:64%}
-.sc.pf .im img{object-position:28% 30%;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
-.sc .mk2{position:absolute;top:14px;left:14px;z-index:2;padding:3px 9px;border-radius:999px;background:rgba(255,255,255,.85);font-size:11px;color:#1d1d1f}
-.wide.vil{max-width:1080px;margin:0 auto}
-.reg2 .wall{-webkit-mask-image:radial-gradient(ellipse 62% 70% at 50% 50%,transparent 20%,#000 85%);mask-image:radial-gradient(ellipse 62% 70% at 50% 50%,transparent 20%,#000 85%)}
-.sched3{max-width:760px;margin:0 auto;text-align:left;border-top:1px solid var(--line)}
-.sched3 li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;align-items:baseline;padding:22px 4px;border-bottom:1px solid var(--line)}
-.sched3 time{font-size:24px;font-weight:600;letter-spacing:-.01em;font-variant-numeric:tabular-nums;color:var(--ink)}
-.sched3 li>span{font-size:19px;color:var(--ink)}
-.sched3 li.hot>span{font-weight:600}
-.sched3 em{font-style:normal;margin-left:10px;padding:2px 10px;border-radius:999px;background:#fff1e0;color:#b64400;font-size:12px;font-weight:600;vertical-align:3px}
-.sched3 .split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.sched3 .split span{font-size:19px;color:var(--ink)}
-.sched3 .split small{display:block;font-size:12px;font-weight:600;color:var(--tc);margin-bottom:2px}
-.dtitle{font-size:17px;font-weight:500;color:var(--mute);margin:-8px 0 28px;letter-spacing:0}
-@media(max-width:734px){
- .hero{padding:104px 0 0}.hero .t-eye{font-size:15px}.hero .sub{font-size:17px;margin-top:16px}.hero .more{font-size:17px}
- .hero-media{margin-top:28px;aspect-ratio:4/3}
- .hero-media .src{right:16px;bottom:14px}
- .sched3 li{grid-template-columns:1fr;gap:2px;padding:16px 2px}.sched3 time{font-size:20px}.sched3 li>span,.sched3 .split span{font-size:17px}
- .sched3 .split{gap:14px;margin-top:4px}
- .dtitle{font-size:15px}
-}
-.cc .md.ph0{background:linear-gradient(160deg,#e6e6ea,#d2d2d7);display:grid;place-items:center}.cc .md.ph0 span{padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.85);font-size:13px;color:#6e6e73}
-
-.cc .eng{margin:6px 0 0;font-size:19px;font-weight:600;color:var(--tc)}
-.cc .out b{display:block;font-size:40px;line-height:1.1;font-weight:700;letter-spacing:-.01em}
-.cc .out b span{display:block;font-size:28px;color:var(--tc)}
-#seniors .covers{display:flex;flex-direction:column;gap:20px;overflow:hidden;margin-top:56px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-#seniors .crow{display:flex;gap:20px;width:max-content;animation:wall 50s linear infinite}
-#seniors .crow.rev{animation-direction:reverse}
-#seniors .crow img{flex:none;max-width:none;width:240px;height:300px;object-fit:cover;border-radius:18px}
-#seniors .mk3{margin:28px 0 0;font-size:13px;color:#86868b}
-@media(prefers-reduced-motion:reduce){#seniors .crow{animation:none}}
-#village .gam{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:auto auto;gap:20px;margin-top:48px}
-#village .gam figure{margin:0;position:relative;border-radius:28px;overflow:hidden;background:#1d1d1f}
-#village .gam img{display:block;width:100%;height:440px;object-fit:cover}
-#village .gam figcaption{position:absolute;left:20px;bottom:16px;color:#fff;font-weight:600;font-size:17px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
-#showcase .clips{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
-#showcase .ph0{aspect-ratio:16/9;border-radius:24px;background:#d2d2d7;display:grid;place-items:center;color:#6e6e73;font-size:15px}
-@media(max-width:734px){.cc .out b{font-size:30px}.cc .out b span{font-size:22px}#seniors .crow img{width:150px;height:188px}#village .gam{grid-template-columns:1fr}#village .gam img{height:260px}#showcase .clips{grid-template-columns:1fr}}
-#village .gam .big{grid-column:1/-1}#village .gam .big img{height:auto;aspect-ratio:1892/968}#village .gam{grid-template-columns:1fr 1fr}
-@media(max-width:734px){#village .gam{grid-template-columns:1fr}#village .gam .big img{height:auto}}
-
-.eye{margin:0 0 10px;font-size:21px;line-height:1.3;font-weight:600;color:var(--mute)}
-.dark .eye{color:#86868b}
-#numbers .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:72px 40px;max-width:980px;margin:0 auto}
-#numbers .nums small{display:block;font-size:17px;color:#a1a1a6;margin-bottom:6px}
-#numbers .nums b{display:block;font-size:44px;line-height:1.15;font-weight:700;letter-spacing:-.01em;color:#f5f5f7;text-wrap:balance}
-@media(max-width:1068px){#numbers .nums b{font-size:36px}}
-@media(max-width:734px){.eye{font-size:17px}#numbers .nums{grid-template-columns:1fr 1fr;gap:44px 20px}#numbers .nums b{font-size:26px}#numbers .nums small{font-size:14px}}
-
-.hero .hfacts{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:12px 44px;margin:28px auto 0;padding:0 24px;max-width:980px}
-.hero .hfacts li{display:flex;flex-direction:column;align-items:center;gap:2px}
-.hero .hfacts small{font-size:14px;color:#86868b}
-.hero .hfacts b{font-size:19px;font-weight:600;color:#f5f5f7}
-@media(max-width:734px){.hero .hfacts{display:grid;grid-template-columns:1fr 1fr;gap:16px 12px;margin-top:22px}.hero .hfacts b{font-size:16px}.hero .hfacts small{font-size:12px}}
-
-/* highlights (Apple "Get the highlights" pattern) */
-#benefits{padding:144px 0 120px}
-#benefits .head{margin-bottom:48px}#benefits .t-sec{font-size:48px;line-height:1.25;font-weight:600}
-.hlw{position:relative}
-.hl{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:30px;margin-bottom:-30px;overscroll-behavior-x:contain}
-.hl::-webkit-scrollbar{display:none}.hl.anim{scroll-snap-type:none;pointer-events:none}
-.hl-track{display:grid;grid-auto-flow:column;gap:20px;width:max-content;padding:0 max(6.25vw,calc((100vw - 1260px)/2))}
-.hl-s{position:relative;width:min(87.5vw,1260px);height:612px;scroll-snap-align:center;border-radius:28px;overflow:clip;background:#1d1d1f;color:#fff;cursor:pointer}
-.hl-s.on{cursor:default}
-.hl-s::after{content:"";position:absolute;inset:0;border:.8px solid #424245;border-radius:inherit;pointer-events:none;z-index:4}
-.hl-m{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hl-s::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.66) 0,rgba(0,0,0,.28) 24%,rgba(0,0,0,0) 44%),linear-gradient(0deg,rgba(0,0,0,.4) 0,rgba(0,0,0,0) 16%)}
-.hl-cap{position:absolute;left:0;right:0;top:0;z-index:2;margin:48px auto 0;max-width:584px;padding:0 24px;text-align:center;will-change:transform,opacity}
-.hl-cap p{margin:0;font-size:28px;line-height:1.39;font-weight:600;color:rgba(255,255,255,.92);text-wrap:balance}
-.hl-cap b{font-weight:600;color:#fff}
-.hl-s .src{position:absolute;left:28px;bottom:22px;z-index:2;font-size:12px;color:rgba(255,255,255,.75);text-shadow:0 1px 3px rgba(0,0,0,.8)}
-.hl-s .mk2{top:auto;bottom:20px;left:24px}
-.hl-s .go{position:absolute;right:22px;bottom:20px;z-index:3;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.22);color:#fff;display:grid;place-items:center;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-.hl-s .go:hover{background:rgba(255,255,255,.34)}
-.hl-ctl{position:sticky;bottom:32px;z-index:5;display:flex;justify-content:center;gap:16px;margin-top:56px}
-.hl-dots,.hl-pp{height:56px;border-radius:28px;background:rgba(42,42,45,.72);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px)}
-.hl-dots{display:flex;align-items:center;padding:0 16px}
-.hl-d{position:relative;flex:none;width:8px;height:8px;margin:0 8px;padding:0;border:0;border-radius:10px;background:rgba(255,255,255,.36);overflow:hidden;cursor:pointer}
-.hl-d:hover{background:rgba(255,255,255,.48)}.hl-d.on{pointer-events:none}
-.hl-d::before{content:"";position:absolute;inset:-14px -6px}
-.hl-d i{position:absolute;left:0;top:0;bottom:0;width:0;min-width:15%;margin-left:-15%;border-radius:10px;background:#f5f5f7;display:none}
-.hl-d.on i{display:block;animation:hlfill 6.15s linear forwards;animation-play-state:paused}
-.playing .hl-d.on i{animation-play-state:running}
-.ended .hl-d.on i{animation:none;width:115%}
-@keyframes hlfill{from{width:0}to{width:115%}}
-.hl-pp{width:56px;border:0;display:grid;place-items:center;color:#f5f5f7;cursor:pointer;padding:0}
-.hl-pp:hover{background:rgba(73,73,76,.73)}
-.hl-pp svg{display:none}.playing .hl-pp .i-pause,.paused .hl-pp .i-play,.ended .hl-pp .i-replay{display:block}
-.hl-d:focus-visible,.hl-pp:focus-visible,.hl-s .go:focus-visible{outline:2px solid #0071e3;outline-offset:3px}
-@media(max-width:1068px){.hl-s{height:576px}.hl-cap{margin-top:44px;max-width:555px}.hl-cap p{font-size:24px;line-height:1.375}#benefits .t-sec{font-size:40px}}
-@media(max-width:734px){#benefits{padding:112px 0 100px}#benefits .head{margin-bottom:32px}#benefits .t-sec{font-size:32px}
- .hl-track{padding:0 calc(6.25vw)}.hl{scroll-padding-inline-start:6.25vw}.hl-s{width:calc(87.5vw - 20px);height:480px;scroll-snap-align:start}
- .hl-cap{margin-top:32px;padding:0 20px}.hl-cap p{font-size:17px;line-height:1.35}.hl-s .src{left:20px;right:64px;bottom:18px}
- .hl-ctl{bottom:20px;margin-top:40px}}
-.hl-s:not(.on) .go{opacity:0;pointer-events:none}
-.hl-s .go{background:rgba(0,0,0,.45)}.hl-s .go:hover{background:rgba(0,0,0,.6)}
-.hl-s .mk2{position:absolute;z-index:2;bottom:20px;left:24px;padding:3px 9px;border-radius:999px;background:rgba(255,255,255,.85);font-size:11px;color:#1d1d1f}
-.hl-s::before{background:linear-gradient(180deg,rgba(0,0,0,.8) 0,rgba(0,0,0,.35) 30%,rgba(0,0,0,0) 50%),linear-gradient(0deg,rgba(0,0,0,.4) 0,rgba(0,0,0,0) 16%)}
-.hl-cap p{text-shadow:0 1px 14px rgba(0,0,0,.5)}
-
-.sc.feat .fm{height:72%}.sc.feat .fm::before{background:linear-gradient(180deg,var(--fc) 0,transparent 26%)}
-/* gallery: shared sections */
-.hl-ph{display:grid;place-items:center;background:#2c2c2e;color:#8e8e93;font-size:15px}
-.sec:not(.dark) .hl-ph{background:#d2d2d7;color:#6e6e73}
-.sec:not(.dark) .hl-s{background:#e8e8ed}.sec:not(.dark) .hl-s::after{border-color:#d2d2d7}
-.sec:not(.dark) .hl-dots,.sec:not(.dark) .hl-pp{background:rgba(210,210,215,.64)}
-.sec:not(.dark) .hl-d{background:rgba(0,0,0,.24)}.sec:not(.dark) .hl-d i{background:#1d1d1f}.sec:not(.dark) .hl-pp{color:#1d1d1f}
-.sec:not(.dark) .hl-pp:hover{background:rgba(190,190,195,.8)}
-.hl-s .hl-ph~.hl-cap p{text-shadow:none}
-.sec:not(.dark) .hl-s .hl-ph~.hl-cap p{color:#1d1d1f}.sec:not(.dark) .hl-s .hl-ph~.hl-cap b{color:#1d1d1f}
-.hl-s .hl-ph{z-index:0}.hl-s:has(.hl-ph)::before{display:none}
-#seniors .hl-m.covers{margin:0;-webkit-mask-image:none;mask-image:none;display:flex;flex-direction:column;justify-content:flex-end;gap:18px;overflow:hidden;background:#1d1d1f;padding:0 0 40px}
-#seniors .hl-m.covers .crow img{width:200px;height:250px}
-@media(max-width:734px){#seniors .hl-m.covers{padding-bottom:44px}#seniors .hl-m.covers .crow img{width:130px;height:163px}}
-#village,#seniors,#showcase{padding-bottom:120px}
-/* hero scrub */
-.hero-media.scrub{will-change:transform;border-radius:var(--r,0px);overflow:hidden}
-/* store cards: one layout for every card (text top, media bottom) */
-.sc.tint .lb,.sc.feat .lb{position:relative;z-index:1;margin:30px 28px 0;font-size:12px}
-.sc h3,.sc.tint h3,.sc.feat h3{position:relative;z-index:1;font-size:24px;line-height:1.3;font-weight:700;margin:6px 28px 0}
-.sc.tint .sub{margin:6px 60px 0 28px;font-size:14px}
-.sc.tint .im,.sc.pf .im,.sc.mt .im{inset:auto 0 0 0;height:66%;top:auto}
-.sc.tint .im img,.sc.pf .im img{-webkit-mask-image:linear-gradient(0deg,#000 62%,transparent 100%);mask-image:linear-gradient(0deg,#000 62%,transparent 100%);object-position:50% 30%}
-.sc.tint .fan{inset:auto 0 0 0;top:auto;height:62%}
-.sc.feat .fm{height:66%}
-.sc .mk2{top:auto;bottom:22px;left:22px}
-/* product-story sections (Apple: lockup, showpiece, detail cards) */
-.story{padding:140px 0 120px;overflow:clip}
-.lock{text-align:center;max-width:680px;margin:0 auto}
-.lock .eye{font-size:21px;font-weight:600;margin:0 0 8px}
-.lock .t-sec{font-size:56px;line-height:1.1;font-weight:700;margin:0}
-.lock-copy{margin:28px auto 0;max-width:600px;font-size:21px;line-height:1.38;color:#6e6e73}
-.dark .lock .eye{color:#f5f5f7}.dark .lock-copy{color:#86868b}
-.lock .plus{margin-top:24px}
-.spiece{position:relative;height:220vh;margin-top:64px}
-.spiece[data-steps="0"]{height:auto}
-.show-pin{position:sticky;top:0;height:100vh;display:grid;place-items:center;overflow:hidden}
-.spiece[data-steps="0"] .show-pin{position:static;height:auto}
-.show-frame{position:relative;width:min(87.5vw,1260px);aspect-ratio:1892/968;border-radius:28px;overflow:hidden;background:#1d1d1f;transform-origin:50% 50%}
-.show-m{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:var(--ox,50%) var(--oy,50%);will-change:transform}
-.show-frame::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 34%)}
-.show-cap{position:absolute;left:0;right:0;bottom:44px;z-index:2;margin:0;text-align:center;font-size:32px;line-height:1.3;font-weight:700;color:#fff;opacity:0;transition:opacity .5s;text-shadow:0 2px 16px rgba(0,0,0,.4);padding:0 24px}
-.show-cap.on{opacity:1}
-.show-note{position:absolute;left:20px;top:18px;z-index:2;font-size:12px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.35);padding:4px 10px;border-radius:999px}
-.show-ph{display:grid;place-items:center;background:#2c2c2e;color:#8e8e93;font-size:17px}
-.spiece:has(.show-ph) .show-frame::before{display:none}
-#seniors .show-m.covers{display:flex;flex-direction:column;justify-content:center;gap:20px;margin:0;-webkit-mask-image:none;mask-image:none;transform-origin:50% 45%;padding-bottom:40px}
-#seniors .show-m.covers .crow img{width:210px;height:262px}
-.mcw{margin-top:56px}
-.mc{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-padding-inline:max(6.25vw,calc((100vw - 1260px)/2))}
-.mc::-webkit-scrollbar{display:none}
-.mc-set{list-style:none;margin:0;display:grid;grid-auto-flow:column;gap:20px;width:max-content;padding:0 max(6.25vw,calc((100vw - 1260px)/2))}
-.mc-i{width:min(590px,80vw);scroll-snap-align:start}
-.mc-m{position:relative;aspect-ratio:590/420;border-radius:28px;overflow:hidden;background:#1d1d1f}
-.mc-m img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.mc-ph{position:absolute;inset:0;display:grid;place-items:center;background:#2c2c2e;color:#8e8e93;font-size:15px}
-.sec:not(.dark) .mc-m{background:#e8e8ed}.sec:not(.dark) .mc-ph{background:#d2d2d7;color:#6e6e73}
-.mc-t{margin:0;padding:28px 16px 0;max-width:460px;font-size:17px;line-height:1.47;color:#6e6e73}
-.dark .mc-t{color:#86868b}.mc-t b{font-weight:600;color:#1d1d1f}.dark .mc-t b{color:#f5f5f7}
-.mc-nav{display:flex;justify-content:flex-end;gap:16px;margin-top:32px}
-.mc-nav button{width:36px;height:36px;border-radius:50%;border:0;display:grid;place-items:center;cursor:pointer;background:rgba(210,210,215,.64);color:#1d1d1f}
-.dark .mc-nav button{background:#333336;color:#f5f5f7}
-.mc-nav button:disabled{opacity:.36;cursor:default}
-.mc-nav button:focus-visible,.mc:focus-visible{outline:2px solid #0071e3;outline-offset:3px}
-@media(max-width:1068px){.lock .t-sec{font-size:48px}.show-cap{font-size:26px}}
-@media(max-width:734px){.story{padding:100px 0 90px}.lock .eye{font-size:17px}.lock .t-sec{font-size:36px}.lock-copy{font-size:17px;margin-top:18px;padding:0 8px}
- .spiece{height:200vh;margin-top:44px}.show-frame{width:87.5vw;aspect-ratio:4/5}.show-cap{font-size:21px;bottom:28px}
- #seniors .show-m.covers .crow img{width:130px;height:163px}.mcw{margin-top:40px}.mc-t{font-size:15px;padding:20px 8px 0}}
-@media(prefers-reduced-motion:reduce){.spiece{height:auto}.show-pin{position:static;height:auto}}
-
-/* showpiece = one big static visual (Apple hardware hero), no pin, no zoom */
-.spiece,.spiece[data-steps="0"]{height:auto;margin-top:56px}
-.spiece .show-pin{position:static;height:auto;display:flex;justify-content:center;overflow:visible}
-.show-m{transform:none!important}
-.show-frame::before{display:none}
-@media(max-width:734px){.spiece{margin-top:36px}.show-frame{aspect-ratio:1892/968}#seniors .show-frame{aspect-ratio:4/5}#showcase .show-frame{aspect-ratio:16/10}}
-
-/* hero fills the first screen */
-.hero{height:100vh;height:100svh;min-height:600px;display:flex;flex-direction:column;padding:120px 0 0}
-.hero .t-hero{flex:none}
-.hero-media{flex:1 1 auto;min-height:0;width:100%;max-width:none;aspect-ratio:auto;margin:36px 0 0}
-.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-@media(max-width:734px){.hero{padding-top:104px;min-height:560px}.hero-media{margin-top:28px}}
-.sec:not(.dark) .show-ph{background:#d2d2d7;color:#6e6e73}.sec:not(.dark) .show-frame{background:#d2d2d7}
-
-.tlink{display:inline-block;margin-top:18px;font-size:17px;color:#0066cc}
-.tlink:hover{text-decoration:underline}
-body.reg-in .ln-btn{opacity:0;pointer-events:none;transition:opacity .2s}
-.sc .im.phc{display:grid;place-items:center;background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);font-size:14px}
-.show-by{margin:20px 0 0;text-align:center;font-size:17px;color:#86868b}.show-by b{color:#f5f5f7;font-weight:600}
-.cc .eng{font-weight:400;color:#6e6e73;font-size:17px}
-.lock-copy,.mc-t{text-wrap:pretty}
-
-/* clarity pass: nothing hides under the floating nav; track columns line up */
-section[id],[id="registration"]{scroll-margin-top:96px}
-.cmp2,.cmp2[class]{grid-template-rows:repeat(11,auto)!important}
-.cc{grid-row:span 11}
-.cc .eng{text-wrap:balance}
-.sc.pf .mk2{top:calc(40% + 12px);left:22px;right:auto;bottom:auto}
-.sc.pf .im{height:60%}
-@media(max-width:734px){.cmp2{column-gap:16px}.cc .eng{font-size:15px}.cc .tlink{font-size:15px}.cc .li b{font-size:15px}}
-
-/* highlight cards v3: one plain sentence (key words black, rest grey), media melts into the card */
-.sc.hc{background:#fff;color:#1d1d1f;padding:0;box-shadow:none;display:block;overflow:hidden}
-.sc.hc .hc-t{position:relative;z-index:2;margin:0;padding:30px 28px 0;font-size:24px;line-height:1.3;font-weight:600;color:#86868b;text-wrap:balance}
-.sc.hc .hc-t b{color:#1d1d1f;font-weight:700}
-.sc.hc .hc-m{position:absolute;left:0;right:0;bottom:0;height:68%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
-.sc.hc .hc-m>img,.sc.hc .hc-m>video{width:100%;height:100%;object-fit:cover;display:block}
-.sc.hc .hc-m .fan{position:absolute;inset:0;display:grid;place-items:center;background:none}
-.sc.hc .hc-m .fan img{position:absolute;width:120px;height:150px;object-fit:cover;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
-.sc.hc .hc-m .ph{position:absolute;inset:0;display:grid;place-items:center;background:#e8e8ed;color:#86868b;font-size:14px}
-.sc.hc .src{position:absolute;left:20px;right:auto;bottom:18px;z-index:2;font-size:11px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8)}
-.sc.hc .src.mk{padding:3px 9px;border-radius:999px;background:rgba(255,255,255,.9);color:#1d1d1f;text-shadow:none}
-.sc.hc .go{position:absolute;right:18px;bottom:16px;z-index:3;width:36px;height:36px;border-radius:50%;border:0;display:grid;place-items:center;background:rgba(0,0,0,.55);color:#fff;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-.sc.hc.dk{background:#000}.sc.hc.dk .hc-t{color:#a1a1a6}.sc.hc.dk .hc-t b{color:#f5f5f7}
-@media(max-width:734px){.sc.hc .hc-t{font-size:21px;padding:26px 24px 0}}
-/* hero: headline and clip are one piece, no hard edge */
-.hero-media{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%);mask-image:linear-gradient(180deg,transparent 0,#000 22%);margin-top:0!important}
-.sc.hc .hc-t b{white-space:nowrap}
-
-/* HamsVillage zones: Apple segmented tabs + one big visual + one line */
-.zones{margin-top:56px;text-align:center}
-.zt-h{margin:0 0 16px;font-size:17px;font-weight:600;color:#6e6e73}
-.zt-tabs{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:#e8e8ed;max-width:100%;overflow-x:auto;scrollbar-width:none}
-.zt-tabs::-webkit-scrollbar{display:none}
-.zt-b{flex:none;border:0;background:none;padding:10px 20px;border-radius:999px;font:inherit;font-size:15px;font-weight:600;color:#6e6e73;cursor:pointer;transition:background .25s,color .25s}
-.zt-b.on{background:#fff;color:#1d1d1f;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-.zt-b:focus-visible{outline:2px solid #0071e3;outline-offset:2px}
-.zt-p{margin-top:28px}
-.zt-p.on{animation:ztin .35s ease}
-@keyframes ztin{from{opacity:0}to{opacity:1}}
-.zt-m{aspect-ratio:16/9;border-radius:28px;background:#d2d2d7;display:grid;place-items:center;color:#6e6e73;font-size:17px;max-width:1060px;margin:0 auto}
-.zt-cap{margin:24px auto 0;max-width:560px;font-size:21px;line-height:1.4;color:#6e6e73}
-.zt-cap b{color:#1d1d1f;font-weight:600}
-@media(max-width:734px){.zt-b{padding:9px 14px;font-size:14px}.zt-m{aspect-ratio:4/3;border-radius:22px}.zt-cap{font-size:17px}}
-@media(prefers-reduced-motion:reduce){.zt-p.on{animation:none}}
-
-/* nav: invisible capsule over the hero, frosted once you scroll */
-.tabbar{transition:background .35s,box-shadow .35s}
-html.top .tabbar{background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
-html.top .tabbar .ind{opacity:0}
-/* village: what you learn */
-.learn{list-style:none;margin:40px auto 0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:28px 56px;max-width:900px}
-.learn li{display:flex;flex-direction:column;align-items:center;gap:10px}
-.learn svg{width:40px;height:40px;color:#1d1d1f}
-.learn b{font-size:21px;font-weight:600;color:#1d1d1f}
-.learn small{font-size:14px;color:#6e6e73}
-@media(max-width:734px){.learn{display:grid;grid-template-columns:1fr 1fr;gap:28px 12px}.learn b{font-size:17px}}
-.cmp2,.cmp2[class]{grid-template-rows:repeat(10,auto)!important}.cc{grid-row:span 10}
-
-/* learn tiles, Apple feature-tile style: icon top-left, bold lead + grey line */
-.learn{display:grid!important;grid-template-columns:repeat(4,1fr);gap:20px!important;max-width:1060px!important;margin:48px auto 0!important;text-align:left}
-.learn li{display:block!important;background:#fff;border-radius:28px;padding:32px 28px 36px}
-.learn svg{width:36px!important;height:36px!important;color:var(--ic)!important;display:block;margin-bottom:20px}
-.learn p{margin:0;font-size:19px;line-height:1.42;color:#6e6e73;text-wrap:pretty}
-.learn p b{font-size:inherit;color:#1d1d1f;font-weight:600}
-@media(max-width:1068px){.learn{grid-template-columns:1fr 1fr}}
-@media(max-width:734px){.learn{gap:12px!important}.learn li{padding:24px 20px 26px;border-radius:22px}.learn p{font-size:17px}.learn svg{width:30px!important;height:30px!important;margin-bottom:14px}}
-.lock .learn{width:min(1060px,calc(100vw - 48px));max-width:none!important;position:relative;left:50%;transform:translateX(-50%)}
-.cmp2,.cmp2[class]{grid-template-rows:none!important;align-items:start}.cmp2>.cc{display:flex!important;flex-direction:column;grid-row:auto!important}.cc .eng{min-height:1.5em;margin-top:6px}
+@font-face{font-family:'Noto Sans Thai';font-style:normal;font-weight:400 700;font-display:swap;src:url('fonts/noto-sans-thai-thai.woff2') format('woff2');unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC}
+@font-face{font-family:'Noto Sans Thai';font-style:normal;font-weight:400 700;font-display:swap;src:url('fonts/noto-sans-thai-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--bg:#fff;--alt:#f5f5f7;--ink:#1d1d1f;--mute:#515154;--blue:#0071e3;--portfolio:#0057b8;--project:#b25000;--line:#d2d2d7}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 'Noto Sans Thai',-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased}img,video{display:block;max-width:100%}h1,h2,h3,p,ul,ol,figure{margin:0}ul,ol{padding:0;list-style:none}a{color:#0066cc;text-decoration:none}a:hover{text-decoration:underline}button{font:inherit;cursor:pointer}button:disabled{opacity:.4;cursor:default}:focus-visible{outline:3px solid #2997ff;outline-offset:3px}.skip{position:fixed;top:-70px;left:12px;z-index:100;background:#fff;padding:10px 18px;border-radius:30px}.skip:focus{top:12px}.wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}.narrow{width:min(980px,calc(100% - 48px));margin-inline:auto}.section{padding:104px 0}.alt{background:var(--alt)}.dark{background:#000;color:#f5f5f7}.section h2{font-size:clamp(30px,4vw,52px);line-height:1.22;letter-spacing:-.02em}.intro{margin-top:12px;font-size:clamp(17px,2vw,21px);color:var(--mute)}.dark .intro{color:#b9b9bd}.section-head{margin-bottom:38px}.center{text-align:center}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 25px;border:0;border-radius:100px;background:var(--blue);color:#fff;font-weight:600;text-align:center}.btn:hover{background:#0077ed;color:#fff;text-decoration:none}.text-link{display:inline-flex;align-items:center;min-height:44px;font-weight:600}.tag{display:inline-block;font-size:13px;font-weight:700;line-height:1.3}.eyebrow{font-size:16px;font-weight:600}.note{font-size:13px;color:var(--mute)}
+/* Navigation */
+.site-header{position:fixed;top:14px;left:0;right:0;z-index:50;padding:0 12px;pointer-events:none}.tabbar{pointer-events:auto;display:flex;align-items:center;gap:2px;width:max-content;max-width:100%;margin:auto;padding:5px;border-radius:100px;background:rgba(22,22,23,.88);backdrop-filter:blur(22px);box-shadow:0 12px 32px #0004}.tabbar a{display:inline-flex;align-items:center;min-height:44px;padding:8px 13px;border-radius:100px;color:#eee;font-size:13px;font-weight:600;white-space:nowrap}.tabbar a:hover{text-decoration:none;background:#ffffff26}.tabbar .brand{color:#fff}.tabbar .nav-cta{background:var(--blue);color:#fff;padding-inline:18px}.tabbar .nav-cta:hover{background:#0077ed}
+/* Hero */
+.hero{background:#000;color:#f5f5f7;padding:112px 0 80px;overflow:hidden}.hero-copy{text-align:center}.hero .eyebrow{color:#a1a1a6}.hero h1{max-width:1120px;margin:12px auto 0;font-size:clamp(34px,5vw,70px);line-height:1.24;letter-spacing:-.025em;text-wrap:balance}.hero h1 span{display:block}.hero h1 span:first-child{color:#fff}.hero h1 span:last-child{color:#ffae71}.hero .sub{margin:18px auto 0;max-width:760px;font-size:clamp(17px,2.1vw,24px);color:#d2d2d7}.hero-facts{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 26px;margin-top:22px;font-size:16px;font-weight:600}.hero-facts li+li:before{content:'·';margin-right:26px;color:#86868b}.hero-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 24px;margin-top:25px}.hero-actions .text-link{color:#66b5ff}.hero-visual{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}.hero-panel{position:relative;min-width:0;aspect-ratio:1.7;border-radius:24px;overflow:hidden;background:#18181a}.hero-panel img,.hero-panel video{width:100%;height:100%;object-fit:cover}.hero-panel figcaption{position:absolute;left:16px;bottom:14px;padding:5px 10px;border-radius:20px;background:#000b;color:#fff;font-size:13px}.video-toggle{position:absolute;right:14px;bottom:14px;width:44px;height:44px;border:1px solid #fff8;border-radius:50%;background:#0009;color:#fff}.video-toggle:hover{background:#000}.hero-panel:nth-child(1) img{object-position:42% 50%}
+/* Benefits */
+.gal.store{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:max(24px,calc((100vw - 1200px)/2));padding:0 max(24px,calc((100vw - 1200px)/2)) 10px;scrollbar-width:thin}.benefit{position:relative;flex:0 0 min(390px,82vw);min-height:500px;border-radius:26px;overflow:hidden;background:#fff;scroll-snap-align:start}.benefit .body{position:relative;z-index:2;padding:26px}.benefit h3{font-size:25px;line-height:1.3;margin-top:5px}.benefit p{font-size:16px;margin-top:8px;color:var(--mute)}.benefit .media{position:absolute;inset:42% 0 0}.benefit .media img,.benefit .media video{width:100%;height:100%;object-fit:cover}.benefit .media:before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(#fff,transparent 20%)}.benefit .badge{position:absolute;z-index:2;bottom:16px;left:17px;background:#000b;border-radius:18px;padding:5px 10px;color:#fff;font-size:12px}.benefit .detail{position:absolute;z-index:3;bottom:14px;right:15px;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:#111;font-size:25px}.benefit.dark-card{background:#1d1d1f;color:#fff}.benefit.dark-card p{color:#d2d2d7}.benefit.dark-card .media:before{background:linear-gradient(#1d1d1f,transparent 20%)}.benefit.hv .media:before{background:linear-gradient(#fff,transparent 15%)}.sarrows{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}.ar,.rail-controls button{width:48px;height:48px;border:0;border-radius:50%;background:#dedee2;font-size:27px;line-height:1}.ar:hover,.rail-controls button:hover{background:#cacad0}
+/* Tracks */
+.track-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.track{border-radius:26px;background:var(--alt);overflow:hidden;display:flex;flex-direction:column}.track .track-media{aspect-ratio:1.8;overflow:hidden;background:#ddd}.track .track-media img{width:100%;height:100%;object-fit:cover}.track .track-media figcaption{padding:4px 8px;background:#000a;color:#fff;border-radius:12px;position:absolute;bottom:12px;left:12px;font-size:12px}.track .track-media{position:relative}.track .content{padding:28px;display:flex;flex:1;flex-direction:column}.track h3{font-size:clamp(28px,3vw,36px);line-height:1.25;margin:5px 0}.track .subtitle{font-size:18px;color:var(--mute)}.skills{margin:22px 0;display:grid;gap:10px}.skills li{padding-left:20px;position:relative}.skills li:before{content:'✓';position:absolute;left:0;color:var(--portfolio);font-weight:700}.track.project .skills li:before{color:var(--project)}.track-output{margin-top:auto;border-top:1px solid var(--line);padding-top:18px}.track-output strong{display:block;font-size:25px}.track-output p{font-size:15px;color:var(--mute)}.track-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;margin-top:20px}.track-actions button{min-height:44px;padding:8px 0;border:0;background:none;color:#0066cc;font-weight:600}.track.portfolio .tag{color:var(--portfolio)}.track.project .tag{color:var(--project)}
+/* Showcase */
+.works{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 0 16px;scrollbar-width:thin}.work{flex:0 0 min(370px,82vw);scroll-snap-align:start;min-width:0;border-radius:20px;overflow:hidden;background:#1d1d1f}.work video{width:100%;height:210px;object-fit:contain;background:#090909}.work h3{min-height:3.5em;padding:14px 16px 18px;font-size:20px;line-height:1.35}.rail-controls{display:flex;justify-content:flex-end;gap:10px;margin-top:12px}
+/* Guest + Seniors */
+.senior-intro{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-bottom:26px}.senior-intro .section-head{margin:0}.senior-photo{position:relative;overflow:hidden;border-radius:24px}.senior-photo img{width:100%;height:300px;object-fit:cover}.senior-photo figcaption{position:absolute;bottom:12px;left:12px;padding:5px 10px;border-radius:16px;background:#000b;color:#fff;font-size:12px}.senior-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.senior-card{background:#1d1d1f;color:#fff;border-radius:24px;padding:24px;min-height:230px}.senior-card time{color:#9ecfff;font-weight:700}.senior-card h3{font-size:22px;line-height:1.3;margin-top:13px}.senior-card p{color:#b9b9bd;margin-top:8px;font-size:15px}.senior-card .hours{display:block;color:#fff;font-weight:600;margin-top:14px}
+/* Schedule */
+.day-tabs{display:flex;justify-content:center;gap:8px;margin:22px 0}.day-tabs button{min-height:44px;padding:8px 20px;border:1px solid var(--line);border-radius:22px;background:#fff}.day-tabs button[aria-selected=true]{background:#1d1d1f;border-color:#1d1d1f;color:#fff}.day-panel{max-width:820px;margin:0 auto 28px}.day-panel h3{font-size:27px;margin-bottom:2px}.day-hours{color:var(--mute);font-size:16px;font-weight:600;margin-bottom:18px}.schedule-list{border-top:1px solid var(--line)}.schedule-list li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:16px 8px;border-bottom:1px solid var(--line)}.schedule-list time{font-weight:700;white-space:nowrap}.schedule-list strong{display:block;margin-bottom:5px}.schedule-list .split{display:grid;gap:5px}.schedule-list small{font-size:13px;font-weight:700}.schedule-list .split span:first-child small{color:var(--portfolio)}.schedule-list .split span:last-child small{color:var(--project)}.guest-slot{background:#fff8f1;border-radius:18px;margin:8px 0;border:1px solid #f0d8c4!important;padding:18px!important}.guest-detail summary{cursor:pointer;list-style:none;position:relative;padding-right:36px;display:grid;grid-template-columns:112px 1fr;gap:16px;align-items:center}.guest-detail summary img{width:112px;height:132px;object-fit:cover;object-position:50% 30%;border-radius:14px}.guest-heading{display:block}.guest-detail summary::-webkit-details-marker{display:none}.guest-detail summary:after{content:'+';position:absolute;right:3px;top:18px;font-size:27px;font-weight:400}.guest-detail[open] summary:after{content:'−'}.guest-detail summary strong{font-size:24px;line-height:1.25;margin:3px 0}.guest-detail .guest-label{display:block;color:#9d4500;font-size:13px;font-weight:700}.guest-detail .speaker-name{display:block;font-weight:600}.guest-detail .guest-body{padding:17px 0 4px}.guest-detail .guest-body p{margin-bottom:10px;color:var(--mute)}.js .day-panel[hidden]{display:none}
+/* Registration + FAQ + Footer */
+.registration{background:#000;color:#fff;padding:105px 0;text-align:center}.registration h2{font-size:clamp(34px,5vw,60px);line-height:1.2}.registration .subtitle{margin-top:8px;color:#aaa}.registration .facts{margin-top:20px;font-size:19px}.registration .selected{margin-top:12px;color:#b9b9bd}.registration .actions{margin-top:24px;display:flex;align-items:center;justify-content:center;gap:12px 24px;flex-wrap:wrap}.registration .actions button{min-height:44px;padding:8px 0;border:0;background:none;color:#7bc0ff;font-weight:600}.faq-list{max-width:840px;margin:auto}.faq-list details{border-bottom:1px solid var(--line)}.faq-list summary{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 2px;cursor:pointer;font-size:18px;font-weight:600;list-style:none}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary:after{content:'+';font-size:25px;font-weight:400}.faq-list details[open] summary:after{content:'−'}.faq-list details p{padding:0 30px 20px 2px;color:var(--mute)}.footer{background:var(--alt);padding:40px 0 54px;font-size:14px;color:var(--mute)}.footer p+p{margin-top:4px}.footer-links{display:flex;gap:12px 24px;flex-wrap:wrap;margin-top:16px}
+/* Dialog */
+dialog.sheet{width:min(620px,calc(100% - 32px));max-height:min(80vh,800px);border:0;border-radius:26px;padding:0;box-shadow:0 24px 80px #0005;color:var(--ink)}dialog.sheet::backdrop{background:#0009}.sheet .inside{padding:28px 30px 36px;overflow-y:auto}.sheet .close{position:sticky;top:14px;float:right;width:44px;height:44px;border:0;border-radius:50%;background:#e8e8ed;font-size:25px;line-height:1;z-index:2}.sheet h2{font-size:30px;line-height:1.25;padding-right:46px}.sheet .lead{margin:13px 0 18px;color:var(--mute)}.sheet h3{font-size:19px;margin:25px 0 10px}.sheet ul,.sheet ol{display:grid;gap:12px}.sheet li{border-top:1px solid var(--line);padding-top:12px}.sheet li strong{display:block}.sheet li span{display:block;color:var(--mute);font-size:15px}.sheet .output{margin-top:22px;font-weight:700}
+@media(max-width:850px){.nav-optional{display:none}.senior-grid{grid-template-columns:1fr}.senior-card{min-height:0;display:grid;grid-template-columns:100px 1fr;gap:0 16px;align-items:start}.senior-card time{grid-row:1/4}.senior-card h3{margin-top:0}.senior-card .hours{margin-top:8px}.section{padding:76px 0}}
+@media(max-width:600px){.wrap,.narrow{width:calc(100% - 32px)}.site-header{top:8px;padding:0 8px}.tabbar{width:100%;justify-content:space-between}.tabbar .brand{font-size:12px;padding-inline:12px}.tabbar .nav-cta{margin-left:auto}.tabbar .nav-optional,.tabbar .nav-mobile-hide{display:none}.hero{padding:85px 0 55px}.hero h1{font-size:clamp(30px,8.4vw,40px);line-height:1.25}.hero .sub{margin-top:12px;font-size:16px}.hero-facts{gap:2px 13px;margin-top:14px;font-size:13px}.hero-facts li+li:before{margin-right:13px}.hero-actions{margin-top:18px;gap:5px 16px}.hero-actions .btn{font-size:15px}.hero-actions .text-link{font-size:14px}.hero-visual{margin-top:28px;gap:8px}.hero-panel{aspect-ratio:1.1;border-radius:15px}.hero-panel figcaption{left:7px;bottom:7px;padding:3px 6px;font-size:10px}.video-toggle{right:7px;bottom:7px;width:44px;height:44px}.benefit{min-height:455px}.benefit .body{padding:24px}.benefit h3{font-size:23px}.track-grid{grid-template-columns:1fr;gap:16px}.track .content{padding:23px}#seniors{padding-top:96px}.senior-intro{grid-template-columns:1fr;gap:20px}.senior-photo img{height:230px}.senior-card{grid-template-columns:76px 1fr;padding:18px}.senior-card h3{font-size:18px}.senior-card p{font-size:14px}.schedule-list li{grid-template-columns:1fr;gap:3px}.guest-slot{gap:7px!important}.guest-detail summary{grid-template-columns:88px 1fr;gap:12px;padding-right:24px}.guest-detail summary img{width:88px;height:108px}.guest-detail summary strong{font-size:20px}.guest-detail summary:after{top:2px}.work video{height:184px}.section-head{margin-bottom:26px}.registration{padding:80px 0}.footer-links{display:grid}}
+@media(max-width:380px){.hero h1{font-size:30px}.hero-facts{font-size:12px}.hero-actions .btn{padding-inline:16px}.hero-visual{margin-top:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
-<a class="skip" href="#benefits">ข้ามไปที่เนื้อหา</a>
-
-<header class="ln">
-  <nav class="tabbar" id="tabbar" aria-label="ในหน้านี้">
-    <span class="ind" aria-hidden="true"></span>
-    <a class="brand" href="#top">Hamster Hub</a>
-    <a href="#benefits">สิ่งที่จะได้รับ</a><a href="#tracks">เลือก Track</a><a href="#schedule">ตารางกิจกรรม</a><a href="#faq" class="opt">FAQ</a>
-    <a class="ln-btn" href="https://www.hamsterhub.co/portcamp">สมัคร<span class="lg">เข้าร่วมกิจกรรม</span></a>
-  </nav>
-</header>
-
-<main id="top">
-<section class="hero" id="hero">
-  
-  <p class="t-eye">Hamster Hub Portfolio Camp for TCAS 1</p>
-  <h1 class="t-hero"><span>ทำพอร์ตพร้อมยื่น</span><span class="g">ใน 3 วัน</span></h1>
-  <div class="hero-media"><video id="heroVid" src="vid/command-select.mp4" poster="img/command-select.jpg" autoplay muted loop playsinline aria-label="คลิปเกม COMMAND SELECT ผลงานจริงของน้องใน Hamster Hub"></video><span class="src">ผลงานจริง: COMMAND SELECT</span></div>
-</section>
-
-<section class="sec alt" id="benefits">
-  <div class="vw"><div class="head"><h2 class="t-sec">3 วัน ได้อะไรบ้าง</h2></div></div>
-  <div class="gal store" id="bstore"><article class="sc hc dk"><p class="hc-t"><b>เกม 1 เกม</b> ที่น้องทำเองด้วย Roblox หรือ Unity</p><div class="hc-m"><video src="vid/heart.mp4" poster="img/heart.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><span class="src">ผลงานจริง</span><button class="go" type="button" data-sheet="sh-tpj" aria-haspopup="dialog" aria-expanded="false" aria-label="Project Track ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
-<article class="sc hc"><p class="hc-t"><b>พอร์ต 1 เล่ม</b> พร้อมยื่น TCAS รอบ 1</p><div class="hc-m"><img src="img/t-portfolio.jpg" alt="" loading="lazy" style="object-position:30% 30%"></div><span class="src mk">ภาพตัวอย่าง</span><button class="go" type="button" data-sheet="sh-tpf" aria-haspopup="dialog" aria-expanded="false" aria-label="Portfolio Track ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
-<article class="sc hc"><p class="hc-t"><b>เรียนเหมือนเล่นเกม</b> ในหมู่บ้านออนไลน์ HamsVillage</p><div class="hc-m"><img src="img/hv-2.jpg" alt="" loading="lazy" style="object-position:40% 40%"></div><button class="go" type="button" data-sheet="sh-zones" aria-haspopup="dialog" aria-expanded="false" aria-label="HamsVillage ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
-<article class="sc hc"><p class="hc-t"><b>รุ่นพี่มหาลัย</b> คุยกับน้องทุกคืน</p><div class="hc-m"><div class="fan"><img src="img/dek/dek69-1.jpg" alt="" loading="lazy"><img src="img/dek/dek69-13.jpg" alt="" loading="lazy"><img src="img/dek/dek69-6.jpg" alt="" loading="lazy"></div></div><button class="go" type="button" data-sheet="sh-uni" aria-haspopup="dialog" aria-expanded="false" aria-label="รุ่นพี่มหาวิทยาลัย ดูรายละเอียด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></article>
-<article class="sc hc"><p class="hc-t"><b>บูธโชว์ผลงาน</b> วันสุดท้ายของค่าย</p><div class="hc-m"><div class="ph"><span>รอภาพบูธจริง</span></div></div></article></div>
-  <div class="vw sarrows"><button class="ar" data-d="-1" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="ar" data-d="1" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-</section>
-
-<section class="sec" id="tracks">
-  <div class="vw">
-    <div class="head c"><h2 class="t-sec">เลือกทางที่ใช่</h2></div>
-    <div class="cmp2">
-      <div class="cc" style="--tc:#0057b8">
-        <div class="md ph0" role="img" aria-label="รอภาพ Portfolio Track"><span>รอภาพจริง</span></div>
-        <p class="nm">Portfolio Track</p><h3 class="t-card">มีผลงานแล้ว</h3><p class="eng"></p>
-        <div class="act"><a class="tlink" data-track="portfolio" href="#registration">สมัคร Portfolio Track</a></div>
-        <div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h7v14H4zM13 5h7v14h-7z"/></svg><b>เล่าเรื่องผลงาน</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M9 11h6M9 15h6"/></svg><b>เขียน SOP</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M10 10v10"/></svg><b>จัดหน้าพอร์ต</b></div>
-        <div class="out"><small>ได้กลับบ้าน</small><b>พอร์ต 1 เล่ม<span>พร้อมส่ง</span></b></div><button class="plus sm" type="button" data-sheet="sh-tpf" aria-haspopup="dialog" aria-expanded="false">รายละเอียด<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button>
-      </div>
-      <div class="cc" style="--tc:#b25000">
-        <div class="md ph0" role="img" aria-label="รอภาพ Project Track"><span>รอภาพเกมจริง</span></div>
-        <p class="nm">Project Track</p><h3 class="t-card">ยังไม่มีผลงาน</h3><p class="eng">ทำเกม Roblox หรือ Unity</p>
-        <div class="act"><a class="tlink" data-track="project" href="#registration">สมัคร Project Track</a></div>
-        <div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z"/></svg><b>คิดไอเดียเกม</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg><b>สร้างเกม</b></div><div class="li"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><b>ทำให้เสร็จ</b></div>
-        <div class="out"><small>ได้กลับบ้าน</small><b>เกม 1 เกม<span>พร้อมเล่น</span></b></div><button class="plus sm" type="button" data-sheet="sh-tpj" aria-haspopup="dialog" aria-expanded="false">รายละเอียด<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-
-
-<section class="sec dark story" id="showcase">
-  <div class="vw"><div class="lock"><h2 class="t-sec">เกมที่น้อง<span style="white-space:nowrap"> Hamster Hub </span>ทำเอง</h2></div></div>
-  <div class="spiece" data-steps="0"><div class="show-pin"><div class="show-frame"><img class="show-m" src="img/hof/work-stressstrike.jpg" alt="ภาพเกม StressStrike"></div></div></div>
-  <div class="vw"><p class="show-by"><b>StressStrike</b> โดย @วิน ชนะเลิศ OBEC Roboplayground</p></div>
-  <div class="mcw"><div class="mc" tabindex="0" aria-label="ผลงานของน้อง"><ul class="mc-set"><li class="mc-i"><div class="mc-m"><img src="img/hof/work-beyond-the-board.jpg" alt="ภาพเกม Beyond the Board" loading="lazy"></div><p class="mc-t"><b>Beyond the Board</b> โดย @กัปตัน</p></li><li class="mc-i"><div class="mc-m"><img src="img/hof/work-eugation-strike.jpg" alt="ภาพเกม Eugation Strike" loading="lazy"></div><p class="mc-t"><b>Eugation Strike</b> โดย @ไผ่</p></li><li class="mc-i"><div class="mc-m"><img src="img/hof/work-slash-speed.jpg" alt="ภาพเกม SLASH//SPEED" loading="lazy"></div><p class="mc-t"><b>SLASH//SPEED</b> โดย @ดินสอ</p></li><li class="mc-i"><div class="mc-m"><img src="img/hof/work-micro-immersive-sim.jpg" alt="ภาพเกม Micro Immersive Sim" loading="lazy"></div><p class="mc-t"><b>Micro Immersive Sim</b> โดย @เพชร</p></li><li class="mc-i"><div class="mc-m"><img src="img/hof/work-phi-krahang.jpg" alt="ภาพเกม ผีกระหัง" loading="lazy"></div><p class="mc-t"><b>ผีกระหัง</b> โดย @นนท์</p></li><li class="mc-i"><div class="mc-m"><img src="img/hof/work-midnight-at-roadside.jpg" alt="ภาพเกม Midnight at Roadside" loading="lazy"></div><p class="mc-t"><b>Midnight at Roadside</b> โดย @Windy</p></li><li class="mc-i"><div class="mc-m"><img src="img/hof/work-hot-hot-hot.jpg" alt="ภาพเกม Hot Hot Hot" loading="lazy"></div><p class="mc-t"><b>Hot Hot Hot</b> โดย @โอม</p></li><li class="mc-i"><div class="mc-m"><img src="img/hof/work-apocalypis-building.jpg" alt="ภาพเกม Apocalypis Building" loading="lazy"></div><p class="mc-t"><b>Apocalypis Building</b> โดย @ฟาร์</p></li><li class="mc-i"><div class="mc-m"><img src="img/hof/work-escape-rolling.jpg" alt="ภาพเกม Escape Rolling" loading="lazy"></div><p class="mc-t"><b>Escape Rolling</b> โดย @เป๊ป</p></li></ul></div><div class="vw mc-nav"><button class="mc-p" type="button" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="mc-n" type="button" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
-</section>
-
-<section class="sec alt story" id="village">
-  <div class="vw"><div class="lock"><p class="eye">เรียนรู้ด้วย Gamification</p><h2 class="t-sec">เรียนสนุก ปั่นงานมันส์</h2></div></div>
-  
-  <div class="vw zones"><div class="zt-tabs" role="tablist" aria-label="โซนใน HamsVillage"><button class="zt-b on" type="button" role="tab" id="zt-project" aria-controls="zp-project" aria-selected="true" tabindex="0">Project</button><button class="zt-b" type="button" role="tab" id="zt-portfolio" aria-controls="zp-portfolio" aria-selected="false" tabindex="-1">Portfolio</button><button class="zt-b" type="button" role="tab" id="zt-university" aria-controls="zp-university" aria-selected="false" tabindex="-1">University</button><button class="zt-b" type="button" role="tab" id="zt-showcase" aria-controls="zp-showcase" aria-selected="false" tabindex="-1">Showcase</button></div><div class="zt-p on" role="tabpanel" id="zp-project" aria-labelledby="zt-project"><div class="zt-m"><span>รอภาพ Project Zone</span></div><p class="zt-cap"><b>Project Zone</b> เดินดูเกมที่เพื่อนสร้างในค่าย</p></div><div class="zt-p" role="tabpanel" id="zp-portfolio" aria-labelledby="zt-portfolio" hidden><div class="zt-m"><span>รอภาพ Portfolio Zone</span></div><p class="zt-cap"><b>Portfolio Zone</b> เปิดดูพอร์ตและผลงานของเพื่อน</p></div><div class="zt-p" role="tabpanel" id="zp-university" aria-labelledby="zt-university" hidden><div class="zt-m"><span>รอภาพ University Zone</span></div><p class="zt-cap"><b>University Zone</b> สำรวจข้อมูลคณะและมหาวิทยาลัย</p></div><div class="zt-p" role="tabpanel" id="zp-showcase" aria-labelledby="zt-showcase" hidden><div class="zt-m"><span>รอภาพ Showcase Zone</span></div><p class="zt-cap"><b>Showcase Zone</b> ชม 10 ผลงานเด่นของ Hamster Hub</p></div></div>
-  <div class="mcw"><div class="mc" tabindex="0" aria-label="เรียนอะไรในค่าย"><ul class="mc-set"><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพ Storytelling</span></div></div><p class="mc-t"><b>Storytelling</b> เล่าเรื่องผลงานให้น่าสนใจ</p></li><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพ SOP</span></div></div><p class="mc-t"><b>SOP</b> เขียนแนะนำตัวยื่นคณะ</p></li><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพ Game Design</span></div></div><p class="mc-t"><b>Game Design</b> คิดไอเดียเกม</p></li><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพ พัฒนาเกม</span></div></div><p class="mc-t"><b>พัฒนาเกม</b> สร้างเกมด้วย Roblox หรือ Unity</p></li></ul></div><div class="vw mc-nav"><button class="mc-p" type="button" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="mc-n" type="button" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
-</section>
-
-<section class="sec dark story" id="seniors">
-  <div class="vw"><div class="lock"><h2 class="t-sec">คุยกับรุ่นพี่มหาลัย</h2></div></div></div>
-  <div class="mcw"><div class="mc" tabindex="0" aria-label="รุ่นพี่ในแต่ละวัน"><ul class="mc-set"><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพรุ่นพี่</span></div></div><p class="mc-t"><b>4 ธ.ค.</b> แนะนำคณะ</p></li><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพพอร์ตจริงของรุ่นพี่</span></div></div><p class="mc-t"><b>5 ธ.ค.</b> เปิดพอร์ตจริงให้ดู</p></li><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพรุ่นพี่</span></div></div><p class="mc-t"><b>6 ธ.ค.</b> ถามตอบ วางเส้นทาง</p></li></ul></div><div class="vw mc-nav"><button class="mc-p" type="button" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="mc-n" type="button" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
-</section>
-
-<section class="sec c" id="schedule">
-  <div class="vn">
-    <div class="head"><h2 class="t-sec">ตารางกิจกรรม</h2></div>
-    <div class="days" role="tablist" id="days"></div>
-    <div id="dayPanel" role="tabpanel"></div>
-  </div>
-</section>
-
-
-
-<section class="reg2 c" id="registration">
-  
-  <div class="vw rin">
-    <h2 class="t-hero">พร้อมเริ่มแล้วหรือยัง?</h2>
-    <p class="price2"><b>190<small>บาท</small></b><span>4–6 ธ.ค. 2569 ออนไลน์ผ่าน Discord</span></p>
-    <p id="pickedTrack" class="soon" style="margin-top:16px;color:#a1a1a6" hidden></p>
-    <div class="acts2"><a class="btn" id="regBtn" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><button class="plus" type="button" data-sheet="sh-how" aria-haspopup="dialog" aria-expanded="false">สมัครอย่างไร<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button></div>
-  </div>
-</section>
-
-<section class="sec alt" id="faq">
-  <div class="vw">
-    <div class="head"><h2 class="t-sec">คำถามที่พบบ่อย</h2></div>
-    <div class="faq" id="faqList"></div>
-  </div>
-</section>
-
-
+<a class="skip" href="#hero">ข้ามไปเนื้อหา</a>
+<header class="site-header"><nav class="tabbar" aria-label="ในหน้านี้">
+<a class="brand" href="#hero">Hamster Hub</a><a class="nav-mobile-hide" href="#benefits">สิ่งที่จะได้รับ</a><a class="nav-mobile-hide" href="#tracks">เลือก Track</a><a class="nav-optional" href="#schedule">ตารางกิจกรรม</a><a class="nav-optional" href="#faq">FAQ</a><a class="nav-cta" data-register-source="nav" href="https://www.hamsterhub.co/portcamp">สมัคร</a>
+</nav></header>
+<main>
+<section class="hero" id="hero" aria-labelledby="hero-title"><div class="wrap hero-copy">
+<p class="eyebrow">Portfolio Camp for TCAS 1</p>
+<h1 id="hero-title"><span>มีผลงานแล้ว ทำพอร์ตให้พร้อม</span><span>ยังไม่มี มาเริ่มสร้างเกม</span></h1>
+<p class="sub">3 วัน เตรียมผลงานและพอร์ตสำหรับเข้ามหาวิทยาลัย</p>
+<ul class="hero-facts" aria-label="รายละเอียดกิจกรรม"><li>4–6 ธันวาคม 2569</li><li>ออนไลน์ผ่าน Discord</li><li class="event-price" hidden></li></ul>
+<div class="hero-actions"><a class="btn" data-register-source="hero" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><a class="text-link" href="#tracks">เลือก Track ที่เหมาะกับเรา</a></div>
+</div><div class="wrap hero-visual">
+<figure class="hero-panel"><img src="img/t-portfolio-opt.webp" width="900" height="506" alt="ภาพตัวอย่างการจัดหน้าพอร์ต" fetchpriority="high"><figcaption>ภาพตัวอย่างพอร์ต</figcaption></figure>
+<figure class="hero-panel"><video id="heroVid" poster="img/command-select-opt.webp" muted loop playsinline preload="none" aria-label="วิดีโอเกม COMMAND SELECT"></video><figcaption>ผลงานจริง: COMMAND SELECT</figcaption><button class="video-toggle" type="button" aria-label="เล่นวิดีโอผลงาน COMMAND SELECT" aria-pressed="false">▶</button></figure>
+</div></section>
+<section class="section alt" id="benefits" aria-labelledby="benefits-title"><div class="wrap section-head"><h2 id="benefits-title">3 วัน ได้อะไรบ้าง</h2><p class="intro">เลือกทำพอร์ตหรือสร้างเกม แล้วพบรุ่นพี่และโชว์ผลงานไปด้วยกัน</p></div>
+<div class="gal store" id="bstore" tabindex="0" aria-label="สิ่งที่จะได้รับ 5 รายการ">
+<article class="benefit"><div class="body"><span class="tag">Portfolio Track</span><h3>ทำพอร์ตให้พร้อม</h3><p>เขียน SOP จัดรูปเล่ม และเล่าผลงานให้เข้าใจง่าย</p></div><div class="media"><img src="img/t-portfolio-opt.webp" width="900" height="506" alt="ภาพตัวอย่างพอร์ต" loading="lazy"></div><span class="badge">ภาพตัวอย่าง</span><button class="detail" type="button" data-sheet="sh-tpf" aria-label="รายละเอียด Portfolio Track">+</button></article>
+<article class="benefit dark-card"><div class="body"><span class="tag">Project Track</span><h3>สร้างเกมชิ้นแรก</h3><p>เริ่มสร้างผลงานด้วย Unity หรือ Roblox เพื่อต่อยอดทำพอร์ต</p></div><div class="media"><img src="img/heart.jpg" width="1600" height="900" alt="ภาพเกมผลงานนักเรียน" loading="lazy"></div><span class="badge">ผลงานจริง</span><button class="detail" type="button" data-sheet="sh-tpj" aria-label="รายละเอียด Project Track">+</button></article>
+<article class="benefit dark-card"><div class="body"><span class="tag">ทั้งสอง Track</span><h3>เล่าผลงานให้น่าสนใจ</h3><p>ฝึกสื่อสารผ่านข้อความ ภาพปก และคลิปนำเสนอ</p></div><div class="media"><img src="img/stock/recording.webp" width="1000" height="667" alt="อุปกรณ์กล้อง ไมโครโฟน และคอมพิวเตอร์สำหรับบันทึกคลิป ภาพประกอบ" loading="lazy"></div><span class="badge">ภาพประกอบการทำคลิป</span></article>
+<article class="benefit"><div class="body"><span class="tag">ทั้งสอง Track</span><h3>พบรุ่นพี่มหาวิทยาลัย</h3><p>รู้จักคณะ เปิดพอร์ตจริง และถามข้อสงสัย</p></div><div class="media"><img src="img/stock/university-lecture-hall.webp" width="1400" height="935" alt="ห้องเรียนมหาวิทยาลัยว่าง ภาพประกอบ" loading="lazy"></div><span class="badge">ภาพประกอบมหาวิทยาลัย</span><button class="detail" type="button" data-sheet="sh-uni" aria-label="รายละเอียดกิจกรรมพบรุ่นพี่">+</button></article>
+<article class="benefit hv"><div class="body"><span class="tag">ทั้งสอง Track</span><h3>สนุกไปกับ HamsVillage</h3><p>พบเพื่อน ชมผลงาน และเปิดบูธของตัวเอง</p></div><div class="media"><img src="img/hv-2-opt.webp" width="900" height="451" alt="ภาพหน้าจอ HamsVillage" loading="lazy"></div><span class="badge">ภาพหน้าจอ HamsVillage</span></article>
+</div><div class="wrap sarrows"><button class="ar" type="button" data-d="-1" aria-label="การ์ดก่อนหน้า">‹</button><button class="ar" type="button" data-d="1" aria-label="การ์ดถัดไป">›</button></div></section>
+<section class="section" id="tracks" aria-labelledby="tracks-title"><div class="wrap"><div class="section-head center"><h2 id="tracks-title">เลือกทางที่ใช่</h2><p class="intro">เลือกตามผลงานที่มี ไม่ใช่ระดับชั้น</p></div><div class="track-grid">
+<article class="track portfolio"><figure class="track-media"><img src="img/t-portfolio-opt.webp" width="900" height="506" alt="ภาพตัวอย่างการจัดหน้าพอร์ต" loading="lazy"><figcaption>ภาพตัวอย่างพอร์ต</figcaption></figure><div class="content"><span class="tag">Portfolio Track</span><h3>มีผลงานแล้ว</h3><p class="subtitle">เอาผลงานที่มี มาเล่าให้เป็น</p><ul class="skills"><li>เขียน SOP</li><li>เขียนบรรยายผลงาน</li><li>จัดรูปเล่ม Portfolio</li><li>ซ้อมสัมภาษณ์และแนะนำตัว</li></ul><div class="track-output"><strong>พอร์ต 1 เล่ม</strong><p>คลิปซ้อมสัมภาษณ์และคลิปนำเสนอผลงาน</p></div><div class="track-actions"><a class="btn" data-track="portfolio" href="#registration">เลือก Portfolio Track</a><button type="button" data-sheet="sh-tpf">รายละเอียด</button></div></div></article>
+<article class="track project"><figure class="track-media"><img src="img/heart.jpg" width="1600" height="900" alt="ภาพเกมผลงานนักเรียน" loading="lazy"><figcaption>ผลงานจริง</figcaption></figure><div class="content"><span class="tag">Project Track</span><h3>ยังไม่มีผลงาน</h3><p class="subtitle">มาเริ่มสร้างผลงานชิ้นแรก</p><ul class="skills"><li>คิดไอเดียเกม</li><li>ออกแบบเกม</li><li>สร้างเกมด้วย Unity หรือ Roblox</li><li>ฝึกนำเสนอเกม</li></ul><div class="track-output"><strong>เกม 1 เกม</strong><p>คลิปนำเสนอสำหรับต่อยอดทำพอร์ต</p></div><div class="track-actions"><a class="btn" data-track="project" href="#registration">เลือก Project Track</a><button type="button" data-sheet="sh-tpj">รายละเอียด</button></div></div></article>
+</div></div></section>
+<section class="section alt" id="seniors" aria-labelledby="seniors-title"><div class="wrap"><div class="senior-intro"><div class="section-head"><h2 id="seniors-title">อยากเข้ามหาวิทยาลัยไหน มาคุยกับรุ่นพี่ที่เรียนอยู่จริง</h2></div><figure class="senior-photo"><img src="img/stock/university-lecture-hall.webp" width="1400" height="935" alt="บรรยากาศห้องเรียนมหาวิทยาลัยที่ไม่มีคน" loading="lazy"><figcaption>ภาพประกอบบรรยากาศมหาวิทยาลัย</figcaption></figure></div><div class="senior-grid"><article class="senior-card"><time datetime="2026-12-04">4 ธ.ค.</time><h3>รู้จักคณะและมหาวิทยาลัย</h3><p>แต่ละคณะเรียนอะไร และควรเตรียมตัวอย่างไร</p><span class="hours">20:00–21:00</span></article><article class="senior-card"><time datetime="2026-12-05">5 ธ.ค.</time><h3>เปิดพอร์ตจริงของรุ่นพี่</h3><p>ดูตัวอย่างการเลือกผลงานและการเล่าเรื่องในพอร์ต</p><span class="hours">19:00–20:00</span></article><article class="senior-card"><time datetime="2026-12-06">6 ธ.ค.</time><h3>ถามตอบเรื่องมหาวิทยาลัย</h3><p>ถามข้อสงสัยและวางแผนเส้นทางของตัวเอง</p><span class="hours">19:00–20:00</span></article></div></div></section>
+<section class="section dark" id="showcase" aria-labelledby="showcase-title"><div class="wrap"><div class="section-head center"><h2 id="showcase-title">ผลงานจริง จากเด็ก Hamster Hub</h2><p class="intro">จากไอเดียของนักเรียน สู่ผลงานที่เล่นได้จริง</p></div><div class="works" id="works" tabindex="0" aria-label="เลื่อนดูคลิปผลงานเกม 7 รายการ">
+<article class="work"><video controls muted loop playsinline preload="none" poster="img/showcase/hydrosaur.webp" width="960" height="538" aria-label="คลิปเกม Hydrosaur"><source src="vid/showcase/hydrosaur.mp4" type="video/mp4">เบราว์เซอร์นี้ไม่รองรับวิดีโอ</video><h3>Hydrosaur</h3></article>
+<article class="work"><video controls muted loop playsinline preload="none" poster="img/showcase/noas.webp" width="640" height="350" aria-label="คลิปเกม Noas"><source src="vid/showcase/noas.mp4" type="video/mp4">เบราว์เซอร์นี้ไม่รองรับวิดีโอ</video><h3>Noas</h3></article>
+<article class="work"><video controls muted loop playsinline preload="none" poster="img/showcase/pitch.webp" width="960" height="540" aria-label="คลิปเกม PITCH"><source src="vid/showcase/pitch.mp4" type="video/mp4">เบราว์เซอร์นี้ไม่รองรับวิดีโอ</video><h3>PITCH</h3></article>
+<article class="work"><video controls muted loop playsinline preload="none" poster="img/showcase/apocalypse-building.webp" width="960" height="540" aria-label="คลิปเกม Apocalypse Building"><source src="vid/showcase/apocalypse-building.mp4" type="video/mp4">เบราว์เซอร์นี้ไม่รองรับวิดีโอ</video><h3>Apocalypse Building</h3></article>
+<article class="work"><video controls muted loop playsinline preload="none" poster="img/showcase/heart-of-remember.webp" width="304" height="540" aria-label="คลิปเกม Heart of Remember"><source src="vid/showcase/heart-of-remember.mp4" type="video/mp4">เบราว์เซอร์นี้ไม่รองรับวิดีโอ</video><h3>Heart of Remember</h3></article>
+<article class="work"><video controls muted loop playsinline preload="none" poster="img/showcase/5-mins-till-we-drown.webp" width="960" height="540" aria-label="คลิปเกม 5 Min till we drown"><source src="vid/showcase/5-mins-till-we-drown.mp4" type="video/mp4">เบราว์เซอร์นี้ไม่รองรับวิดีโอ</video><h3>5 Min till we drown</h3></article>
+<article class="work"><video controls muted loop playsinline preload="none" poster="img/showcase/tlaman.webp" width="960" height="540" aria-label="คลิปเกม TLAMAN"><source src="vid/showcase/tlaman.mp4" type="video/mp4">เบราว์เซอร์นี้ไม่รองรับวิดีโอ</video><h3>TLAMAN</h3></article>
+</div><div class="rail-controls"><button type="button" data-rail="-1" aria-label="ผลงานก่อนหน้า">‹</button><button type="button" data-rail="1" aria-label="ผลงานถัดไป">›</button></div></div></section>
+<section class="section" id="schedule" aria-labelledby="schedule-title"><div class="narrow"><div class="section-head center"><h2 id="schedule-title">ตารางกิจกรรม</h2></div><div class="day-tabs" id="day-tabs" role="tablist" aria-label="เลือกวันกิจกรรม"><button type="button" role="tab" id="tab-1" aria-controls="day-1" aria-selected="true" tabindex="0">4 ธ.ค.</button><button type="button" role="tab" id="tab-2" aria-controls="day-2" aria-selected="false" tabindex="-1">5 ธ.ค.</button><button type="button" role="tab" id="tab-3" aria-controls="day-3" aria-selected="false" tabindex="-1">6 ธ.ค.</button></div>
+<div class="day-panel" id="day-1" role="tabpanel" aria-labelledby="tab-1"><h3>ค้นหาเส้นทาง</h3><p class="day-hours">4 ธันวาคม · 19:00–21:00 น.</p><ol class="schedule-list"><li><time>19:00–20:00</time><span>เปิดค่ายและแนะนำกิจกรรม</span></li><li><time>20:00–21:00</time><span>รุ่นพี่แนะนำคณะและมหาวิทยาลัย</span></li></ol></div>
+<div class="day-panel" id="day-2" role="tabpanel" aria-labelledby="tab-2"><h3>ลงมือสร้าง</h3><p class="day-hours">5 ธันวาคม · 13:00–21:00 น.</p><ol class="schedule-list"><li><time>13:00–15:00</time><span><strong>Workshop ตาม Track</strong><span class="split"><span><small>Portfolio Track:</small> เขียนพอร์ตและ SOP</span><span><small>Project Track:</small> ออกแบบและสร้างเกม</span></span></span></li><li class="guest-slot"><time>15:00</time><details class="guest-detail"><summary><img src="img/guest/jatuporn.webp" width="700" height="1048" alt="พี่ก๊อก จัตุพร รักไทยเจริญชีพ" loading="lazy"><span class="guest-heading"><span class="guest-label">SPECIAL GUEST · ARAYA</span><strong>From Idea to Production</strong><span class="speaker-name">พี่ก๊อก จัตุพร รักไทยเจริญชีพ</span></span></summary><div class="guest-body"><p>หนึ่งในผู้พัฒนาเกม ARAYA</p><p>จากโปรเจกต์ธีสิสสู่เกมสยองขวัญสัญชาติไทยบน Steam เรียนรู้วิธีพัฒนาไอเดียและสื่อสารผลงานให้คนสนใจ</p><a class="text-link" href="https://store.steampowered.com/app/466740/ARAYA/" target="_blank" rel="noopener noreferrer">รู้จักเกม ARAYA</a></div></details></li><li><time>ช่วงบ่าย</time><span>ลงมือทำผลงาน</span></li><li><time>19:00–20:00</time><span>เปิดพอร์ตจริงของรุ่นพี่</span></li><li><time>20:00–21:00</time><span>ลงมือทำผลงาน</span></li></ol></div>
+<div class="day-panel" id="day-3" role="tabpanel" aria-labelledby="tab-3"><h3>โชว์ผลงาน</h3><p class="day-hours">6 ธันวาคม · 13:00–21:00 น.</p><ol class="schedule-list"><li><time>13:00–15:00</time><span>ทำผลงานให้เสร็จ</span></li><li><time>15:00</time><span>ส่งผลงาน</span></li><li><time>16:00–18:00</time><span>HamsVillage Showcase</span></li><li><time>19:00–20:00</time><span>University Q&amp;A</span></li><li><time>20:00–21:00</time><span>ปิดกิจกรรม</span></li></ol></div>
+</div></section>
+<section class="registration" id="registration" aria-labelledby="registration-title"><div class="narrow"><h2 id="registration-title">เริ่มต้นเส้นทางของตัวเอง</h2><p class="subtitle">Portfolio Camp for TCAS 1</p><p class="facts">4–6 ธันวาคม 2569 · ออนไลน์ผ่าน Discord <span class="event-price" hidden></span></p><p class="selected" id="picked-track" hidden></p><div class="actions"><a class="btn" data-register-source="registration" href="https://www.hamsterhub.co/portcamp">สมัครเข้าร่วมกิจกรรม</a><button type="button" data-sheet="sh-how">สมัครอย่างไร</button></div></div></section>
+<section class="section alt" id="faq" aria-labelledby="faq-title"><div class="narrow"><div class="section-head"><h2 id="faq-title">คำถามที่พบบ่อย</h2></div><div class="faq-list">
+<details><summary>ไม่มีพื้นฐาน สมัครได้ไหม?</summary><p>ได้ เลือก Project Track แล้วเริ่มสร้างเกมจากพื้นฐาน</p></details>
+<details><summary>มีผลงานที่ไม่ใช่เกม สมัครได้ไหม?</summary><p>ได้ หากมีผลงานที่ต้องการนำไปทำพอร์ต สามารถเลือก Portfolio Track</p></details>
+<details><summary>ยังไม่รู้ว่าจะเข้าคณะไหน สมัครได้ไหม?</summary><p>ได้ มาค้นหาเส้นทางและถามข้อสงสัยกับรุ่นพี่มหาวิทยาลัย</p></details>
+<details><summary>ต้องเตรียมอะไรบ้าง?</summary><p>คอมพิวเตอร์หรือโน้ตบุ๊ก อินเทอร์เน็ต และบัญชี Discord หากเลือก Portfolio Track ให้เตรียมไฟล์ผลงานที่มี</p></details>
+<details><summary>ต้องเดินทางไหม?</summary><p>ไม่ต้อง กิจกรรมจัดออนไลน์ผ่าน Discord และ HamsVillage</p></details>
+<details><summary>จบค่ายแล้วได้อะไร?</summary><p>Portfolio Track ได้ทำรูปเล่มพอร์ตและคลิปซ้อมสัมภาษณ์ ส่วน Project Track ได้สร้างเกม ทั้งสอง Track มีคลิปนำเสนอผลงาน 2 นาที</p></details>
+<details><summary>เข้าค่ายแล้วสอบติดแน่นอนไหม?</summary><p>ค่ายช่วยเตรียมผลงานและพอร์ต การรับเข้าศึกษาขึ้นอยู่กับเกณฑ์ของแต่ละมหาวิทยาลัย</p></details>
+</div></div></section>
 </main>
-
-<dialog class="sheet" id="sh-uni" aria-labelledby="sh-uni-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-uni-t">คุยกับรุ่นพี่มหาวิทยาลัย</h3><h4>ถามได้</h4><ul class="sl"><li class="one"><b>คณะนี้เรียนอะไร</b></li><li class="one"><b>ชีวิตมหาวิทยาลัย</b></li><li class="one"><b>รุ่นพี่เตรียมตัวยังไง</b></li><li class="one"><b>ต้องเริ่มเตรียมอะไร</b></li></ul><h4>วันไหน</h4><ul class="sl"><li><small>4 ธ.ค.</small><div><b>พบรุ่นพี่</b><span>19:30–20:30</span></div></li><li><small>5 ธ.ค.</small><div><b>ดูพอร์ตรุ่นพี่</b><span>19:00–20:00</span></div></li><li><small>6 ธ.ค.</small><div><b>ถามตอบกับรุ่นพี่</b><span>19:00–20:00</span></div></li></ul><p class="cap">ติดตามรายชื่อรุ่นพี่และมหาวิทยาลัยที่จะเข้าร่วมเร็ว ๆ นี้</p></div></dialog>
-<dialog class="sheet" id="sh-zones" aria-labelledby="sh-zones-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-zones-t">4 โซนใน HamsVillage</h3><ul class="sl"><li><small>Project Zone</small><div><b>เดินดูเกมที่เพื่อนสร้างในค่าย</b></div></li><li><small>Portfolio Zone</small><div><b>เปิดดูพอร์ตและผลงานของเพื่อน</b></div></li><li><small>University Zone</small><div><b>สำรวจข้อมูลคณะและมหาวิทยาลัย</b></div></li><li><small>Showcase Zone</small><div><b>ชม 10 ผลงานเด่นของ Hamster Hub</b></div></li></ul><p class="sn">HamsQuest ทำภารกิจ รับไอเทม และปลดล็อกประสบการณ์พิเศษระหว่างค่าย</p></div></dialog>
-<dialog class="sheet" id="sh-tpf" aria-labelledby="sh-tpf-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-tpf-t">Portfolio Track</h3><p class="sp">มีผลงานแล้ว แต่ไม่รู้จะเขียนพอร์ตยังไง นำผลงานที่มีมาเรียบเรียง ฝึกเล่าเรื่อง เขียน SOP และจัดรูปเล่ม</p><ul class="sl"><li><small>Storytelling</small><div><b>เล่าผลงานให้คนอ่านเข้าใจ</b></div></li><li><small>SOP</small><div><b>เขียนเหตุผลที่อยากเข้าคณะและมหาวิทยาลัย</b></div></li><li><small>Portfolio Design</small><div><b>จัดรูปเล่มและเลือกเนื้อหา</b></div></li><li><small>Presentation</small><div><b>ฝึกนำเสนอผลงานเด่น</b></div></li><li><small>ได้กลับบ้าน</small><div><b>พอร์ต 1 เล่ม</b><span>พร้อมส่ง</span></div></li></ul><p class="sn">เหมาะกับคนที่มีผลงานอยู่แล้ว โดยเฉพาะคนที่กำลังเตรียมยื่นรอบ Portfolio</p></div></dialog>
-<dialog class="sheet" id="sh-tpj" aria-labelledby="sh-tpj-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-tpj-t">Project Track</h3><p class="sp">ยังไม่มีผลงาน มาสร้างชิ้นแรก เริ่มจากออกแบบเกม เรียนพื้นฐาน แล้วลงมือทำเกมของตัวเองในค่าย</p><ul class="sl"><li><small>Game Design</small><div><b>คิดไอเดียและออกแบบวิธีเล่น</b></div></li><li><small>Game Development</small><div><b>เรียนรู้การสร้างเกม</b></div></li><li><small>Project Building</small><div><b>ลงมือทำเกมของตัวเอง</b></div></li><li><small>Presentation</small><div><b>ฝึกนำเสนอผลงาน</b></div></li><li><small>ได้กลับบ้าน</small><div><b>เกม 1 เกม</b><span>พร้อมเล่น ทำด้วย Roblox หรือ Unity</span></div></li></ul><p class="sn">เหมาะกับคนที่ยังไม่มีผลงาน หรืออยากเริ่มสร้างเกม</p></div></dialog>
-<dialog class="sheet" id="sh-how" aria-labelledby="sh-how-t"><button class="x" type="button" aria-label="ปิด"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="in"><h3 id="sh-how-t">สมัครอย่างไร</h3><h4>ขั้นตอน</h4><ul class="sl"><li><small>ขั้นที่ 1</small><div><b>กดสมัครเข้าร่วมกิจกรรม</b></div></li><li><small>ขั้นที่ 2</small><div><b>กรอกข้อมูลและแบบประเมินความพร้อม</b></div></li><li><small>ขั้นที่ 3</small><div><b>เลือก Track ที่เหมาะกับตัวเอง</b></div></li><li><small>ขั้นที่ 4</small><div><b>ยืนยันการสมัคร</b><span>แล้วรอรับข้อมูลเข้าค่ายจากทีมงาน</span></div></li></ul><h4>สิ่งที่ต้องเตรียม</h4><ul class="sl"><li><small>ทุกคน</small><div><b>คอมหรือโน้ตบุ๊ก และเน็ต</b></div></li><li><small>ทุกคน</small><div><b>บัญชี Discord</b><span>และบัญชี Hamster Hub ตามที่ทีมแจ้ง</span></div></li><li><small>Portfolio Track</small><div><b>ไฟล์ผลงานและรูปที่มี</b><span>ถ้ามีคณะเป้าหมาย เตรียมชื่อคณะไว้ด้วย</span></div></li><li><small>Project Track</small><div><b>ไม่ต้องมีผลงานมาก่อน</b><span>ติดตั้งโปรแกรมตามที่ทีมแจ้ง</span></div></li></ul></div></dialog>
-
-<footer class="gf">
-  <div class="vn">
-    <div class="notes">
-      <p>คลิปและภาพเกมเป็นผลงานจริง ภาพที่ติดป้ายเป็นภาพตัวอย่าง</p>
-      <p>การรับเข้าศึกษาขึ้นอยู่กับเกณฑ์และการพิจารณาของแต่ละมหาวิทยาลัย</p>
-    </div>
-    <div class="lk"><a href="https://www.hamsterhub.co/">เว็บไซต์ Hamster Hub</a><a href="https://page.line.me/jkm4247u?openQrModal=true">ติดต่อทีมงาน</a><span>นโยบายความเป็นส่วนตัว [รอลิงก์จากทีม]</span></div>
-    
-  </div>
-</footer>
-
+<dialog class="sheet" id="sh-tpf" aria-labelledby="sh-tpf-title"><div class="inside"><button class="close" type="button" aria-label="ปิดรายละเอียด">×</button><h2 id="sh-tpf-title">Portfolio Track</h2><p class="lead">นำผลงานที่มีมาเขียนพอร์ต ฝึกเล่าเรื่อง และเตรียมตัวสำหรับการสัมภาษณ์</p><ul><li><strong>เขียน SOP</strong><span>เล่าเหตุผลที่อยากเข้าคณะและเป้าหมายของตัวเอง</span></li><li><strong>เขียนบรรยายผลงาน</strong><span>อธิบายไอเดีย วิธีทำ และสิ่งที่ได้เรียนรู้</span></li><li><strong>จัดรูปเล่ม</strong><span>เลือกผลงานและจัดหน้าให้อ่านง่าย</span></li><li><strong>ซ้อมสัมภาษณ์</strong><span>อัดคลิปแนะนำตัวและฝึกตอบคำถาม</span></li><li><strong>โชว์ผลงาน</strong><span>เลือกผลงานเด่นที่สุด 1 ชิ้น พร้อมภาพปกและคลิปนำเสนอ 2 นาที</span></li></ul><p class="output">รูปเล่ม Portfolio คลิปซ้อมสัมภาษณ์ และคลิปนำเสนอผลงาน</p></div></dialog>
+<dialog class="sheet" id="sh-tpj" aria-labelledby="sh-tpj-title"><div class="inside"><button class="close" type="button" aria-label="ปิดรายละเอียด">×</button><h2 id="sh-tpj-title">Project Track</h2><p class="lead">เริ่มจากพื้นฐาน แล้วสร้างเกมของตัวเองเพื่อใช้ต่อยอดทำพอร์ต</p><ul><li><strong>Game Design</strong><span>คิดไอเดียและออกแบบวิธีเล่น</span></li><li><strong>Game Development</strong><span>ลงมือสร้างเกมด้วย Unity หรือ Roblox</span></li><li><strong>Storytelling</strong><span>เล่าให้คนเข้าใจและเห็นจุดเด่นของเกม</span></li><li><strong>โชว์ผลงาน</strong><span>ทำภาพปกและคลิปนำเสนอเกม 2 นาที</span></li></ul><p class="output">เกม 1 เกม พร้อมคลิปนำเสนอผลงาน</p></div></dialog>
+<dialog class="sheet" id="sh-uni" aria-labelledby="sh-uni-title"><div class="inside"><button class="close" type="button" aria-label="ปิดรายละเอียด">×</button><h2 id="sh-uni-title">พบรุ่นพี่มหาวิทยาลัย</h2><ul><li><strong>4 ธ.ค. · 20:00–21:00</strong><span>รู้จักคณะและมหาวิทยาลัย</span></li><li><strong>5 ธ.ค. · 19:00–20:00</strong><span>เปิดพอร์ตจริงของรุ่นพี่</span></li><li><strong>6 ธ.ค. · 19:00–20:00</strong><span>ถามตอบเรื่องมหาวิทยาลัย</span></li></ul></div></dialog>
+<dialog class="sheet" id="sh-how" aria-labelledby="sh-how-title"><div class="inside"><button class="close" type="button" aria-label="ปิดรายละเอียด">×</button><h2 id="sh-how-title">สมัครอย่างไร</h2><h3>ขั้นตอน</h3><ol><li>กดสมัครเข้าร่วมกิจกรรม</li><li>กรอกข้อมูลและเลือก Track</li><li>ยืนยันการสมัครตามขั้นตอนบนเว็บไซต์</li><li>ติดตามข้อมูลเข้าค่ายจากทีมงาน</li></ol><h3>สิ่งที่ต้องเตรียม</h3><ul><li>คอมพิวเตอร์หรือโน้ตบุ๊ก อินเทอร์เน็ต และบัญชี Discord</li><li>Portfolio Track: ไฟล์ผลงานที่มี</li><li>Project Track: ติดตั้งโปรแกรมตามที่ทีมแจ้ง</li></ul></div></dialog>
+<footer class="footer"><div class="narrow"><p>จัดโดย Hamster Hub</p><p>ภาพผลงานจริงและภาพตัวอย่างมีป้ายกำกับตามประเภท</p><p>การรับเข้าศึกษาขึ้นอยู่กับเกณฑ์ของแต่ละมหาวิทยาลัย</p><div class="footer-links"><a href="https://www.hamsterhub.co/">เว็บไซต์ Hamster Hub</a><a href="https://page.line.me/jkm4247u?openQrModal=true">ติดต่อทีมงาน</a></div></div></footer>
 <script>
-{
-const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const REG='https://www.hamsterhub.co/portcamp';
-
-/* nav indicator */
-{const bar=$('#tabbar'),ind=bar.querySelector('.ind'),links=[...bar.querySelectorAll('a[href^="#"]:not(.brand)')];
-const ids=links.map(a=>a.getAttribute('href').slice(1));
-const place=a=>{if(!a||!a.offsetParent){ind.style.width=0;return;}ind.style.left=a.offsetLeft+'px';ind.style.width=a.offsetWidth+'px';};
-const map={benefits:'benefits',tracks:'tracks',schedule:'schedule',faq:'faq'};
-let cur=null;const upd=()=>{let id=null;for(const s of $$('main>section')){if(s.getBoundingClientRect().top<160)id=map[s.id]||null;}
- if(id!==cur){cur=id;links.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+id));place(links.find(a=>a.getAttribute('href')==='#'+id));}};
-addEventListener('scroll',upd,{passive:true});addEventListener('resize',()=>{cur=undefined;upd()});upd();}
-
-
-/* hall of fame rail (data from hamsterhub showcase) */
-const HOF=[['stressstrike','StressStrike','@วิน','ชนะเลิศ OBEC Roboplayground'],['beyond-the-board','Beyond the Board','@กัปตัน'],['eugation-strike','Eugation Strike','@ไผ่'],['slash-speed','SLASH//SPEED','@ดินสอ'],['micro-immersive-sim','Micro Immersive Sim','@เพชร'],['phi-krahang','ผีกระหัง','@นนท์'],['midnight-at-roadside','Midnight at Roadside','@Windy'],['hot-hot-hot','Hot Hot Hot','@โอม'],['apocalypis-building','Apocalypis Building','@ฟาร์'],['escape-rolling','Escape Rolling','@เป๊ป']];
-
-/* generic rail dots + arrows */
-$$('.ctrls[data-for]').forEach(c=>{const r=document.getElementById(c.dataset.for),it=[...r.children],d=c.querySelector('.dots');
- d.innerHTML=it.map((_,i)=>`<button aria-label="${i+1} จาก ${it.length}"></button>`).join('');const bs=[...d.children];
- const idx=()=>Math.round(r.scrollLeft/(it[0].offsetWidth+20));
- const mark=i=>{bs.forEach((b,k)=>{b.classList.toggle('on',k===i);k===i?b.setAttribute('aria-current','true'):b.removeAttribute('aria-current')});c.querySelector('[data-d="-1"]').disabled=i===0;c.querySelector('[data-d="1"]').disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4;};
- const go=i=>{i=Math.max(0,Math.min(it.length-1,i));r.scrollTo({left:it[i].offsetLeft-it[0].offsetLeft,behavior:reduce?'auto':'smooth'});};
- bs.forEach((b,i)=>b.addEventListener('click',()=>go(i)));c.querySelectorAll('.round').forEach(b=>b.addEventListener('click',()=>go(idx()+ +b.dataset.d)));
- let t;r.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>mark(idx()),80)},{passive:true});mark(0);});
-
-
-/* benefits store row */
-{const r=$('#bstore'),bs=$$('.sarrows .ar');const upd=()=>{bs[0].disabled=r.scrollLeft<4;bs[1].disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4;};
-bs.forEach(b=>b.addEventListener('click',()=>r.scrollBy({left:+b.dataset.d*(r.clientWidth*.7),behavior:reduce?'auto':'smooth'})));r.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();}
-/* highlights gallery (Apple pattern: native scroll + snap, 6.15s per slide, no loop) */
-const HLG=W=>{const sc=$('.hl',W),S=$$('.hl-s',sc),D=$$('.hl-d',W),pp=$('.hl-pp',W),N=S.length,PERSIST=6150,TWEEN=1000;
- let cur=0,playing=false,ended=false,userPaused=false,tweening=false,timer=0,t0=0,elapsed=0,inView=false;
- const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;
- const pos=i=>S[i].offsetLeft-(sc.clientWidth-S[i].offsetWidth)/2;
- const prog=()=>{const x=sc.scrollLeft;for(let i=0;i<N-1;i++){const a=pos(i),b=pos(i+1);if(x<=b)return i+Math.max(0,(x-a)/(b-a));}return N-1;};
- const paint=p=>{D.forEach((d,i)=>{const k=Math.max(0,1-Math.abs(i-p));d.style.width=(8+(innerWidth<735?24:40)*k)+'px';});
-  S.forEach((s,i)=>{const o=reduce?(i===cur?1:0):Math.pow(Math.max(0,1-Math.abs(p-i)),3),c=$('.hl-cap',s);c.style.opacity=o;c.style.transform=reduce?'none':`translateX(${(p-i)*-120}px)`;});};
- const vReset=i=>{const v=$('video',S[i]);if(v){v.pause();v.currentTime=0;}};
- const vPlay=()=>{const v=$('video',S[cur]);if(v&&inView&&!ended&&playing)v.play().catch(()=>{});};
- const setCur=i=>{if(i===cur&&D[i].classList.contains('on'))return;vReset(cur);cur=i;
-  S.forEach((s,k)=>{const on=k===i;s.classList.toggle('on',on);$$('.go',s).forEach(g=>{g.tabIndex=on?0:-1;});s.setAttribute('aria-hidden',on?'false':'true');});
-  D.forEach((d,k)=>{d.classList.toggle('on',k===i);d.setAttribute('aria-current',k===i?'true':'false');d.tabIndex=k===i?0:-1;const f=$('i',d);f.style.animation='none';void f.offsetWidth;f.style.animation='';});vPlay();};
- const state=c=>{W.classList.remove('playing','paused','ended');W.classList.add(c);pp.setAttribute('aria-label',c==='playing'?'หยุดไฮไลท์':c==='ended'?'เล่นไฮไลท์ใหม่':'เล่นไฮไลท์');};
- const arm=()=>{clearTimeout(timer);t0=performance.now();timer=setTimeout(async()=>{const v=$('video',S[cur]);if(v&&!v.paused&&!v.ended&&v.duration-v.currentTime<2.5)await new Promise(r=>v.addEventListener('ended',r,{once:true}));if(!playing)return;elapsed=0;cur<N-1?goTo(cur+1,false):end();},Math.max(0,PERSIST-elapsed));};
- const goTo=(i,byUser)=>{tweening=true;const a=sc.scrollLeft,b=pos(i),st=performance.now();sc.classList.add('anim');
-  if(reduce){sc.scrollLeft=b;setCur(i);tweening=false;sc.classList.remove('anim');paint(i);byUser?pause(true):playing&&arm();return;}
-  (function f(n){const k=Math.min(1,(n-st)/TWEEN);sc.scrollLeft=a+(b-a)*ease(k);paint(prog());if(k>=.5&&cur!==i)setCur(i);
-   if(k<1)requestAnimationFrame(f);else{tweening=false;sc.classList.remove('anim');byUser?pause(true):playing&&arm();}})(st);};
- const play=()=>{if(ended){ended=false;elapsed=0;playing=true;userPaused=false;state('playing');goTo(0,false);return;}playing=true;userPaused=false;state('playing');vPlay();arm();};
- const pause=byUser=>{if(playing)elapsed+=performance.now()-t0;playing=false;userPaused=userPaused||byUser;clearTimeout(timer);const v=$('video',S[cur]);if(v)v.pause();state('paused');};
- const end=()=>{playing=false;ended=true;clearTimeout(timer);state('ended');};
- sc.addEventListener('scroll',()=>{const p=prog();paint(p);if(!tweening){const r=Math.round(p);if(r!==cur){setCur(r);elapsed=0;pause(true);}}},{passive:true});
- D.forEach((d,i)=>d.addEventListener('click',()=>{elapsed=0;ended=false;goTo(i,true);}));
- S.forEach((s,i)=>s.addEventListener('click',e=>{if(i!==cur&&!e.target.closest('.go')){elapsed=0;goTo(i,true);}}));
- pp.addEventListener('click',()=>playing?pause(true):play());
- W.addEventListener('keydown',e=>{if(e.key==='ArrowRight'&&cur<N-1){e.preventDefault();goTo(cur+1,true);D[cur+1<N?cur+1:cur].focus();}if(e.key==='ArrowLeft'&&cur>0){e.preventDefault();D[cur-1].focus();goTo(cur-1,true);}});
- new IntersectionObserver(([e])=>{inView=e.isIntersecting;if(inView){if(!reduce&&!userPaused&&!ended&&!playing)play();}else if(!ended&&playing){pause(false);}},{threshold:.6}).observe(sc);
- addEventListener('resize',()=>{sc.scrollLeft=pos(cur);paint(cur);});
- cur=-1;setCur(0);cur=0;state('paused');sc.scrollLeft=pos(0);paint(0);}
-$$('.hlw').forEach(HLG);
-/* nav blends into hero at the top */
-{const f=()=>document.documentElement.classList.toggle('top',scrollY<40);f();addEventListener('scroll',f,{passive:true});}
-
-/* HamsVillage zone tabs */
-{const T=$$('.zt-b'),P=$$('.zt-p');const sel=i=>{T.forEach((t,k)=>{const on=k===i;t.classList.toggle('on',on);t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;});P.forEach((p,k)=>{p.classList.toggle('on',k===i);p.hidden=k!==i;});};
- T.forEach((t,i)=>{t.addEventListener('click',()=>sel(i));t.addEventListener('keydown',e=>{const d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){e.preventDefault();const n=(i+d+T.length)%T.length;sel(n);T[n].focus();}});});}
-
-/* one primary button per view: hide nav CTA while registration is on screen */
-{const r=document.getElementById('registration');if(r)new IntersectionObserver(([e])=>document.body.classList.toggle('reg-in',e.isIntersecting),{threshold:.25}).observe(r);}
-/* detail cards paddles (Apple media-card-set) */
-$$('.mcw').forEach(w=>{const sc=$('.mc',w),p=$('.mc-p',w),n=$('.mc-n',w),step=()=>$('.mc-i',w).offsetWidth+20;
- const upd=()=>{p.disabled=sc.scrollLeft<4;n.disabled=sc.scrollLeft+sc.clientWidth>=sc.scrollWidth-4;};
- p.addEventListener('click',()=>sc.scrollBy({left:-step(),behavior:'smooth'}));n.addEventListener('click',()=>sc.scrollBy({left:step(),behavior:'smooth'}));
- sc.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();});
-
-/* schedule */
-const DAYS=[
- {tab:'4 ธ.ค.',title:'ค้นหาเส้นทางของตัวเอง',rows:[['19:00–19:30','เปิดค่าย รู้จักเพื่อน'],['19:30–20:30','พบรุ่นพี่มหาวิทยาลัย',1],['20:30–21:00','สำรวจ HamsVillage และรับภารกิจ']]},
- {tab:'5 ธ.ค.',title:'ลงมือสร้าง',rows:[['13:00–14:30',['Storytelling และ SOP','Game Design']],['14:30–15:30',['ทำ Portfolio','พัฒนาเกม']],['16:00–17:00','ทำผลงานและภารกิจ'],['19:00–20:00','ดูพอร์ตรุ่นพี่',1],['20:00–21:00','ทำผลงานต่อ']]},
- {tab:'6 ธ.ค.',title:'โชว์ผลงานของตัวเอง',rows:[['13:00–15:00','ทำผลงานให้เสร็จ'],['15:00','ส่งผลงาน'],['15:00–16:00','เตรียมบูธ'],['16:00–17:30','เปิดบูธโชว์ผลงาน',1],['19:00–20:00','ถามตอบกับรุ่นพี่มหาวิทยาลัย'],['20:00–21:00','ปิดค่าย']]}];
-const days=$('#days'),panel=$('#dayPanel');
-days.innerHTML=DAYS.map((d,i)=>`<button role="tab" id="dt${i}" aria-controls="dayPanel" aria-selected="${i===0}" tabindex="${i===0?0:-1}">${d.tab}</button>`).join('');
-const show=i=>{const d=DAYS[i];days.querySelectorAll('button').forEach((b,k)=>{b.setAttribute('aria-selected',k===i);b.tabIndex=k===i?0:-1});panel.setAttribute('aria-labelledby','dt'+i);
- panel.innerHTML=`<ol class="sched3">`+d.rows.map(([t,a,hl])=>`<li class="${hl?'hot':''}"><time>${t}</time>${Array.isArray(a)?`<div class="split"><span style="--tc:#0057b8"><small>Portfolio Track</small>${a[0]}</span><span style="--tc:#b25000"><small>Project Track</small>${a[1]}</span></div>`:`<span>${a}${hl?'<em>ไฮไลต์</em>':''}</span>`}</li>`).join('')+'</ol>';};
-days.addEventListener('click',e=>{const b=e.target.closest('button');if(b)show([...days.children].indexOf(b));});
-days.addEventListener('keydown',e=>{const bs=[...days.children],i=bs.findIndex(b=>b.getAttribute('aria-selected')==='true');let n=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:null;if(n===null)return;n=(n+bs.length)%bs.length;show(n);bs[n].focus();});
-show(0);
-
-/* faq */
-const FAQ=[['ไม่มีพื้นฐาน สมัครได้ไหม?','ได้ เลือก Project Track เริ่มจากพื้นฐาน'],
-['อยู่ ม.5 แต่มีผลงานแล้ว เลือก Portfolio Track ได้ไหม?','ได้ แบ่งตามความพร้อม ไม่ใช่ระดับชั้น'],
-['ยังไม่มีคณะในใจ สมัครได้ไหม?','ได้ วันแรกมีพบรุ่นพี่มหาวิทยาลัย'],
-
-['ต้องเดินทางไหม?','ไม่ต้อง ออนไลน์ผ่าน Discord และ HamsVillage'],
-['วันสุดท้ายต้องส่งอะไร?','Portfolio Track ส่งพอร์ต ส่วน Project Track ส่งเกม'],
-['เข้าค่ายแล้วติดแน่ไหม?','ไม่มีใครรับประกันได้ ค่ายช่วยให้ผลงานและพอร์ตพร้อมขึ้น การรับเข้าขึ้นกับแต่ละมหาวิทยาลัย']];
-$('#faqList').innerHTML=FAQ.map(([q,a],i)=>`<div class="fq"><h3><button aria-expanded="false" aria-controls="fa${i}" id="fq${i}">${q}<i aria-hidden="true">+</i></button></h3><div class="a" id="fa${i}" role="region" aria-labelledby="fq${i}" hidden>${a}</div></div>`).join('');
-$('#faqList').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!o);document.getElementById(b.getAttribute('aria-controls')).hidden=o;});
-
-/* track pick: remember choice, pass it to the sign-up link */
-$$('[data-track]').forEach(a=>a.addEventListener('click',()=>{const t=a.dataset.track,n=t==='portfolio'?'Portfolio Track':'Project Track';
- const p=$('#pickedTrack');p.hidden=false;p.textContent='เลือกไว้: '+n;$('#regBtn').href=REG+'?track='+t;
- (window.dataLayer=window.dataLayer||[]).push({event:'select_track',track:t});}));
-
-/* videos play only while on screen */
-{const v=$('#heroVid');if(matchMedia('(max-width:734px)').matches){v.src='vid/command-select-sm.mp4';v.play().catch(()=>{});}}
-{const vs=$$('video').filter(v=>v.id!=='heroVid'&&!v.closest('.hl'));
- const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting&&!reduce)v.play().catch(()=>{});else v.pause();}),{threshold:.35});
- vs.forEach(v=>io.observe(v));}
-
-/* sheets: one modal for every section */
-{let opener=null;const root=document.documentElement;
- $$('[data-sheet]').forEach(b=>{const d=document.getElementById(b.dataset.sheet);b.setAttribute('aria-controls',d.id);
-  b.addEventListener('click',()=>{opener=b;d.showModal();root.style.overflow='hidden';b.setAttribute('aria-expanded','true');d.querySelector('.in').scrollTop=0;d.querySelector('.x').focus();});});
- $$('dialog.sheet').forEach(d=>{
-  d.querySelector('.x').addEventListener('click',()=>d.close());
-  d.addEventListener('click',e=>{if(e.target===d)d.close();});
-  d.addEventListener('close',()=>{root.style.overflow='';$$(`[data-sheet="${d.id}"]`).forEach(b=>b.setAttribute('aria-expanded','false'));if(opener){opener.focus();opener=null;}});});}
-
-/* measurement */
-{window.dataLayer=window.dataLayer||[];document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;
- if(/portcamp/.test(a.href))dataLayer.push({event:'register_click',where:a.closest('section,header')?.id||'nav'});
- else if(/line\.me/.test(a.href))dataLayer.push({event:'line_click'});});}
-}
+(() => {
+  const EVENT={registrationUrl:'https://www.hamsterhub.co/portcamp',contactUrl:'https://page.line.me/jkm4247u?openQrModal=true',price:null,registrationClose:null};
+  document.documentElement.classList.add('js');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
+  const analytics=(event,detail={})=>(window.dataLayer=window.dataLayer||[]).push({event,...detail});
+  document.querySelectorAll('[data-register-source]').forEach(a=>{a.href=EVENT.registrationUrl;a.addEventListener('click',()=>analytics('register_click',{where:a.dataset.registerSource}));});
+  document.querySelectorAll('.footer-links a').forEach(a=>{if(a.href.includes('line.me')){a.href=EVENT.contactUrl;a.addEventListener('click',()=>analytics('line_click'));}});
+  if(EVENT.price!==null){document.querySelectorAll('.event-price').forEach(el=>{el.textContent=EVENT.price;el.hidden=false;});}
+  const tabs=[...document.querySelectorAll('#day-tabs button')],panels=[...document.querySelectorAll('.day-panel')];
+  const selectDay=(n,focus=false)=>{tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===n));tab.tabIndex=i===n?0:-1;panels[i].hidden=i!==n;});if(focus)tabs[n].focus();};
+  tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectDay(i));tab.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i-1+tabs.length)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;e.preventDefault();selectDay(n,true);});});selectDay(0);
+  document.querySelectorAll('[data-track]').forEach(a=>a.addEventListener('click',()=>{const name=a.dataset.track==='portfolio'?'Portfolio Track':'Project Track';const picked=document.getElementById('picked-track');picked.textContent='สนใจ '+name+' · เลือก Track อีกครั้งในหน้าสมัคร';picked.hidden=false;analytics('select_track',{track:a.dataset.track});}));
+  let opener=null;document.querySelectorAll('[data-sheet]').forEach(button=>{const dialog=document.getElementById(button.dataset.sheet);if(!dialog)return;button.setAttribute('aria-haspopup','dialog');button.setAttribute('aria-controls',dialog.id);button.addEventListener('click',()=>{opener=button;dialog.showModal();dialog.querySelector('.close').focus();});});
+  document.querySelectorAll('dialog.sheet').forEach(dialog=>{dialog.querySelector('.close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});dialog.addEventListener('close',()=>{opener?.focus();opener=null;});});
+  const scrollRail=(rail,dir)=>{const item=rail.firstElementChild;if(item)rail.scrollBy({left:dir*(item.getBoundingClientRect().width+18),behavior:reduce.matches?'instant':'smooth'});};
+  document.querySelectorAll('.sarrows .ar').forEach(button=>button.addEventListener('click',()=>scrollRail(document.getElementById('bstore'),Number(button.dataset.d))));
+  document.querySelectorAll('[data-rail]').forEach(button=>button.addEventListener('click',()=>scrollRail(document.getElementById('works'),Number(button.dataset.rail))));
+  const workVideos=[...document.querySelectorAll('.work video')];
+  const visibleWorks=new Set(),userPausedWorks=new WeakSet(),autoPausedWorks=new WeakSet();
+  const pauseWork=video=>{if(video.paused)return;autoPausedWorks.add(video);video.pause();};
+  const playVisibleWorks=()=>{if(document.hidden||reduce.matches)return;visibleWorks.forEach(video=>{if(!userPausedWorks.has(video))video.play().catch(()=>{});});};
+  workVideos.forEach(video=>{video.addEventListener('pause',()=>{if(autoPausedWorks.has(video))autoPausedWorks.delete(video);else userPausedWorks.add(video);});video.addEventListener('play',()=>userPausedWorks.delete(video));});
+  const workObserver=new IntersectionObserver(entries=>{entries.forEach(({target,intersectionRatio})=>{if(intersectionRatio>=.55)visibleWorks.add(target);else{visibleWorks.delete(target);pauseWork(target);}});playVisibleWorks();},{threshold:[0,.55]});
+  workVideos.forEach(video=>workObserver.observe(video));
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)workVideos.forEach(pauseWork);else playVisibleWorks();});
+  reduce.addEventListener('change',()=>{if(reduce.matches)workVideos.forEach(pauseWork);else playVisibleWorks();});
+  const video=document.getElementById('heroVid'),toggle=document.querySelector('.video-toggle');let videoWanted=false,userPaused=false;
+  const source=()=>{if(!video.getAttribute('src'))video.src=matchMedia('(max-width: 600px)').matches?'vid/command-select-sm.mp4':'vid/command-select.mp4';};
+  const setToggle=()=>{toggle.setAttribute('aria-pressed',String(!video.paused));toggle.textContent=video.paused?'▶':'Ⅱ';toggle.setAttribute('aria-label',video.paused?'เล่นวิดีโอผลงาน COMMAND SELECT':'หยุดวิดีโอผลงาน COMMAND SELECT');};
+  toggle.addEventListener('click',async()=>{if(video.paused){videoWanted=true;userPaused=false;source();try{await video.play();}catch{}}else{videoWanted=false;userPaused=true;video.pause();}setToggle();});
+  video.addEventListener('play',setToggle);video.addEventListener('pause',setToggle);
+  new IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting){video.pause();}else if(!reduce.matches && !matchMedia('(max-width: 600px)').matches && !userPaused){videoWanted=true;source();video.play().catch(()=>{});}else if(videoWanted){source();video.play().catch(()=>{});}}},{threshold:.3}).observe(video);
+  reduce.addEventListener('change',()=>{if(reduce.matches){videoWanted=false;video.pause();}});
+})();
 </script>
-<script src="vendor/gsap.min.js"></script><script src="vendor/ScrollTrigger.min.js"></script>
-<script>
-if(window.gsap&&window.ScrollTrigger&&!matchMedia('(prefers-reduced-motion: reduce)').matches){gsap.registerPlugin(ScrollTrigger);
- const m=document.querySelector('.hero-media');m.classList.add('scrub');
- gsap.fromTo(m,{scale:1,'--r':'0px'},{scale:.88,'--r':'32px',ease:'none',scrollTrigger:{trigger:m,start:'top 20%',end:'bottom top',scrub:true}});
- }
-</script>
-
 </body>
 </html>
