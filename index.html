@@ -565,6 +565,23 @@ section[id],[id="registration"]{scroll-margin-top:96px}
 /* hero: headline and clip are one piece, no hard edge */
 .hero-media{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%);mask-image:linear-gradient(180deg,transparent 0,#000 22%);margin-top:0!important}
 .sc.hc .hc-t b{white-space:nowrap}
+
+/* HamsVillage zones: Apple segmented tabs + one big visual + one line */
+.zones{margin-top:56px;text-align:center}
+.zt-h{margin:0 0 16px;font-size:17px;font-weight:600;color:#6e6e73}
+.zt-tabs{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:#e8e8ed;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.zt-tabs::-webkit-scrollbar{display:none}
+.zt-b{flex:none;border:0;background:none;padding:10px 20px;border-radius:999px;font:inherit;font-size:15px;font-weight:600;color:#6e6e73;cursor:pointer;transition:background .25s,color .25s}
+.zt-b.on{background:#fff;color:#1d1d1f;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.zt-b:focus-visible{outline:2px solid #0071e3;outline-offset:2px}
+.zt-p{margin-top:28px}
+.zt-p.on{animation:ztin .35s ease}
+@keyframes ztin{from{opacity:0}to{opacity:1}}
+.zt-m{aspect-ratio:16/9;border-radius:28px;background:#d2d2d7;display:grid;place-items:center;color:#6e6e73;font-size:17px;max-width:1060px;margin:0 auto}
+.zt-cap{margin:24px auto 0;max-width:560px;font-size:21px;line-height:1.4;color:#6e6e73}
+.zt-cap b{color:#1d1d1f;font-weight:600}
+@media(max-width:734px){.zt-b{padding:9px 14px;font-size:14px}.zt-m{aspect-ratio:4/3;border-radius:22px}.zt-cap{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.zt-p.on{animation:none}}
 </style>
 </head>
 <body>
@@ -629,9 +646,8 @@ section[id],[id="registration"]{scroll-margin-top:96px}
 </section>
 
 <section class="sec alt story" id="village">
-  <div class="vw"><div class="lock"><p class="eye">เรียนรู้ด้วย Gamification</p><h2 class="t-sec">เรียนสนุก ปั่นงานมันส์</h2><p class="lock-copy">ทั้งค่ายเรียนในหมู่บ้านออนไลน์ HamsVillage ทำงานทีละเควสไปกับเพื่อน</p><button class="plus" type="button" data-sheet="sh-zones" aria-haspopup="dialog" aria-expanded="false">ดู 4 โซนในหมู่บ้าน<i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></i></button></div></div>
-  <div class="spiece z" data-steps="0"><div class="show-pin"><div class="show-frame"><div class="show-m show-ph"><span>รอภาพ HamsVillage</span></div></div></div></div>
-  <div class="mcw"><div class="mc" tabindex="0" aria-label="รายละเอียด HamsVillage"><ul class="mc-set"><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพ HamsVillage</span></div></div><p class="mc-t"><b>Squad</b> จับทีมกับเพื่อน ลงด่านไปด้วยกัน</p></li><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพ HamsVillage</span></div></div><p class="mc-t"><b>Raid Boss</b> มีบอสเกิดตามรอบเวลาในหมู่บ้าน</p></li><li class="mc-i"><div class="mc-m"><div class="mc-ph"><span>รอภาพ HamsVillage</span></div></div><p class="mc-t"><b>HamsQuest</b> งานทุกชิ้นเป็นเควสบน Questboard</p></li></ul></div><div class="vw mc-nav"><button class="mc-p" type="button" aria-label="ก่อนหน้า"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="mc-n" type="button" aria-label="ถัดไป"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
+  <div class="vw"><div class="lock"><p class="eye">HamsVillage</p><h2 class="t-sec">เรียนสนุก ปั่นงานมันส์</h2><p class="lock-copy">ทั้งค่ายเรียนในหมู่บ้านออนไลน์ HamsVillage ทำงานทีละเควสไปกับเพื่อน</p></div></div>
+  <div class="vw zones"><p class="zt-h">4 โซนในหมู่บ้าน</p><div class="zt-tabs" role="tablist" aria-label="โซนใน HamsVillage"><button class="zt-b on" type="button" role="tab" id="zt-project" aria-controls="zp-project" aria-selected="true" tabindex="0">Project</button><button class="zt-b" type="button" role="tab" id="zt-portfolio" aria-controls="zp-portfolio" aria-selected="false" tabindex="-1">Portfolio</button><button class="zt-b" type="button" role="tab" id="zt-university" aria-controls="zp-university" aria-selected="false" tabindex="-1">University</button><button class="zt-b" type="button" role="tab" id="zt-showcase" aria-controls="zp-showcase" aria-selected="false" tabindex="-1">Showcase</button></div><div class="zt-p on" role="tabpanel" id="zp-project" aria-labelledby="zt-project"><div class="zt-m"><span>รอภาพ Project Zone</span></div><p class="zt-cap"><b>Project Zone</b> เดินดูเกมที่เพื่อนสร้างในค่าย</p></div><div class="zt-p" role="tabpanel" id="zp-portfolio" aria-labelledby="zt-portfolio" hidden><div class="zt-m"><span>รอภาพ Portfolio Zone</span></div><p class="zt-cap"><b>Portfolio Zone</b> เปิดดูพอร์ตและผลงานของเพื่อน</p></div><div class="zt-p" role="tabpanel" id="zp-university" aria-labelledby="zt-university" hidden><div class="zt-m"><span>รอภาพ University Zone</span></div><p class="zt-cap"><b>University Zone</b> สำรวจข้อมูลคณะและมหาวิทยาลัย</p></div><div class="zt-p" role="tabpanel" id="zp-showcase" aria-labelledby="zt-showcase" hidden><div class="zt-m"><span>รอภาพ Showcase Zone</span></div><p class="zt-cap"><b>Showcase Zone</b> ชม 10 ผลงานเด่นของ Hamster Hub</p></div></div>
 </section>
 
 <section class="sec dark story" id="seniors">
@@ -750,6 +766,10 @@ const HLG=W=>{const sc=$('.hl',W),S=$$('.hl-s',sc),D=$$('.hl-d',W),pp=$('.hl-pp'
  addEventListener('resize',()=>{sc.scrollLeft=pos(cur);paint(cur);});
  cur=-1;setCur(0);cur=0;state('paused');sc.scrollLeft=pos(0);paint(0);}
 $$('.hlw').forEach(HLG);
+/* HamsVillage zone tabs */
+{const T=$$('.zt-b'),P=$$('.zt-p');const sel=i=>{T.forEach((t,k)=>{const on=k===i;t.classList.toggle('on',on);t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;});P.forEach((p,k)=>{p.classList.toggle('on',k===i);p.hidden=k!==i;});};
+ T.forEach((t,i)=>{t.addEventListener('click',()=>sel(i));t.addEventListener('keydown',e=>{const d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){e.preventDefault();const n=(i+d+T.length)%T.length;sel(n);T[n].focus();}});});}
+
 /* one primary button per view: hide nav CTA while registration is on screen */
 {const r=document.getElementById('registration');if(r)new IntersectionObserver(([e])=>document.body.classList.toggle('reg-in',e.isIntersecting),{threshold:.25}).observe(r);}
 /* detail cards paddles (Apple media-card-set) */
